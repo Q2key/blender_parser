@@ -1,0 +1,27 @@
+[
+    {
+        "id" : "m1",
+        "texture" : "C:/blender/src/textures/dev/red_fabric.jpg",
+        "map" : "C:/blender/src/maps/FabricCanvas001_DISP_6K.jpg",
+        "type" : "fabric_multy"
+    },
+    {   "id" : "m2",
+        "texture" : "C:/blender/src/textures/dev/gray_fabric.jpg",
+        "map" : "C:/blender/src/maps/FabricCanvas001_DISP_6K.jpg",
+        "type" : "fabric_multy"
+    },
+    {
+        "id" : "m3",
+        "texture" : "C:/blender/src/textures/dev/deep_blue.jpg",
+        "map" : "C:/blender/src/maps/FabricCanvas001_DISP_6K.jpg",
+        "type" : "fabric_multy"
+    },
+    {
+        "id" : "pm1",
+        "type" : "plastic_mate"
+    },
+    {
+        "id" : "pm2",
+        "type" : "plastic_pearl"
+    }
+]

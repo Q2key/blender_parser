@@ -1,0 +1,20 @@
+{
+    "Collar" : {
+        "filePrefix" : "collar",
+        "shadowCatchers" : ["Body"],
+        "excludedFromRender" : ["Buttons","Sleeve","Strings"],
+        "avaibleMaterialsID" : ["m1","m2","m3"]
+    },
+    "Sleeve" : {
+        "filePrefix" : "sleeve",
+        "shadowCatchers" : ["Body"],
+        "excludedFromRender" : ["Buttons","Collar_inner","Collar_outer","Strings"],
+        "avaibleMaterialsID" : ["m1","m2","m3"]
+    },
+    "Body" : {
+        "filePrefix" : "body",
+        "shadowCatchers" : [],
+        "excludedFromRender" : ["Buttons","Sleeve","Collar_inner","Collar_outer","Strings"],
+        "avaibleMaterialsID" : ["m1","m2","m3"]
+    }
+}
