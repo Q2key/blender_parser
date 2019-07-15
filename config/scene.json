@@ -1,8 +1,20 @@
 {
-    "Resolution" : {
-        "x" : 300,
-        "y" : 300
+    "Resolution": {
+        "x": 2000,
+        "y": 2000
     },
-    "PerspectiveStyle" : "Table",
-    "Percentage" : 100
+    "PerspectiveStyle": "Table",
+    "Percentage": 100,
+    "Components": [
+        "Buttons",
+        "Body",
+        "Logo",
+        "Sleeve_inner",
+        "Sleeve_outer",
+        "Collar_inner",
+        "Collar_outer",
+        "Strings_collar",
+        "Strings_body",
+        "Strings_sleeve"
+    ]
 }

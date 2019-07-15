@@ -8,6 +8,7 @@ from workers.fabric_worker import FabricWorker
 from workers.plastic_worker import PlasticWorker 
 from workers.strings_worker import StringsWorker
 
+
 class Engine:
 
     def __init__(self, context):
@@ -48,12 +49,12 @@ class Engine:
 
     def reset_included(self):
         ''' include all componens before render '''
-        for inc in ["Body","Buttons", "Collar_inner", "Collar_outer", "Sleeve", "Strings"]:
+        for inc in self.ctx.SCENE['Components']:
             bpy.data.objects[inc].hide_render = False
 
     def reset_catchers(self):
         ''' set shadow catchers for element '''
-        for sc in ["Body","Buttons","Collar_inner", "Collar_outer", "Sleeve", "Strings"]:
+        for sc in self.ctx.SCENE['Components']:
             bpy.data.objects[sc].cycles.is_shadow_catcher = False
 
     def before_render(self, d):
