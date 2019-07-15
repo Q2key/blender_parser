@@ -3,23 +3,22 @@ import bpy
 
 class FabricWorker():
 
-
     @staticmethod
-    def create_fabric_multy_material(mat_name='fabric_material', map=False, texture=False, cleanBefore=False):
+    def create_fabric_multy_material(m):
         ''' set material '''
 
-        mi = MaterialWorker.get_material_info(mat_name,True)
+        mi = MaterialWorker.get_material_info('fabric_material',True)
 
         # shaderNodeTexImage
         shaderNodeTexImage = mi['nodes'].new("ShaderNodeTexImage")
-        shaderNodeTexImage.image = bpy.data.images.load(texture)
+        shaderNodeTexImage.image = bpy.data.images.load(m['texture'])
         shaderNodeTexImage.use_custom_color = True
         shaderNodeTexImage.color = (200, 200, 200)
         shaderNodeTexImage.location = [-300, -100]
 
         # shaderNodeTexImageMap
         shaderNodeTexImageMap = mi['nodes'].new("ShaderNodeTexImage")
-        shaderNodeTexImageMap.image = bpy.data.images.load(map)
+        shaderNodeTexImageMap.image = bpy.data.images.load(m['map'])
         shaderNodeTexImageMap.use_custom_color = True
         shaderNodeTexImageMap.color = (180, 180, 0)
         shaderNodeTexImageMap.location = [0, -300]

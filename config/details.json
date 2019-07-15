@@ -16,5 +16,11 @@
         "shadowCatchers" : [],
         "excludedFromRender" : ["Buttons","Sleeve","Collar_inner","Collar_outer","Strings"],
         "avaibleMaterialsID" : ["m1","m2","m3"]
+    },
+    "Buttons" : {
+        "filePrefix" : "buttons",
+        "shadowCatchers" : ["Body"],
+        "excludedFromRender" : ["Sleeve","Collar_inner","Collar_outer","Strings"],
+        "avaibleMaterialsID" : ["pg1","pg2","pg3"]
     }
 }

@@ -5,6 +5,7 @@ import datetime
 import bpy
 
 from workers.fabric_worker import FabricWorker 
+from workers.plastic_worker import PlasticWorker 
 
 class Engine:
 
@@ -12,6 +13,7 @@ class Engine:
         self.ctx = context
         self.folder = str.format("{0}/{1}", context.RENDERS_PATH,
                                  datetime.datetime.now().strftime("%d_%b_%Y_(%H_%M_%S)"))
+
 
     def go(self):
         self.set_scene()
@@ -45,12 +47,12 @@ class Engine:
 
     def reset_included(self):
         ''' include all componens before render '''
-        for inc in ["Body", "Collar_inner", "Collar_outer", "Sleeve", "Strings"]:
+        for inc in ["Body","Buttons", "Collar_inner", "Collar_outer", "Sleeve", "Strings"]:
             bpy.data.objects[inc].hide_render = False
 
     def reset_catchers(self):
         ''' set shadow catchers for element '''
-        for sc in ["Body", "Collar_inner", "Collar_outer", "Sleeve", "Strings"]:
+        for sc in ["Body","Buttons","Collar_inner", "Collar_outer", "Sleeve", "Strings"]:
             bpy.data.objects[sc].cycles.is_shadow_catcher = False
 
     def before_render(self, d):
@@ -69,10 +71,11 @@ class Engine:
             self.render_detail(r)
         pass
 
-    def set_material(self, mat):
-        if mat['type'] == 'fabric_multy':
-            FabricWorker.create_fabric_multy_material(
-                'fabric_material', mat['map'], mat['texture'], True)
+    def set_material(self, m):
+        if m['type'] == 'fabric_multy':
+            FabricWorker.create_fabric_multy_material(m)
+        if m['type'] == 'plastic_glossy':
+            PlasticWorker.create_gloss_plastic_material(m)
 
     def set_scene(self):
         bpy.data.scenes["Scene"].render.resolution_x = self.ctx.SCENE["Resolution"]["x"]

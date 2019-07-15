@@ -1,44 +1,47 @@
 from workers.material_worker import MaterialWorker
 import bpy
 
+
 class PlasticWorker():
-    
+
     @staticmethod
-    def create_gloss_plastic(mat_name='fabric_material', map=False, texture=False, cleanBefore=False):
+    def create_gloss_plastic_material(m=False):
         ''' set material '''
 
-        mi = MaterialWorker.get_material_info(mat_name,True)
+        mi = MaterialWorker.get_material_info('plastic_material', True)
 
-        # shaderNodeTexImage
-        shaderNodeTexImage = mi['nodes'].new("ShaderNodeTexImage")
-        shaderNodeTexImage.image = bpy.data.images.load(texture)
-        shaderNodeTexImage.use_custom_color = True
-        shaderNodeTexImage.color = (200, 200, 200)
-        shaderNodeTexImage.location = [-300, -100]
+        lw = mi['nodes'].new("ShaderNodeLayerWeight")
+        lw.location = [0, -200]
 
-        # shaderNodeTexImageMap
-        shaderNodeTexImageMap = mi['nodes'].new("ShaderNodeTexImage")
-        shaderNodeTexImageMap.image = bpy.data.images.load(map)
-        shaderNodeTexImageMap.use_custom_color = True
-        shaderNodeTexImageMap.color = (180, 180, 0)
-        shaderNodeTexImageMap.location = [0, -300]
+        bd1 = mi['nodes'].new("ShaderNodeBsdfDiffuse")
+        bd1.location = [0, -350]
+        bd1.inputs[0].default_value = (1, 0.8749, 0.8749, 1)
 
-        # shaderNodeBsdfDfiffuseWidth
-        shaderNodeBsdfDfiffuse = mi['nodes'].new("ShaderNodeBsdfDiffuse")
-        shaderNodeBsdfDfiffuse.use_custom_color = True
-        shaderNodeBsdfDfiffuse.color = (200, 200, 200)
-        shaderNodeBsdfDfiffuse.location = [0, -100]
+        bd2 = mi['nodes'].new("ShaderNodeBsdfDiffuse")
+        bd2.location = [0, -500]
+        bd2.inputs[0].default_value = (1, 0.977174, 0.910533, 1)
 
-        # shaderNodeOutputMaterial
-        shaderNodeOutputMaterial = mi['nodes'].new("ShaderNodeOutputMaterial")
-        shaderNodeOutputMaterial.use_custom_color = True
-        shaderNodeOutputMaterial.color = (200, 200, 200)
-        shaderNodeOutputMaterial.location = [300, -100]
+        fr = mi['nodes'].new("ShaderNodeFresnel")
+        fr.location = [200,  -200]
+        fr.inputs['IOR'].default_value = 1.9
 
-        # link up
-        mi['links'].new(shaderNodeTexImage.outputs["Color"],
-                  shaderNodeBsdfDfiffuse.inputs['Color'])
-        mi['links'].new(shaderNodeBsdfDfiffuse.outputs["BSDF"],
-                  shaderNodeOutputMaterial.inputs['Surface'])
-        mi['links'].new(shaderNodeTexImageMap.outputs["Color"],
-                  shaderNodeOutputMaterial.inputs['Displacement'])
+        ms1 = mi['nodes'].new("ShaderNodeMixShader")
+        ms1.location = [200, -350]
+
+        bg = mi['nodes'].new("ShaderNodeBsdfGlossy")
+        bg.location = [200, -500]
+        bg.inputs[1].default_value = 0
+
+        ms2 = mi['nodes'].new("ShaderNodeMixShader")
+        ms2.location = [400, -350]
+
+        om = mi['nodes'].new("ShaderNodeOutputMaterial")
+        om.location = [600, -350]
+
+        mi['links'].new(lw.outputs['Fresnel'], ms1.inputs[0])
+        mi['links'].new(bd1.outputs['BSDF'], ms1.inputs[1])
+        mi['links'].new(bd2.outputs['BSDF'], ms1.inputs[2])
+        mi['links'].new(fr.outputs['Fac'], ms2.inputs[0])
+        mi['links'].new(ms1.outputs['Shader'], ms2.inputs[1])
+        mi['links'].new(bg.outputs['BSDF'], ms2.inputs[2])
+        mi['links'].new(ms2.outputs['Shader'], om.inputs['Surface'])

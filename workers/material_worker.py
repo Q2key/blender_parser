@@ -1,10 +1,11 @@
 
 import bpy
 
+
 class MaterialWorker:
 
     @staticmethod
-    def get_material_info(mat_name,cleanBefore):
+    def get_material_info(mat_name, cleanBefore):
         ''' get material, nodes and links for creating material '''
         # get material or create new with same name
         mat = (bpy.data.materials.get(mat_name) or
@@ -22,5 +23,5 @@ class MaterialWorker:
         # clear nodes
         if cleanBefore:
             nodes.clear()
-        
-        return { "mat" : mat, "nodes" : nodes, "links" : links }
+
+        return {"mat": mat, "nodes": nodes, "links": links}

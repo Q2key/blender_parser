@@ -17,11 +17,18 @@
         "type" : "fabric_multy"
     },
     {
-        "id" : "pm1",
-        "type" : "plastic_mate"
+        "id" : "pg1",
+        "color" : "azure",
+        "type" : "plastic_glossy"
     },
     {
-        "id" : "pm2",
-        "type" : "plastic_pearl"
+        "id" : "pg2",
+        "color" : "gray",
+        "type" : "plastic_glossy"
+    },
+    {
+        "id" : "pg3",
+        "color" : "black",
+        "type" : "plastic_glossy"
     }
 ]
