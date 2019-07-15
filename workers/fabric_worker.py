@@ -31,6 +31,7 @@ class FabricWorker():
 
         # shaderNodeNormalMap
         shaderNodeNormalMap = mi['nodes'].new("ShaderNodeNormalMap")
+        shaderNodeNormalMap.space = 'OBJECT'
         shaderNodeNormalMap.use_custom_color = True
         shaderNodeNormalMap.color = (200, 200, 200)
         shaderNodeNormalMap.location = [0, -100]
@@ -46,10 +47,3 @@ class FabricWorker():
                   shaderNodeBsdfDfiffuse.inputs['Color'])
         mi['links'].new(shaderNodeBsdfDfiffuse.outputs["BSDF"],
                   shaderNodeOutputMaterial.inputs['Surface'])
-        mi['links'].new(shaderNodeTexImageMap.outputs["Color"],
-                  shaderNodeOutputMaterial.inputs['Displacement'])
-        mi['links'].new(shaderNodeTexImageMap.outputs["Color"],
-                  shaderNodeNormalMap.inputs['Color'])
-        mi['links'].new(shaderNodeNormalMap.outputs["Normal"],
-                  shaderNodeBsdfDfiffuse.inputs['Normal'])
-
