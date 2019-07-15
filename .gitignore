@@ -1,1 +1,4 @@
-__pycashe__
+
+renders/*
+*.pyc
+*.pyo
