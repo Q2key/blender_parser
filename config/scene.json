@@ -1,7 +1,7 @@
 {
     "Resolution": {
-        "x": 2000,
-        "y": 2000
+        "x": 300,
+        "y": 300
     },
     "PerspectiveStyle": "Table",
     "Percentage": 100,
@@ -13,6 +13,7 @@
         "Sleeve_outer",
         "Collar_inner",
         "Collar_outer",
+        "Collar_cave",
         "Strings_collar",
         "Strings_body",
         "Strings_sleeve"
