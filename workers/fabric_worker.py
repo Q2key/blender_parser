@@ -16,25 +16,11 @@ class FabricWorker():
         shaderNodeTexImage.color = (200, 200, 200)
         shaderNodeTexImage.location = [-300, -100]
 
-        # shaderNodeTexImageMap
-        shaderNodeTexImageMap = mi['nodes'].new("ShaderNodeTexImage")
-        shaderNodeTexImageMap.image = bpy.data.images.load(m['map'])
-        shaderNodeTexImageMap.use_custom_color = True
-        shaderNodeTexImageMap.color = (180, 180, 0)
-        shaderNodeTexImageMap.location = [0, -300]
-
         # shaderNodeBsdfDfiffuseWidth
         shaderNodeBsdfDfiffuse = mi['nodes'].new("ShaderNodeBsdfDiffuse")
         shaderNodeBsdfDfiffuse.use_custom_color = True
         shaderNodeBsdfDfiffuse.color = (200, 200, 200)
         shaderNodeBsdfDfiffuse.location = [0, -100]
-
-        # shaderNodeNormalMap
-        shaderNodeNormalMap = mi['nodes'].new("ShaderNodeNormalMap")
-        shaderNodeNormalMap.space = 'OBJECT'
-        shaderNodeNormalMap.use_custom_color = True
-        shaderNodeNormalMap.color = (200, 200, 200)
-        shaderNodeNormalMap.location = [0, -100]
 
         # shaderNodeOutputMaterial
         shaderNodeOutputMaterial = mi['nodes'].new("ShaderNodeOutputMaterial")
