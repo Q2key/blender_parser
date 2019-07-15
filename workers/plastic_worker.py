@@ -1,4 +1,4 @@
-from workers.material_worker import MaterialWorker
+from workers.material_info import MaterialInfo
 import bpy
 
 
@@ -8,7 +8,7 @@ class PlasticWorker():
     def create_gloss_plastic_material(m=False):
         ''' set material '''
 
-        mi = MaterialWorker.get_material_info('plastic_material', True)
+        mi = MaterialInfo.get_material_info('plastic_material', True)
 
         lw = mi['nodes'].new("ShaderNodeLayerWeight")
         lw.location = [0, -200]

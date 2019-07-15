@@ -2,7 +2,7 @@
 import bpy
 
 
-class MaterialWorker:
+class MaterialInfo:
 
     @staticmethod
     def get_material_info(mat_name, cleanBefore):

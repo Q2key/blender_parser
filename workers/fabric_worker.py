@@ -1,4 +1,4 @@
-from workers.material_worker import MaterialWorker
+from workers.material_info import MaterialInfo
 import bpy
 
 class FabricWorker():
@@ -7,7 +7,7 @@ class FabricWorker():
     def create_fabric_multy_material(m):
         ''' set material '''
 
-        mi = MaterialWorker.get_material_info('fabric_material',True)
+        mi = MaterialInfo.get_material_info('fabric_material',True)
 
         # shaderNodeTexImage
         shaderNodeTexImage = mi['nodes'].new("ShaderNodeTexImage")
