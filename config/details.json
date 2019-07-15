@@ -76,7 +76,6 @@
             "Strings_body",
             "Strings_sleeve",
             "Strings_collar",
-            "Strings_body",
             "Logo"
         ],
         "avaibleMaterialsID": [
@@ -111,6 +110,10 @@
             "Collar_inner",
             "Collar_outer",
             "Sleeve_inner",
+            "Sleeve_outer",
+            "Strings_body",
+            "Strings_sleeve",
+            "Strings_collar",
             "Body",
             "Buttons",
             "Logo"
