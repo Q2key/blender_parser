@@ -6,6 +6,7 @@ import bpy
 
 from workers.fabric_worker import FabricWorker 
 from workers.plastic_worker import PlasticWorker 
+from workers.strings_worker import StringsWorker
 
 class Engine:
 
@@ -76,6 +77,9 @@ class Engine:
             FabricWorker.create_fabric_multy_material(m)
         if m['type'] == 'plastic_glossy':
             PlasticWorker.create_gloss_plastic_material(m)
+        if m['type'] == 'strings_base':
+            StringsWorker.create_strings_material(m)
+
 
     def set_scene(self):
         bpy.data.scenes["Scene"].render.resolution_x = self.ctx.SCENE["Resolution"]["x"]

@@ -1,34 +1,50 @@
 [
     {
-        "id" : "m1",
-        "texture" : "C:/blender/src/textures/dev/red_fabric.jpg",
-        "map" : "C:/blender/src/maps/FabricCanvas001_DISP_6K.jpg",
-        "type" : "fabric_multy"
-    },
-    {   "id" : "m2",
-        "texture" : "C:/blender/src/textures/dev/gray_fabric.jpg",
-        "map" : "C:/blender/src/maps/FabricCanvas001_DISP_6K.jpg",
-        "type" : "fabric_multy"
+        "id": "m1",
+        "texture": "C:/blender/src/textures/dev/red_fabric.jpg",
+        "map": "C:/blender/src/maps/FabricCanvas001_DISP_6K.jpg",
+        "type": "fabric_multy"
     },
     {
-        "id" : "m3",
-        "texture" : "C:/blender/src/textures/dev/deep_blue.jpg",
-        "map" : "C:/blender/src/maps/FabricCanvas001_DISP_6K.jpg",
-        "type" : "fabric_multy"
+        "id": "m2",
+        "texture": "C:/blender/src/textures/dev/gray_fabric.jpg",
+        "map": "C:/blender/src/maps/FabricCanvas001_DISP_6K.jpg",
+        "type": "fabric_multy"
     },
     {
-        "id" : "pg1",
-        "color" : "azure",
-        "type" : "plastic_glossy"
+        "id": "m3",
+        "texture": "C:/blender/src/textures/dev/deep_blue.jpg",
+        "map": "C:/blender/src/maps/FabricCanvas001_DISP_6K.jpg",
+        "type": "fabric_multy"
     },
     {
-        "id" : "pg2",
-        "color" : "gray",
-        "type" : "plastic_glossy"
+        "id": "pg1",
+        "color": "azure",
+        "type": "plastic_glossy"
     },
     {
-        "id" : "pg3",
-        "color" : "black",
-        "type" : "plastic_glossy"
+        "id": "pg2",
+        "color": "gray",
+        "type": "plastic_glossy"
+    },
+    {
+        "id": "pg3",
+        "color": "black",
+        "type": "plastic_glossy"
+    },
+    {
+        "id": "sm1",
+        "color": "azure",
+        "type": "strings_base"
+    },
+    {
+        "id": "sm2",
+        "color": "gray",
+        "type": "strings_base"
+    },
+    {
+        "id": "sm3",
+        "color": "black",
+        "type": "strings_base"
     }
 ]
