@@ -83,6 +83,7 @@ class Engine:
 
 
     def set_scene(self):
+        bpy.data.scenes["Scene"].render.engine = 'CYCLES'
         bpy.data.scenes["Scene"].render.resolution_x = self.ctx.SCENE["Resolution"]["x"]
         bpy.data.scenes["Scene"].render.resolution_y = self.ctx.SCENE["Resolution"]["y"]
         bpy.data.scenes["Scene"].render.resolution_percentage = self.ctx.SCENE["Percentage"]
