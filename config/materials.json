@@ -18,6 +18,12 @@
         "type": "fabric_multy"
     },
     {
+        "id": "m3",
+        "texture": "C:/blender/src/textures/dev/papper_test.png",
+        "map": "C:/blender/src/maps/FabricCanvas001_DISP_6K.jpg",
+        "type": "fabric_multy"
+    },
+    {
         "id": "pg1",
         "color": "azure",
         "type": "plastic_glossy"
