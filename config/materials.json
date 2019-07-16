@@ -18,8 +18,14 @@
         "type": "fabric_multy"
     },
     {
-        "id": "m3",
-        "texture": "C:/blender/src/textures/dev/papper_test.png",
+        "id": "m4",
+        "texture": "C:/blender/src/textures/dev/fabric16_basecolor.jpg",
+        "map": "C:/blender/src/maps/FabricCanvas001_DISP_6K.jpg",
+        "type": "fabric_multy"
+    },
+    {
+        "id": "m5",
+        "texture": "C:/blender/src/textures/dev/TD_FABRIC25_basecolor.jpg",
         "map": "C:/blender/src/maps/FabricCanvas001_DISP_6K.jpg",
         "type": "fabric_multy"
     },

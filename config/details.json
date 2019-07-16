@@ -18,7 +18,9 @@
         "avaibleMaterialsID": [
             "m1",
             "m2",
-            "m3"
+            "m3",
+            "m4",
+            "m5"
         ]
     },
     "Collar_outer": {
@@ -40,7 +42,9 @@
         "avaibleMaterialsID": [
             "m1",
             "m2",
-            "m3"
+            "m3",
+            "m4",
+            "m5"
         ]
     },
     "Sleeve_inner": {
@@ -61,7 +65,9 @@
         "avaibleMaterialsID": [
             "m1",
             "m2",
-            "m3"
+            "m3",
+            "m4",
+            "m5"
         ]
     },
     "Sleeve_outer": {
@@ -83,7 +89,9 @@
         "avaibleMaterialsID": [
             "m1",
             "m2",
-            "m3"
+            "m3",
+            "m4",
+            "m5"
         ]
     },
     "Body": {
@@ -104,7 +112,9 @@
         "avaibleMaterialsID": [
             "m1",
             "m2",
-            "m3"
+            "m3",
+            "m4",
+            "m5"
         ]
     },
     "Buttons": {
@@ -166,7 +176,9 @@
         "avaibleMaterialsID": [
             "m1",
             "m2",
-            "m3"
+            "m3",
+            "m4",
+            "m5"
         ]
     },
     "Logo": {
@@ -187,7 +199,9 @@
         "avaibleMaterialsID": [
             "m1",
             "m2",
-            "m3"
+            "m3",
+            "m4",
+            "m5"
         ]
     }
 }
