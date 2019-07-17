@@ -1,7 +1,13 @@
 {
     "Resolution": {
-        "x": 600,
-        "y": 600
+        "Big" : {
+            "x": 600,
+            "y": 600
+        },
+        "Small":{
+            "x" : 300,
+            "y" : 300
+        }
     },
     "PerspectiveStyle": "Table",
     "Percentage": 100,
