@@ -6,6 +6,7 @@ os.sys.path.append(str.format("{0}/src",os.getcwd()))
 
 from instance import Instance
 from argparser import ArgumentParserForBlender
+
 from commands.render_command import RenderCommand
 from commands.reset_command import ResetCommand
 from commands.watch_command import WatchCommand
