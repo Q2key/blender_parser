@@ -5,5 +5,5 @@ class ResetCommand:
         self.ctx = ctx
         self.args = args
     
-    def run(self,ctx,args):
+    def run():
         print("reset")

@@ -1,7 +1,6 @@
 {
     "BlenderPath" : "C:/blender",
+    "StorePath" : "C:/blender/src/texstures/store",
     "SrcPath" : "C:/blender/src",
-    "MeshesPath" : "C:/blender/src/meshes",
-    "TexturesPath" : "C:/blender/src/textures",
     "RendersPath" : "C:/blender/src/renders"
 }

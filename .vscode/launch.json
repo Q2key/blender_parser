@@ -13,12 +13,12 @@
             "args": ["--","-m","all"]
         },
         {
-            "name": "Sleeve_inner",
+            "name": "Watch",
             "type": "python",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "args": ["--","-m","Sleeve_inner", "-e","render"]
+            "args": ["--","-w"]
         }
     ]
 }

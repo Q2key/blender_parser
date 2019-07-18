@@ -7,6 +7,7 @@ class Instance:
 
     def __init__(self):
         self.BLENDER_PATH = "C:/blender"
+        self.STORE_PATH = str.format("{0}/src/textures/store",self.BLENDER_PATH)
         self.SRC_PATH = str.format("{0}/src",self.BLENDER_PATH)
         self.RENDERS_PATH = str.format("{0}/renders",self.SRC_PATH)
         self.DETAILS = self.read_config(str.format("{0}/config/details.json",self.SRC_PATH))

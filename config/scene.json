@@ -23,5 +23,6 @@
         "Strings_collar",
         "Strings_body",
         "Strings_sleeve"
-    ]
+    ],
+    "TexturesFormat" : [".png"]
 }
