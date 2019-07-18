@@ -28,7 +28,7 @@ class WatchCommand:
         return m
 
     def extend_details(self):
-        ids = [m["id"] for m in self.search_for_material()]
+        ids = [ m["id"] for m in self.search_for_material() ]
         for (k, v) in self.ctx.DETAILS.items():
             if v["textured"]:
                 v["avaibleMaterialsID"] = ids
