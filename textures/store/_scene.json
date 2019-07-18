@@ -1,12 +1,12 @@
 {
     "Resolution": {
-        "Big" : {
+        "Big": {
             "x": 1080,
             "y": 1080
         },
-        "Small":{
-            "x" : 540,
-            "y" : 540
+        "Small": {
+            "x": 540,
+            "y": 540
         }
     },
     "PerspectiveStyle": "Table",
@@ -23,5 +23,8 @@
         "Strings_collar",
         "Strings_body",
         "Strings_sleeve"
+    ],
+    "TexturesFormat": [
+        ".png"
     ]
 }

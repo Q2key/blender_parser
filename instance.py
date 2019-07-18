@@ -13,7 +13,7 @@ class Instance:
         self.DETAILS = self.read_config(str.format("{0}/config/details.json",self.SRC_PATH))
         self.MATERIALS = self.read_config(str.format("{0}/config/materials.json",self.SRC_PATH))
         self.SCENE = self.read_config(str.format("{0}/config/scene.json",self.SRC_PATH))
-
+        self.APP =  self.read_config(str.format("{0}/config/app.json",self.SRC_PATH))
 
     def read_config(self,path):
         try:

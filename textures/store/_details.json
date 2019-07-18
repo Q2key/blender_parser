@@ -1,8 +1,8 @@
 {
     "Collar_inner": {
+        "textured": true,
         "filePrefix": "collar_inner",
-        "shadowCatchers": [
-        ],
+        "shadowCatchers": [],
         "excludedFromRender": [
             "Body",
             "Buttons",
@@ -16,14 +16,23 @@
             "Logo"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+            "dm0",
+            "dm1",
+            "dm2",
+            "dm3",
+            "dm4",
+            "dm5",
+            "dm6",
+            "dm7",
+            "dm8",
+            "dm9",
+            "dm10",
+            "dm11",
+            "dm12"
         ]
     },
     "Collar_outer": {
+        "textured": true,
         "filePrefix": "collar_outer",
         "shadowCatchers": [
             "Body"
@@ -40,14 +49,23 @@
             "Logo"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+            "dm0",
+            "dm1",
+            "dm2",
+            "dm3",
+            "dm4",
+            "dm5",
+            "dm6",
+            "dm7",
+            "dm8",
+            "dm9",
+            "dm10",
+            "dm11",
+            "dm12"
         ]
     },
     "Sleeve_inner": {
+        "textured": true,
         "filePrefix": "sleeve_inner",
         "shadowCatchers": [],
         "excludedFromRender": [
@@ -63,14 +81,23 @@
             "Logo"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+            "dm0",
+            "dm1",
+            "dm2",
+            "dm3",
+            "dm4",
+            "dm5",
+            "dm6",
+            "dm7",
+            "dm8",
+            "dm9",
+            "dm10",
+            "dm11",
+            "dm12"
         ]
     },
     "Sleeve_outer": {
+        "textured": true,
         "filePrefix": "sleeve_outer",
         "shadowCatchers": [
             "Body"
@@ -87,14 +114,23 @@
             "Logo"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+            "dm0",
+            "dm1",
+            "dm2",
+            "dm3",
+            "dm4",
+            "dm5",
+            "dm6",
+            "dm7",
+            "dm8",
+            "dm9",
+            "dm10",
+            "dm11",
+            "dm12"
         ]
     },
     "Body": {
+        "textured": true,
         "filePrefix": "body",
         "shadowCatchers": [],
         "excludedFromRender": [
@@ -110,14 +146,23 @@
             "Logo"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+            "dm0",
+            "dm1",
+            "dm2",
+            "dm3",
+            "dm4",
+            "dm5",
+            "dm6",
+            "dm7",
+            "dm8",
+            "dm9",
+            "dm10",
+            "dm11",
+            "dm12"
         ]
     },
     "Buttons": {
+        "textured": false,
         "filePrefix": "buttons",
         "shadowCatchers": [
             "Body"
@@ -140,6 +185,7 @@
         ]
     },
     "Strings": {
+        "textured": false,
         "filePrefix": "strings",
         "shadowCatchers": [],
         "excludedFromRender": [
@@ -159,6 +205,7 @@
         ]
     },
     "Collar_cave": {
+        "textured": true,
         "filePrefix": "cave",
         "shadowCatchers": [],
         "excludedFromRender": [
@@ -174,16 +221,27 @@
             "Logo"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+            "dm0",
+            "dm1",
+            "dm2",
+            "dm3",
+            "dm4",
+            "dm5",
+            "dm6",
+            "dm7",
+            "dm8",
+            "dm9",
+            "dm10",
+            "dm11",
+            "dm12"
         ]
     },
     "Logo": {
+        "textured": true,
         "filePrefix": "logo",
-        "shadowCatchers": ["Collar_cave"],
+        "shadowCatchers": [
+            "Collar_cave"
+        ],
         "excludedFromRender": [
             "Collar_inner",
             "Collar_outer",
@@ -197,11 +255,19 @@
             "Buttons"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+            "dm0",
+            "dm1",
+            "dm2",
+            "dm3",
+            "dm4",
+            "dm5",
+            "dm6",
+            "dm7",
+            "dm8",
+            "dm9",
+            "dm10",
+            "dm11",
+            "dm12"
         ]
     }
 }

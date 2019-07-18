@@ -17,14 +17,24 @@ parser.add_argument("-r", "--reset", action='store_true')
 parser.add_argument("-w", "--watch", action='store_true')
 parser.add_argument("-e", "--exec", action="store_true")
 
+
 args = parser.parse_args()
 
 if __name__ == "__main__":
     cmd = None
     if args.reset:
         cmd = ResetCommand(Instance(),args)
+        cmd.run()
     if args.watch:
         cmd = WatchCommand(Instance(),args)
-    if args.exec:
+        cmd.run()
+    if args.exec and args.watch is not True :
         cmd = RenderCommand(Instance(),args)
-    cmd.run()
+        cmd.run()
+    if args.exec and args.watch:
+        i = Instance()
+        cmd = WatchCommand(i,args)
+        cmd.run()
+        cmd = RenderCommand(i,args)
+        cmd.run()
+

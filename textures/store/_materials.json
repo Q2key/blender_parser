@@ -1,0 +1,80 @@
+[
+    {
+        "id": "dm0",
+        "texture": "C:/blender/src/textures/store/0",
+        "map": false,
+        "type": "fabric_multy"
+    },
+    {
+        "id": "dm1",
+        "texture": "C:/blender/src/textures/store/1",
+        "map": false,
+        "type": "fabric_multy"
+    },
+    {
+        "id": "dm2",
+        "texture": "C:/blender/src/textures/store/2",
+        "map": false,
+        "type": "fabric_multy"
+    },
+    {
+        "id": "dm3",
+        "texture": "C:/blender/src/textures/store/3",
+        "map": false,
+        "type": "fabric_multy"
+    },
+    {
+        "id": "dm4",
+        "texture": "C:/blender/src/textures/store/4",
+        "map": false,
+        "type": "fabric_multy"
+    },
+    {
+        "id": "dm5",
+        "texture": "C:/blender/src/textures/store/5",
+        "map": false,
+        "type": "fabric_multy"
+    },
+    {
+        "id": "dm6",
+        "texture": "C:/blender/src/textures/store/6",
+        "map": false,
+        "type": "fabric_multy"
+    },
+    {
+        "id": "dm7",
+        "texture": "C:/blender/src/textures/store/7",
+        "map": false,
+        "type": "fabric_multy"
+    },
+    {
+        "id": "dm8",
+        "texture": "C:/blender/src/textures/store/8",
+        "map": false,
+        "type": "fabric_multy"
+    },
+    {
+        "id": "dm9",
+        "texture": "C:/blender/src/textures/store/9",
+        "map": false,
+        "type": "fabric_multy"
+    },
+    {
+        "id": "dm10",
+        "texture": "C:/blender/src/textures/store/10",
+        "map": false,
+        "type": "fabric_multy"
+    },
+    {
+        "id": "dm11",
+        "texture": "C:/blender/src/textures/store/11",
+        "map": false,
+        "type": "fabric_multy"
+    },
+    {
+        "id": "dm12",
+        "texture": "C:/blender/src/textures/store/12",
+        "map": false,
+        "type": "fabric_multy"
+    }
+]

@@ -1,5 +1,6 @@
 {
     "Collar_inner": {
+        "textured" : true,
         "filePrefix": "collar_inner",
         "shadowCatchers": [
         ],
@@ -24,6 +25,7 @@
         ]
     },
     "Collar_outer": {
+        "textured" : true,
         "filePrefix": "collar_outer",
         "shadowCatchers": [
             "Body"
@@ -48,6 +50,7 @@
         ]
     },
     "Sleeve_inner": {
+        "textured" : true,
         "filePrefix": "sleeve_inner",
         "shadowCatchers": [],
         "excludedFromRender": [
@@ -71,6 +74,7 @@
         ]
     },
     "Sleeve_outer": {
+        "textured" : true,
         "filePrefix": "sleeve_outer",
         "shadowCatchers": [
             "Body"
@@ -95,6 +99,7 @@
         ]
     },
     "Body": {
+        "textured" : true,
         "filePrefix": "body",
         "shadowCatchers": [],
         "excludedFromRender": [
@@ -118,6 +123,7 @@
         ]
     },
     "Buttons": {
+        "textured" : false,
         "filePrefix": "buttons",
         "shadowCatchers": [
             "Body"
@@ -140,6 +146,7 @@
         ]
     },
     "Strings": {
+        "textured" : false,
         "filePrefix": "strings",
         "shadowCatchers": [],
         "excludedFromRender": [
@@ -159,6 +166,7 @@
         ]
     },
     "Collar_cave": {
+        "textured" : true,
         "filePrefix": "cave",
         "shadowCatchers": [],
         "excludedFromRender": [
@@ -182,6 +190,7 @@
         ]
     },
     "Logo": {
+        "textured" : true,
         "filePrefix": "logo",
         "shadowCatchers": ["Collar_cave"],
         "excludedFromRender": [
