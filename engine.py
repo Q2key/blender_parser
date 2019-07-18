@@ -65,14 +65,15 @@ class Engine:
     def set_catchers(self, d):
         for sc in d["shadowCatchers"]:
             bpy.data.objects[sc].cycles.is_shadow_catcher = True
+            bpy.data.objects[sc].hide_render = False
 
     def set_excluded(self, d):
-        for ex in d["excludedFromRender"]:
-            bpy.data.objects[ex].hide_render = True
+        for ex in d["included"]:
+            bpy.data.objects[ex].hide_render = False
 
     def reset_included(self):
         for inc in self.ctx.SCENE['Components']:
-            bpy.data.objects[inc].hide_render = False
+            bpy.data.objects[inc].hide_render = True
 
     def reset_catchers(self):
         for sc in self.ctx.SCENE['Components']:
