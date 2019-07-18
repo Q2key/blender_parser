@@ -22,19 +22,15 @@ args = parser.parse_args()
 
 if __name__ == "__main__":
     cmd = None
+    cmd_stack = list()
+    ctx = Instance()
     if args.reset:
-        cmd = ResetCommand(Instance(),args)
-        cmd.run()
+        cmd_stack.append(ResetCommand(ctx,args))
     if args.watch:
-        cmd = WatchCommand(Instance(),args)
-        cmd.run()
-    if args.exec and args.watch is not True :
-        cmd = RenderCommand(Instance(),args)
-        cmd.run()
-    if args.exec and args.watch:
-        i = Instance()
-        cmd = WatchCommand(i,args)
-        cmd.run()
-        cmd = RenderCommand(i,args)
+        cmd_stack.append(WatchCommand(ctx,args))
+    if args.exec:
+        cmd_stack.append(RenderCommand(ctx,args))
+
+    for cmd in cmd_stack:
         cmd.run()
 

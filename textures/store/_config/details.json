@@ -16,19 +16,19 @@
             "Logo"
         ],
         "avaibleMaterialsID": [
-            "dm0",
-            "dm1",
-            "dm2",
-            "dm3",
-            "dm4",
-            "dm5",
-            "dm6",
-            "dm7",
-            "dm8",
-            "dm9",
-            "dm10",
-            "dm11",
-            "dm12"
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
         ]
     },
     "Collar_outer": {
@@ -49,19 +49,19 @@
             "Logo"
         ],
         "avaibleMaterialsID": [
-            "dm0",
-            "dm1",
-            "dm2",
-            "dm3",
-            "dm4",
-            "dm5",
-            "dm6",
-            "dm7",
-            "dm8",
-            "dm9",
-            "dm10",
-            "dm11",
-            "dm12"
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
         ]
     },
     "Sleeve_inner": {
@@ -81,19 +81,19 @@
             "Logo"
         ],
         "avaibleMaterialsID": [
-            "dm0",
-            "dm1",
-            "dm2",
-            "dm3",
-            "dm4",
-            "dm5",
-            "dm6",
-            "dm7",
-            "dm8",
-            "dm9",
-            "dm10",
-            "dm11",
-            "dm12"
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
         ]
     },
     "Sleeve_outer": {
@@ -114,19 +114,19 @@
             "Logo"
         ],
         "avaibleMaterialsID": [
-            "dm0",
-            "dm1",
-            "dm2",
-            "dm3",
-            "dm4",
-            "dm5",
-            "dm6",
-            "dm7",
-            "dm8",
-            "dm9",
-            "dm10",
-            "dm11",
-            "dm12"
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
         ]
     },
     "Body": {
@@ -146,19 +146,19 @@
             "Logo"
         ],
         "avaibleMaterialsID": [
-            "dm0",
-            "dm1",
-            "dm2",
-            "dm3",
-            "dm4",
-            "dm5",
-            "dm6",
-            "dm7",
-            "dm8",
-            "dm9",
-            "dm10",
-            "dm11",
-            "dm12"
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
         ]
     },
     "Buttons": {
@@ -221,19 +221,19 @@
             "Logo"
         ],
         "avaibleMaterialsID": [
-            "dm0",
-            "dm1",
-            "dm2",
-            "dm3",
-            "dm4",
-            "dm5",
-            "dm6",
-            "dm7",
-            "dm8",
-            "dm9",
-            "dm10",
-            "dm11",
-            "dm12"
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
         ]
     },
     "Logo": {
@@ -255,19 +255,19 @@
             "Buttons"
         ],
         "avaibleMaterialsID": [
-            "dm0",
-            "dm1",
-            "dm2",
-            "dm3",
-            "dm4",
-            "dm5",
-            "dm6",
-            "dm7",
-            "dm8",
-            "dm9",
-            "dm10",
-            "dm11",
-            "dm12"
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
         ]
     }
 }

@@ -18,10 +18,10 @@ class WatchCommand:
         f = os.listdir(s)
         t = [e for e in f if self.check(e)]
         m = list()
-        for (e, i) in enumerate(t):
+        for (key,val) in enumerate(t):
             m.append({
-                "id": str.format("dm{0}", e),
-                "texture": str.format("{0}/{1}", s, e),
+                "id": str.format("[{0}]", val),
+                "texture": str.format("{0}/{1}", s, val),
                 "map": False,
                 "type": "fabric_multy"
             })
@@ -34,14 +34,14 @@ class WatchCommand:
                 v["avaibleMaterialsID"] = ids
     
     def write_config(self,file,data):
-        with open(str.format("{0}/{1}",self.ctx.STORE_PATH,file),mode="w") as f:
+        with open(str.format("{0}/_config/{1}",self.ctx.STORE_PATH,file),mode="w") as f:
             f.write(data)
 
     def flush_config(self):
-        self.write_config("_details.json",json.dumps(self.ctx.DETAILS,indent=4))
-        self.write_config("_scene.json",json.dumps(self.ctx.SCENE,indent=4))
-        self.write_config("_app.json",json.dumps(self.ctx.APP,indent=4))
-        self.write_config("_materials.json",json.dumps(self.ctx.MATERIALS,indent=4))
+        self.write_config("details.json",json.dumps(self.ctx.DETAILS,indent=4))
+        self.write_config("scene.json",json.dumps(self.ctx.SCENE,indent=4))
+        self.write_config("app.json",json.dumps(self.ctx.APP,indent=4))
+        self.write_config("materials.json",json.dumps(self.ctx.MATERIALS,indent=4))
 
 
     def run(self):
