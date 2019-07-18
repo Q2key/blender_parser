@@ -28,10 +28,12 @@ class WatchCommand:
         return m
 
     def extend_details(self):
-        ids = [ m["id"] for m in self.search_for_material() ]
+        mts = self.search_for_material()
+        ids = [ m["id"] for m in mts]
         for (k, v) in self.ctx.DETAILS.items():
             if v["textured"]:
                 v["avaibleMaterialsID"] = ids
+        self.ctx.MATERIALS.extend(mts)
     
     def write_config(self,file,data):
         with open(str.format("{0}/_config/{1}",self.ctx.STORE_PATH,file),mode="w") as f:
