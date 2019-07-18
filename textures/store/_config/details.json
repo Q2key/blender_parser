@@ -184,9 +184,9 @@
             "pg3"
         ]
     },
-    "Strings": {
+    "Strings_sleeve": {
         "textured": false,
-        "filePrefix": "strings",
+        "filePrefix": "strings_sleeve",
         "shadowCatchers": [],
         "excludedFromRender": [
             "Collar_inner",
@@ -196,7 +196,53 @@
             "Sleeve_outer",
             "Body",
             "Buttons",
-            "Logo"
+            "Logo",
+            "Strings_collar",
+            "Strings_body"
+        ],
+        "avaibleMaterialsID": [
+            "sm1",
+            "sm2",
+            "sm3"
+        ]
+    },
+    "Strings_collar": {
+        "textured": false,
+        "filePrefix": "strings_collar",
+        "shadowCatchers": [],
+        "excludedFromRender": [
+            "Collar_inner",
+            "Collar_outer",
+            "Collar_cave",
+            "Sleeve_inner",
+            "Sleeve_outer",
+            "Body",
+            "Buttons",
+            "Logo",
+            "Strings_buttons",
+            "Strins_body"
+        ],
+        "avaibleMaterialsID": [
+            "sm1",
+            "sm2",
+            "sm3"
+        ]
+    },
+    "Strings_body": {
+        "textured": false,
+        "filePrefix": "strings_buttons",
+        "shadowCatchers": [],
+        "excludedFromRender": [
+            "Collar_inner",
+            "Collar_outer",
+            "Collar_cave",
+            "Sleeve_inner",
+            "Sleeve_outer",
+            "Body",
+            "Buttons",
+            "Logo",
+            "Strings_collar",
+            "Strings_sleeve"
         ],
         "avaibleMaterialsID": [
             "sm1",
