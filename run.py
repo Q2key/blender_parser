@@ -17,13 +17,12 @@ parser.add_argument("-r", "--reset", action='store_true')
 parser.add_argument("-w", "--watch", action='store_true')
 parser.add_argument("-e", "--exec", action="store_true")
 
-
 args = parser.parse_args()
 
 if __name__ == "__main__":
-    cmd = None
     cmd_stack = list()
     ctx = Instance()
+
     if args.reset:
         cmd_stack.append(ResetCommand(ctx,args))
     if args.watch:
