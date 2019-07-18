@@ -88,10 +88,8 @@ class Engine:
         self.before_render(d)
         for m in d['avaibleMaterials']:
             file_prefix = str.format("{0}_{1}",d["filePrefix"], m["id"])
-           
             b = str.format("{0}/{1}_b.png", self.folder,file_prefix)
             s = str.format("{0}/{1}_s.png", self.folder,file_prefix)
-
             self.set_material(m)
             self.render_detail(b)
             self.save_small(b,s)

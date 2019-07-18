@@ -25,10 +25,10 @@ class WatchCommand:
                 "map": False,
                 "type": "fabric_multy"
             })
-        self.ctx.MATERIALS = m
+        return m
 
     def extend_details(self):
-        ids = [m["id"] for m in self.ctx.MATERIALS]
+        ids = [m["id"] for m in self.search_for_material()]
         for (k, v) in self.ctx.DETAILS.items():
             if v["textured"]:
                 v["avaibleMaterialsID"] = ids
