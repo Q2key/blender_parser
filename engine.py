@@ -2,13 +2,13 @@ import os
 import sys
 import json
 import datetime
-#import bpy
+import bpy
 
 from PIL import Image
 
-#from workers.fabric_worker import FabricWorker 
-#from workers.plastic_worker import PlasticWorker 
-#from workers.strings_worker import StringsWorker
+from workers.fabric_worker import FabricWorker 
+from workers.plastic_worker import PlasticWorker 
+from workers.strings_worker import StringsWorker
 
 
 class Engine:
@@ -23,7 +23,7 @@ class Engine:
         d['avaibleMaterials'] = [m for m in self.ctx.MATERIALS if m['id'] in d['avaibleMaterialsID'] ]
 
     def go(self):
-        #self.set_scene()
+        self.set_scene()
         self.filter_details()
         self.extend_details()
         self.process_details()
