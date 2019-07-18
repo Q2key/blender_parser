@@ -1,6 +1,9 @@
 from engine import Engine
 class ResetCommand:
+
+    def __init__(self,ctx,args):
+        self.ctx = ctx
+        self.args = args
     
     def run(self,ctx,args):
-            engine = Engine(ctx,args)
-            engine.go()
+        print("reset")
