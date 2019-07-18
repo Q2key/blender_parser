@@ -19,10 +19,8 @@ class Engine:
         self.folder = str.format("{0}/{1}", ctx.RENDERS_PATH,
                                  datetime.datetime.now().strftime("%d_%b_%Y_(%H_%M_%S)"))
 
-
     def extend_materials(self,d):
         d['avaibleMaterials'] = [m for m in self.ctx.MATERIALS if m['id'] in d['avaibleMaterialsID'] ]
-
 
     def go(self):
         self.set_scene()
@@ -105,8 +103,6 @@ class Engine:
             PlasticWorker.create_gloss_plastic_material(m)
         if m['type'] == 'strings_base':
             StringsWorker.create_strings_material(m)
-
-
 
 
     def save_small(self,b,s):

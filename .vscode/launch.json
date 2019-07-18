@@ -18,7 +18,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "args": ["--","-m","Sleeve_inner"]
+            "args": ["--","-m","Sleeve_inner", "-e","render"]
         }
     ]
 }
