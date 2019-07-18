@@ -5,6 +5,7 @@ import datetime
 import bpy
 
 from PIL import Image
+
 from workers.fabric_worker import FabricWorker 
 from workers.plastic_worker import PlasticWorker 
 from workers.strings_worker import StringsWorker
@@ -12,19 +13,44 @@ from workers.strings_worker import StringsWorker
 
 class Engine:
 
-    def __init__(self, context):
-        self.ctx = context
-        self.folder = str.format("{0}/{1}", context.RENDERS_PATH,
+    def __init__(self, ctx, args=False):
+        self.ctx = ctx
+        self.args = args
+        self.folder = str.format("{0}/{1}", ctx.RENDERS_PATH,
                                  datetime.datetime.now().strftime("%d_%b_%Y_(%H_%M_%S)"))
+
+
+    def extend_materials(self,d):
+        d['avaibleMaterials'] = [m for m in self.ctx.MATERIALS if m['id'] in d['avaibleMaterialsID'] ]
 
 
     def go(self):
         self.set_scene()
-        self.render_all()
+        self.filter_details()
+        self.extend_details()
+        self.process_details()
 
-    def render_all(self):
-        for d in self.ctx.DETAILS:
-            self.render_partial(self.ctx.DETAILS[d])
+    def filter_details(self):
+        if self.args and self.args.model:
+            details = dict()
+            # Iterate over all the items in dictionary
+            for (key, value) in self.ctx.DETAILS.items():
+                if key == self.args.model:
+                    details[key] = value
+            self.ctx.DETAILS = details
+
+    def get_material(self,d):
+        d['avaibleMaterials'] = [
+                e for e in self.ctx.MATERIALS 
+                    if e['id'] in d['avaibleMaterialsID']]
+
+    def extend_details(self):
+        [ self.get_material(d) for d in self.ctx.DETAILS.values() ]
+
+    def process_details(self):
+        for key,value in self.ctx.DETAILS.items():
+            self.render_partial(value)
+
 
     def get_folder(self):
         # define the name of the directory to be created

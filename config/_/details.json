@@ -1,0 +1,207 @@
+{
+    "Collar_inner": {
+        "filePrefix": "collar_inner",
+        "shadowCatchers": [
+        ],
+        "excludedFromRender": [
+            "Body",
+            "Buttons",
+            "Collar_cave",
+            "Collar_outer",
+            "Sleeve_inner",
+            "Sleeve_outer",
+            "Strings_body",
+            "Strings_collar",
+            "Strings_sleeve",
+            "Logo"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    "Collar_outer": {
+        "filePrefix": "collar_outer",
+        "shadowCatchers": [
+            "Body"
+        ],
+        "excludedFromRender": [
+            "Buttons",
+            "Collar_cave",
+            "Sleeve_inner",
+            "Sleeve_outer",
+            "Collar_inner",
+            "Strings_body",
+            "Strings_collar",
+            "Strings_sleeve",
+            "Logo"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    "Sleeve_inner": {
+        "filePrefix": "sleeve_inner",
+        "shadowCatchers": [],
+        "excludedFromRender": [
+            "Body",
+            "Buttons",
+            "Collar_inner",
+            "Collar_outer",
+            "Collar_cave",
+            "Sleeve_outer",
+            "Strings_body",
+            "Strings_collar",
+            "Strings_sleeve",
+            "Logo"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    "Sleeve_outer": {
+        "filePrefix": "sleeve_outer",
+        "shadowCatchers": [
+            "Body"
+        ],
+        "excludedFromRender": [
+            "Buttons",
+            "Collar_inner",
+            "Collar_outer",
+            "Collar_cave",
+            "Sleeve_inner",
+            "Strings_body",
+            "Strings_collar",
+            "Strings_sleeve",
+            "Logo"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    "Body": {
+        "filePrefix": "body",
+        "shadowCatchers": [],
+        "excludedFromRender": [
+            "Buttons",
+            "Sleeve_inner",
+            "Sleeve_outer",
+            "Collar_inner",
+            "Collar_outer",
+            "Collar_cave",
+            "Strings_collar",
+            "Strings_body",
+            "Strings_sleeve",
+            "Logo"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    "Buttons": {
+        "filePrefix": "buttons",
+        "shadowCatchers": [
+            "Body"
+        ],
+        "excludedFromRender": [
+            "Sleeve_inner",
+            "Sleeve_outer",
+            "Collar_inner",
+            "Collar_outer",
+            "Collar_cave",
+            "Strings_body",
+            "Strings_sleeve",
+            "Strings_collar",
+            "Logo"
+        ],
+        "avaibleMaterialsID": [
+            "pg1",
+            "pg2",
+            "pg3"
+        ]
+    },
+    "Strings": {
+        "filePrefix": "strings",
+        "shadowCatchers": [],
+        "excludedFromRender": [
+            "Collar_inner",
+            "Collar_outer",
+            "Collar_cave",
+            "Sleeve_inner",
+            "Sleeve_outer",
+            "Body",
+            "Buttons",
+            "Logo"
+        ],
+        "avaibleMaterialsID": [
+            "sm1",
+            "sm2",
+            "sm3"
+        ]
+    },
+    "Collar_cave": {
+        "filePrefix": "cave",
+        "shadowCatchers": [],
+        "excludedFromRender": [
+            "Collar_inner",
+            "Collar_outer",
+            "Sleeve_inner",
+            "Sleeve_outer",
+            "Strings_body",
+            "Strings_sleeve",
+            "Strings_collar",
+            "Body",
+            "Buttons",
+            "Logo"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    "Logo": {
+        "filePrefix": "logo",
+        "shadowCatchers": ["Collar_cave"],
+        "excludedFromRender": [
+            "Collar_inner",
+            "Collar_outer",
+            "Collar_cave",
+            "Sleeve_inner",
+            "Sleeve_outer",
+            "Strings_body",
+            "Strings_sleeve",
+            "Strings_collar",
+            "Body",
+            "Buttons"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    }
+}

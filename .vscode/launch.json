@@ -5,12 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Текущий файл",
+            "name": "All",
             "type": "python",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
             "args": ["--","-m","all"]
+        },
+        {
+            "name": "Sleeve_inner",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": ["--","-m","Sleeve_inner"]
         }
     ]
 }

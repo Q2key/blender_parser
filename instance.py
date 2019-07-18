@@ -21,10 +21,6 @@ class Instance:
         except OSError:  
             print ("Creation of the directory %s failed" % path)
 
-    def extend_materials(self,d):
-        d['avaibleMaterials'] = [a for a in self.MATERIALS if a['id'] in d['avaibleMaterialsID']]
-
-
     def get_folder(self):
         # define the name of the directory to be created
         dt = datetime.datetime.now().strftime("%d_%b_%Y_(%H_%M_%S)")
@@ -36,11 +32,5 @@ class Instance:
         else:  
             print ("Successfully created the directory %s " % path)
         return path
-
-    def init(self,model):
-        if model == 'all':
-            [ self.extend_materials(d) for d in self.DETAILS.values()]
-        else:
-            [ self.extend_materials(self.DETAILS[model]) ]
 
 
