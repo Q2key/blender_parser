@@ -1,8 +1,10 @@
 import os
 import sys
 
-os.sys.path.append(os.getcwd())
-os.sys.path.append(str.format("{0}/src",os.getcwd()))
+
+root = os.path.dirname(__file__)
+sys.path.append(root)
+sys.path.append(root + "/src")
 
 from instance import Instance
 from argparser import ArgumentParserForBlender

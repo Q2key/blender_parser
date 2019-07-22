@@ -8,7 +8,7 @@ class Instance:
     def __init__(self):
         core_path = os.getcwd()
         src_path = str.format("{0}/src",core_path)
-        self.RENDERS_PATH = str.format("{0}/renders",core_path)
+        self.RENDERS_PATH = str.format("{0}/renders",src_path)
         self.STORE_PATH = str.format("{0}/textures/store",src_path)
         self.DETAILS = self.read_config(str.format("{0}/config/details.json",src_path))
         self.MATERIALS = self.read_config(str.format("{0}/config/materials.json",src_path))
