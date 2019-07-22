@@ -30,7 +30,6 @@ if __name__ == "__main__":
         cmd_stack.append(WatchCommand(ctx,args))
     if args.exec:
         cmd_stack.append(RenderCommand(ctx,args))
-
     for cmd in cmd_stack:
         cmd.run()
 

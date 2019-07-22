@@ -6,14 +6,13 @@ import datetime
 class Instance:
 
     def __init__(self):
-        self.BLENDER_PATH = "C:/blender"
-        self.STORE_PATH = str.format("{0}/src/textures/store",self.BLENDER_PATH)
-        self.SRC_PATH = str.format("{0}/src",self.BLENDER_PATH)
-        self.RENDERS_PATH = str.format("{0}/renders",self.SRC_PATH)
-        self.DETAILS = self.read_config(str.format("{0}/config/details.json",self.SRC_PATH))
-        self.MATERIALS = self.read_config(str.format("{0}/config/materials.json",self.SRC_PATH))
-        self.SCENE = self.read_config(str.format("{0}/config/scene.json",self.SRC_PATH))
-        self.APP =  self.read_config(str.format("{0}/config/app.json",self.SRC_PATH))
+        core_path = os.getcwd()
+        src_path = str.format("{0}/src",core_path)
+        self.RENDERS_PATH = str.format("{0}/renders",core_path)
+        self.STORE_PATH = str.format("{0}/textures/store",src_path)
+        self.DETAILS = self.read_config(str.format("{0}/config/details.json",src_path))
+        self.MATERIALS = self.read_config(str.format("{0}/config/materials.json",src_path))
+        self.SCENE = self.read_config(str.format("{0}/config/scene.json",src_path))
 
     def read_config(self,path):
         try:

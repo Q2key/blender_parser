@@ -32,7 +32,8 @@ class Engine:
         if self.args and self.args.model:
             details = dict()
             # Iterate over all the items in dictionary
-            for (key, value) in self.ctx.DETAILS.items():
+            itms = self.ctx.DETAILS.items()
+            for (key, value) in itms:
                 if key == self.args.model:
                     details[key] = value
             self.ctx.DETAILS = details
@@ -43,10 +44,12 @@ class Engine:
                 if e['id'] in d['avaibleMaterialsID']]
 
     def extend_details(self):
-        [ self.get_material(d) for d in self.ctx.DETAILS.values() ]
+        vls = self.ctx.DETAILS.values()
+        [ self.get_material(d) for d in vls ]
 
     def process_details(self):
-        for key,value in self.ctx.DETAILS.items():
+        itms = self.ctx.DETAILS.items()
+        for key,value in itms:
             self.render_partial(value)
 
 
