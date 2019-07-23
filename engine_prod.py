@@ -74,6 +74,12 @@ class Engine:
         for ex in d["included"]:
             bpy.data.objects[ex].hide_render = False
 
+
+    def exclude_all_objects():
+        for (k,v) in bpy.data.objects.items():
+            if v.name not in ["Camera","Lamp_0","Lamp_1","Lamp_2","Lamp_4"]:
+                v.hide_render = True
+
     def reset_included(self):
         for inc in self.ctx.SCENE['Components']:
             bpy.data.objects[inc].hide_render = True
