@@ -5,7 +5,6 @@ import datetime
 
 from PIL import Image
 
-
 class Engine:
 
     def __init__(self, ctx, args=False):
