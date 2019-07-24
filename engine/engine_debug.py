@@ -96,11 +96,11 @@ class Engine(EngineBase):
         p = d['filePrefix']
         for m in d['avaibleMaterials']:
             file_prefix = str.format("{0}_{1}",d["filePrefix"], m["id"])
-            b = str.format("{0}/{1}/{2}_b.png", self.folder, p,file_prefix)
-            s = str.format("{0}/{1}/{2}_s.png", self.folder, p, file_prefix)
+            ns = ph.get_image_name(
+                self.folder,file_prefix,self.ctx.SCENE['Resolution'])
             self.set_material(m)
-            self.render_detail(b)
-            self.save_small(b,s)
+            self.render_detail(ns)
+            self.save_small(ns)
 
     def set_material(self, m):
         self.print_caller()

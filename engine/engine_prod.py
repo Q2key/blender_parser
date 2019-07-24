@@ -78,13 +78,16 @@ class Engine(EngineBase):
     def render_partial(self, d):
         self.before_render(d)
         p = d['filePrefix']
+        r = self.ctx.SCENE['Resolution']
         for m in d['avaibleMaterials']:
-            file_prefix = str.format("{0}_{1}", p, m["id"])
-            b = str.format("{0}/{1}/{2}_b.png", self.folder,p,file_prefix)
-            s = str.format("{0}/{1}/{2}_s.png", self.folder,p,file_prefix)
+            file_prefix = str.format("{0}_{1}",p, m["id"])
+            ns = ph.get_image_name(
+                self.folder,file_prefix,r)
             self.set_material(m)
-            self.render_detail(b)
-            self.save_small(b,s)
+            self.render_detail(ns)
+
+            #save small copy
+            ph.save_small(ns,r)
 
     def set_material(self, m):
         if m['type'] == 'fabric_multy':
@@ -94,13 +97,6 @@ class Engine(EngineBase):
         if m['type'] == 'strings_base':
             StringsWorker.create_strings_material(m)
 
-    def save_small(self,b,s):
-        img = Image.open(b)
-        new_width  = self.ctx.SCENE["Resolution"]["Small"]["x"]
-        new_height = self.ctx.SCENE["Resolution"]["Small"]["y"]
-        img = img.resize((new_width, new_height), Image.ANTIALIAS)
-        img.save(s)
-
     def set_scene(self):
         bpy.data.scenes["Scene"].render.engine = 'CYCLES'
         bpy.data.scenes["Scene"].render.resolution_x = self.ctx.SCENE["Resolution"]["Big"]["x"]
@@ -108,5 +104,5 @@ class Engine(EngineBase):
         bpy.data.scenes["Scene"].render.resolution_percentage = self.ctx.SCENE["Percentage"]
 
     def render_detail(self, result):
-        bpy.context.scene.render.filepath = result
+        bpy.context.scene.render.filepath = result['b']
         bpy.ops.render.render(write_still=True)

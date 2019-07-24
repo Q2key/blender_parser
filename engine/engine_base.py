@@ -56,9 +56,11 @@ class EngineBase(ABC):
     def set_material(self, m):
         pass
 
+    '''
     @abstractmethod
     def save_small(self,b,s):
         pass
+    '''
 
     @abstractmethod
     def set_scene(self):
