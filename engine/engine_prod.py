@@ -82,10 +82,10 @@ class Engine(EngineBase):
         r = self.ctx.SCENE['Resolution']
         for m in d['avaibleMaterials']:
             fp = str.format("{0}_{1}", p, m["id"])
-            ns = ph.get_image_name(self.folder, fp, r)
+            ns = ph.get_image_name(self.folder,p,fp,r)
             self.set_material(m)
             self.render_detail(ns)
-            self.save_small(ns, r)
+            self.save_small(ns,r)
 
     def set_material(self, m):
         if m['type'] == 'fabric_multy':
