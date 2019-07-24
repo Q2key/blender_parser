@@ -6,6 +6,8 @@ import inspect
 
 from PIL import Image
 from engine.engine_base import EngineBase
+from helpers.process_helper import ProcessHelper as ph
+
 
 class Engine(EngineBase):
 
@@ -17,8 +19,7 @@ class Engine(EngineBase):
         self.print_caller()
         self.ctx = ctx
         self.args = args
-        self.folder = str.format("{0}/{1}", ctx.RENDERS_PATH,
-                                 datetime.datetime.now().strftime("%d_%b_%Y_(%H_%M_%S)"))
+        self.folder = ph.get_folder_name(ctx.RENDERS_PATH)
 
     def extend_materials(self,d):
         self.print_caller()
@@ -92,10 +93,11 @@ class Engine(EngineBase):
     def render_partial(self, d):
         self.print_caller()
         self.before_render(d)
+        p = d['filePrefix']
         for m in d['avaibleMaterials']:
             file_prefix = str.format("{0}_{1}",d["filePrefix"], m["id"])
-            b = str.format("{0}/{1}_b.png", self.folder,file_prefix)
-            s = str.format("{0}/{1}_s.png", self.folder,file_prefix)
+            b = str.format("{0}/{1}/{2}_b.png", self.folder, p,file_prefix)
+            s = str.format("{0}/{1}/{2}_s.png", self.folder, p, file_prefix)
             self.set_material(m)
             self.render_detail(b)
             self.save_small(b,s)
