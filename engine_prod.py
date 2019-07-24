@@ -76,7 +76,7 @@ class Engine:
             if ex in bpy.data.objects:
                 bpy.data.objects[ex].hide_render = False
 
-    def set_default():
+    def set_default(self):
         for (k,v) in bpy.data.objects.items():
             if v.name not in ["Camera","Lamp_0","Lamp_1","Lamp_2","Lamp_4"]:
                 v.hide_render = True
@@ -89,11 +89,11 @@ class Engine:
 
     def reset_catchers(self):
         for sc in self.ctx.SCENE['Components']:
-            bpy.data.objects[sc].cycles.is_shadow_catcher = False
+            if sc in bpy.data.objects:
+                bpy.data.objects[sc].cycles.is_shadow_catcher = False
 
     def before_render(self, d):
-        self.reset_catchers()
-        self.reset_included()
+        self.set_default()
         self.set_catchers(d)
         self.set_excluded(d)
 

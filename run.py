@@ -25,7 +25,6 @@ args = parser.parse_args()
 if __name__ == "__main__":
     cmd_stack = list()
     ctx = Instance()
-
     if args.reset:
         cmd_stack.append(ResetCommand(ctx,args))
     if args.watch:
