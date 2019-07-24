@@ -6,11 +6,12 @@ import bpy
 
 from PIL import Image
 
-from workers.fabric_worker import FabricWorker 
-from workers.plastic_worker import PlasticWorker 
+from workers.fabric_worker import FabricWorker
+from workers.plastic_worker import PlasticWorker
 from workers.strings_worker import StringsWorker
 from engine.engine_base import EngineBase
 from helpers.process_helper import ProcessHelper as ph
+
 
 class Engine(EngineBase):
 
@@ -19,8 +20,10 @@ class Engine(EngineBase):
         self.args = args
         self.folder = ph.get_folder_name(ctx.RENDERS_PATH)
 
-    def extend_materials(self,d):
-        d['avaibleMaterials'] = [ m for m in self.ctx.MATERIALS if m['id'] in d['avaibleMaterialsID'] ]
+    def extend_materials(self, d):
+        d['avaibleMaterials'] = [
+            m for m in self.ctx.MATERIALS if
+            m['id'] in d['avaibleMaterialsID']]
 
     def go(self):
         self.set_scene()
@@ -28,29 +31,27 @@ class Engine(EngineBase):
         self.extend_details()
         self.process_details()
 
-
     def filter_details(self):
         if self.args and self.args.model:
             details = dict()
-            # Iterate over all the items in dictionary
             itms = self.ctx.DETAILS.items()
             for (key, value) in itms:
                 if key == self.args.model:
                     details[key] = value
             self.ctx.DETAILS = details
 
-    def get_material(self,d):
+    def get_material(self, d):
         d['avaibleMaterials'] = [
-            e for e in self.ctx.MATERIALS 
-                if e['id'] in d['avaibleMaterialsID']]
+            e for e in self.ctx.MATERIALS
+            if e['id'] in d['avaibleMaterialsID']]
 
     def extend_details(self):
         vls = self.ctx.DETAILS.values()
-        [ self.get_material(d) for d in vls ]
+        [self.get_material(d) for d in vls]
 
     def process_details(self):
         itms = self.ctx.DETAILS.items()
-        for key,value in itms:
+        for key, value in itms:
             self.render_partial(value)
 
     def set_catchers(self, d):
@@ -65,8 +66,8 @@ class Engine(EngineBase):
                 bpy.data.objects[ex].hide_render = False
 
     def set_default(self):
-        for (k,v) in bpy.data.objects.items():
-            if v.name not in ["Camera","Lamp_0","Lamp_1","Lamp_2","Lamp_4"]:
+        for (k, v) in bpy.data.objects.items():
+            if v.name not in ["Camera", "Lamp_0", "Lamp_1", "Lamp_2", "Lamp_4"]:
                 v.hide_render = True
                 v.cycles.is_shadow_catcher = False
 
@@ -80,14 +81,11 @@ class Engine(EngineBase):
         p = d['filePrefix']
         r = self.ctx.SCENE['Resolution']
         for m in d['avaibleMaterials']:
-            file_prefix = str.format("{0}_{1}",p, m["id"])
-            ns = ph.get_image_name(
-                self.folder,file_prefix,r)
+            fp = str.format("{0}_{1}", p, m["id"])
+            ns = ph.get_image_name(self.folder, fp, r)
             self.set_material(m)
             self.render_detail(ns)
-
-            #save small copy
-            ph.save_small(ns,r)
+            self.save_small(ns, r)
 
     def set_material(self, m):
         if m['type'] == 'fabric_multy':
@@ -96,6 +94,9 @@ class Engine(EngineBase):
             PlasticWorker.create_gloss_plastic_material(m)
         if m['type'] == 'strings_base':
             StringsWorker.create_strings_material(m)
+
+    def save_small(self, ns, r):
+        ph.save_small(ns, r)
 
     def set_scene(self):
         bpy.data.scenes["Scene"].render.engine = 'CYCLES'

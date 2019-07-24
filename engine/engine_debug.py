@@ -94,10 +94,10 @@ class Engine(EngineBase):
         self.print_caller()
         self.before_render(d)
         p = d['filePrefix']
+        r = self.ctx.SCENE['Resolution']
         for m in d['avaibleMaterials']:
-            file_prefix = str.format("{0}_{1}",d["filePrefix"], m["id"])
-            ns = ph.get_image_name(
-                self.folder,file_prefix,self.ctx.SCENE['Resolution'])
+            fp = str.format("{0}_{1}",d["filePrefix"], m["id"])
+            ns = ph.get_image_name(self.folder,fp,r)
             self.set_material(m)
             self.render_detail(ns)
             self.save_small(ns)
@@ -111,10 +111,8 @@ class Engine(EngineBase):
         if m['type'] == 'strings_base':
             pass
 
-
-    def save_small(self,b,s):
-        self.print_caller()
-
+    def save_small(self,ns,r):
+        pass
 
     def set_scene(self):
         self.print_caller()
