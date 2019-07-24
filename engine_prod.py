@@ -20,7 +20,7 @@ class Engine:
                                  datetime.datetime.now().strftime("%d_%b_%Y_(%H_%M_%S)"))
 
     def extend_materials(self,d):
-        d['avaibleMaterials'] = [m for m in self.ctx.MATERIALS if m['id'] in d['avaibleMaterialsID'] ]
+        d['avaibleMaterials'] = [ m for m in self.ctx.MATERIALS if m['id'] in d['avaibleMaterialsID'] ]
 
     def go(self):
         self.set_scene()
@@ -81,16 +81,6 @@ class Engine:
             if v.name not in ["Camera","Lamp_0","Lamp_1","Lamp_2","Lamp_4"]:
                 v.hide_render = True
                 v.cycles.is_shadow_catcher = False
-
-    def reset_included(self):
-        for inc in self.ctx.SCENE['Components']:
-            if inc in bpy.data.objects:
-                bpy.data.objects[inc].hide_render = True
-
-    def reset_catchers(self):
-        for sc in self.ctx.SCENE['Components']:
-            if sc in bpy.data.objects:
-                bpy.data.objects[sc].cycles.is_shadow_catcher = False
 
     def before_render(self, d):
         self.set_default()
