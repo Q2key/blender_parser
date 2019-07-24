@@ -2,28 +2,38 @@ import os
 import sys
 import json
 import datetime
+import inspect
 
 from PIL import Image
 from engine.engine_base import EngineBase
 
 class Engine(EngineBase):
 
+
+
+    def print_caller(fn):
+        print(inspect.stack()[1][3])
+
     def __init__(self, ctx, args=False):
+        self.print_caller()
         self.ctx = ctx
         self.args = args
         self.folder = str.format("{0}/{1}", ctx.RENDERS_PATH,
                                  datetime.datetime.now().strftime("%d_%b_%Y_(%H_%M_%S)"))
 
     def extend_materials(self,d):
+        self.print_caller()
         d['avaibleMaterials'] = [m for m in self.ctx.MATERIALS if m['id'] in d['avaibleMaterialsID'] ]
 
     def go(self):
+        self.print_caller()
         self.set_scene()
         self.filter_details()
         self.extend_details()
         self.process_details()
 
     def filter_details(self):
+        self.print_caller()
         if self.args and self.args.model:
             details = dict()
             # Iterate over all the items in dictionary
@@ -37,56 +47,52 @@ class Engine(EngineBase):
         d['avaibleMaterials'] = [
             e for e in self.ctx.MATERIALS 
                 if e['id'] in d['avaibleMaterialsID']]
+        print(d['avaibleMaterials'])
 
     def extend_details(self):
+        self.print_caller()
         vls = self.ctx.DETAILS.values()
-        print(vls)
+        [ self.get_material(d) for d in vls ]
 
     def process_details(self):
+        self.print_caller()
         itms = self.ctx.DETAILS.items()
-        print(itms)
-
-
-    def get_folder(self):
-        # define the name of the directory to be created
-        dt = datetime.datetime.now().strftime("%d_%b_%Y_(%H_%M_%S)")
-        path = "{0}/{1}".format(self.ctx.RENDERS_PATH, dt)
-        try:
-            os.mkdir(path)
-        except OSError:
-            print("Creation of the directory %s failed" % path)
-        else:
-            print("Successfully created the directory %s " % path)
-        return path
+        for key,value in itms:
+            self.render_partial(value)
 
     def set_default(self):
-        pass
+        self.print_caller()
 
     def set_catchers(self, d):
+        self.print_caller()
         for sc in d["shadowCatchers"]:
             print("cather state: ", sc, True)
             print("object hided: ", sc, False)
 
 
     def set_excluded(self, d):
+        self.print_caller()
         for ex in d["included"]:
             print("object hided: ", ex, False)
 
     def reset_included(self):
+        self.print_caller()
         for inc in self.ctx.SCENE['Components']:
             print("object hided: ", inc, True)
 
     def reset_catchers(self):
+        self.print_caller()
         for sc in self.ctx.SCENE['Components']:
             print("cather state: ", sc, False)
 
     def before_render(self, d):
-        self.reset_catchers()
-        self.reset_included()
+        self.print_caller()
+        self.set_default()
         self.set_catchers(d)
         self.set_excluded(d)
 
     def render_partial(self, d):
+        self.print_caller()
         self.before_render(d)
         for m in d['avaibleMaterials']:
             file_prefix = str.format("{0}_{1}",d["filePrefix"], m["id"])
@@ -97,6 +103,7 @@ class Engine(EngineBase):
             self.save_small(b,s)
 
     def set_material(self, m):
+        self.print_caller()
         if m['type'] == 'fabric_multy':
             print("fabric_multy")
         if m['type'] == 'plastic_glossy':
@@ -106,19 +113,11 @@ class Engine(EngineBase):
 
 
     def save_small(self,b,s):
-        img = Image.open(b)
-        new_width  = self.ctx.SCENE["Resolution"]["Small"]["x"]
-        new_height = self.ctx.SCENE["Resolution"]["Small"]["y"]
-        img = img.resize((new_width, new_height), Image.ANTIALIAS)
-        print("small image saved")
+        self.print_caller()
 
 
     def set_scene(self):
-        engine = 'CYCLES'
-        resolution_x = self.ctx.SCENE["Resolution"]["Big"]["x"]
-        resolution_y = self.ctx.SCENE["Resolution"]["Big"]["y"]
-        resolution_percentage = self.ctx.SCENE["Percentage"]
-        print(engine,resolution_x,resolution_y,resolution_percentage)
+        self.print_caller()
 
     def render_detail(self, result):
-        print("rendered")
+        self.print_caller()

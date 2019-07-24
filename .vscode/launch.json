@@ -5,18 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "All",
+            "name": "DEBUG",
             "type": "python",
             "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal",
-            "args": ["--","-m","all"]
-        },
-        {
-            "name": "Watch",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
+            "program": "${workspaceFolder}/run.py",
             "console": "integratedTerminal",
             "args": ["--","-e","-d"],
             "cwd": "C:/blender"

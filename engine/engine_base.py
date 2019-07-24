@@ -26,10 +26,12 @@ class EngineBase(ABC):
     def process_details(self):
         pass
 
+    '''
     @abstractmethod
     def get_folder(self):
         pass
-
+    '''
+    
     @abstractmethod
     def set_catchers(self, d):
         pass
