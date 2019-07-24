@@ -9,8 +9,9 @@ from PIL import Image
 from workers.fabric_worker import FabricWorker 
 from workers.plastic_worker import PlasticWorker 
 from workers.strings_worker import StringsWorker
+from engine.engine_base import EngineBase
 
-class Engine:
+class Engine(EngineBase):
 
     def __init__(self, ctx, args=False):
         self.ctx = ctx
@@ -26,6 +27,7 @@ class Engine:
         self.filter_details()
         self.extend_details()
         self.process_details()
+
 
     def filter_details(self):
         if self.args and self.args.model:

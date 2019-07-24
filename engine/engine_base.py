@@ -1,6 +1,6 @@
 from abc import ABC,abstractmethod
 
-class RenderBase(ABC):
+class EngineBase(ABC):
 
     @abstractmethod
     def extend_materials(self,d):

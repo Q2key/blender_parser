@@ -4,8 +4,9 @@ import json
 import datetime
 
 from PIL import Image
+from engine.engine_base import EngineBase
 
-class Engine:
+class Engine(EngineBase):
 
     def __init__(self, ctx, args=False):
         self.ctx = ctx
@@ -57,6 +58,9 @@ class Engine:
         else:
             print("Successfully created the directory %s " % path)
         return path
+
+    def set_default(self):
+        pass
 
     def set_catchers(self, d):
         for sc in d["shadowCatchers"]:

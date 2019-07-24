@@ -4,7 +4,8 @@ import sys
 
 root = os.path.dirname(__file__)
 sys.path.append(root)
-sys.path.append(root + "/src")
+sys.path.append(root + "/src/")
+
 
 from instance import Instance
 from helpers.argparser import ArgumentParserForBlender
@@ -19,6 +20,7 @@ parser.add_argument("-m", "--model", type=str, default=False, help="model type |
 parser.add_argument("-r", "--reset", action='store_true')
 parser.add_argument("-w", "--watch", action='store_true')
 parser.add_argument("-e", "--exec", action="store_true")
+parser.add_argument("-d","--debug",action="store_true")
 
 args = parser.parse_args()
 

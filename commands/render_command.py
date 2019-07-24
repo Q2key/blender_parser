@@ -1,4 +1,10 @@
-from engine.engine_prod import Engine
+import sys
+import os
+
+if '-d' in sys.argv:
+    from engine.engine_debug import Engine
+else:
+    from engine.engine_prod import Engine
 
 class RenderCommand:
 
@@ -9,4 +15,3 @@ class RenderCommand:
     def run(self):
             engine = Engine(self.ctx,self.args)
             engine.go()
-
