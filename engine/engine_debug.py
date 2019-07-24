@@ -12,7 +12,7 @@ from helpers.process_helper import ProcessHelper as ph
 class Engine(EngineBase):
 
     def print_caller(fn):
-        #print(inspect.stack()[1][3])
+        # print(inspect.stack()[1][3])
         pass
 
     def __init__(self, ctx, args=False):
@@ -21,9 +21,10 @@ class Engine(EngineBase):
         self.args = args
         self.folder = ph.get_folder_name(ctx.RENDERS_PATH)
 
-    def extend_materials(self,d):
+    def extend_materials(self, d):
         self.print_caller()
-        d['avaibleMaterials'] = [m for m in self.ctx.MATERIALS if m['id'] in d['avaibleMaterialsID'] ]
+        d['avaibleMaterials'] = [
+            m for m in self.ctx.MATERIALS if m['id'] in d['avaibleMaterialsID']]
 
     def go(self):
         self.print_caller()
@@ -43,20 +44,20 @@ class Engine(EngineBase):
                     details[key] = value
             self.ctx.DETAILS = details
 
-    def get_material(self,d):
+    def get_material(self, d):
         d['avaibleMaterials'] = [
-            e for e in self.ctx.MATERIALS 
-                if e['id'] in d['avaibleMaterialsID']]
+            e for e in self.ctx.MATERIALS
+            if e['id'] in d['avaibleMaterialsID']]
 
     def extend_details(self):
         self.print_caller()
         vls = self.ctx.DETAILS.values()
-        [ self.get_material(d) for d in vls ]
+        [self.get_material(d) for d in vls]
 
     def process_details(self):
         self.print_caller()
         itms = self.ctx.DETAILS.items()
-        for key,value in itms:
+        for key, value in itms:
             self.render_partial(value)
 
     def set_default(self):
@@ -67,7 +68,6 @@ class Engine(EngineBase):
         for sc in d["shadowCatchers"]:
             print("cather state: ", sc, True)
             print("object hided: ", sc, False)
-
 
     def set_excluded(self, d):
         self.print_caller()
@@ -96,8 +96,8 @@ class Engine(EngineBase):
         p = d['filePrefix']
         r = self.ctx.SCENE['Resolution']
         for m in d['avaibleMaterials']:
-            fp = str.format("{0}_{1}",d["filePrefix"], m["id"])
-            ns = ph.get_image_name(self.folder,p,fp,r)
+            fp = str.format("{0}_{1}", d["filePrefix"], m["id"])
+            ns = ph.get_image_name(self.folder, p, fp, r)
             self.set_material(m)
             self.render_detail(ns)
             self.save_small(ns)
@@ -111,7 +111,7 @@ class Engine(EngineBase):
         if m['type'] == 'strings_base':
             pass
 
-    def save_small(self,ns,r):
+    def save_small(self, ns, r):
         pass
 
     def set_scene(self):

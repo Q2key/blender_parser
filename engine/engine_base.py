@@ -1,9 +1,10 @@
-from abc import ABC,abstractmethod
+from abc import ABC, abstractmethod
+
 
 class EngineBase(ABC):
 
     @abstractmethod
-    def extend_materials(self,d):
+    def extend_materials(self, d):
         pass
 
     @abstractmethod
@@ -15,7 +16,7 @@ class EngineBase(ABC):
         pass
 
     @abstractmethod
-    def get_material(self,d):
+    def get_material(self, d):
         pass
 
     @abstractmethod
@@ -50,11 +51,9 @@ class EngineBase(ABC):
     def set_material(self, m):
         pass
 
-
     @abstractmethod
-    def save_small(self,b,s):
+    def save_small(self, b, s):
         pass
-
 
     @abstractmethod
     def set_scene(self):
