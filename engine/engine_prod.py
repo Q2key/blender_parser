@@ -4,8 +4,6 @@ import json
 import datetime
 import bpy
 
-from PIL import Image
-
 from workers.fabric_worker import FabricWorker
 from workers.plastic_worker import PlasticWorker
 from workers.strings_worker import StringsWorker
