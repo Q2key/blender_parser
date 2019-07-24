@@ -1,7 +1,7 @@
 import argparse
 import sys
 
-class ArgumentParserForBlender(argparse.ArgumentParser):
+class ArgumentsHelper(argparse.ArgumentParser):
     """
     This class is identical to its superclass, except for the parse_args
     method (see docstring). It resolves the ambiguity generated when calling

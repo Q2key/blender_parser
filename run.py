@@ -8,13 +8,13 @@ sys.path.append(root + "/src/")
 
 
 from instance import Instance
-from helpers.parse_helper import ArgumentParserForBlender
+from helpers.arguments_helper import ArgumentsHelper
 
 from commands.render_command import RenderCommand
 from commands.reset_command import ResetCommand
 from commands.watch_command import WatchCommand
 
-parser = ArgumentParserForBlender()
+parser = ArgumentsHelper()
 
 parser.add_argument("-m", "--model", type=str, default=False, help="model type | all models")
 parser.add_argument("-r", "--reset", action='store_true')
