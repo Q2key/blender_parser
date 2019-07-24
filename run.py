@@ -8,7 +8,7 @@ sys.path.append(root + "/src/")
 
 
 from instance import Instance
-from helpers.argparser import ArgumentParserForBlender
+from helpers.parse_helper import ArgumentParserForBlender
 
 from commands.render_command import RenderCommand
 from commands.reset_command import ResetCommand

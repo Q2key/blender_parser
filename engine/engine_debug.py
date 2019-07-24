@@ -9,10 +9,9 @@ from engine.engine_base import EngineBase
 
 class Engine(EngineBase):
 
-
-
     def print_caller(fn):
-        print(inspect.stack()[1][3])
+        #print(inspect.stack()[1][3])
+        pass
 
     def __init__(self, ctx, args=False):
         self.print_caller()
@@ -47,7 +46,6 @@ class Engine(EngineBase):
         d['avaibleMaterials'] = [
             e for e in self.ctx.MATERIALS 
                 if e['id'] in d['avaibleMaterialsID']]
-        print(d['avaibleMaterials'])
 
     def extend_details(self):
         self.print_caller()
@@ -105,11 +103,11 @@ class Engine(EngineBase):
     def set_material(self, m):
         self.print_caller()
         if m['type'] == 'fabric_multy':
-            print("fabric_multy")
+            pass
         if m['type'] == 'plastic_glossy':
-            print("plastic_glossy")
+            pass
         if m['type'] == 'strings_base':
-            print("strings_base")
+            pass
 
 
     def save_small(self,b,s):
