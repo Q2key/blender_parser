@@ -11,18 +11,5 @@
     },
     "PerspectiveStyle": "Table",
     "Percentage": 100,
-    "Components": [
-        "Buttons",
-        "Body",
-        "Logo",
-        "Sleeve_inner",
-        "Sleeve_outer",
-        "Collar_inner",
-        "Collar_outer",
-        "Collar_cave",
-        "Strings_collar",
-        "Strings_body",
-        "Strings_sleeve"
-    ],
     "TexturesFormat" : [".png"]
 }

@@ -18,7 +18,8 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "args": ["--","-w", "-e", "-m", "Buttons"]
+            "args": ["--","-e"],
+            "cwd": "C:/blender"
         }
     ]
 }

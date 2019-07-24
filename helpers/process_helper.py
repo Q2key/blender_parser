@@ -16,3 +16,6 @@ class ProcessHelper:
         else:
             print("Successfully created the directory %s " % path)
         return path
+
+    def make_folder_by_detail(self,detail_code):
+        pass

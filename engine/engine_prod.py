@@ -10,7 +10,6 @@ from workers.fabric_worker import FabricWorker
 from workers.plastic_worker import PlasticWorker 
 from workers.strings_worker import StringsWorker
 
-
 class Engine:
 
     def __init__(self, ctx, args=False):
@@ -51,7 +50,6 @@ class Engine:
         itms = self.ctx.DETAILS.items()
         for key,value in itms:
             self.render_partial(value)
-
 
     def get_folder(self):
         # define the name of the directory to be created
@@ -105,14 +103,12 @@ class Engine:
         if m['type'] == 'strings_base':
             StringsWorker.create_strings_material(m)
 
-
     def save_small(self,b,s):
         img = Image.open(b)
         new_width  = self.ctx.SCENE["Resolution"]["Small"]["x"]
         new_height = self.ctx.SCENE["Resolution"]["Small"]["y"]
         img = img.resize((new_width, new_height), Image.ANTIALIAS)
         img.save(s)
-
 
     def set_scene(self):
         bpy.data.scenes["Scene"].render.engine = 'CYCLES'
