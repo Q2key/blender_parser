@@ -1,12 +1,12 @@
 {
     "Resolution": {
         "Big" : {
-            "x": 1280,
-            "y": 1280
+            "x": 1024,
+            "y": 1024
         },
         "Small":{
-            "x" : 640,
-            "y" : 640
+            "x" : 150,
+            "y" : 150
         }
     },
     "PerspectiveStyle": "Table",

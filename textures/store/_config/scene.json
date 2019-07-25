@@ -1,29 +1,16 @@
 {
     "Resolution": {
         "Big": {
-            "x": 300,
-            "y": 300
+            "x": 1280,
+            "y": 1280
         },
         "Small": {
-            "x": 150,
-            "y": 150
+            "x": 640,
+            "y": 640
         }
     },
     "PerspectiveStyle": "Table",
     "Percentage": 100,
-    "Components": [
-        "Buttons",
-        "Body",
-        "Logo",
-        "Sleeve_inner",
-        "Sleeve_outer",
-        "Collar_inner",
-        "Collar_outer",
-        "Collar_cave",
-        "Strings_collar",
-        "Strings_body",
-        "Strings_sleeve"
-    ],
     "TexturesFormat": [
         ".png"
     ]

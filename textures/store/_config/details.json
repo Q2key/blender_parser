@@ -1,35 +1,13 @@
 {
-    "Collar_inner": {
+    "V_1_external": {
         "textured": true,
-        "filePrefix": "collar_inner",
-        "shadowCatchers": [],
-        "included": [
-            "Collar_inner"
-        ],
-        "avaibleMaterialsID": [
-            "[2k.png]",
-            "[4kcut.png]",
-            "[blue.png]",
-            "[dark_gray.png]",
-            "[go.png]",
-            "[gray.png]",
-            "[green.png]",
-            "[pink.png]",
-            "[solid_black.png]",
-            "[solid_red.png]",
-            "[toxic.png]",
-            "[transp.png]",
-            "[white.png]"
-        ]
-    },
-    "Collar_outer": {
-        "textured": true,
-        "filePrefix": "collar_outer",
+        "filePrefix": "V_1_external",
         "shadowCatchers": [
-            "Body"
+            "body_shirt"
         ],
         "included": [
-            "Collar_outer"
+            "V_1_collar",
+            "V_1_external_stand"
         ],
         "avaibleMaterialsID": [
             "[2k.png]",
@@ -47,37 +25,15 @@
             "[white.png]"
         ]
     },
-    "Sleeve_inner": {
+    "V_2_external": {
         "textured": true,
-        "filePrefix": "sleeve_inner",
-        "shadowCatchers": [],
-        "included": [
-            "Sleeve_inner"
-        ],
-        "avaibleMaterialsID": [
-            "[2k.png]",
-            "[4kcut.png]",
-            "[blue.png]",
-            "[dark_gray.png]",
-            "[go.png]",
-            "[gray.png]",
-            "[green.png]",
-            "[pink.png]",
-            "[solid_black.png]",
-            "[solid_red.png]",
-            "[toxic.png]",
-            "[transp.png]",
-            "[white.png]"
-        ]
-    },
-    "Sleeve_outer": {
-        "textured": true,
-        "filePrefix": "sleeve_outer",
+        "filePrefix": "V_2_external",
         "shadowCatchers": [
-            "Body"
+            "body_shirt"
         ],
         "included": [
-            "Sleeve_outer"
+            "V_2_collar",
+            "V_2_external_stand"
         ],
         "avaibleMaterialsID": [
             "[2k.png]",
@@ -95,12 +51,15 @@
             "[white.png]"
         ]
     },
-    "Body": {
+    "V_3_external": {
         "textured": true,
-        "filePrefix": "body",
-        "shadowCatchers": [],
+        "filePrefix": "V_3_external",
+        "shadowCatchers": [
+            "body_shirt"
+        ],
         "included": [
-            "Body"
+            "V_3_collar",
+            "V_3_external_stand"
         ],
         "avaibleMaterialsID": [
             "[2k.png]",
@@ -118,89 +77,746 @@
             "[white.png]"
         ]
     },
-    "Buttons": {
-        "textured": false,
-        "filePrefix": "buttons",
+    "V_4_external": {
+        "textured": true,
+        "filePrefix": "V_4_external",
         "shadowCatchers": [
-            "Body"
+            "body_shirt"
         ],
         "included": [
-            "Buttons"
+            "V_4_collar",
+            "V_4_external_stand"
         ],
         "avaibleMaterialsID": [
-            "pg1",
-            "pg2",
-            "pg3"
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
         ]
     },
-    "Strings_sleeve": {
-        "textured": false,
-        "filePrefix": "strings_sleeve",
+    "V_1_internal": {
+        "textured": true,
+        "filePrefix": "V_1_internal",
         "shadowCatchers": [],
         "included": [
-            "Strings_sleeve"
+            "V_1_internal_stand"
         ],
         "avaibleMaterialsID": [
-            "sm1",
-            "sm2",
-            "sm3"
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
         ]
     },
-    "Strings_collar": {
-        "textured": false,
-        "filePrefix": "strings_collar",
+    "V_2_internal": {
+        "textured": true,
+        "filePrefix": "V_2_internal",
         "shadowCatchers": [],
         "included": [
-            "Strings_collar"
+            "V_2_internal_stand"
         ],
         "avaibleMaterialsID": [
-            "sm1",
-            "sm2",
-            "sm3"
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "V_3_internal": {
+        "textured": true,
+        "filePrefix": "V_3_internal",
+        "shadowCatchers": [],
+        "included": [
+            "V_3_internal_stand"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "V_4_internal": {
+        "textured": true,
+        "filePrefix": "V_4_internal",
+        "shadowCatchers": [],
+        "included": [
+            "V_4_internal_stand"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "V_1_strings": {
+        "textured": true,
+        "filePrefix": "V_1_strings",
+        "shadowCatchers": [],
+        "included": [
+            "V_1_seam_collar",
+            "V_1_seam_external_stand",
+            "V_1_seam_internal_stand"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "V_2_strings": {
+        "textured": true,
+        "filePrefix": "V_2_strings",
+        "shadowCatchers": [],
+        "included": [
+            "V_2_seam_collar",
+            "V_2_seam_external_stand",
+            "V_2_seam_internal_stand"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "V_3_strings": {
+        "textured": true,
+        "filePrefix": "V_3_strings",
+        "shadowCatchers": [],
+        "included": [
+            "V_3_seam_collar",
+            "V_3_seam_external_stand",
+            "V_3_seam_internal_stand"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "V_4_strings": {
+        "textured": true,
+        "filePrefix": "V_4_strings",
+        "shadowCatchers": [],
+        "included": [
+            "V_4_seam_collar",
+            "V_4_seam_external_stand",
+            "V_4_seam_internal_stand"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "V_1_button": {
+        "textured": true,
+        "filePrefix": "V_1_button",
+        "shadowCatchers": [],
+        "included": [
+            "V_1_button_collar"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "V_2_button": {
+        "textured": true,
+        "filePrefix": "V_2_button",
+        "shadowCatchers": [],
+        "included": [
+            "V_2_button_collar"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "V_3_button": {
+        "textured": true,
+        "filePrefix": "V_3_button",
+        "shadowCatchers": [],
+        "included": [
+            "V_3_button_collar"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "V_4_button": {
+        "textured": true,
+        "filePrefix": "V_4_button",
+        "shadowCatchers": [],
+        "included": [
+            "V_4_button_collar"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "M_1_external": {
+        "textured": true,
+        "filePrefix": "M_1_external_cuff",
+        "shadowCatchers": [
+            "body_shirt"
+        ],
+        "included": [
+            "M_1_external_cuff"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "M_2_external": {
+        "textured": true,
+        "filePrefix": "M_2_external_cuff",
+        "shadowCatchers": [
+            "body_shirt"
+        ],
+        "included": [
+            "M_2_external_cuff"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "M_3_external": {
+        "textured": true,
+        "filePrefix": "M_3_external_cuff",
+        "shadowCatchers": [
+            "body_shirt"
+        ],
+        "included": [
+            "M_3_external_cuff"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "M_4_external": {
+        "textured": true,
+        "filePrefix": "M_4_external_cuff",
+        "shadowCatchers": [
+            "body_shirt"
+        ],
+        "included": [
+            "M_4_external_cuff"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "M_1_internal": {
+        "textured": true,
+        "filePrefix": "M_1_internal_cuff",
+        "shadowCatchers": [],
+        "included": [
+            "M_1_internal_cuff"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "M_2_internal": {
+        "textured": true,
+        "filePrefix": "M_2_internal_cuff",
+        "shadowCatchers": [],
+        "included": [
+            "M_2_internal_cuff"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "M_3_internal": {
+        "textured": true,
+        "filePrefix": "M_3_internal_cuff",
+        "shadowCatchers": [],
+        "included": [
+            "M_3_internal_cuff"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "M_4_internal": {
+        "textured": true,
+        "filePrefix": "M_4_internal_cuff",
+        "shadowCatchers": [],
+        "included": [
+            "M_4_internal_cuff"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "M_1_buttons": {
+        "textured": true,
+        "filePrefix": "M_1_buttons",
+        "shadowCatchers": [],
+        "included": [
+            "M_1_button_Cuff"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "M_2_buttons": {
+        "textured": true,
+        "filePrefix": "M_2_buttons",
+        "shadowCatchers": [],
+        "included": [
+            "M_2_button_Cuff"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "M_3_buttons": {
+        "textured": true,
+        "filePrefix": "M_3_buttons",
+        "shadowCatchers": [],
+        "included": [
+            "M_3_button_Cuff"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "M_4_buttons": {
+        "textured": true,
+        "filePrefix": "M_4_buttons",
+        "shadowCatchers": [],
+        "included": [
+            "M_4_button_Cuff"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "M_1_strings": {
+        "textured": true,
+        "filePrefix": "M_1_strings",
+        "shadowCatchers": [],
+        "included": [
+            "M_1_strings_cuff"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "M_2_strings": {
+        "textured": true,
+        "filePrefix": "M_2_strings",
+        "shadowCatchers": [],
+        "included": [
+            "M_2_strings_cuff"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "M_3_strings": {
+        "textured": true,
+        "filePrefix": "M_3_strings",
+        "shadowCatchers": [],
+        "included": [
+            "M_3_strings_cuff"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "M_4_strings": {
+        "textured": true,
+        "filePrefix": "M_4_strings",
+        "shadowCatchers": [],
+        "included": [
+            "M_4_strings_cuff"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "Body_shirt": {
+        "textured": true,
+        "filePrefix": "Body_shirt",
+        "shadowCatchers": [],
+        "included": [
+            "body_shirt"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
+        ]
+    },
+    "Button_body": {
+        "textured": true,
+        "filePrefix": "Button_body",
+        "shadowCatchers": [
+            "Body_shirt"
+        ],
+        "included": [
+            "button_body"
+        ],
+        "avaibleMaterialsID": [
+            "[2k.png]",
+            "[4kcut.png]",
+            "[blue.png]",
+            "[dark_gray.png]",
+            "[go.png]",
+            "[gray.png]",
+            "[green.png]",
+            "[pink.png]",
+            "[solid_black.png]",
+            "[solid_red.png]",
+            "[toxic.png]",
+            "[transp.png]",
+            "[white.png]"
         ]
     },
     "Strings_body": {
-        "textured": false,
-        "filePrefix": "strings_buttons",
-        "shadowCatchers": [],
-        "included": [
-            "Strings_body"
-        ],
-        "avaibleMaterialsID": [
-            "sm1",
-            "sm2",
-            "sm3"
-        ]
-    },
-    "Collar_cave": {
         "textured": true,
-        "filePrefix": "cave",
+        "filePrefix": "Strings_body",
         "shadowCatchers": [],
         "included": [
-            "Collar_cave"
-        ],
-        "avaibleMaterialsID": [
-            "[2k.png]",
-            "[4kcut.png]",
-            "[blue.png]",
-            "[dark_gray.png]",
-            "[go.png]",
-            "[gray.png]",
-            "[green.png]",
-            "[pink.png]",
-            "[solid_black.png]",
-            "[solid_red.png]",
-            "[toxic.png]",
-            "[transp.png]",
-            "[white.png]"
-        ]
-    },
-    "Logo": {
-        "textured": true,
-        "filePrefix": "logo",
-        "shadowCatchers": [],
-        "included": [
-            "Logo"
+            "strings_body"
         ],
         "avaibleMaterialsID": [
             "[2k.png]",

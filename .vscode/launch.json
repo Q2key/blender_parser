@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/run.py",
             "console": "integratedTerminal",
-            "args": ["--","-e","-d"],
+            "args": ["--","-w", "-e","-d"],
             "cwd": "C:/blender"
         }
     ]

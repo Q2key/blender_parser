@@ -42,7 +42,6 @@ class WatchCommand:
         self.write_config("details.json", json.dumps(
             self.ctx.DETAILS, indent=4))
         self.write_config("scene.json", json.dumps(self.ctx.SCENE, indent=4))
-        self.write_config("app.json", json.dumps(self.ctx.APP, indent=4))
         self.write_config("materials.json", json.dumps(
             self.ctx.MATERIALS, indent=4))
 
