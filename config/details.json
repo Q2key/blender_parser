@@ -136,7 +136,7 @@
         "filePrefix": "V_1_strings",
         "shadowCatchers": [],
         "included": [
-            "V_1_seam_collar",
+            "V_1_strings_collar",
             "V_1_seam_external_stand",
             "V_1_seam_internal_stand"
         ],
@@ -153,7 +153,7 @@
         "filePrefix": "V_2_strings",
         "shadowCatchers": [],
         "included": [
-            "V_2_seam_collar",
+            "V_2_strings_collar",
             "V_2_seam_external_stand",
             "V_2_seam_internal_stand"
         ],
@@ -170,7 +170,7 @@
         "filePrefix": "V_3_strings",
         "shadowCatchers": [],
         "included": [
-            "V_3_seam_collar",
+            "V_3_strings_collar",
             "V_3_seam_external_stand",
             "V_3_seam_internal_stand"
         ],
@@ -187,7 +187,7 @@
         "filePrefix": "V_4_strings",
         "shadowCatchers": [],
         "included": [
-            "V_4_seam_collar",
+            "V_4_strings_collar",
             "V_4_seam_internal_stand"
         ],
         "avaibleMaterialsID": [
