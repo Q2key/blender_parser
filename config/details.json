@@ -188,7 +188,6 @@
         "shadowCatchers": [],
         "included": [
             "V_4_seam_collar",
-            "V_4_seam_external_stand",
             "V_4_seam_internal_stand"
         ],
         "avaibleMaterialsID": [
