@@ -29,21 +29,24 @@ class WatchCommand:
     def extend_details(self):
         mts = self.search_for_material()
         ids = [m["id"] for m in mts]
-        for (k, v) in self.ctx.DETAILS.items():
-            if v["textured"]:
-                v["avaibleMaterialsID"] = ids
+        for (k, v) in self.ctx.DETAILS2.items():
+            for d in v:
+                if d["textured"]:
+                    d["avaibleMaterialsID"] = ids
         self.ctx.MATERIALS.extend(mts)
 
     def write_config(self, file, data):
-        with open(str.format("{0}/_config/{1}", self.ctx.STORE_PATH, file), mode="w") as f:
+        with open(file, mode="w") as f:
             f.write(data)
 
     def flush_config(self):
-        self.write_config("details.json", json.dumps(
-            self.ctx.DETAILS, indent=4))
-        self.write_config("scene.json", json.dumps(self.ctx.SCENE, indent=4))
-        self.write_config("materials.json", json.dumps(
-            self.ctx.MATERIALS, indent=4))
+        for k,v in self.ctx.DETAILS2.items():
+            file = k.lower() + '.json'
+            path = str.format("{0}/_config/_details/{1}", self.ctx.STORE_PATH, file)
+            self.write_config(path, json.dumps(v, indent=4))
+        
+        self.write_config("{0}/_config/scene.json".format(self.ctx.STORE_PATH),json.dumps(self.ctx.SCENE, indent=4))
+        self.write_config("{0}/_config/materials.json".format(self.ctx.STORE_PATH),json.dumps(self.ctx.MATERIALS, indent=4))
 
     def run(self):
         self.search_for_material()
