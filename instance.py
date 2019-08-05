@@ -31,17 +31,3 @@ class Instance:
                 return json.loads(f.read())
         except OSError:  
             print ("Creation of the directory %s failed" % path)
-
-    def get_folder(self):
-        # define the name of the directory to be created
-        dt = datetime.datetime.now().strftime("%d_%b_%Y_(%H_%M_%S)")
-        path = "{0}/{1}".format(self.RENDERS_PATH,dt)
-        try:  
-            os.mkdir(path)
-        except OSError:  
-            print ("Creation of the directory %s failed" % path)
-        else:  
-            print ("Successfully created the directory %s " % path)
-        return path
-
-

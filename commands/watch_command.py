@@ -27,7 +27,7 @@ class WatchCommand:
             })
         return m
 
-    def extend_details(self):
+    def update_config(self):
         mts = self.search_for_material()
         ids = [m["id"] for m in mts]
         for (k, v) in self.ctx.DETAILS2.items():
@@ -51,5 +51,5 @@ class WatchCommand:
 
     def run(self):
         self.search_for_material()
-        self.extend_details()
+        self.update_config()
         self.flush_config()
