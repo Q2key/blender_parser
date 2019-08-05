@@ -1,5 +1,6 @@
 import os
 import json
+from helpers.process_helper import ProcessHelper
 
 
 class WatchCommand:
@@ -19,7 +20,7 @@ class WatchCommand:
         m = list()
         for (key, val) in enumerate(t):
             m.append({
-                "id": str.format("[{0}]", val),
+                "id": ProcessHelper.get_meterial_name(val),
                 "texture": str.format("{0}/{1}", s, val),
                 "map": False,
                 "type": "fabric_multy"

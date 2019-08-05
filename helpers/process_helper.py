@@ -25,6 +25,14 @@ class ProcessHelper:
         pass
 
     @staticmethod
+    def get_meterial_name(raw):
+        spl = raw.split('.')
+        if len(spl) > 0:
+            return spl[0].strip()
+        return raw.strip()
+
+
+    @staticmethod
     def save_small(ns,res):
         img = Image.open(ns['b'])
         new_width  = res["Small"]["x"]
