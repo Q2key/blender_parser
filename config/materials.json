@@ -1,32 +1,32 @@
 [
     {
         "id": "m1",
-        "texture": "C:/blender/src/textures/static/red_fabric.jpg",
-        "map": "C:/blender/src/maps/FabricCanvas001_DISP_6K.jpg",
+        "texture": "C:/blender/src/textures/static/test0.png",
+        "map": "",
         "type": "fabric_multy"
     },
     {
         "id": "m2",
-        "texture": "C:/blender/src/textures/static/gray_fabric.jpg",
-        "map": "C:/blender/src/maps/FabricCanvas001_DISP_6K.jpg",
+        "texture": "C:/blender/src/textures/static/test1.jpg",
+        "map": false,
         "type": "fabric_multy"
     },
     {
         "id": "m3",
-        "texture": "C:/blender/src/textures/static/deep_blue.jpg",
-        "map": "C:/blender/src/maps/FabricCanvas001_DISP_6K.jpg",
+        "texture": "C:/blender/src/textures/static/test2.png",
+        "map": false,
         "type": "fabric_multy"
     },
     {
         "id": "m4",
-        "texture": "C:/blender/src/textures/static/fabric16_basecolor.jpg",
-        "map": "C:/blender/src/maps/FabricCanvas001_DISP_6K.jpg",
+        "texture": "C:/blender/src/textures/static/test2(s).jpg",
+        "map": false,
         "type": "fabric_multy"
     },
     {
         "id": "m5",
         "texture": "C:/blender/src/textures/static/TD_FABRIC25_basecolor.jpg",
-        "map": "C:/blender/src/maps/FabricCanvas001_DISP_6K.jpg",
+        "map": false,
         "type": "fabric_multy"
     },
     {

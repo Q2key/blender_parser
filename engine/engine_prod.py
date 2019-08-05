@@ -25,31 +25,40 @@ class Engine(EngineBase):
 
     def go(self):
         self.set_scene()
-        self.filter_details()
-        self.extend_details()
-        self.process_details()
+        self.process_elements()
 
-    def filter_details(self):
+    def process_elements(self):
+        ''' define details '''
+
+        details = self.ctx.DETAILS2.items()
+        elements = self.filter_details(details)
+        ''' extend details '''
+        for k,d in elements:
+            print('\r\n-----------{0}-----------\r\n'.format(k))
+            self.extend_details(d)
+            self.process_details(d)
+
+
+    def filter_details(self,elements):
         if self.args and self.args.model:
             details = dict()
-            itms = self.ctx.DETAILS.items()
-            for (key, value) in itms:
+            # Iterate over all the items in dictionary
+            for (key, value) in elements:
                 if key == self.args.model:
                     details[key] = value
-            self.ctx.DETAILS = details
+            return details.items()
+        return elements
 
     def get_material(self, d):
         d['avaibleMaterials'] = [
             e for e in self.ctx.MATERIALS
             if e['id'] in d['avaibleMaterialsID']]
 
-    def extend_details(self):
-        vls = self.ctx.DETAILS.values()
-        [self.get_material(d) for d in vls]
+    def extend_details(self,details):
+        [self.get_material(d) for d in details]
 
-    def process_details(self):
-        itms = self.ctx.DETAILS.items()
-        for key, value in itms:
+    def process_details(self,details):
+        for value in details:
             self.render_partial(value)
 
     def set_catchers(self, d):
@@ -65,7 +74,7 @@ class Engine(EngineBase):
 
     def set_default(self):
         for (k, v) in bpy.data.objects.items():
-            if v.name not in ["Camera", "Lamp_0", "Lamp_1", "Lamp_2", "Lamp_4"]:
+            if v.name not in ["Camera", "Lamp", "Lamp_0", "Lamp_1", "Lamp_2", "Lamp_4"]:
                 v.hide_render = True
                 v.cycles.is_shadow_catcher = False
 

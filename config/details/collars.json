@@ -1,0 +1,277 @@
+[
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarItalianOldExternal",
+        "shadowCatchers": [
+            "bodyShirt"
+        ],
+        "included": [
+            "collarItalianOld",
+            "collarItalianOldExternalStand"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarBowTieExternal",
+        "shadowCatchers": [
+            "bodyShirt"
+        ],
+        "included": [
+            "collarBowTie",
+            "collarBowTieExternalStand"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarStandingExternal",
+        "shadowCatchers": [
+            "bodyShirt"
+        ],
+        "included": [
+            "collarStanding",
+            "collarStandingExternalStand"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarButtonDownExternal",
+        "shadowCatchers": [
+            "bodyShirt"
+        ],
+        "included": [
+            "collarButtonDown",
+            "collarButtonDownExternalStand"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarItalianOldInternal",
+        "shadowCatchers": [],
+        "included": [
+            "collarItalianOldInternalStand"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarBowTieInternal",
+        "shadowCatchers": [],
+        "included": [
+            "collarBowTieInternalStand"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarStandingInternal",
+        "shadowCatchers": [],
+        "included": [
+            "collarStandingInternalStand"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarButtonDownInternal",
+        "shadowCatchers": [],
+        "included": [
+            "collarButtonDownInternalStand"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarItalianOldStrings",
+        "shadowCatchers": [],
+        "included": [
+            "collarItalianOldStrings",
+            "collarItalianOldSeamExternalStand",
+            "collarItalianOldSeamInternalStand"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarBowTieStrings",
+        "shadowCatchers": [],
+        "included": [
+            "collarBowTieStrings",
+            "collarBowTieSeamExternalStand",
+            "collarBowTieSeamInternalStand"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarStandingStrings",
+        "shadowCatchers": [],
+        "included": [
+            "collarStandingStrings",
+            "collarStandingSeamExternalStand",
+            "collarStandingSeamInternalStand"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarButtonDownStrings",
+        "shadowCatchers": [],
+        "included": [
+            "collarButtonDownStrings",
+            "collarButtonDownSeamInternalStand"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarItalianOldButton",
+        "shadowCatchers": [],
+        "included": [
+            "collarItalianOldButton"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarBowTieButton",
+        "shadowCatchers": [],
+        "included": [
+            "collarBowTieButton"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarStandingButton",
+        "shadowCatchers": [],
+        "included": [
+            "collarStandingButton"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarButtonDownButton",
+        "shadowCatchers": [],
+        "included": [
+            "collarButtonDownButton"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    }
+]

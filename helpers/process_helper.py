@@ -31,3 +31,16 @@ class ProcessHelper:
         new_height = res["Small"]["y"]
         img = img.resize((new_width, new_height), Image.ANTIALIAS)
         img.save(ns['s'])
+
+    @staticmethod
+    def get_camel(raw):
+        cml = '';
+        spl = raw.split('_')
+        cml_array = []
+        for i in range(len(spl)):
+            s = spl[i]
+            if i > 0:
+                l = s[:1].upper()
+                s = s[:0] + l + s[1:]
+            cml_array.append(s)
+        return "".join(cml_array)

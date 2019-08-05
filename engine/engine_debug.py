@@ -29,35 +29,46 @@ class Engine(EngineBase):
     def go(self):
         self.print_caller()
         self.set_scene()
-        self.filter_details()
-        self.extend_details()
-        self.process_details()
+        self.process_elements()
+        
 
-    def filter_details(self):
+
+    def process_elements(self):
+        ''' define details '''
+
+        details = self.ctx.DETAILS2.items()
+        elements = self.filter_details(details).items()
+        ''' extend details '''
+        for k,d in elements:
+            print('\r\n-----------{0}-----------\r\n'.format(k))
+            self.extend_details(d)
+            self.process_details(d)
+
+
+    def filter_details(self,elements):
         self.print_caller()
         if self.args and self.args.model:
             details = dict()
             # Iterate over all the items in dictionary
-            itms = self.ctx.DETAILS.items()
-            for (key, value) in itms:
+            for (key, value) in elements:
                 if key == self.args.model:
                     details[key] = value
-            self.ctx.DETAILS = details
+            return details
+        return elements  
 
     def get_material(self, d):
         d['avaibleMaterials'] = [
             e for e in self.ctx.MATERIALS
             if e['id'] in d['avaibleMaterialsID']]
 
-    def extend_details(self):
+    def extend_details(self,details):
         self.print_caller()
-        vls = self.ctx.DETAILS.values()
+        vls = details
         [self.get_material(d) for d in vls]
 
-    def process_details(self):
+    def process_details(self,details):
         self.print_caller()
-        itms = self.ctx.DETAILS.items()
-        for key, value in itms:
+        for value in details:
             self.render_partial(value)
 
     def set_default(self):
@@ -111,7 +122,7 @@ class Engine(EngineBase):
         if m['type'] == 'strings_base':
             pass
 
-    def save_small(self, ns, r):
+    def save_small(self, ns):
         pass
 
     def set_scene(self):

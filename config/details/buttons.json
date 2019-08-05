@@ -1,0 +1,17 @@
+[
+    {
+        "textured": true,
+        "filePrefix": "buttonBody",
+        "shadowCatchers": ["bodyShirt"],
+        "included": [
+            "buttonBody"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    }
+]
