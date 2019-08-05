@@ -13,8 +13,8 @@ class ProcessHelper:
 
     @staticmethod
     def get_image_name(root,subfold,file,res):
-        s = str.format("{0}x{1}",res['Small']['x'],res['Small']['y']) 
-        b = str.format("{0}x{1}",res['Big']['x'],res['Big']['y'])
+        s = 's' #str.format("{0}x{1}",res['Small']['x'],res['Small']['y']) 
+        b = 'b' #str.format("{0}x{1}",res['Big']['x'],res['Big']['y'])
         return {
             "s" : str.format("{0}/{1}/{2}_{3}.png",root,subfold,file,s),
             "b" : str.format("{0}/{1}/{2}_{3}.png",root,subfold,file,b)
