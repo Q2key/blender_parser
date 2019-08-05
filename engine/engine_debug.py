@@ -30,7 +30,6 @@ class Engine(EngineBase):
         self.print_caller()
         self.set_scene()
         self.process_elements()
-        
 
 
     def process_elements(self):

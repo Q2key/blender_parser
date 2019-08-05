@@ -25,8 +25,7 @@ class Instance:
         self.SCENE = self.read_config(str.format("{0}/config/scene.json",src_path))
 
 
-
-    def read_config(self,path):
+    def read_config(self,path): 
         try:
             with open(path) as f:
                 return json.loads(f.read())
