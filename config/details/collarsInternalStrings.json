@@ -71,10 +71,10 @@
     {
         "textured": true,
         "material" : "fabric_multy",
-        "filePrefix": "collarItalianOldStringsSeamInternalStand",
+        "filePrefix": "collarItalianOldSeamInternalStand",
         "shadowCatchers": [],
         "included": [
-            "collarItalianOldStringsSeamInternalStand"
+            "collarItalianOldSeamInternalStand"
         ],
         "avaibleMaterialsID": [
             "m1",
@@ -90,7 +90,7 @@
         "filePrefix": "collarBowTieSeamInternalStand",
         "shadowCatchers": [],
         "included": [
-            "collarBowTieStringsSeamInternalStand"
+            "collarBowTieSeamInternalStand"
         ],
         "avaibleMaterialsID": [
             "m1",
@@ -106,7 +106,7 @@
         "filePrefix": "collarStandingSeamInternalStand",
         "shadowCatchers": [],
         "included": [
-            "collarStandingStringsSeamInternalStand"
+            "collarStandingSeamInternalStand"
         ],
         "avaibleMaterialsID": [
             "m1",

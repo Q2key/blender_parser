@@ -2,7 +2,7 @@
     {
         "textured": true,
         "filePrefix": "cuffOneButtonButton",
-        "shadowCatchers": [],
+        "shadowCatchers": ["cuffOneButtonInternal"],
         "included": [
             "cuffOneButtonButton"
         ],
@@ -17,7 +17,7 @@
     {
         "textured": true,
         "filePrefix": "cuffRegulatedWidthButton",
-        "shadowCatchers": [],
+        "shadowCatchers": ["cuffOneButtonInternal"],
         "included": [
             "cuffRegulatedWidthButton"
         ],
@@ -27,12 +27,12 @@
             "m3",
             "m4",
             "m5"
-        ]
+        ]   
     },
     {
         "textured": true,
         "filePrefix": "cuffTwoButtonsButton",
-        "shadowCatchers": [],
+        "shadowCatchers": ["cuffOneButtonInternal"],
         "included": [
             "cuffTwoButtonsButton"
         ],

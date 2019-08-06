@@ -52,10 +52,10 @@
     },
    {
         "textured": true,
-        "filePrefix": "cuffOneButtonInternalCuff",
+        "filePrefix": "cuffOneButtonInternal",
         "shadowCatchers": [],
         "included": [
-            "cuffOneButtonInternalCuff"
+            "cuffOneButtonInternal"
         ],
         "avaibleMaterialsID": [
             "m1",
@@ -67,10 +67,10 @@
     },
     {
         "textured": true,
-        "filePrefix": "cuffRegulatedWidthInternalCuff",
+        "filePrefix": "cuffRegulatedWidthInternal",
         "shadowCatchers": [],
         "included": [
-            "cuffRegulatedWidthInternalCuff"
+            "cuffRegulatedWidthInternal"
         ],
         "avaibleMaterialsID": [
             "m1",
@@ -82,10 +82,10 @@
     },
     {
         "textured": true,
-        "filePrefix": "cuffTwoButtonsInternalCuff",
+        "filePrefix": "cuffTwoButtonsInternal",
         "shadowCatchers": [],
         "included": [
-            "cuffTwoButtonsInternalCuff"
+            "cuffTwoButtonsInternal"
         ],
         "avaibleMaterialsID": [
             "m1",
@@ -100,7 +100,7 @@
         "filePrefix": "cuffOneButtonButtons",
         "shadowCatchers": [],
         "included": [
-            "cuffOneButtonButtonCuff"
+            "cuffOneButtonButton"
         ],
         "avaibleMaterialsID": [
             "m1",
@@ -115,7 +115,7 @@
         "filePrefix": "cuffRegulatedWidthButtons",
         "shadowCatchers": [],
         "included": [
-            "cuffRegulatedWidthButtonCuff"
+            "cuffRegulatedWidthButton"
         ],
         "avaibleMaterialsID": [
             "m1",
@@ -130,7 +130,7 @@
         "filePrefix": "cuffTwoButtonsButtons",
         "shadowCatchers": [],
         "included": [
-            "cuffTwoButtonsButtonCuff"
+            "cuffTwoButtonsButton"
         ],
         "avaibleMaterialsID": [
             "m1",
@@ -145,7 +145,7 @@
         "filePrefix": "cuffOneButtonStrings",
         "shadowCatchers": [],
         "included": [
-            "cuffOneButtonStringsCuff"
+            "cuffOneButtonStrings"
         ],
         "avaibleMaterialsID": [
             "m1",
