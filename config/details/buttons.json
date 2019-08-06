@@ -1,6 +1,6 @@
 [
     {
-        "textured": true,
+        "textured": false,
         "filePrefix": "buttonBody",
         "shadowCatchers": ["bodyShirt"],
         "included": [

@@ -11,22 +11,28 @@ class PlasticWorker():
         ''' set material '''
         
         mi = MaterialInfo.get_material_info('pearl_plastic', True)
-        c = Colors().get_color(m["color"])
-
         lw = mi['nodes'].new("ShaderNodeLayerWeight")
         lw.location = [0, -200]
 
         bd1 = mi['nodes'].new("ShaderNodeBsdfDiffuse")
         bd1.location = [0, -350]
-        bd1.inputs[0].default_value = (1, 0.8749, 0.8749, 1)
+
 
         bd2 = mi['nodes'].new("ShaderNodeBsdfDiffuse")
         bd2.location = [0, -500]
-        bd2.inputs[0].default_value = (1, 0.977174, 0.910533, 1)
+
+        if m is not None:
+            c = m['color']
+            bd1.inputs[0].default_value = (c['R'], c['G'], c['B'], c['A'])
+            bd2.inputs[0].default_value = (c['R'], c['G'], c['B'], c['A'])
+        else:
+            bd2.inputs[0].default_value = (1, 0.977174, 0.910533, 1)
+            bd2.inputs[0].default_value = (1, 0.977174, 0.910533, 1)
 
         fr = mi['nodes'].new("ShaderNodeFresnel")
         fr.location = [200,  -200]
         fr.inputs['IOR'].default_value = 2
+        
 
         ms1 = mi['nodes'].new("ShaderNodeMixShader")
         ms1.location = [200, -350]
