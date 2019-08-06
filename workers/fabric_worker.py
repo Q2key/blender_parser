@@ -10,6 +10,12 @@ class FabricWorker():
         mi = MaterialInfo.get_material_info('fabric_material',True)
 
         # shaderNodeTexImage
+        shaderNodeTextureCoordinate = mi['nodes'].new("ShaderNodeTexCoord")
+        shaderNodeTextureCoordinate.use_custom_color = True
+        shaderNodeTextureCoordinate.color = (200, 200, 200)
+        shaderNodeTextureCoordinate.location = [-700, -100]
+
+        # shaderNodeTexImage
         shaderNodeTexImage = mi['nodes'].new("ShaderNodeTexImage")
         shaderNodeTexImage.image = bpy.data.images.load(m['texture'])
         shaderNodeTexImage.use_custom_color = True
@@ -29,6 +35,8 @@ class FabricWorker():
         shaderNodeOutputMaterial.location = [300, -100]
 
         # link up
+        mi['links'].new(shaderNodeTextureCoordinate.outputs["Object"],
+            shaderNodeTexImage.inputs['Vector'])
         mi['links'].new(shaderNodeTexImage.outputs["Color"],
                   shaderNodeBsdfDfiffuse.inputs['Color'])
         mi['links'].new(shaderNodeBsdfDfiffuse.outputs["BSDF"],

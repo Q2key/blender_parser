@@ -1,59 +1,10 @@
 [
     {
         "textured": true,
-        "filePrefix": "cuffOneButtonExternal",
-        "shadowCatchers": [
-            "bodyShirt"
-        ],
-        "included": [
-            "cuffOneButtonExternal"
-        ],
-        "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
-        ]
-    },
-     {
-        "textured": true,
-        "filePrefix": "cuffRegulatedWidthExternal",
-        "shadowCatchers": [
-            "bodyShirt"
-        ],
-        "included": [
-            "cuffRegulatedWidthExternal"
-        ],
-        "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
-        ]
-    },
-    {
-        "textured": true,
-        "filePrefix": "cuffTwoButtonsExternal",
-        "shadowCatchers": [
-            "bodyShirt"
-        ],
-        "included": [
-            "cuffTwoButtonsExternal"
-        ],
-        "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
-        ]
-    },
-   {
-        "textured": true,
         "filePrefix": "cuffOneButtonInternal",
-        "shadowCatchers": [],
+        "shadowCatchers": [
+            "bodyShirt"
+        ],
         "included": [
             "cuffOneButtonInternal"
         ],
@@ -65,10 +16,12 @@
             "m5"
         ]
     },
-    {
+     {
         "textured": true,
         "filePrefix": "cuffRegulatedWidthInternal",
-        "shadowCatchers": [],
+        "shadowCatchers": [
+            "bodyShirt"
+        ],
         "included": [
             "cuffRegulatedWidthInternal"
         ],
@@ -83,9 +36,56 @@
     {
         "textured": true,
         "filePrefix": "cuffTwoButtonsInternal",
-        "shadowCatchers": [],
+        "shadowCatchers": [
+            "bodyShirt"
+        ],
         "included": [
             "cuffTwoButtonsInternal"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+   {
+        "textured": true,
+        "filePrefix": "cuffOneButtonInternalCuff",
+        "shadowCatchers": [],
+        "included": [
+            "cuffOneButtonInternalCuff"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "filePrefix": "cuffRegulatedWidthInternalCuff",
+        "shadowCatchers": [],
+        "included": [
+            "cuffRegulatedWidthInternalCuff"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "filePrefix": "cuffTwoButtonsInternalCuff",
+        "shadowCatchers": [],
+        "included": [
+            "cuffTwoButtonsInternalCuff"
         ],
         "avaibleMaterialsID": [
             "m1",

@@ -1,12 +1,12 @@
 [
     {
         "textured": true,
-        "filePrefix": "cuffOneButtonExternal",
+        "filePrefix": "cuffOneButtonStrings",
         "shadowCatchers": [
             "bodyShirt"
         ],
         "included": [
-            "cuffOneButtonExternal"
+            "cuffOneButtonStrings"
         ],
         "avaibleMaterialsID": [
             "m1",
@@ -18,12 +18,12 @@
     },
      {
         "textured": true,
-        "filePrefix": "cuffRegulatedWidthExternal",
+        "filePrefix": "cuffRegulatedWidthStrings",
         "shadowCatchers": [
             "bodyShirt"
         ],
         "included": [
-            "cuffRegulatedWidthExternal"
+            "cuffRegulatedWidthStrings"
         ],
         "avaibleMaterialsID": [
             "m1",
@@ -35,12 +35,12 @@
     },
     {
         "textured": true,
-        "filePrefix": "cuffTwoButtonsExternal",
+        "filePrefix": "cuffTwoButtonsStrings",
         "shadowCatchers": [
             "bodyShirt"
         ],
         "included": [
-            "cuffTwoButtonsExternal"
+            "cuffTwoButtonsStrings"
         ],
         "avaibleMaterialsID": [
             "m1",
@@ -52,10 +52,10 @@
     },
    {
         "textured": true,
-        "filePrefix": "cuffOneButtonInternal",
+        "filePrefix": "cuffOneButtonStrings",
         "shadowCatchers": [],
         "included": [
-            "cuffOneButtonInternal"
+            "cuffOneButtonStrings"
         ],
         "avaibleMaterialsID": [
             "m1",
@@ -67,10 +67,10 @@
     },
     {
         "textured": true,
-        "filePrefix": "cuffRegulatedWidthInternal",
+        "filePrefix": "cuffRegulatedWidthStrings",
         "shadowCatchers": [],
         "included": [
-            "cuffRegulatedWidthInternal"
+            "cuffRegulatedWidthStrings"
         ],
         "avaibleMaterialsID": [
             "m1",
@@ -82,10 +82,10 @@
     },
     {
         "textured": true,
-        "filePrefix": "cuffTwoButtonsInternal",
+        "filePrefix": "cuffTwoButtonsStrings",
         "shadowCatchers": [],
         "included": [
-            "cuffTwoButtonsInternal"
+            "cuffTwoButtonsStrings"
         ],
         "avaibleMaterialsID": [
             "m1",
@@ -100,7 +100,7 @@
         "filePrefix": "cuffOneButtonButtons",
         "shadowCatchers": [],
         "included": [
-            "cuffOneButtonButtonCuff"
+            "cuffOneButtonButton"
         ],
         "avaibleMaterialsID": [
             "m1",
@@ -115,7 +115,7 @@
         "filePrefix": "cuffRegulatedWidthButtons",
         "shadowCatchers": [],
         "included": [
-            "cuffRegulatedWidthButtonCuff"
+            "cuffRegulatedWidthButton"
         ],
         "avaibleMaterialsID": [
             "m1",
@@ -130,7 +130,7 @@
         "filePrefix": "cuffTwoButtonsButtons",
         "shadowCatchers": [],
         "included": [
-            "cuffTwoButtonsButtonCuff"
+            "cuffTwoButtonsButton"
         ],
         "avaibleMaterialsID": [
             "m1",
@@ -145,7 +145,7 @@
         "filePrefix": "cuffOneButtonStrings",
         "shadowCatchers": [],
         "included": [
-            "cuffOneButtonStringsCuff"
+            "cuffOneButtonStrings"
         ],
         "avaibleMaterialsID": [
             "m1",

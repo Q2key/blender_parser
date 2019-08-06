@@ -1,0 +1,47 @@
+[
+    {
+        "textured": true,
+        "filePrefix": "cuffOneButtonButton",
+        "shadowCatchers": [],
+        "included": [
+            "cuffOneButtonButton"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "filePrefix": "cuffRegulatedWidthButton",
+        "shadowCatchers": [],
+        "included": [
+            "cuffRegulatedWidthButton"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "filePrefix": "cuffTwoButtonsButton",
+        "shadowCatchers": [],
+        "included": [
+            "cuffTwoButtonsButton"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    }
+]

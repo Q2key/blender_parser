@@ -2,7 +2,7 @@
     {
         "textured": true,
         "material" : "fabric_multy",
-        "filePrefix": "collarItalianOldExternal",
+        "filePrefix": "collarItalianOld",
         "shadowCatchers": [
             "bodyShirt"
         ],
@@ -21,7 +21,7 @@
     {
         "textured": true,
         "material" : "fabric_multy",
-        "filePrefix": "collarBowTieExternal",
+        "filePrefix": "collarBowTie",
         "shadowCatchers": [
             "bodyShirt"
         ],
@@ -40,7 +40,7 @@
     {
         "textured": true,
         "material" : "fabric_multy",
-        "filePrefix": "collarStandingExternal",
+        "filePrefix": "collarStanding",
         "shadowCatchers": [
             "bodyShirt"
         ],
@@ -59,7 +59,7 @@
     {
         "textured": true,
         "material" : "fabric_multy",
-        "filePrefix": "collarButtonDownExternal",
+        "filePrefix": "collarButtonDown",
         "shadowCatchers": [
             "bodyShirt"
         ],
@@ -75,70 +75,7 @@
             "m5"
         ]
     },
-    {
-        "textured": true,
-        "material" : "fabric_multy",
-        "filePrefix": "collarItalianOldInternal",
-        "shadowCatchers": [],
-        "included": [
-            "collarItalianOldInternalStand"
-        ],
-        "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
-        ]
-    },
-    {
-        "textured": true,
-        "material" : "fabric_multy",
-        "filePrefix": "collarBowTieInternal",
-        "shadowCatchers": [],
-        "included": [
-            "collarBowTieInternalStand"
-        ],
-        "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
-        ]
-    },
-    {
-        "textured": true,
-        "material" : "fabric_multy",
-        "filePrefix": "collarStandingInternal",
-        "shadowCatchers": [],
-        "included": [
-            "collarStandingInternalStand"
-        ],
-        "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
-        ]
-    },
-    {
-        "textured": true,
-        "material" : "fabric_multy",
-        "filePrefix": "collarButtonDownInternal",
-        "shadowCatchers": [],
-        "included": [
-            "collarButtonDownInternalStand"
-        ],
-        "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
-        ]
-    },
+
     {
         "textured": true,
         "material" : "fabric_multy",

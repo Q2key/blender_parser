@@ -1,0 +1,119 @@
+[
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarItalianOldSeamInternalStand",
+        "shadowCatchers": [
+        ],
+        "included": [
+            "collarItalianOldSeamInternalStand"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarBowTieSeamInternalStand",
+        "shadowCatchers": [
+        ],
+        "included": [
+            "collarBowTieSeamInternalStand"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarStandingSeamInternalStand",
+        "shadowCatchers": [
+        ],
+        "included": [
+            "collarStandingSeamInternalStand"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarButtonDownSeamInternalStand",
+        "shadowCatchers": [
+        ],
+        "included": [
+            "collarButtonDownSeamInternalStand"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarItalianOldStringsSeamInternalStand",
+        "shadowCatchers": [],
+        "included": [
+            "collarItalianOldStringsSeamInternalStand"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarBowTieSeamInternalStand",
+        "shadowCatchers": [],
+        "included": [
+            "collarBowTieStringsSeamInternalStand"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    },
+    {
+        "textured": true,
+        "material" : "fabric_multy",
+        "filePrefix": "collarStandingSeamInternalStand",
+        "shadowCatchers": [],
+        "included": [
+            "collarStandingStringsSeamInternalStand"
+        ],
+        "avaibleMaterialsID": [
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5"
+        ]
+    }
+]

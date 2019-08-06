@@ -35,7 +35,7 @@ class Engine(EngineBase):
     def process_elements(self):
         ''' define details '''
 
-        details = self.ctx.DETAILS2.items()
+        details = self.ctx.DETAILS2
         elements = self.filter_details(details).items()
         ''' extend details '''
         for k,d in elements:
@@ -52,7 +52,7 @@ class Engine(EngineBase):
             for (key, value) in elements:
                 if key == self.args.model:
                     details[key] = value
-            return details
+            return details.items()
         return elements  
 
     def get_material(self, d):

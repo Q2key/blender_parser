@@ -16,8 +16,19 @@ class Instance:
 
         self.DETAILS2['BODY'] = self.read_config(str.format("{0}/config/details/body.json",src_path))
         self.DETAILS2['BUTTONS'] = self.read_config(str.format("{0}/config/details/buttons.json",src_path))
+
+        #Воротники
+        self.DETAILS2['COLLARS_INTERNAL'] = self.read_config(str.format("{0}/config/details/collarsInternal.json",src_path))
+        self.DETAILS2['COLLARS_INTERNAL_STRINGS'] = self.read_config(str.format("{0}/config/details/collarsInternalStrings.json",src_path))
         self.DETAILS2['COLLARS'] = self.read_config(str.format("{0}/config/details/collars.json",src_path))
+
+        #Манжеты
         self.DETAILS2['CUFFS'] = self.read_config(str.format("{0}/config/details/cuffs.json",src_path))
+        self.DETAILS2['CUFFS_BUTTONS'] = self.read_config(str.format("{0}/config/details/cuffsButtons.json",src_path))
+        self.DETAILS2['CUFFS_INTERNAL'] = self.read_config(str.format("{0}/config/details/cuffsInternal.json",src_path))
+        self.DETAILS2['CUFFS_STRINGS'] = self.read_config(str.format("{0}/config/details/cuffsStrings.json",src_path))
+
+
         self.DETAILS2['STRINGS'] = self.read_config(str.format("{0}/config/details/strings.json",src_path))
 
         self.COLLARS = self.read_config(str.format("{0}/config/details/collars.json",src_path))
