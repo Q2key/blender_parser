@@ -60,18 +60,33 @@
         "type": "plastic_pearl"
     },
     {
-        "id": "sm1",
-        "color": "azure",
-        "type": "strings_base"
+        "id": "strings_1",
+        "color": {
+            "R" : 8,
+            "G" : 8,
+            "B" : 8,
+            "A" : 1
+        },
+        "type": "fabric_strings"
     },
     {
-        "id": "sm2",
-        "color": "gray",
-        "type": "strings_base"
+        "id": "strings_2",
+        "color": {
+            "R" : 5,
+            "G" : 5,
+            "B" : 5,
+            "A" : 1
+        },
+        "type": "fabric_strings"
     },
     {
-        "id": "sm3",
-        "color": "black",
-        "type": "strings_base"
+        "id": "strings_3",
+        "color": {
+            "R" : 0,
+            "G" : 0,
+            "B" : 0,
+            "A" : 1
+        },
+        "type": "fabric_strings"
     }
 ]

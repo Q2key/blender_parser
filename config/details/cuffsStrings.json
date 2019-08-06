@@ -1,6 +1,6 @@
 [
     {
-        "textured": true,
+        "textured": false,
         "filePrefix": "cuffOneButtonStrings",
         "shadowCatchers": [
             "bodyShirt"
@@ -9,15 +9,13 @@
             "cuffOneButtonStrings"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+            "strings_1",
+            "strings_2",
+            "strings_3"
         ]
     },
      {
-        "textured": true,
+        "textured": false,
         "filePrefix": "cuffRegulatedWidthStrings",
         "shadowCatchers": [
             "bodyShirt"
@@ -26,15 +24,13 @@
             "cuffRegulatedWidthStrings"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+            "strings_1",
+            "strings_2",
+            "strings_3"
         ]
     },
     {
-        "textured": true,
+        "textured": false,
         "filePrefix": "cuffTwoButtonsStrings",
         "shadowCatchers": [
             "bodyShirt"
@@ -43,56 +39,48 @@
             "cuffTwoButtonsStrings"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+            "strings_1",
+            "strings_2",
+            "strings_3"
         ]
     },
    {
-        "textured": true,
+        "textured": false,
         "filePrefix": "cuffOneButtonStrings",
         "shadowCatchers": [],
         "included": [
             "cuffOneButtonStrings"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+            "strings_1",
+            "strings_2",
+            "strings_3"
         ]
     },
     {
-        "textured": true,
+        "textured": false,
         "filePrefix": "cuffRegulatedWidthStrings",
         "shadowCatchers": [],
         "included": [
             "cuffRegulatedWidthStrings"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+            "strings_1",
+            "strings_2",
+            "strings_3"
         ]
     },
     {
-        "textured": true,
+        "textured": false,
         "filePrefix": "cuffTwoButtonsStrings",
         "shadowCatchers": [],
         "included": [
             "cuffTwoButtonsStrings"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+            "strings_1",
+            "strings_2",
+            "strings_3"
         ]
     },
     {
@@ -103,11 +91,9 @@
             "cuffOneButtonButton"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+            "strings_1",
+            "strings_2",
+            "strings_3"
         ]
     },
     {
@@ -118,41 +104,35 @@
             "cuffRegulatedWidthButton"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+            "strings_1",
+            "strings_2",
+            "strings_3"
         ]
     },
     {
-        "textured": true,
+        "textured": false,
         "filePrefix": "cuffTwoButtonsButtons",
         "shadowCatchers": [],
         "included": [
             "cuffTwoButtonsButton"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+            "strings_1",
+            "strings_2",
+            "strings_3"
         ]
     },
     {
-        "textured": true,
+        "textured": false,
         "filePrefix": "cuffOneButtonStrings",
         "shadowCatchers": [],
         "included": [
             "cuffOneButtonStrings"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+            "strings_1",
+            "strings_2",
+            "strings_3"
         ]
     }
 ]

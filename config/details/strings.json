@@ -1,17 +1,15 @@
 [
     {
-        "textured": true,
+        "textured": false,
         "filePrefix": "stringsBody",
         "shadowCatchers": [],
         "included": [
             "stringsBody"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+            "strings_1",
+            "strings_2",
+            "strings_3"
         ]
     }
 ]
