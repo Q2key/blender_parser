@@ -10,7 +10,7 @@ class PlasticWorker():
     def create_gloss_plastic_material(m=False):
         ''' set material '''
         
-        mi = MaterialInfo.get_material_info('plastic_material', True)
+        mi = MaterialInfo.get_material_info('pearl_plastic', True)
         c = Colors().get_color(m["color"])
 
         lw = mi['nodes'].new("ShaderNodeLayerWeight")
@@ -26,14 +26,14 @@ class PlasticWorker():
 
         fr = mi['nodes'].new("ShaderNodeFresnel")
         fr.location = [200,  -200]
-        fr.inputs['IOR'].default_value = 1.9
+        fr.inputs['IOR'].default_value = 2
 
         ms1 = mi['nodes'].new("ShaderNodeMixShader")
         ms1.location = [200, -350]
 
         bg = mi['nodes'].new("ShaderNodeBsdfGlossy")
         bg.location = [200, -500]
-        bg.inputs[1].default_value = 0
+        bg.inputs[1].default_value = 0.3
 
         ms2 = mi['nodes'].new("ShaderNodeMixShader")
         ms2.location = [400, -350]

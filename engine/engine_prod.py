@@ -97,7 +97,7 @@ class Engine(EngineBase):
     def set_material(self, m):
         if m['type'] == 'fabric_multy':
             FabricWorker.create_fabric_multy_material(m)
-        if m['type'] == 'plastic_glossy':
+        if m['type'] == 'plastic_pearl':
             PlasticWorker.create_gloss_plastic_material(m)
         if m['type'] == 'strings_base':
             StringsWorker.create_strings_material(m)

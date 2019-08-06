@@ -22,11 +22,11 @@ def get_material_info(mat_name,cleanBefore):
     return { "mat" : mat, "nodes" : nodes, "links" : links }
 
 
-def create_gloss_plastic_material(mat_name='gloss_plastic', map=False, texture=False, cleanBefore=False):
+def create_gloss_plastic_material(mat_name='pearl_plastic', map=False, texture=False, cleanBefore=False):
     ''' set material '''
     
     mi = get_material_info(mat_name,cleanBefore)
-        
+
     lw = mi['nodes'].new("ShaderNodeLayerWeight")
     lw.location = [0, -200]
 
@@ -40,14 +40,14 @@ def create_gloss_plastic_material(mat_name='gloss_plastic', map=False, texture=F
 
     fr = mi['nodes'].new("ShaderNodeFresnel")
     fr.location = [ 200,  -200]
-    fr.inputs['IOR'].default_value = 1.9
+    fr.inputs['IOR'].default_value = 2
 
     ms1 = mi['nodes'].new("ShaderNodeMixShader")
     ms1.location = [200, -350]
 
     bg = mi['nodes'].new("ShaderNodeBsdfGlossy")
     bg.location = [200, -500]
-    bg.inputs[1].default_value = 0
+    bg.inputs[1].default_value = 0.3
 
     ms2 = mi['nodes'].new("ShaderNodeMixShader")
     ms2.location = [400, -350]

@@ -32,17 +32,17 @@
     {
         "id": "pg1",
         "color": "azure",
-        "type": "plastic_glossy"
+        "type": "plastic_pearl"
     },
     {
         "id": "pg2",
         "color": "gray",
-        "type": "plastic_glossy"
+        "type": "plastic_pearl"
     },
     {
         "id": "pg3",
         "color": "black",
-        "type": "plastic_glossy"
+        "type": "plastic_pearl"
     },
     {
         "id": "sm1",

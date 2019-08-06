@@ -35,7 +35,7 @@ class FabricWorker():
         shaderNodeOutputMaterial.location = [300, -100]
 
         # link up
-        mi['links'].new(shaderNodeTextureCoordinate.outputs["Object"],
+        mi['links'].new(shaderNodeTextureCoordinate.outputs["UV"],
             shaderNodeTexImage.inputs['Vector'])
         mi['links'].new(shaderNodeTexImage.outputs["Color"],
                   shaderNodeBsdfDfiffuse.inputs['Color'])
