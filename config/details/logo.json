@@ -1,7 +1,7 @@
 [
     {
         "textured": true,
-        "filePrefix": "stringsBody",
+        "filePrefix": "bodyShirtLogo",
         "shadowCatchers": [],
         "included": [
             "bodyShirtLogo"
@@ -9,9 +9,7 @@
         "avaibleMaterialsID": [
             "m1",
             "m2",
-            "m3",
-            "m4",
-            "m5"
+            "m3"
         ]
     }
 ]

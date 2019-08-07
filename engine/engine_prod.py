@@ -99,7 +99,7 @@ class Engine(EngineBase):
             FabricWorker.create_fabric_multy_material(m)
         if m['type'] == 'plastic_pearl':
             PlasticWorker.create_gloss_plastic_material(m)
-        if m['type'] == 'strings_base':
+        if m['type'] == 'fabric_strings':
             StringsWorker.create_strings_material(m)
 
     def save_small(self, ns, r):
