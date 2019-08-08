@@ -52,3 +52,20 @@ class ProcessHelper:
                 s = s[:0] + l + s[1:]
             cml_array.append(s)
         return "".join(cml_array)
+
+    @staticmethod
+    def hex2col(hex, normalize=False, precision=None):
+        col = []
+        it = iter(hex)
+        for char in it:
+            col.append(int(char + it.__next__(), 16))
+
+        col.append(255)
+
+        if normalize:
+            col = map(lambda x: x / 255, col)
+            
+            if precision is not None and precision > 0:
+                col = map(lambda x: round(x, precision), col)
+                    
+        return list(col)
