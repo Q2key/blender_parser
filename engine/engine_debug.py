@@ -40,7 +40,6 @@ class Engine(EngineBase):
         ''' extend details '''
         for k,d in elements:
             print('\r\n-----------{0}-----------\r\n'.format(k))
-            self.extend_details(d)
             self.process_details(d)
 
 
@@ -59,11 +58,6 @@ class Engine(EngineBase):
         d['avaibleMaterials'] = [
             e for e in self.ctx.MATERIALS
             if e['id'] in d['avaibleMaterialsID']]
-
-    def extend_details(self,details):
-        self.print_caller()
-        vls = details
-        [self.get_material(d) for d in vls]
 
     def process_details(self,details):
         self.print_caller()
@@ -105,6 +99,7 @@ class Engine(EngineBase):
         self.before_render(d)
         p = d['filePrefix']
         r = self.ctx.SCENE['Resolution']
+        
         for m in d['avaibleMaterials']:
             fp = str.format("{0}_{1}", d["filePrefix"], m["id"])
             ns = ph.get_image_name(self.folder, p, fp, r)
@@ -115,11 +110,11 @@ class Engine(EngineBase):
     def set_material(self, m):
         self.print_caller()
         if m['type'] == 'fabric_multy':
-            pass
+            print("\r\b","-------->" , m, "---------")
         if m['type'] == 'plastic_glossy':
-            pass
+            print("\r\b","-------->" , m, "---------")
         if m['type'] == 'strings_base':
-            pass
+            print("\r\b","-------->" , m, "---------")
 
     def save_small(self, ns):
         pass

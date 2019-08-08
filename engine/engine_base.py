@@ -19,9 +19,7 @@ class EngineBase(ABC):
     def get_material(self, d):
         pass
 
-    @abstractmethod
-    def extend_details(self):
-        pass
+
 
     @abstractmethod
     def process_details(self):

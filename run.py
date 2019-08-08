@@ -12,7 +12,8 @@ from helpers.arguments_helper import ArgumentsHelper
 
 from commands.render_command import RenderCommand
 from commands.reset_command import ResetCommand
-from commands.watch_command import WatchCommand
+from commands.scan_store_command import ScanStoreCommand
+from commands.init_command import InitCommand
 
 parser = ArgumentsHelper()
 
@@ -31,8 +32,9 @@ if __name__ == "__main__":
     if args.reset:
         cmd_stack.append(ResetCommand(ctx,args))
     if args.watch:
-        cmd_stack.append(WatchCommand(ctx,args))
+        cmd_stack.append(ScanStoreCommand(ctx,args))
     if args.execute:
+        cmd_stack.append(InitCommand(ctx,args))
         cmd_stack.append(RenderCommand(ctx,args))
     for cmd in cmd_stack:
         cmd.run()

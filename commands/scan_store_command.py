@@ -3,7 +3,7 @@ import json
 from helpers.process_helper import ProcessHelper
 
 
-class WatchCommand:
+class ScanStoreCommand:
 
     def __init__(self, ctx, args):
         self.ctx = ctx
@@ -32,9 +32,10 @@ class WatchCommand:
         ids = [m["id"] for m in mts]
         for (k, v) in self.ctx.DETAILS2.items():
             for d in v:
-                if d["textured"]:
-                    d["avaibleMaterialsID"] = ids
-        self.ctx.MATERIALS.extend(mts)
+                material_key = d['material']
+                d['avaibleMaterials'] = mts
+                self.ctx.MATERIALS2[material_key] = mts
+
 
     def write_config(self, file, data):
         with open(file, mode="w") as f:
