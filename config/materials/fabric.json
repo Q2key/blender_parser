@@ -1,0 +1,27 @@
+[
+    {
+        "id": "m1",
+        "texture": "C:/blender/src/textures/static/test0.png",
+        "type": "fabric"
+    },
+    {
+        "id": "m2",
+        "texture": "C:/blender/src/textures/static/test1.jpg",
+        "type": "fabric"
+    },
+    {
+        "id": "m3",
+        "texture": "C:/blender/src/textures/static/test2.png",
+        "type": "fabric"
+    },
+    {
+        "id": "m4",
+        "texture": "C:/blender/src/textures/static/test2(s).jpg",
+        "type": "fabric"
+    },
+    {
+        "id": "m5",
+        "texture": "C:/blender/src/textures/static/TD_FABRIC25_basecolor.jpg",
+        "type": "fabric"
+    }
+]
