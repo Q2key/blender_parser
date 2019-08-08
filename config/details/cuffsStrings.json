@@ -9,7 +9,7 @@
             "cuffOneButtonStrings"
         ]
     },
-     {
+    {
         "type": "strings",
         "filePrefix": "cuffRegulatedWidthStrings",
         "shadowCatchers": [
@@ -29,7 +29,7 @@
             "cuffTwoButtonsStrings"
         ]
     },
-   {
+    {
         "type": "strings",
         "filePrefix": "cuffOneButtonStrings",
         "shadowCatchers": [],
@@ -54,7 +54,7 @@
         ]
     },
     {
-        "textured": true,
+        "type": "strings",
         "filePrefix": "cuffOneButtonButtons",
         "shadowCatchers": [],
         "included": [
@@ -62,7 +62,7 @@
         ]
     },
     {
-        "textured": true,
+        "type": "strings",
         "filePrefix": "cuffRegulatedWidthButtons",
         "shadowCatchers": [],
         "included": [

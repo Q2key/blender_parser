@@ -30,18 +30,18 @@ class ScanStoreCommand:
     def update_config(self):
         mts = self.search_for_material()
         ids = [m["id"] for m in mts]
-        for (k, v) in self.ctx.DETAILS2.items():
+        for (k, v) in self.ctx.DETAILS.items():
             for d in v:
-                material_key = d['material']
+                material_key = d['type']
                 d['avaibleMaterials'] = mts
-                self.ctx.MATERIALS2[material_key] = mts
+                self.ctx.MATERIALS[material_key] = mts
 
     def write_config(self, file, data):
         with open(file, mode="w") as f:
             f.write(data)
 
     def flush_config(self):
-        for k,v in self.ctx.DETAILS2.items():
+        for k,v in self.ctx.DETAILS.items():
             file = k.lower() + '.json'
             path = str.format("{0}/_config/_details/{1}", self.ctx.STORE_PATH, file)
             self.write_config(path, json.dumps(v, indent=4))

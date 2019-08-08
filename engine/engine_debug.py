@@ -35,7 +35,7 @@ class Engine(EngineBase):
     def process_elements(self):
         ''' define details '''
 
-        details = self.ctx.DETAILS2
+        details = self.ctx.DETAILS
         elements = self.filter_details(details).items()
         ''' extend details '''
         for k,d in elements:
@@ -103,17 +103,17 @@ class Engine(EngineBase):
         for m in d['avaibleMaterials']:
             fp = str.format("{0}_{1}", d["filePrefix"], m["id"])
             ns = ph.get_image_name(self.folder, p, fp, r)
-            self.set_material(m)
+            self.set_material(m,d['type'])
             self.render_detail(ns)
             self.save_small(ns)
 
-    def set_material(self, m):
+    def set_material(self, m, materyal_type):
         self.print_caller()
-        if m['type'] == 'fabric_multy':
+        if materyal_type == 'fabric':
             print("\r\b","-------->" , m, "---------")
-        if m['type'] == 'plastic_glossy':
+        if materyal_type == 'plastic':
             print("\r\b","-------->" , m, "---------")
-        if m['type'] == 'strings_base':
+        if materyal_type == 'strings':
             print("\r\b","-------->" , m, "---------")
 
     def save_small(self, ns):

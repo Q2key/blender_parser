@@ -95,11 +95,11 @@ class Engine(EngineBase):
             self.save_small(ns, r)
 
     def set_material(self, m):
-        if m['type'] == 'fabric_multy':
+        if m['type'] == 'fabric':
             FabricWorker.create_fabric_multy_material(m)
-        if m['type'] == 'plastic_pearl':
+        if m['type'] == 'plastic':
             PlasticWorker.create_gloss_plastic_material(m)
-        if m['type'] == 'fabric_strings':
+        if m['type'] == 'fabric':
             StringsWorker.create_strings_material(m)
 
     def save_small(self, ns, r):

@@ -13,9 +13,10 @@ class InitCommand:
         self.init_details()
 
     def init_details(self):
-        det = self.ctx.DETAILS2.items()
-        mat = self.ctx.MATERIALS2.items()
+        det = self.ctx.DETAILS.items()
+        mat = self.ctx.MATERIALS
         for (key,details) in det:
             for detail in details:
-                material_key = detail['material']
+                material_key = detail['type']
                 detail['avaibleMaterials'] = mat[material_key]
+
