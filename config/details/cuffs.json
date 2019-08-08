@@ -7,8 +7,7 @@
         ],
         "included": [
             "cuffOneButtonExternal"
-        ],
-        "avaibleMaterialsID": []
+        ]
     },
     {
         "type": "fabric",
@@ -18,8 +17,7 @@
         ],
         "included": [
             "cuffRegulatedWidthExternal"
-        ],
-        "avaibleMaterialsID": []
+        ]
     },
     {
         "type": "fabric",
@@ -29,8 +27,7 @@
         ],
         "included": [
             "cuffTwoButtonsExternal"
-        ],
-        "avaibleMaterialsID": []
+        ]
     },
     {
         "type": "fabric",
@@ -38,8 +35,7 @@
         "shadowCatchers": [],
         "included": [
             "cuffOneButtonInternal"
-        ],
-        "avaibleMaterialsID": []
+        ]
     },
     {
         "type": "fabric",
@@ -47,8 +43,7 @@
         "shadowCatchers": [],
         "included": [
             "cuffRegulatedWidthInternal"
-        ],
-        "avaibleMaterialsID": []
+        ]
     },
     {
         "type": "fabric",
@@ -56,8 +51,7 @@
         "shadowCatchers": [],
         "included": [
             "cuffTwoButtonsInternal"
-        ],
-        "avaibleMaterialsID": []
+        ]
     },
     {
         "type": "fabric",
@@ -65,8 +59,7 @@
         "shadowCatchers": [],
         "included": [
             "cuffOneButtonButtonCuff"
-        ],
-        "avaibleMaterialsID": []
+        ]
     },
     {
         "type": "fabric",
@@ -74,8 +67,7 @@
         "shadowCatchers": [],
         "included": [
             "cuffRegulatedWidthButtonCuff"
-        ],
-        "avaibleMaterialsID": []
+        ]
     },
     {
         "type": "fabric",
@@ -83,8 +75,7 @@
         "shadowCatchers": [],
         "included": [
             "cuffTwoButtonsButtonCuff"
-        ],
-        "avaibleMaterialsID": []
+        ]
     },
     {
         "type": "fabric",
@@ -92,7 +83,6 @@
         "shadowCatchers": [],
         "included": [
             "cuffOneButtonStringsCuff"
-        ],
-        "avaibleMaterialsID": []
+        ]
     }
 ]
