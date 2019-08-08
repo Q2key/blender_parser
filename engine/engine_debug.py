@@ -103,14 +103,14 @@ class Engine(EngineBase):
             self.render_detail(ns)
             self.save_small(ns)
 
-    def set_material(self, m, materyal_type):
+    def set_material(self, material, mtype):
         self.print_caller()
-        if materyal_type == 'fabric':
-            print("\r\b","-------->" , m, "---------")
-        if materyal_type == 'plastic':
-            print("\r\b","-------->" , m, "---------")
-        if materyal_type == 'strings':
-            print("\r\b","-------->" , m, "---------")
+        if mtype == 'fabric':
+            print("\r\b","-------->" , material, "---------")
+        if mtype  == 'plastic':
+            print("\r\b","-------->" , material, "---------")
+        if mtype  == 'strings':
+            print("\r\b","-------->" , material, "---------")
 
     def save_small(self, ns):
         pass

@@ -21,20 +21,21 @@ class ScanStoreCommand:
         for (key, val) in enumerate(t):
             m.append({
                 "id": ProcessHelper.get_meterial_name(val),
-                "texture": str.format("{0}/{1}", s, val),
-                "map": False,
-                "type": "fabric_multy"
+                "texture": str.format("{0}/{1}", s, val)
             })
         return m
 
     def update_config(self):
         mts = self.search_for_material()
-        ids = [m["id"] for m in mts]
         for (k, v) in self.ctx.DETAILS.items():
             for d in v:
-                material_key = d['type']
-                d['avaibleMaterials'] = mts
-                self.ctx.MATERIALS[material_key] = mts
+                mkey = d['type']
+                if mkey == 'fabric':
+                    d['avaibleMaterials'] = mts
+                else:
+                    d['avaibleMaterials'] = self.ctx.MATERIALS[mkey]
+
+        print(mts)
 
     def write_config(self, file, data):
         with open(file, mode="w") as f:

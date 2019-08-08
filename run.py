@@ -36,6 +36,7 @@ if __name__ == "__main__":
     if args.execute:
         cmd_stack.append(InitCommand(ctx,args))
         cmd_stack.append(RenderCommand(ctx,args))
+
     for cmd in cmd_stack:
         cmd.run()
 

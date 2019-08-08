@@ -82,17 +82,17 @@ class Engine(EngineBase):
         for m in d['avaibleMaterials']:
             fp = str.format("{0}_{1}", p, m["id"])
             ns = ph.get_image_name(self.folder, p, fp, r)
-            self.set_material(m,d['type'])
+            self.set_material(m,d)
             self.render_detail(ns)
             self.save_small(ns, r)
 
-    def set_material(self, m, mtype):
-        if mtype == 'fabric':
-            FabricWorker.create_fabric_multy_material(m)
-        if mtype == 'plastic':
-            PlasticWorker.create_gloss_plastic_material(m)
-        if mtype == 'fabric':
-            StringsWorker.create_strings_material(m)
+    def set_material(self, material, detail):
+        if detail['type'] == 'fabric':
+            FabricWorker.create_fabric_multy_material(material)
+        if detail['type'] == 'plastic':
+            PlasticWorker.create_gloss_plastic_material(material)
+        if detail['type'] == 'strings':
+            StringsWorker.create_strings_material(material)
 
     def save_small(self, ns, r):
         ph.save_small(ns, r)
