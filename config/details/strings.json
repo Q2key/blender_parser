@@ -1,13 +1,10 @@
 [
     {
-        "textured": false,
+        "type": "strings",
         "filePrefix": "stringsBody",
         "shadowCatchers": [],
         "included": [
             "stringsBody"
-        ],
-        "avaibleMaterialsID": [
-            "strings_1"
         ]
     }
 ]

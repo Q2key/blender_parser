@@ -1,11 +1,10 @@
 [
     {
-        "textured": true,
+        "type": "fabric",
         "filePrefix": "bodyShirtLogo",
         "shadowCatchers": [],
         "included": [
             "bodyShirtLogo"
-        ],
-        "avaibleMaterialsID": []
+        ]
     }
 ]

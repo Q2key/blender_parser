@@ -1,7 +1,7 @@
 [
     {
-        "textured": true,
         "filePrefix": "collarLayerBottom",
+        "type" : "fabric",
         "shadowCatchers": [],
         "included": [
             "collarLayerBottom"

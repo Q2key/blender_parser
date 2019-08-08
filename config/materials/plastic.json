@@ -6,8 +6,7 @@
             "G": 1,
             "B": 1,
             "A": 1
-        },
-        "type": "plastic"
+        }
     },
     {
         "id": "plastic_2",
@@ -16,8 +15,7 @@
             "G": 0,
             "B": 1,
             "A": 1
-        },
-        "type": "plastic"
+        }
     },
     {
         "id": "plastic_3",
@@ -26,8 +24,7 @@
             "G": 0,
             "B": 0,
             "A": 1
-        },
-        "type": "plastic"
+        }
     },
     {
         "id": "plastic_4",
@@ -36,7 +33,6 @@
             "G": 8,
             "B": 8,
             "A": 1
-        },
-        "type": "plastic"
+        }
     }
 ]

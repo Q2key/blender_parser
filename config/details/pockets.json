@@ -1,11 +1,10 @@
 [
     {
-        "textured": true,
+        "type": "fabric",
         "filePrefix": "pocketLeft",
         "shadowCatchers": [],
         "included": [
             "pocketLeft"
-        ],
-        "avaibleMaterialsID": []
+        ]
     }
 ]

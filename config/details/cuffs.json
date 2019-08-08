@@ -1,6 +1,6 @@
 [
     {
-        "textured": true,
+        "type": "fabric",
         "filePrefix": "cuffOneButtonExternal",
         "shadowCatchers": [
             "bodyShirt"
@@ -11,7 +11,7 @@
         "avaibleMaterialsID": []
     },
     {
-        "textured": true,
+        "type": "fabric",
         "filePrefix": "cuffRegulatedWidthExternal",
         "shadowCatchers": [
             "bodyShirt"
@@ -22,7 +22,7 @@
         "avaibleMaterialsID": []
     },
     {
-        "textured": true,
+        "type": "fabric",
         "filePrefix": "cuffTwoButtonsExternal",
         "shadowCatchers": [
             "bodyShirt"
@@ -33,7 +33,7 @@
         "avaibleMaterialsID": []
     },
     {
-        "textured": true,
+        "type": "fabric",
         "filePrefix": "cuffOneButtonInternal",
         "shadowCatchers": [],
         "included": [
@@ -42,7 +42,7 @@
         "avaibleMaterialsID": []
     },
     {
-        "textured": true,
+        "type": "fabric",
         "filePrefix": "cuffRegulatedWidthInternal",
         "shadowCatchers": [],
         "included": [
@@ -51,7 +51,7 @@
         "avaibleMaterialsID": []
     },
     {
-        "textured": true,
+        "type": "fabric",
         "filePrefix": "cuffTwoButtonsInternal",
         "shadowCatchers": [],
         "included": [
@@ -60,7 +60,7 @@
         "avaibleMaterialsID": []
     },
     {
-        "textured": true,
+        "type": "fabric",
         "filePrefix": "cuffOneButtonButtons",
         "shadowCatchers": [],
         "included": [
@@ -69,7 +69,7 @@
         "avaibleMaterialsID": []
     },
     {
-        "textured": true,
+        "type": "fabric",
         "filePrefix": "cuffRegulatedWidthButtons",
         "shadowCatchers": [],
         "included": [
@@ -78,7 +78,7 @@
         "avaibleMaterialsID": []
     },
     {
-        "textured": true,
+        "type": "fabric",
         "filePrefix": "cuffTwoButtonsButtons",
         "shadowCatchers": [],
         "included": [
@@ -87,7 +87,7 @@
         "avaibleMaterialsID": []
     },
     {
-        "textured": true,
+        "type": "fabric",
         "filePrefix": "cuffOneButtonStrings",
         "shadowCatchers": [],
         "included": [

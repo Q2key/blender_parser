@@ -1,13 +1,11 @@
 [
    {
       "id": "7ca4c5",
-      "color": "7ca4c5",
-      "type": "strings"
+      "color": "7ca4c5"
    },
    {
       "id": "c62d12",
-      "color": "7ca4c5",
-      "type": "strings"
+      "color": "7ca4c5"
    },
    {
       "id": "e2e2e2",
@@ -15,97 +13,78 @@
    },
    {
       "id": "5a7bb3",
-      "color": "5a7bb3",
-      "type": "strings"
+      "color": "5a7bb3"
    },
    {
       "id": "d9c4c5",
-      "color": "d9c4c5",
-      "type": "strings"
+      "color": "d9c4c5"
    },
    {
       "id": "262626",
-      "color": "262626",
-      "type": "strings"
+      "color": "262626"
    },
    {
       "id": "cbdeb6",
-      "color": "cbdeb6",
-      "type": "strings"
+      "color": "cbdeb6"
    },
    {
       "id": "b7b7b5",
-      "color": "b7b7b5",
-      "type": "strings"
+      "color": "b7b7b5"
    },
    {
       "id": "fddb2b",
-      "color": "fddb2b",
-      "type": "strings"
+      "color": "fddb2b"
    },
    {
       "id": "cfb496",
-      "color": "cfb496",
-      "type": "strings"
+      "color": "cfb496"
    },
    {
       "id": "ffffff",
-      "color": "ffffff",
-      "type": "strings"
+      "color": "ffffff"
    },
    {
       "id": "09335f",
-      "color": "09335f",
-      "type": "strings"
+      "color": "09335f"
    },
    {
       "id": "ebbb98",
-      "color": "ebbb98",
-      "type": "strings"
+      "color": "ebbb98"
    },
    {
       "id": "e87e94",
-      "color": "e87e94",
-      "type": "strings"
+      "color": "e87e94"
    },
    {
       "id": "5e2723",
-      "color": "5e2723",
-      "type": "strings"
+      "color": "5e2723"
    },
    {
       "id": "ee9156",
-      "color": "ee9156",
-      "type": "strings"
+      "color": "ee9156"
    },
    {
       "id": "c35d9d",
-      "color": "c35d9d",
-      "type": "strings"
+      "color": "c35d9d"
    },
    {
       "id": "8a295d",
-      "color": "8a295d",
-      "type": "strings"
+      "color": "8a295d"
    },
    {
       "id": "c7ade8",
-      "color": "c7ade8",
-      "type": "strings"
+      "color": "c7ade8"
    },
    {
       "id": "4e2886",
-      "color": "4e2886",
-      "type": "strings"
+      "color": "4e2886"
    },
    {
       "id": "7ad3d8",
-      "color": "7ad3d8",
-      "type": "strings"
+      "color": "7ad3d8"
    },
    {
       "id": "0f968f",
-      "color": "0f968f",
-      "type": "strings"
+      "color": "0f968f"
    }
 ]

@@ -36,7 +36,6 @@ class ScanStoreCommand:
                 d['avaibleMaterials'] = mts
                 self.ctx.MATERIALS2[material_key] = mts
 
-
     def write_config(self, file, data):
         with open(file, mode="w") as f:
             f.write(data)

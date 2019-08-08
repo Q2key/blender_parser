@@ -1,6 +1,6 @@
 [
     {
-        "textured": true,
+        "type": "strings",
         "filePrefix": "pocketLeftSeam",
         "shadowCatchers": [],
         "included": [

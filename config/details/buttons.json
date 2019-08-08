@@ -1,13 +1,10 @@
 [
     {
-        "textured": false,
+        "type" : "plastic",
         "filePrefix": "buttonBody",
         "shadowCatchers": ["bodyShirt"],
         "included": [
             "buttonBody"
-        ],
-        "avaibleMaterialsID": [
-            "pg3"
         ]
     }
 ]
