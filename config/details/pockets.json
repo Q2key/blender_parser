@@ -1,0 +1,11 @@
+[
+    {
+        "textured": true,
+        "filePrefix": "pocketLeft",
+        "shadowCatchers": [],
+        "included": [
+            "pocketLeft"
+        ],
+        "avaibleMaterialsID": []
+    }
+]

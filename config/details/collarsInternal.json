@@ -2,15 +2,24 @@
     {
         "textured": true,
         "material": "fabric_multy",
+        "filePrefix": "collarStandardOldInternal",
+        "shadowCatchers": [],
+        "included": [
+            "collarStandardOldInternalStand",
+            "collarStandardOldButton"
+        ],
+        "avaibleMaterialsID": []
+    },
+    {
+        "textured": true,
+        "material": "fabric_multy",
         "filePrefix": "collarItalianOldInternal",
         "shadowCatchers": [],
         "included": [
             "collarItalianOldInternalStand",
             "collarItalianOldButton"
         ],
-        "avaibleMaterialsID": [
-
-        ]
+        "avaibleMaterialsID": []
     },
     {
         "textured": true,
@@ -21,9 +30,7 @@
             "collarBowTieInternalStand",
             "collarBowTieButton"
         ],
-        "avaibleMaterialsID": [
-
-        ]
+        "avaibleMaterialsID": []
     },
     {
         "textured": true,
@@ -34,9 +41,7 @@
             "collarStandingInternalStand",
             "collarStandingButton"
         ],
-        "avaibleMaterialsID": [
-
-        ]
+        "avaibleMaterialsID": []
     },
     {
         "textured": true,
@@ -47,8 +52,6 @@
             "collarButtonDownInternalStand",
             "collarButtonDownButton"
         ],
-        "avaibleMaterialsID": [
-
-        ]
+        "avaibleMaterialsID": []
     }
 ]
