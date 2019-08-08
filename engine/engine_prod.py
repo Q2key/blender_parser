@@ -18,10 +18,6 @@ class Engine(EngineBase):
         self.args = args
         self.folder = ph.get_folder_name(ctx.RENDERS_PATH)
 
-    def extend_materials(self, d):
-        d['avaibleMaterials'] = [
-            m for m in self.ctx.MATERIALS if
-            m['id'] in d['avaibleMaterialsID']]
 
     def go(self):
         self.set_scene()
@@ -30,12 +26,11 @@ class Engine(EngineBase):
     def process_elements(self):
         ''' define details '''
 
-        details = self.ctx.DETAILS2.items()
+        details = self.ctx.DETAILS.items()
         elements = self.filter_details(details)
         ''' extend details '''
         for k,d in elements:
             print('\r\n-----------{0}-----------\r\n'.format(k))
-            self.extend_details(d)
             self.process_details(d)
 
 
@@ -53,9 +48,6 @@ class Engine(EngineBase):
         d['avaibleMaterials'] = [
             e for e in self.ctx.MATERIALS
             if e['id'] in d['avaibleMaterialsID']]
-
-    def extend_details(self,details):
-        [self.get_material(d) for d in details]
 
     def process_details(self,details):
         for value in details:
@@ -90,16 +82,16 @@ class Engine(EngineBase):
         for m in d['avaibleMaterials']:
             fp = str.format("{0}_{1}", p, m["id"])
             ns = ph.get_image_name(self.folder, p, fp, r)
-            self.set_material(m)
+            self.set_material(m,d['type'])
             self.render_detail(ns)
             self.save_small(ns, r)
 
-    def set_material(self, m):
-        if m['type'] == 'fabric':
+    def set_material(self, m, mtype):
+        if mtype == 'fabric':
             FabricWorker.create_fabric_multy_material(m)
-        if m['type'] == 'plastic':
+        if mtype == 'plastic':
             PlasticWorker.create_gloss_plastic_material(m)
-        if m['type'] == 'fabric':
+        if mtype == 'fabric':
             StringsWorker.create_strings_material(m)
 
     def save_small(self, ns, r):

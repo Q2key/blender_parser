@@ -21,10 +21,6 @@ class Engine(EngineBase):
         self.args = args
         self.folder = ph.get_folder_name(ctx.RENDERS_PATH)
 
-    def extend_materials(self, d):
-        self.print_caller()
-        d['avaibleMaterials'] = [
-            m for m in self.ctx.MATERIALS if m['id'] in d['avaibleMaterialsID']]
 
     def go(self):
         self.print_caller()

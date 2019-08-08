@@ -3,9 +3,7 @@ from abc import ABC, abstractmethod
 
 class EngineBase(ABC):
 
-    @abstractmethod
-    def extend_materials(self, d):
-        pass
+
 
     @abstractmethod
     def go(self):
@@ -18,8 +16,6 @@ class EngineBase(ABC):
     @abstractmethod
     def get_material(self, d):
         pass
-
-
 
     @abstractmethod
     def process_details(self):
