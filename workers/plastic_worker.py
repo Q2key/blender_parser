@@ -23,11 +23,11 @@ class PlasticWorker():
 
         if m is not None:
             c = m['color']
-            bd1.inputs[0].default_value = (c['R'], c['G'], c['B'], c['A'])
-            bd2.inputs[0].default_value = (c['R'], c['G'], c['B'], c['A'])
+            bd1.inputs[0].default_value = (0, 0, 0, 1)
+            bd2.inputs[0].default_value = (0, 0, 0, 1)
         else:
-            bd2.inputs[0].default_value = (1, 0.977174, 0.910533, 1)
-            bd2.inputs[0].default_value = (1, 0.977174, 0.910533, 1)
+            bd2.inputs[0].default_value = (0, 0, 0, 1)
+            bd2.inputs[0].default_value = (0, 0, 0, 1)
 
         fr = mi['nodes'].new("ShaderNodeFresnel")
         fr.location = [200,  -200]
