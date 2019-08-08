@@ -19,8 +19,8 @@ parser = ArgumentsHelper()
 
 parser.add_argument("-m", "--model", type=str, default=False, help="model type | all models")
 parser.add_argument("-r", "--reset", action='store_true')
-parser.add_argument("-w", "--watch", action='store_true')
-parser.add_argument("-e", "--execute", action="store_true")
+parser.add_argument("-store", "--store", action='store_true')
+parser.add_argument("-static", "--static", action="store_true")
 parser.add_argument("-d", "--debug", action="store_true")
 
 args = parser.parse_args()
@@ -31,9 +31,10 @@ if __name__ == "__main__":
     ctx = Instance()
     if args.reset:
         cmd_stack.append(ResetCommand(ctx,args))
-    if args.watch:
+    if args.store:
         cmd_stack.append(ScanStoreCommand(ctx,args))
-    if args.execute:
+        cmd_stack.append(RenderCommand(ctx,args))
+    if args.static:
         cmd_stack.append(InitCommand(ctx,args))
         cmd_stack.append(RenderCommand(ctx,args))
 
