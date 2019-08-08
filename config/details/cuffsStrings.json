@@ -9,9 +9,7 @@
             "cuffOneButtonStrings"
         ],
         "avaibleMaterialsID": [
-            "strings_1",
-            "strings_2",
-            "strings_3"
+            "strings_1"
         ]
     },
      {
@@ -24,9 +22,7 @@
             "cuffRegulatedWidthStrings"
         ],
         "avaibleMaterialsID": [
-            "strings_1",
-            "strings_2",
-            "strings_3"
+            "strings_1"
         ]
     },
     {
@@ -39,9 +35,7 @@
             "cuffTwoButtonsStrings"
         ],
         "avaibleMaterialsID": [
-            "strings_1",
-            "strings_2",
-            "strings_3"
+            "strings_1"
         ]
     },
    {
@@ -52,9 +46,7 @@
             "cuffOneButtonStrings"
         ],
         "avaibleMaterialsID": [
-            "strings_1",
-            "strings_2",
-            "strings_3"
+            "strings_1"
         ]
     },
     {
@@ -65,9 +57,7 @@
             "cuffRegulatedWidthStrings"
         ],
         "avaibleMaterialsID": [
-            "strings_1",
-            "strings_2",
-            "strings_3"
+            "strings_1"
         ]
     },
     {
@@ -78,9 +68,7 @@
             "cuffTwoButtonsStrings"
         ],
         "avaibleMaterialsID": [
-            "strings_1",
-            "strings_2",
-            "strings_3"
+            "strings_1"
         ]
     },
     {
@@ -91,9 +79,7 @@
             "cuffOneButtonButton"
         ],
         "avaibleMaterialsID": [
-            "strings_1",
-            "strings_2",
-            "strings_3"
+            "strings_1"
         ]
     },
     {
@@ -104,9 +90,7 @@
             "cuffRegulatedWidthButton"
         ],
         "avaibleMaterialsID": [
-            "strings_1",
-            "strings_2",
-            "strings_3"
+            "strings_1"
         ]
     },
     {
@@ -117,9 +101,7 @@
             "cuffTwoButtonsButton"
         ],
         "avaibleMaterialsID": [
-            "strings_1",
-            "strings_2",
-            "strings_3"
+            "strings_1"
         ]
     },
     {
@@ -130,9 +112,7 @@
             "cuffOneButtonStrings"
         ],
         "avaibleMaterialsID": [
-            "strings_1",
-            "strings_2",
-            "strings_3"
+            "strings_1"
         ]
     }
 ]

@@ -7,8 +7,6 @@
             "cuffOneButtonButton"
         ],
         "avaibleMaterialsID": [
-            "pg1",
-            "pg1",
             "pg3"
         ]
     },
@@ -20,8 +18,6 @@
             "cuffRegulatedWidthButton"
         ],
         "avaibleMaterialsID": [
-            "pg1",
-            "pg2",
             "pg3"
         ]   
     },
@@ -33,8 +29,6 @@
             "cuffTwoButtonsButton"
         ],
         "avaibleMaterialsID": [
-            "pg1",
-            "pg2",
             "pg3"
         ]
     }

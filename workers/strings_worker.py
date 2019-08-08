@@ -13,7 +13,7 @@ class StringsWorker():
         bd1.location = [ 0 , 0]
 
         c = m['color']
-        bd1.inputs[0].default_value = (c['R'], c['G'], c['B'], c['A'])
+        bd1.inputs[0].default_value = (1, 1, 1, 1)
 
         om = mi['nodes'].new("ShaderNodeOutputMaterial")
         om.location = [200, 0]

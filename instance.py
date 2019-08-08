@@ -32,6 +32,10 @@ class Instance:
         #logos
         self.DETAILS2['LOGOS'] = self.read_config(str.format("{0}/config/details/logo.json",src_path))
 
+        #logos
+        self.DETAILS2['POCKET'] = self.read_config(str.format("{0}/config/details/pockets.json",src_path))
+        self.DETAILS2['POCKET_STRINGS'] = self.read_config(str.format("{0}/config/details/pocketsStrings.json",src_path))
+
 
         self.DETAILS2['STRINGS'] = self.read_config(str.format("{0}/config/details/strings.json",src_path))
 
