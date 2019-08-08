@@ -8,15 +8,9 @@
         "included": [
             "cuffOneButtonInternal"
         ],
-        "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
-        ]
+        "avaibleMaterialsID": []
     },
-     {
+    {
         "textured": true,
         "filePrefix": "cuffRegulatedWidthInternal",
         "shadowCatchers": [
@@ -25,13 +19,7 @@
         "included": [
             "cuffRegulatedWidthInternal"
         ],
-        "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
-        ]
+        "avaibleMaterialsID": []
     },
     {
         "textured": true,
@@ -42,28 +30,16 @@
         "included": [
             "cuffTwoButtonsInternal"
         ],
-        "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
-        ]
+        "avaibleMaterialsID": []
     },
-   {
+    {
         "textured": true,
         "filePrefix": "cuffOneButtonInternal",
         "shadowCatchers": [],
         "included": [
             "cuffOneButtonInternal"
         ],
-        "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
-        ]
+        "avaibleMaterialsID": []
     },
     {
         "textured": true,
@@ -72,13 +48,7 @@
         "included": [
             "cuffRegulatedWidthInternal"
         ],
-        "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
-        ]
+        "avaibleMaterialsID": []
     },
     {
         "textured": true,
@@ -87,13 +57,7 @@
         "included": [
             "cuffTwoButtonsInternal"
         ],
-        "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
-        ]
+        "avaibleMaterialsID": []
     },
     {
         "textured": true,
@@ -102,13 +66,7 @@
         "included": [
             "cuffOneButtonButton"
         ],
-        "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
-        ]
+        "avaibleMaterialsID": []
     },
     {
         "textured": true,
@@ -117,28 +75,7 @@
         "included": [
             "cuffRegulatedWidthButton"
         ],
-        "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
-        ]
-    },
-    {
-        "textured": true,
-        "filePrefix": "cuffTwoButtonsButtons",
-        "shadowCatchers": [],
-        "included": [
-            "cuffTwoButtonsButton"
-        ],
-        "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
-        ]
+        "avaibleMaterialsID": []
     },
     {
         "textured": true,
@@ -147,12 +84,6 @@
         "included": [
             "cuffOneButtonStrings"
         ],
-        "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
-        ]
+        "avaibleMaterialsID": []
     }
 ]

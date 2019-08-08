@@ -6,10 +6,6 @@
         "included": [
             "bodyShirtLogo"
         ],
-        "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3"
-        ]
+        "avaibleMaterialsID": []
     }
 ]

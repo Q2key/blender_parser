@@ -9,11 +9,7 @@
             "collarItalianOldButton"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+
         ]
     },
     {
@@ -26,11 +22,7 @@
             "collarBowTieButton"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+
         ]
     },
     {
@@ -43,11 +35,7 @@
             "collarStandingButton"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+
         ]
     },
     {
@@ -60,11 +48,7 @@
             "collarButtonDownButton"
         ],
         "avaibleMaterialsID": [
-            "m1",
-            "m2",
-            "m3",
-            "m4",
-            "m5"
+
         ]
     }
 ]
