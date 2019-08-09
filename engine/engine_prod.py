@@ -102,6 +102,7 @@ class Engine(EngineBase):
         bpy.data.scenes["Scene"].render.resolution_x = self.ctx.SCENE["Resolution"]["Big"]["x"]
         bpy.data.scenes["Scene"].render.resolution_y = self.ctx.SCENE["Resolution"]["Big"]["y"]
         bpy.data.scenes["Scene"].render.resolution_percentage = self.ctx.SCENE["Percentage"]
+        bpy.data.scenes["Scene"].render.image_settings.compression = self.ctx.SCENE["Compression"]
 
     def render_detail(self, result):
         bpy.context.scene.render.filepath = result['b']

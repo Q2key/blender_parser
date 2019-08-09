@@ -19,7 +19,7 @@ class StringsWorker():
         rgb = ph.hex2col(c,True,2)
 
 
-        bd1.inputs[0].default_value = (rgb[0], rgb[1], rgb[2], rgb[3])
+        bd1.inputs[0].default_value = rgb
         
 
         om = mi['nodes'].new("ShaderNodeOutputMaterial")

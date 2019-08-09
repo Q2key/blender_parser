@@ -1,15 +1,16 @@
 {
     "Resolution": {
         "Big" : {
-            "x": 3840,
-            "y": 2160
+            "x": 1920,
+            "y": 1080
         },
         "Small":{
-            "x" : 960,
-            "y" : 540
+            "x" : 1920,
+            "y" : 1080
         }
     },
     "PerspectiveStyle": "Table",
     "Percentage": 100,
+    "Compression" :10,
     "TexturesFormat" : [".png",".jpg"]
 }
