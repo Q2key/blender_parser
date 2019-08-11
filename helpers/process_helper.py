@@ -15,9 +15,11 @@ class ProcessHelper:
     def get_image_name(root,subfold,file,res):
         s = 's' #str.format("{0}x{1}",res['Small']['x'],res['Small']['y']) 
         b = 'b' #str.format("{0}x{1}",res['Big']['x'],res['Big']['y'])
+        l = 'l' #str.format("{0}x{1}",res['Big']['x'],res['Big']['y'])
         return {
             "s" : str.format("{0}/{1}/{2}_{3}.png",root,subfold,file,s),
-            "b" : str.format("{0}/{1}/{2}_{3}.png",root,subfold,file,b)
+            "b" : str.format("{0}/{1}/{2}_{3}.png",root,subfold,file,b),
+            "l" : str.format("{0}/{1}/{2}_{3}.png",root,subfold,file,l)
         }
     
     @staticmethod
@@ -31,10 +33,17 @@ class ProcessHelper:
             return spl[0].strip()
         return raw.strip()
 
+    @staticmethod
+    def save_big(ns,res):
+        img = Image.open(ns['l'])
+        new_width  = res["Big"]["x"]
+        new_height = res["Big"]["y"]
+        img = img.resize((new_width, new_height), Image.ANTIALIAS)
+        img.save(ns['b'])
 
     @staticmethod
     def save_small(ns,res):
-        img = Image.open(ns['b'])
+        img = Image.open(ns['l'])
         new_width  = res["Small"]["x"]
         new_height = res["Small"]["y"]
         img = img.resize((new_width, new_height), Image.ANTIALIAS)

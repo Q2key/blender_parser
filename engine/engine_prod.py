@@ -84,6 +84,7 @@ class Engine(EngineBase):
             ns = ph.get_image_name(self.folder, p, fp, r)
             self.set_material(m,d)
             self.render_detail(ns)
+            self.save_big(ns, r)
             self.save_small(ns, r)
 
     def set_material(self, material, detail):
@@ -94,16 +95,19 @@ class Engine(EngineBase):
         if detail['type'] == 'strings':
             StringsWorker.create_strings_material(material)
 
+    def save_big(self, ns, r):
+        ph.save_big(ns, r)
+
     def save_small(self, ns, r):
         ph.save_small(ns, r)
 
     def set_scene(self):
         bpy.data.scenes["Scene"].render.engine = 'CYCLES'
-        bpy.data.scenes["Scene"].render.resolution_x = self.ctx.SCENE["Resolution"]["Big"]["x"]
-        bpy.data.scenes["Scene"].render.resolution_y = self.ctx.SCENE["Resolution"]["Big"]["y"]
+        bpy.data.scenes["Scene"].render.resolution_x = self.ctx.SCENE["Resolution"]["Loseless"]["x"]
+        bpy.data.scenes["Scene"].render.resolution_y = self.ctx.SCENE["Resolution"]["Loseless"]["y"]
         bpy.data.scenes["Scene"].render.resolution_percentage = self.ctx.SCENE["Percentage"]
         bpy.data.scenes["Scene"].render.image_settings.compression = self.ctx.SCENE["Compression"]
 
     def render_detail(self, result):
-        bpy.context.scene.render.filepath = result['b']
+        bpy.context.scene.render.filepath = result['l']
         bpy.ops.render.render(write_still=True)
