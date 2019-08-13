@@ -1,8 +1,8 @@
 {
     "Resolution": {
         "Loseless":{
-            "x": 3840,
-            "y": 2160
+            "x": 1920,
+            "y": 1080
         },
         "Big" : {
             "x": 1920,
@@ -15,6 +15,6 @@
     },
     "PerspectiveStyle": "Table",
     "Percentage": 100,
-    "Compression" : 50,
+    "Compression" : 30,
     "TexturesFormat" : [".png",".jpg"]
 }
