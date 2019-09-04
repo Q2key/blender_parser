@@ -1,3 +1,11 @@
+
+import os
+import sys
+
+root = os.path.dirname(__file__)
+sys.path.append(root)
+sys.path.append(root)
+
 from commands.init_command import InitCommand
 from commands.scan_store_command import ScanStoreCommand
 from commands.reset_command import ResetCommand
@@ -5,13 +13,6 @@ from commands.render_command import RenderCommand
 from helpers.logger import Logger as Logger
 from helpers.arguments_helper import ArgumentsHelper
 from instance import Instance
-import os
-import sys
-
-
-root = os.path.dirname(__file__)
-sys.path.append(root)
-sys.path.append(root)
 
 
 parser = ArgumentsHelper()
