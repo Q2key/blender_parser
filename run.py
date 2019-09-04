@@ -4,7 +4,7 @@ import sys
 
 root = os.path.dirname(__file__)
 sys.path.append(root)
-sys.path.append(root + "/src/")
+sys.path.append(root)
 
 
 from instance import Instance
@@ -26,7 +26,6 @@ parser.add_argument("-d", "--debug", action="store_true")
 args = parser.parse_args()
 
 if __name__ == "__main__":
-
     cmd_stack = list()
     ctx = Instance()
     if args.reset:

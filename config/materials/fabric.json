@@ -1,22 +1,22 @@
 [
     {
         "id": "m1",
-        "texture": "C:/blender/src/textures/static/test0.png"
+        "texture": "textures/static/test0.png"
     },
     {
         "id": "m2",
-        "texture": "C:/blender/src/textures/static/test1.jpg"
+        "texture": "textures/static/test1.jpg"
     },
     {
         "id": "m3",
-        "texture": "C:/blender/src/textures/static/test2.png"
+        "texture": "textures/static/test2.png"
     },
     {
         "id": "m4",
-        "texture": "C:/blender/src/textures/static/test2(s).jpg"
+        "texture": "textures/static/test2(s).jpg"
     },
     {
         "id": "m5",
-        "texture": "C:/blender/src/textures/static/TD_FABRIC25_basecolor.jpg"
+        "texture": "textures/static/TD_FABRIC25_basecolor.jpg"
     }
 ]

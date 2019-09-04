@@ -10,8 +10,8 @@
             "request": "launch",
             "program": "${workspaceFolder}/run.py",
             "console": "integratedTerminal",
-            "args": ["--","-w", "-e","-d"],
-            "cwd": "C:/blender"
+            "args": ["--","--store","-d"],
+            "cwd": "C:/Projects/shirtRender"
         }
     ]
 }
