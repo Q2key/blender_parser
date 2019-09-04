@@ -41,10 +41,25 @@ class ScanStoreCommand:
         with open(file, mode="w") as f:
             f.write(data)
 
+    def write_dir_tree(self,p):
+        subdirs = [ x for x in p.split('/') if x.find('.') is -1  ]
+        d = subdirs[0]
+        for s in subdirs:
+            if s is not d:
+                d = '{0}/{1}'.format(d,s)
+            if os.path.exists(d):
+                print('directory {0} exists'.format(d))
+            else:
+                print('directory {0} not exists'.format(d))
+                os.mkdir(d)
+
+
+
     def flush_config(self):
         for k,v in self.ctx.DETAILS.items():
             file = k.lower() + '.json'
             path = str.format("{0}/_config/_details/{1}", self.ctx.STORE_PATH, file)
+            self.write_dir_tree(path)
             self.write_config(path, json.dumps(v, indent=4))
         
         self.write_config("{0}/_config/scene.json".format(self.ctx.STORE_PATH),json.dumps(self.ctx.SCENE, indent=4))
