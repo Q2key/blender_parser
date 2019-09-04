@@ -1,0 +1,1 @@
+start C:/blender/blender scenes/scene.blend --background --python run.py -- -store -m=body
