@@ -1,10 +1,10 @@
 [
     {
         "type": "fabric",
-        "filePrefix": "pocketLeft",
+        "filePrefix": "pocket",
         "shadowCatchers": [],
         "included": [
-            "pocketLeft"
+            "pocket"
         ]
     }
 ]
