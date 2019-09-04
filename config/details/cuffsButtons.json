@@ -6,21 +6,5 @@
         "included": [
             "cuffOneButtonButton"
         ]
-    },
-    {
-        "type": "plastic",
-        "filePrefix": "cuffRegulatedWidthButton",
-        "shadowCatchers": ["cuffOneButtonInternal"],
-        "included": [
-            "cuffRegulatedWidthButton"
-        ]
-    },
-    {
-        "type": "plastic",
-        "filePrefix": "cuffTwoButtonsButton",
-        "shadowCatchers": ["cuffOneButtonInternal"],
-        "included": [
-            "cuffTwoButtonsButton"
-        ]
     }
 ]

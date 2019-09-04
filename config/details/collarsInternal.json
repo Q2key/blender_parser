@@ -7,45 +7,5 @@
             "collarStandardOldInternalStand",
             "collarStandardOldButton"
         ]
-    },
-    {
-        
-        "type": "fabric",
-        "filePrefix": "collarItalianOldInternal",
-        "shadowCatchers": [],
-        "included": [
-            "collarItalianOldInternalStand",
-            "collarItalianOldButton"
-        ]
-    },
-    {
-        
-        "type": "fabric",
-        "filePrefix": "collarBowTieInternal",
-        "shadowCatchers": [],
-        "included": [
-            "collarBowTieInternalStand",
-            "collarBowTieButton"
-        ]
-    },
-    {
-        
-        "type": "fabric",
-        "filePrefix": "collarStandingInternal",
-        "shadowCatchers": [],
-        "included": [
-            "collarStandingInternalStand",
-            "collarStandingButton"
-        ]
-    },
-    {
-        
-        "type": "fabric",
-        "filePrefix": "collarButtonDownInternal",
-        "shadowCatchers": [],
-        "included": [
-            "collarButtonDownInternalStand",
-            "collarButtonDownButton"
-        ]
     }
 ]
