@@ -1,11 +1,10 @@
 [
     {
         "type": "fabric",
-        "filePrefix": "collarStandardOldInternal",
+        "filePrefix": "collarButtonDownInternal",
         "shadowCatchers": [],
         "included": [
-            "collarStandardOldInternalStand",
-            "collarStandardOldButton"
+            "collarButtonDownInternalStand"
         ]
     }
 ]

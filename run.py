@@ -26,7 +26,6 @@ parser.add_argument("-d", "--debug", action="store_true")
 args = parser.parse_args()
 
 if __name__ == "__main__":
-    
     cmd_stack = list()
     ctx = Instance()
     if args.reset:
