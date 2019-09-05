@@ -2,9 +2,7 @@
     {
         "type": "fabric",
         "filePrefix": "cuffOneButtonExternal",
-        "shadowCatchers": [
-            "bodyShirt"
-        ],
+        "shadowCatchers": [],
         "included": [
             "cuffOneButtonExternal"
         ]

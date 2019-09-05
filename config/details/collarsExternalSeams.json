@@ -1,10 +1,10 @@
 [
     {
         "type": "strings",
-        "filePrefix": "collarButtonDownSeamExternalSeam",
+        "filePrefix": "collarButtonDownSeamExternalStand",
         "shadowCatchers": [],
         "included": [
-            "collarButtonDownSeamExternalSeam"
+            "collarButtonDownSeamExternalStand"
         ]
     }
 ]

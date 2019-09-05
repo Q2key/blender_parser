@@ -1,12 +1,11 @@
 [
     {
         "type": "fabric",
-        "filePrefix": "collarButtonDown",
+        "filePrefix": "collarButtonDownExternalStand",
         "shadowCatchers": [
             "bodyShirt"
         ],
         "included": [
-            "collarButtonDown",
             "collarButtonDownExternalStand"
         ]
     }
