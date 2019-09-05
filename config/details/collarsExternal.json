@@ -1,7 +1,7 @@
 [
     {
         "type": "fabric",
-        "filePrefix": "collarButtonDown",
+        "filePrefix": "collarButtonDownExternal",
         "shadowCatchers": [
             "bodyShirt"
         ],
