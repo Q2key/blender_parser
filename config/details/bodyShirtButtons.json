@@ -1,10 +1,10 @@
 [
     {
         "type" : "plastic",
-        "filePrefix": "bodyButton",
+        "filePrefix": "bodyShirtButton",
         "shadowCatchers": ["bodyShirt"],
         "included": [
-            "bodyButton"
+            "bodyShirtButton"
         ]
     }
 ]
