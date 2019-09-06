@@ -1,10 +1,10 @@
 [
     {
         "type": "strings",
-        "filePrefix": "bodyStrings",
+        "filePrefix": "bodyShirtStrings",
         "shadowCatchers": [],
         "included": [
-            "bodyStrings"
+            "bodyShirtStrings"
         ]
     }
 ]

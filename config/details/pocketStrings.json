@@ -1,10 +1,10 @@
 [
     {
         "type": "strings",
-        "filePrefix": "pocketString",
+        "filePrefix": "pocketStrings",
         "shadowCatchers": [],
         "included": [
-            "pocketString"
+            "pocketStrings"
         ]
     }
 ]
