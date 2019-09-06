@@ -1,0 +1,10 @@
+[
+    {
+        "type": "plastic",
+        "filePrefix": "collarButtonDownButton",
+        "shadowCatchers": [],
+        "included": [
+            "collarButtonDownButton"
+        ]
+    }
+]

@@ -14,7 +14,7 @@
         }
     },
     "PerspectiveStyle": "Table",
-    "Percentage":15,
+    "Percentage":50,
     "Compression" : 0,
     "TexturesFormat" : [".png",".jpg"]
 }
