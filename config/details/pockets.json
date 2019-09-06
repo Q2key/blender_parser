@@ -1,7 +1,7 @@
 [
     {
         "type": "fabric",
-        "filePrefix": "pocketExternal",
+        "filePrefix": "pocket",
         "shadowCatchers": ["bodyShirt"],
         "included": [
             "pocket"
