@@ -1,0 +1,164 @@
+{
+    "detailVariants": {
+        "bodyShirt": [
+            "bodyShirt"
+        ],
+        "bodyShirtLogo": [
+            "bodyShirtLogo"
+        ],
+        "bodyShirtStrings": [
+            "bodyShirtStrings"
+        ],
+        "bodyShirtButtons": [
+            "bodyShirtButton"
+        ],
+        "collar": [
+            "collarButtonDown",
+            "collarCutaway",
+            "collarKent",
+            "collarKing",
+            "collarLondoner",
+            "collarRoma",
+            "collarWindsor",
+            "collarWingTip"
+        ],
+        "cuff": [
+            "cuffFrench",
+            "cuffOneButton",
+            "cuffRegulated",
+            "cuffRounded",
+            "cuffStraight",
+            "cuffTwoButtons"
+        ]
+    },
+    "configPresets": [
+        {
+            "parent": "bodyShirt",
+            "configFile": "bodyShirt.json",
+            "type": "fabric",
+            "shadowCatchers": []
+        },
+        {
+            "parent": "bodyShirtButton",
+            "configFile": "bodyShirtButton.json",
+            "type": "plastic",
+            "shadowCatchers": [
+                "bodyShirt"
+            ]
+        },
+        {
+            "parent": "bodyShirtStrings",
+            "configFile": "bodyShirtStrings.json",
+            "type": "strings",
+            "shadowCatchers": []
+        },
+        {
+            "parent": "collar",
+            "configFile": "collar.json",
+            "type": "fabric",
+            "shadowCatchers": [
+                "bodyShirt"
+            ]
+        },
+        {
+            "parent": "collar",
+            "configFile": "collarButton.json",
+            "type": "plastic",
+            "shadowCatchers": []
+        },
+        {
+            "parent": "collar",
+            "configFile": "collarExternalStands.json",
+            "type": "fabric",
+            "shadowCatchers": [
+                "collarLayerBottom"
+            ]
+        },
+        {
+            "parent": "collar",
+            "configFile": "collarInternalStands.json",
+            "type": "fabric",
+            "shadowCatchers": [
+                "collarLayerBottom"
+            ]
+        },
+        {
+            "parent": "collar",
+            "configFile": "collarSeamExternalStand.json",
+            "type": "strings",
+            "shadowCatchers": []
+        },
+        {
+            "parent": "collar",
+            "configFile": "collarSeamInternalStand.json",
+            "type": "strings",
+            "shadowCatchers": []
+        },
+        {
+            "parent": "collar",
+            "configFile": "collarStrings.json",
+            "type": "strings",
+            "shadowCatchers": []
+        },
+        {
+            "parent": "collar",
+            "configFile": "collarStrings.json",
+            "type": "strings",
+            "shadowCatchers": []
+        },
+        {
+            "parent": "collarLayerBottom",
+            "configFile": "collarLayerBottom.json",
+            "type": "fabric",
+            "shadowCatchers": []
+        },
+        {
+            "parent": "logo",
+            "configFile": "bodyShirtLogo.json",
+            "type": "fabric",
+            "shadowCatchers": []
+        },
+        {
+            "parent": "cuff",
+            "configFile": "cuffButton.json",
+            "type": "plastic",
+            "shadowCatchers": [
+                "cuffOneButtonInternal"
+            ]
+        },
+        {
+            "parent": "cuff",
+            "configFile": "cuffInternal.json",
+            "type": "fabric",
+            "shadowCatchers": [
+                "bodyShirt"
+            ]
+        },
+        {
+            "parent": "cuff",
+            "configFile": "cuffExternal.json",
+            "type": "fabric",
+            "shadowCatchers": []
+        },
+        {
+            "parent": "cuff",
+            "configFile": "cuffStrings.json",
+            "type": "strings",
+            "shadowCatchers": []
+        },
+        {
+            "parent": "pocket",
+            "configFile": "pocket.json",
+            "type": "fabric",
+            "shadowCatchers": [
+                "bodyShirt"
+            ]
+        },
+        {
+            "parent": "pocket",
+            "configFile": "pocketStrings.json",
+            "type": "strings",
+            "shadowCatchers": []
+        }
+    ]
+}

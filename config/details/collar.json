@@ -7,16 +7,6 @@
         ],
         "included": [
             "collarButtonDown"
-        ],
-        "variants": [
-            "collarButtonDown",
-            "collarCutaway",
-            "collarKent",
-            "collarKing",
-            "collarLondoner",
-            "collarRoma",
-            "collarWindsor",
-            "collarWingTip"
         ]
     }
 ]
