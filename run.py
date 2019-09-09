@@ -6,14 +6,17 @@ root = os.path.dirname(__file__)
 sys.path.append(root)
 sys.path.append(root)
 
+#commands
 from commands.init_command import InitCommand
 from commands.scan_store_command import ScanStoreCommand
 from commands.reset_command import ResetCommand
 from commands.render_command import RenderCommand
+from commands.install_command import InstallCommand
+
+#helpers
 from helpers.logger import Logger as Logger
 from helpers.arguments_helper import ArgumentsHelper
 from instance import Instance
-
 
 parser = ArgumentsHelper()
 
@@ -22,6 +25,7 @@ parser.add_argument("-r", "--reset", action='store_true')
 parser.add_argument("-store", "--store", action='store_true')
 parser.add_argument("-static", "--static", action="store_true")
 parser.add_argument("-d", "--debug", action="store_true")
+parser.add_argument("-i", "--install", action="store_true")
 
 args = parser.parse_args()
 
