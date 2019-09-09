@@ -1,10 +1,17 @@
-[
-    {
-        "type": "fabric",
-        "filePrefix": "collarButtonDownStrings",
-        "shadowCatchers": [],
-        "included": [
-            "collarButtonDownStrings"
-        ]
-    }
-]
+{
+    "type": "strings",
+    "shadowCatchers": [],
+    "included": [
+        "Strings"
+    ],
+    "variants": [
+        "ButtonDown",
+        "Cutaway",
+        "Kent",
+        "King",
+        "Londoner",
+        "Roma",
+        "Windsor",
+        "WingTip"
+    ]
+}

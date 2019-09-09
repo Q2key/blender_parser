@@ -1,10 +1,18 @@
-[
-    {
-        "type": "strings",
-        "filePrefix": "collarButtonDownSeamExternalStand",
-        "shadowCatchers": [],
-        "included": [
-            "collarButtonDownSeamExternalStand"
-        ]
-    }
-]
+{
+    "type": "strings",
+    "shadowCatchers": [],
+    "name" : "collar",
+    "included": [
+        "SeamExternalStand"
+    ],
+    "variants": [
+        "ButtonDown",
+        "Cutaway",
+        "Kent",
+        "King",
+        "Londoner",
+        "Roma",
+        "Windsor",
+        "WingTip"
+    ]
+}

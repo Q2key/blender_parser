@@ -1,12 +1,16 @@
-[
-    {
-        "type": "fabric",
-        "filePrefix": "cuffOneButtonInternal",
-        "shadowCatchers": [
-            "bodyShirt"
-        ],
-        "included": [
-            "cuffOneButtonInternal"
-        ]
-    }
-]
+{
+    "type": "fabric",
+    "shadowCatchers": [],
+    "name": "cuff",
+    "included": [
+        "Internal"
+    ],
+    "variants": [
+        "French",
+        "OneButton",
+        "Regulated",
+        "Rounded",
+        "Straight",
+        "TwoButtons"
+    ]
+}

@@ -1,10 +1,20 @@
-[
-    {
-        "type": "fabric",
-        "filePrefix": "collarButtonDownInternalStand",
-        "shadowCatchers": [],
-        "included": [
-            "collarButtonDownInternalStand"
-        ]
-    }
-]
+{
+    "type": "fabric",
+    "name" : "collar",
+    "shadowCatchers": [
+        "collarLayerBottom"
+    ],
+    "included": [
+        "InternalStand"
+    ],
+    "variants": [
+        "ButtonDown",
+        "Cutaway",
+        "Kent",
+        "King",
+        "Londoner",
+        "Roma",
+        "Windsor",
+        "WingTip"
+    ]
+}

@@ -1,10 +1,20 @@
-[
-    {
-        "type": "plastic",
-        "filePrefix": "collarButtonDownButton",
-        "shadowCatchers": [],
-        "included": [
-            "collarButtonDownButton"
-        ]
-    }
-]
+{
+    "type": "fabric",
+    "name": "collar",
+    "shadowCatchers": [
+        "bodyShirt"
+    ],
+    "included": [
+        "Button"
+    ],
+    "variants": [
+        "ButtonDown",
+        "Cutaway",
+        "Kent",
+        "King",
+        "Londoner",
+        "Roma",
+        "Windsor",
+        "WingTip"
+    ]
+}

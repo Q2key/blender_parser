@@ -1,12 +1,20 @@
-[
-    {
-        "type": "fabric",
-        "filePrefix": "collarButtonDownExternalStand",
-        "shadowCatchers": [
-            "collarLayerBottom"
-        ],
-        "included": [
-            "collarButtonDownExternalStand"
-        ]
-    }
-]
+{
+    "type": "fabric",
+    "name" : "collar",
+    "shadowCatchers": [
+        "collarLayerBottom"
+    ],
+    "included": [
+        "ExternalStand"
+    ],
+    "variants": [
+        "ButtonDown",
+        "Cutaway",
+        "Kent",
+        "King",
+        "Londoner",
+        "Roma",
+        "Windsor",
+        "WingTip"
+    ]
+}

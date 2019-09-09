@@ -1,10 +1,11 @@
-[
-    {
-        "type": "fabric",
-        "filePrefix": "pocket",
-        "shadowCatchers": ["bodyShirt"],
-        "included": [
-            "pocket"
-        ]
-    }
-]
+{
+    "type": "fabric",
+    "shadowCatchers": [],
+    "name": "cuff",
+    "included": [
+        "Parent"
+    ],
+    "variants": [
+        "pocket"
+    ]
+}

@@ -1,10 +1,11 @@
-[
-    {
-        "type": "strings",
-        "filePrefix": "pocketStrings",
-        "shadowCatchers": [],
-        "included": [
-            "pocketStrings"
-        ]
-    }
-]
+{
+    "type": "strings",
+    "shadowCatchers": [],
+    "name": "pocket",
+    "included": [
+        "Strings"
+    ],
+    "variants": [
+        "Strings"
+    ]
+}

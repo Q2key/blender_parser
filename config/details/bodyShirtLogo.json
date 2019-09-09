@@ -1,10 +1,13 @@
-[
-    {
-        "type": "fabric",
-        "filePrefix": "bodyShirtLogo",
-        "shadowCatchers": [],
-        "included": [
-            "bodyShirtLogo"
-        ]
-    }
-]
+{
+    "type": "fabric",
+    "name": "body",
+    "shadowCatchers": [
+        "bodyShirt"
+    ],
+    "variants": [
+        "ShirtLogo"
+    ],
+    "included": [
+        "ShirtLogo"
+    ]
+}

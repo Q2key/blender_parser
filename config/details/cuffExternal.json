@@ -1,10 +1,16 @@
-[
-    {
-        "type": "fabric",
-        "filePrefix": "cuffOneButtonExternal",
-        "shadowCatchers": [],
-        "included": [
-            "cuffOneButtonExternal"
-        ]
-    }
-]
+{
+    "type": "plastic",
+    "shadowCatchers": [],
+    "name": "cuff",
+    "included": [
+        "External"
+    ],
+    "variants": [
+        "French",
+        "OneButton",
+        "Regulated",
+        "Rounded",
+        "Straight",
+        "TwoButtons"
+    ]
+}

@@ -30,7 +30,6 @@ class Engine(EngineBase):
 
     def process_elements(self):
         ''' define details '''
-
         details = self.ctx.DETAILS
         elements = self.filter_details(details).items()
         ''' extend details '''
@@ -55,24 +54,26 @@ class Engine(EngineBase):
             e for e in self.ctx.MATERIALS
             if e['id'] in d['avaibleMaterialsID']]
 
-    def process_details(self,details):
+    def process_details(self,detail):
         self.print_caller()
-        for value in details:
-            self.render_partial(value)
+        for variant in detail['variants']:
+            detail['filePrefix'] = detail['name'] + variant
+            self.before_render(detail)
+            self.render_partial(detail)
+
 
     def set_default(self):
         self.print_caller()
 
     def set_catchers(self, d):
         self.print_caller()
-        for sc in d["shadowCatchers"]:
+        for sc in d["staticCatchers"]:
             print("cather state: ", sc, True)
-            print("object hided: ", sc, False)
 
     def set_excluded(self, d):
         self.print_caller()
         for ex in d["included"]:
-            print("object hided: ", ex, False)
+            print("object hided: ", d['filePrefix'], False)
 
     def reset_included(self):
         self.print_caller()
@@ -92,7 +93,6 @@ class Engine(EngineBase):
 
     def render_partial(self, d):
         self.print_caller()
-        self.before_render(d)
         p = d['filePrefix']
         r = self.ctx.SCENE['Resolution']
         

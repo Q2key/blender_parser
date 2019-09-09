@@ -28,12 +28,11 @@ class ScanStoreCommand:
     def update_config(self):
         mts = self.search_for_material()
         for (k, v) in self.ctx.DETAILS.items():
-            for d in v:
-                mkey = d['type']
-                if mkey == 'fabric':
-                    d['avaibleMaterials'] = mts
-                else:
-                    d['avaibleMaterials'] = self.ctx.MATERIALS[mkey]
+            mkey = v['type']
+            if mkey == 'fabric':
+                v['avaibleMaterials'] = mts
+            else:
+                v['avaibleMaterials'] = self.ctx.MATERIALS[mkey]
         print(mts)
 
     def write_config(self, file, data):
