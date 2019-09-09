@@ -20,7 +20,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/run.py",
             "console": "integratedTerminal",
-            "args": ["--","--store","-d", "-i"],
+            "args": ["--","-d", "-i"],
             "cwd": "C:/Projects/shirtsRender"
         }
     ]

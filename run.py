@@ -40,6 +40,8 @@ if __name__ == "__main__":
     if args.static:
         cmd_stack.append(InitCommand(ctx, args))
         cmd_stack.append(RenderCommand(ctx, args))
+    if args.install:
+        cmd_stack.append(InstallCommand(ctx, args))
 
     for cmd in cmd_stack:
         cmd.run()
