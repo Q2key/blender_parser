@@ -4,9 +4,7 @@
     "shadowCatchers": [
         "collarLayerBottom"
     ],
-    "included": [
-        "InternalStand"
-    ],
+    "suffix": "InternalStand",
     "variants": [
         "ButtonDown",
         "Cutaway",

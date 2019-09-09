@@ -1,13 +1,13 @@
 {
     "type": "fabric",
-    "name": "body",
-    "shadowCatchers": [
-        "bodyShirt"
-    ],
+    "prefix": "body",
     "variants": [
         "Shirt"
     ],
-    "included": [
-        "body"
+    "suffix": [
+        ""
+    ],
+    "shadowCatchers": [
+        "bodyShirt"
     ]
 }

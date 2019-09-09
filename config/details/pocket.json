@@ -1,11 +1,9 @@
 {
     "type": "fabric",
     "shadowCatchers": [],
-    "name": "cuff",
-    "included": [
-        "Parent"
-    ],
+    "prefix": "pocket",
     "variants": [
-        "pocket"
-    ]
+        ""
+    ],
+    "suffix": ""
 }

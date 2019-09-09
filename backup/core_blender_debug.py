@@ -42,7 +42,7 @@ def set_excluded(d):
     for ex in d["excludedFromRender"]:
         bpy.data.objects[ex].hide_render = True
 
-def reset_included():
+def reset_suffix():
     ''' include all componens before render '''
     for inc in ["Body","Collar_inner","Collar_outer","Sleeve","Strings"]:
         bpy.data.objects[inc].hide_render = False
@@ -55,7 +55,7 @@ def reset_catchers():
 def before_render(d):
     ''' prepare scene before interation '''
     reset_catchers()
-    reset_included()
+    reset_suffix()
     set_catchers(d)
     set_excluded(d)
 

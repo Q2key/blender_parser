@@ -1,11 +1,9 @@
 {
     "type": "strings",
     "shadowCatchers": [],
-    "name": "pocket",
-    "included": [
-        "Strings"
-    ],
+    "prefix": "pocket",
     "variants": [
         "Strings"
-    ]
+    ],
+    "suffix":""
 }

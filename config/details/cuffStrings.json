@@ -1,10 +1,7 @@
 {
     "type": "fabric",
     "shadowCatchers": [],
-    "name": "cuff",
-    "included": [
-        "Strings"
-    ],
+    "prefix": "cuff",
     "variants": [
         "French",
         "OneButton",
@@ -12,5 +9,6 @@
         "Rounded",
         "Straight",
         "TwoButtons"
-    ]
+    ],
+    "suffix": "Strings"
 }

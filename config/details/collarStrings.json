@@ -1,9 +1,8 @@
 {
     "type": "strings",
     "shadowCatchers": [],
-    "included": [
-        "Strings"
-    ],
+    "name" : "collar",
+    "suffix": "Strings",
     "variants": [
         "ButtonDown",
         "Cutaway",

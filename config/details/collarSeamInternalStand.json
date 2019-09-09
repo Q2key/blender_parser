@@ -1,10 +1,8 @@
 {
     "type": "strings",
     "shadowCatchers": [],
-    "name" : "collar",
-    "included": [
-        "SeamInternalStand"
-    ],
+    "prefix": "collar",
+    "suffix": "SeamInternalStand",
     "variants": [
         "ButtonDown",
         "Cutaway",

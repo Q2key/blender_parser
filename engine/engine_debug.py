@@ -67,15 +67,15 @@ class Engine(EngineBase):
 
     def set_catchers(self, d):
         self.print_caller()
-        for sc in d["staticCatchers"]:
+        for sc in d["shadowCatchers"]:
             print("cather state: ", sc, True)
 
     def set_excluded(self, d):
         self.print_caller()
-        for ex in d["included"]:
+        for ex in d["suffix"]:
             print("object hided: ", d['filePrefix'], False)
 
-    def reset_included(self):
+    def reset_suffix(self):
         self.print_caller()
         for inc in self.ctx.SCENE['Components']:
             print("object hided: ", inc, True)

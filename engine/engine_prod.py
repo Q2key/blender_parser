@@ -60,7 +60,7 @@ class Engine(EngineBase):
                 bpy.data.objects[sc].hide_render = False
 
     def set_excluded(self, d):
-        for ex in d["included"]:
+        for ex in d["suffix"]:
             if ex in bpy.data.objects:
                 bpy.data.objects[ex].hide_render = False
 

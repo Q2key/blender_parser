@@ -1,12 +1,10 @@
 {
     "type": "fabric",
-    "name" : "collar",
+    "prefix": "collar",
     "shadowCatchers": [
         "LayerBottom"
     ],
-    "included": [
-        "LayerBottom"
-    ],
+    "suffix": "LayerBottom",
     "variants": [
         "LayerBottom"
     ]

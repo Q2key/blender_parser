@@ -1,13 +1,13 @@
 {
     "type": "plastic",
-    "name": "body",
+    "prefix": "body",
+    "variants": [
+        "Shirt"
+    ],
+    "suffix": [
+        "Button"
+    ],
     "shadowCatchers": [
         "bodyShirt"
-    ],
-    "variants": [
-        "ShirtButton"
-    ],
-    "included": [
-        "ShirtButton"
     ]
 }

@@ -2,9 +2,7 @@
     "type": "strings",
     "shadowCatchers": [],
     "name" : "collar",
-    "included": [
-        "SeamExternalStand"
-    ],
+    "suffix": "SeamExternalStand",
     "variants": [
         "ButtonDown",
         "Cutaway",

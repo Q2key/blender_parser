@@ -1,10 +1,7 @@
 {
     "type": "plastic",
     "shadowCatchers": [],
-    "name": "cuff",
-    "included": [
-        "Button"
-    ],
+    "prefix": "cuff",
     "variants": [
         "French",
         "OneButton",
@@ -12,5 +9,8 @@
         "Rounded",
         "Straight",
         "TwoButtons"
+    ],
+    "suffix": [
+        "Button"
     ]
 }

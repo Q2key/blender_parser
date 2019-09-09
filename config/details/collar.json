@@ -1,6 +1,6 @@
 {
     "type": "fabric",
-    "name": "collar",
+    "prefix": "collar",
     "shadowCatchers": [
         "bodyShirt"
     ],
@@ -14,7 +14,5 @@
         "Windsor",
         "WingTip"
     ],
-    "included": [
-        "Parent"
-    ]
+    "suffix": ""
 }
