@@ -25,7 +25,6 @@ class Engine(EngineBase):
 
     def process_elements(self):
         ''' define details '''
-
         details = self.ctx.DETAILS.items()
         elements = self.filter_details(details)
         ''' extend details '''
@@ -49,9 +48,11 @@ class Engine(EngineBase):
             e for e in self.ctx.MATERIALS
             if e['id'] in d['avaibleMaterialsID']]
 
-    def process_details(self,details):
-        for value in details:
-            self.render_partial(value)
+    def process_details(self,detail):
+        for variant in detail['variants']:
+            detail['filePrefix'] = detail['prefix'] + variant + detail['suffix']
+            self.before_render(detail)
+            self.render_partial(detail)
 
     def set_catchers(self, d):
         for sc in d["shadowCatchers"]:
@@ -60,9 +61,9 @@ class Engine(EngineBase):
                 bpy.data.objects[sc].hide_render = False
 
     def set_excluded(self, d):
-        for ex in d["suffix"]:
-            if ex in bpy.data.objects:
-                bpy.data.objects[ex].hide_render = False
+        obj_key = d['filePrefix']
+        if obj_key in bpy.data.objects:
+            bpy.data.objects[obj_key].hide_render = False
 
     def set_default(self):
         for (k, v) in bpy.data.objects.items():

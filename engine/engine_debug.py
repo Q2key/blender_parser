@@ -16,22 +16,20 @@ class Engine(EngineBase):
         pass
 
     def __init__(self, ctx, args=False):
-        self.print_caller()
         self.ctx = ctx
         self.args = args
         self.folder = ph.get_folder_name(ctx.RENDERS_PATH)
 
 
     def go(self):
-        self.print_caller()
         self.set_scene()
         self.process_elements()
 
 
     def process_elements(self):
         ''' define details '''
-        details = self.ctx.DETAILS
-        elements = self.filter_details(details).items()
+        details = self.ctx.DETAILS.items()
+        elements = self.filter_details(details)
         ''' extend details '''
         for k,d in elements:
             print('\r\n-----------{0}-----------\r\n'.format(k))
@@ -39,7 +37,6 @@ class Engine(EngineBase):
 
 
     def filter_details(self,elements):
-        self.print_caller()
         if self.args and self.args.model:
             details = dict()
             # Iterate over all the items in dictionary
@@ -55,7 +52,6 @@ class Engine(EngineBase):
             if e['id'] in d['avaibleMaterialsID']]
 
     def process_details(self,detail):
-        self.print_caller()
         for variant in detail['variants']:
             detail['filePrefix'] = detail['prefix'] + variant + detail['suffix']
             self.before_render(detail)
@@ -63,36 +59,30 @@ class Engine(EngineBase):
 
 
     def set_default(self):
-        self.print_caller()
+        pass
 
     def set_catchers(self, d):
-        self.print_caller()
         for sc in d["shadowCatchers"]:
             print("cather state: ", sc, True)
 
     def set_excluded(self, d):
-        self.print_caller()
         print("object hided: ", d['filePrefix'], False)
-            
+
 
     def reset_suffix(self):
-        self.print_caller()
         for inc in self.ctx.SCENE['Components']:
             print("object hided: ", inc, True)
 
     def reset_catchers(self):
-        self.print_caller()
         for sc in self.ctx.SCENE['Components']:
             print("cather state: ", sc, False)
 
     def before_render(self, d):
-        self.print_caller()
         self.set_default()
         self.set_catchers(d)
         self.set_excluded(d)
 
     def render_partial(self, d):
-        self.print_caller()
         p = d['filePrefix']
         r = self.ctx.SCENE['Resolution']
         
@@ -104,7 +94,6 @@ class Engine(EngineBase):
             self.save_small(ns)
 
     def set_material(self, material, mtype):
-        self.print_caller()
         if mtype == 'fabric':
             print("\r\b","-------->" , material, "---------")
         if mtype  == 'plastic':
@@ -116,7 +105,7 @@ class Engine(EngineBase):
         pass
 
     def set_scene(self):
-        self.print_caller()
+        pass
 
     def render_detail(self, result):
-        self.print_caller()
+        pass

@@ -2,9 +2,9 @@
     "type": "plastic",
     "prefix": "body",
     "variants": [
-        "Shirt"
+        ""
     ],
-    "suffix":"Button",
+    "suffix":"ShirtButton",
     "shadowCatchers": [
         "bodyShirt"
     ]
