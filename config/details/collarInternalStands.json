@@ -1,6 +1,6 @@
 {
     "type": "fabric",
-    "name" : "collar",
+    "prefix" : "collar",
     "shadowCatchers": [
         "collarLayerBottom"
     ],

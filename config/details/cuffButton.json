@@ -10,7 +10,5 @@
         "Straight",
         "TwoButtons"
     ],
-    "suffix": [
-        "Button"
-    ]
+    "suffix": "Button"
 }

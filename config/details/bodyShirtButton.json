@@ -4,9 +4,7 @@
     "variants": [
         "Shirt"
     ],
-    "suffix": [
-        "Button"
-    ],
+    "suffix":"Button",
     "shadowCatchers": [
         "bodyShirt"
     ]

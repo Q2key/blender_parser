@@ -6,7 +6,7 @@
     "configurations": [
 
         {
-            "prefix": "RENDER DEBUG",
+            "name": "RENDER DEBUG",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/run.py",
@@ -15,7 +15,7 @@
             "cwd": "C:/Projects/shirtsRender"
         },
         {
-            "prefix": "INIT DEBUG",
+            "name": "INIT DEBUG",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/run.py",

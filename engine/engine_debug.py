@@ -57,7 +57,7 @@ class Engine(EngineBase):
     def process_details(self,detail):
         self.print_caller()
         for variant in detail['variants']:
-            detail['filePrefix'] = detail['name'] + variant
+            detail['filePrefix'] = detail['prefix'] + variant + detail['suffix']
             self.before_render(detail)
             self.render_partial(detail)
 
@@ -72,8 +72,8 @@ class Engine(EngineBase):
 
     def set_excluded(self, d):
         self.print_caller()
-        for ex in d["suffix"]:
-            print("object hided: ", d['filePrefix'], False)
+        print("object hided: ", d['filePrefix'], False)
+            
 
     def reset_suffix(self):
         self.print_caller()
