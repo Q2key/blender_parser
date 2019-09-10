@@ -1,10 +1,9 @@
 {
     "type": "fabric",
-    "prefix": "collar",
     "shadowCatchers": [
         "collarLayerBottom"
     ],
-    "suffix": "ExternalStand",
+    "prefix": "collar",
     "variants": [
         "ButtonDown",
         "Cutaway",
@@ -14,5 +13,6 @@
         "Roma",
         "Windsor",
         "WingTip"
-    ]
+    ],
+    "suffix": "ExternalStand"
 }

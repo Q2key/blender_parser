@@ -2,7 +2,6 @@
     "type": "strings",
     "shadowCatchers": [],
     "prefix": "collar",
-    "suffix": "SeamInternalStand",
     "variants": [
         "ButtonDown",
         "Cutaway",
@@ -12,5 +11,6 @@
         "Roma",
         "Windsor",
         "WingTip"
-    ]
+    ],
+    "suffix": "SeamInternalStand"
 }

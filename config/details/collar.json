@@ -1,9 +1,9 @@
 {
     "type": "fabric",
-    "prefix": "collar",
     "shadowCatchers": [
         "bodyShirt"
     ],
+    "prefix": "collar",
     "variants": [
         "ButtonDown",
         "Cutaway",

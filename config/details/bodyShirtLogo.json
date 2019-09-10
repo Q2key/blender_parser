@@ -2,9 +2,9 @@
     "type": "fabric",
     "prefix": "body",
     "variants": [
-        ""
+        "Shirt"
     ],
-    "suffix": "ShirtLogo",
+    "suffix": "Logo",
     "shadowCatchers": [
         "bodyShirt"
     ]

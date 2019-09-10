@@ -49,8 +49,13 @@ class Engine(EngineBase):
             if e['id'] in d['avaibleMaterialsID']]
 
     def process_details(self,detail):
-        for variant in detail['variants']:
-            detail['filePrefix'] = detail['prefix'] + variant + detail['suffix']
+        if len(detail['variants']) > 0:
+            for variant in detail['variants']:
+                detail['filePrefix'] = detail['prefix'] + variant + detail['suffix']
+                self.before_render(detail)
+                self.render_partial(detail)
+        else :
+            detail['filePrefix'] = detail['prefix'] + detail['suffix']
             self.before_render(detail)
             self.render_partial(detail)
 
