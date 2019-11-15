@@ -3,5 +3,7 @@ renders/*
 *.pyc
 *.pyo
 textures/*
+scenes/*
+docs/*
 
 *.log
