@@ -153,7 +153,7 @@ def create_fabric_material(mat_name='fabric_material', map=False, texture=False,
 
     # выставляем скалирование текстуры под нормали сцены
     shaderNodeMapping.scale[0] = 0.8
-    shaderNodeMapping.scale[1] = 1.6
+    shaderNodeMapping.scale[1] = 0.8
     shaderNodeMapping.scale[2] = 0.8
     shaderNodeMapping.location = [-700, -100]
 
