@@ -25,6 +25,9 @@ class Engine(EngineBase):
         self.set_scene()
         self.process_elements()
 
+    def prepare(self):
+        pass
+
 
     def process_elements(self):
         ''' define details '''

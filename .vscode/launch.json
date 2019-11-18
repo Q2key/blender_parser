@@ -11,16 +11,25 @@
             "request": "launch",
             "program": "${workspaceFolder}/run.py",
             "console": "integratedTerminal",
-            "args": ["--","--store","-d"],
+            "args": ["--", "--store", "-d"],
             "cwd": "C:/Projects/shirtsRender"
         },
         {
-            "name": "PREPARE DEBUG",
+            "name": "REGISTER DEBUG",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/run.py",
             "console": "integratedTerminal",
-            "args": ["--","--prepare", "-d"],
+            "args": [
+                "--", 
+                "--register", 
+                "-d", 
+                "--scene_name=name_from_scene", 
+                "--prefix=collar", 
+                "--variant=Mao", 
+                "--configFamily=collar", 
+                "--material=fabric"
+            ],
             "cwd": "C:/Projects/shirtsRender"
         },
         {
@@ -29,7 +38,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/run.py",
             "console": "integratedTerminal",
-            "args": ["--","-d", "-i"],
+            "args": ["--", "-d", "-i"],
             "cwd": "C:/Projects/shirtsRender"
         }
     ]

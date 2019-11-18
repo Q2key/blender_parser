@@ -18,6 +18,8 @@ class Engine(EngineBase):
         self.args = args
         self.folder = ph.get_folder_name(ctx.RENDERS_PATH)
 
+    def prepare(self):
+        print('prepare')
 
     def go(self):
         self.set_scene()

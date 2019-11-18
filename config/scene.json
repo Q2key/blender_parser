@@ -7,17 +7,17 @@
         "Big": {
             "x": 800,
             "y": 1090
-        },
+        },  
         "Small": {
             "x": 400,
             "y": 545
         }
     },
     "PerspectiveStyle": "Table",
-    "Percentage":15,
-    "Compression": 80,
+    "Percentage":100,
+    "Compression": 70,
     "TexturesFormat": [
         ".png",
         ".jpg"
-    ]
+    ]   
 }
