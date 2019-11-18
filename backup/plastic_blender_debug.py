@@ -22,9 +22,8 @@ def get_material_info(mat_name,cleanBefore):
     return { "mat" : mat, "nodes" : nodes, "links" : links }
 
 
-def create_gloss_plastic_material(mat_name='plastic', map=False, texture=False, cleanBefore=False):
+def create_plastic_material(mat_name='plastic_material', map=False, texture=False, cleanBefore=True):
     ''' set material '''
-    
     mi = get_material_info(mat_name,cleanBefore)
 
     lw = mi['nodes'].new("ShaderNodeLayerWeight")
@@ -62,6 +61,54 @@ def create_gloss_plastic_material(mat_name='plastic', map=False, texture=False, 
     mi['links'].new(ms1.outputs['Shader'],ms2.inputs[1])
     mi['links'].new(bg.outputs['BSDF'],ms2.inputs[2])
     mi['links'].new(ms2.outputs['Shader'],om.inputs['Surface'])
-    
 
-create_gloss_plastic_material()
+
+def create_fabric_material(mat_name='fabric_material', map=False, texture=False, cleanBefore=True):
+    ''' set material '''
+    mi = get_material_info('fabric_material',True)
+
+    # shaderNodeTexImage
+    shaderNodeTextureCoordinate = mi['nodes'].new("ShaderNodeTexCoord")
+    shaderNodeTextureCoordinate.location = [-1100, -100]
+
+    # shaderMapper
+    shaderNodeMapping = mi['nodes'].new("ShaderNodeMapping")
+    shaderNodeMapping.vector_type = 'TEXTURE'
+
+    # выставляем скалирование текстуры под нормали сцены
+    shaderNodeMapping.scale[0] = 0.8
+    shaderNodeMapping.scale[1] = 1.6
+    shaderNodeMapping.scale[2] = 0.8
+    shaderNodeMapping.location = [-700, -100]
+
+    # shaderNodeTexImage
+    shaderNodeTexImage = mi['nodes'].new("ShaderNodeTexImage")
+    shaderNodeTexImage.location = [-300, -100]
+
+    # shaderNodeBsdfDfiffuseWidth
+    shaderNodeBsdfDfiffuse = mi['nodes'].new("ShaderNodeBsdfDiffuse")
+    shaderNodeBsdfDfiffuse.use_custom_color = True
+    shaderNodeBsdfDfiffuse.color = (200, 200, 200)
+    shaderNodeBsdfDfiffuse.location = [0, -100]
+
+    # shaderNodeOutputMaterial
+    shaderNodeOutputMaterial = mi['nodes'].new("ShaderNodeOutputMaterial")
+    shaderNodeOutputMaterial.location = [300, -100]
+
+    # link up
+    mi['links'].new(shaderNodeTextureCoordinate.outputs["UV"],shaderNodeMapping.inputs['Vector'])
+    mi['links'].new(shaderNodeMapping.outputs['Vector'],shaderNodeTexImage.inputs["Vector"])
+    mi['links'].new(shaderNodeTexImage.outputs["Color"],shaderNodeBsdfDfiffuse.inputs['Color'])
+    mi['links'].new(shaderNodeBsdfDfiffuse.outputs["BSDF"],shaderNodeOutputMaterial.inputs['Surface'])
+
+
+def create_strings_material(m=False):
+    ''' set material '''
+
+    mi = get_material_info('strings_material', True)
+    bd1 = mi['nodes'].new("ShaderNodeBsdfDiffuse")
+    bd1.location = [0, 0]
+    om = mi['nodes'].new("ShaderNodeOutputMaterial")
+    om.location = [200, 0]
+
+    mi['links'].new(bd1.outputs['BSDF'], om.inputs['Surface'])

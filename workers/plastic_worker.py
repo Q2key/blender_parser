@@ -1,17 +1,19 @@
 from workers.material_info import MaterialInfo
 from workers.colors import Colors
 from helpers.process_helper import ProcessHelper as ph
+from constants.materials import Materials
 import bpy
 
 
 class PlasticWorker():
 
-
     @staticmethod
     def create_gloss_plastic_material(m=False):
         ''' set material '''
         
-        mi = MaterialInfo.get_material_info('pearl_plastic', True)
+        print("++++++++" + Materials.FABRIC)
+
+        mi = MaterialInfo.get_material_info('plastic_material', True)
         lw = mi['nodes'].new("ShaderNodeLayerWeight")
         lw.location = [0, -200]
 

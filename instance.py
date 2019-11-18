@@ -14,8 +14,7 @@ class Instance:
         self.STORE_PATH = str.format("{0}/textures/store",src_path)
         self.CONFIG_PATH = str.format("{0}/config",src_path)
         self.SCENE = self.read_config(str.format("{0}/config/scene.json",src_path))
-        self.SCELETON = self.read_config(str.format("{0}/config/sceleton.json",src_path)) 
-        
+
         self.init_config('details')
         self.init_config('materials')
 

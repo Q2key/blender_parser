@@ -15,6 +15,15 @@
             "cwd": "C:/Projects/shirtsRender"
         },
         {
+            "name": "PREPARE DEBUG",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/run.py",
+            "console": "integratedTerminal",
+            "args": ["--","--prepare", "-d"],
+            "cwd": "C:/Projects/shirtsRender"
+        },
+        {
             "name": "INIT DEBUG",
             "type": "python",
             "request": "launch",

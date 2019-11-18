@@ -11,7 +11,7 @@ class StringsWorker():
     def create_strings_material(m=False):
         ''' set material '''
 
-        mi = MaterialInfo.get_material_info('fabric_strings', True)
+        mi = MaterialInfo.get_material_info('strings_material', True)
         bd1 = mi['nodes'].new("ShaderNodeBsdfDiffuse")
         bd1.location = [0, 0]
         c = m['color']
