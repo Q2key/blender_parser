@@ -1,0 +1,22 @@
+{
+    "type": "fabric",
+    "shadowCatchers": [
+        "collarLayerBottom"
+    ],
+    "prefix": "collar",
+    "variants": [
+        "Mao",
+        "Mandarin",
+        "King",
+        "Cutaway",
+        "Kent",
+        "Windsor",
+        "Roma",
+        "Colorado",
+        "ColoradoMini",
+        "VintageClub",
+        "Londoner",
+        "VintageClubMini"
+    ],
+    "suffix": "ExternalStand"
+}

@@ -22,7 +22,7 @@ def get_material_info(mat_name,cleanBefore):
     return { "mat" : mat, "nodes" : nodes, "links" : links }
 
 
-def create_gloss_plastic_material(mat_name='pearl_plastic', map=False, texture=False, cleanBefore=False):
+def create_gloss_plastic_material(mat_name='plastic', map=False, texture=False, cleanBefore=False):
     ''' set material '''
     
     mi = get_material_info(mat_name,cleanBefore)

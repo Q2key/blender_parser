@@ -3,14 +3,18 @@
     "shadowCatchers": [],
     "prefix": "collar",
     "variants": [
-        "ButtonDown",
+        "Mao",
+        "Mandarin",
+        "King",
         "Cutaway",
         "Kent",
-        "King",
-        "Londoner",
-        "Roma",
         "Windsor",
-        "WingTip"
+        "Roma",
+        "Colorado",
+        "ColoradoMini",
+        "VintageClub",
+        "Londoner",
+        "VintageClubMini"
     ],
     "suffix": "SeamInternalStand"
 }
