@@ -10,8 +10,6 @@ class PlasticWorker():
     @staticmethod
     def create_gloss_plastic_material(m=False):
         ''' set material '''
-        
-        print("++++++++" + Materials.FABRIC)
 
         mi = MaterialInfo.get_material_info('plastic_material', True)
         lw = mi['nodes'].new("ShaderNodeLayerWeight")
