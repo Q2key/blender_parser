@@ -12,7 +12,6 @@ from commands.scan_store_command import ScanStoreCommand
 from commands.reset_command import ResetCommand
 from commands.render_command import RenderCommand
 from commands.install_command import InstallCommand
-from commands.prepare_command import PrepareCommand
 
 #helpers
 from helpers.logger import Logger as Logger
@@ -35,9 +34,6 @@ args = parser.parse_args()
 if __name__ == "__main__":
     cmd_stack = list()
     ctx = Instance()
-    if args.prepare:
-        print('prepare')
-        cmd_stack.append(PrepareCommand(ctx,args))
     if args.reset:
         print('reset')
         cmd_stack.append(ResetCommand(ctx, args))
