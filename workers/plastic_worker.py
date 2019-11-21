@@ -33,7 +33,7 @@ class PlasticWorker():
 
         fr = mi['nodes'].new("ShaderNodeFresnel")
         fr.location = [200,  -200]
-        fr.inputs['IOR'].default_value = 2
+        fr.inputs['IOR'].default_value = 1.5
         
 
         ms1 = mi['nodes'].new("ShaderNodeMixShader")

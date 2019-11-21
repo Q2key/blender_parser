@@ -1,12 +1,11 @@
 {
     "type": "fabric",
     "shadowCatchers": [
-        "bodyShirt"
+        "collarCatcher"
     ],
     "prefix": "collar",
     "variants": [
-        "Mao",
-        "Mandarin",
+        "Colorado",
         "King",
         "Cutaway",
         "Kent",

@@ -74,7 +74,7 @@ class Engine(EngineBase):
 
     def set_default(self):
         for (k, v) in bpy.data.objects.items():
-            if v.name not in ["Camera", "Lamp", "Lamp_0", "Lamp_1", "Lamp_2", "Lamp_4"]:
+            if v.name not in ["Camera", "Lamp", "Lamp_0", "Lamp_1", "Lamp_2", "Lamp_3","Lamp_4"]:
                 v.hide_render = True
                 v.cycles.is_shadow_catcher = False
 
