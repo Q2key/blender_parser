@@ -92,7 +92,7 @@ class Engine(EngineBase):
             ns = ph.get_image_name(self.folder, p, fp, r)
             self.set_material(m,d)
             self.render_detail(ns)
-            self.save_big(ns, r)
+            #self.save_big(ns, r)
             self.save_small(ns, r)
 
     def set_material(self, material, detail):
@@ -117,5 +117,5 @@ class Engine(EngineBase):
         bpy.data.scenes["Scene"].render.image_settings.compression = self.ctx.SCENE["Compression"]
 
     def render_detail(self, result):
-        bpy.context.scene.render.filepath = result['l']
+        bpy.context.scene.render.filepath = result['b']
         bpy.ops.render.render(write_still=True)

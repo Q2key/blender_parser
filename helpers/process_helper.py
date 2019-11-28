@@ -43,7 +43,7 @@ class ProcessHelper:
 
     @staticmethod
     def save_small(ns,res):
-        img = Image.open(ns['l'])
+        img = Image.open(ns['b'])
         new_width  = res["Small"]["x"]
         new_height = res["Small"]["y"]
         img = img.resize((new_width, new_height), Image.ANTIALIAS)
