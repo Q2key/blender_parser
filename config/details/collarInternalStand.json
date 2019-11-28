@@ -1,7 +1,7 @@
 {
     "type": "fabric",
     "shadowCatchers": [
-        "collarLayerBottom"
+        "bodyShirtInternal"
     ],
     "prefix" : "collar",
     "variants": [
