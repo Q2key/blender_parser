@@ -70,7 +70,7 @@ class Engine(EngineBase):
     def set_excluded(self, d):
         obj_key = d['filePrefix']
         for obj in bpy.data.objects:
-            if obj.name == d['filePrefix'] or obj.name == d['mask']:
+            if obj.name == d['filePrefix'] or obj.name == (obj_key + d['mask']):
                 obj.hide_render = False
 
     def set_default(self):
