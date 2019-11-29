@@ -7,5 +7,6 @@
     "variants": [
         "Shirt"
     ],
+    "mask": false,
     "suffix": "Strings"
 }

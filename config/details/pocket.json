@@ -3,5 +3,6 @@
     "shadowCatchers": [],
     "prefix": "pocket",
     "variants": [],
+    "mask": false,
     "suffix": ""
 }

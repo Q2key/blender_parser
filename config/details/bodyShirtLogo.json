@@ -4,6 +4,7 @@
     "variants": [
         "Shirt"
     ],
+    "mask": false,
     "suffix": "Logo",
     "shadowCatchers": []
 }

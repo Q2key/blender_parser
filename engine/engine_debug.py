@@ -74,8 +74,8 @@ class Engine(EngineBase):
             print("cather state: ", sc, True)
 
     def set_excluded(self, d):
-        print("object hided: ", d['filePrefix'], False)
-
+        if self.check_for_exclude(d):
+            print("object hided: ", d['filePrefix'], False)
 
     def reset_suffix(self):
         for inc in self.ctx.SCENE['Components']:

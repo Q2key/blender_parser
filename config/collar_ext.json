@@ -1,12 +1,9 @@
 {
-    "type": "plastic",
-    "shadowCatchers": [
-        "bodyShirt"
-    ],
+    "configFamily": "collar",
     "prefix": "collar",
+    "suffix": "",
     "variants": [
-        "Mao",
-        "Mandarin",
+        "Colorado",
         "King",
         "Cutaway",
         "Kent",
@@ -16,8 +13,7 @@
         "ColoradoMini",
         "VintageClub",
         "Londoner",
-        "VintageClubMini"
-    ],
-    "mask": false,
-    "suffix": "Button"
+        "VintageClubMini",
+        "Mao"
+    ]
 }

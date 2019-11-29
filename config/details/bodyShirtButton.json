@@ -7,5 +7,6 @@
     "suffix":"Button",
     "shadowCatchers": [
         "bodyShirt"
-    ]
+    ],
+    "mask": false
 }

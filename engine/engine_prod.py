@@ -69,8 +69,9 @@ class Engine(EngineBase):
 
     def set_excluded(self, d):
         obj_key = d['filePrefix']
-        if obj_key in bpy.data.objects:
-            bpy.data.objects[obj_key].hide_render = False
+        for obj in bpy.data.objects:
+            if obj.name == d['filePrefix'] or obj.name == d['mask']:
+                obj.hide_render = False
 
     def set_default(self):
         for (k, v) in bpy.data.objects.items():

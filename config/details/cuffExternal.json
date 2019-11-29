@@ -10,5 +10,6 @@
         "Straight",
         "TwoButtons"
     ],
+    "mask": false,
     "suffix":  "External"
 }
