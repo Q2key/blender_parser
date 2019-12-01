@@ -11,12 +11,26 @@
         "Kent",
         "Windsor",
         "Roma",
-        "Colorado",
         "ColoradoMini",
         "VintageClub",
         "Londoner",
         "VintageClubMini"
     ],
-    "mask": "Seam",
+    "mask": {
+        "details" : {
+            "King": "collarKingSeam",
+            "Colorado": "collarColoradoSeam",
+            "Cutaway": "collarCutawaySeam",
+            "Kent": "collarKentSeam",
+            "Windsor": "collarWindsorSeam",
+            "Roma": "collarRomaSeam",
+            "ColoradoMini": "collarColoradoMiniSeam",
+            "VintageClub": "collarVintageClubSeam",
+            "Londoner": "collarLondonerSeam",
+            "VintageClubMini": "collarVintageClubMiniSeam"
+        },
+        "layerNumber" : 2
+
+    },
     "suffix": ""
 }

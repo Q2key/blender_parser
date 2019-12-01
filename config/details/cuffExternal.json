@@ -10,6 +10,15 @@
         "Straight",
         "TwoButtons"
     ],
-    "mask": false,
-    "suffix":  "Strings"
+    "mask": {
+        "details" : {
+            "French" : "cuffFrenchStrings",
+            "OneButton": "cuffOneButtonStrings",
+            "Regulated": "cuffRegulatedStrings",
+            "Rounded": "cuffRoundedStrings",
+            "Straight": "cuffStraightStrings"
+        },
+        "layerNumber" : 2
+    },
+    "suffix":  "External"
 }

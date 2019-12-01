@@ -1,12 +1,9 @@
 {
     "type": "fabric",
     "shadowCatchers": [
-        "collarLayerBottom"
     ],
     "prefix": "collar",
     "variants": [
-        "Mao",
-        "Mandarin",
         "King",
         "Cutaway",
         "Kent",
@@ -16,8 +13,26 @@
         "ColoradoMini",
         "VintageClub",
         "Londoner",
-        "VintageClubMini"
+        "VintageClubMini",
+        "Mao",
+        "Mandarin"
     ],
-    "mask": false,
+    "mask": {
+        "details" : {
+            "King": "collarKing",
+            "Cutaway" : "collarCutaway" ,
+            "Kent" : "collarKent",
+            "Windsor" : "collarWindsor",
+            "Roma" : "collarRoma",
+            "Colorado" : "collarColorado",
+            "ColoradoMini" : "collarColoradoMini",
+            "VintageClub" : "collarVintageClub",
+            "Londoner" : "collarLondoner",
+            "VintageClubMini" : "collarVintageClubMini",
+            "Mao" : "collarMao",
+            "Mandarin" : "collarMandarin"
+        },
+        "layerNumber" : 2
+    },
     "suffix": "ExternalStand"
 }

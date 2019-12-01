@@ -50,16 +50,16 @@ class Engine(EngineBase):
             e for e in self.ctx.MATERIALS
             if e['id'] in d['avaibleMaterialsID']]
 
-    def process_details(self,detail):
-        if len(detail['variants']) > 0:
-            for variant in detail['variants']:
-                detail['filePrefix'] = detail['prefix'] + variant + detail['suffix']
-                self.before_render(detail)
-                self.render_partial(detail)
+    def process_details(self,d):
+        if len(d['variants']) > 0:
+            for v in d['variants']:
+                d['filePrefix'] = d['prefix'] + v + d['suffix']
+                self.before_render(d,v)
+                self.render_partial(d)
         else :
-            detail['filePrefix'] = detail['prefix'] + detail['suffix']
-            self.before_render(detail)
-            self.render_partial(detail)
+            d['filePrefix'] = d['prefix'] + d['suffix']
+            self.before_render(d,v)
+            self.render_partial(d)
 
     def set_catchers(self, d):
         for sc in d["shadowCatchers"]:
@@ -67,22 +67,28 @@ class Engine(EngineBase):
                 bpy.data.objects[sc].cycles.is_shadow_catcher = True
                 bpy.data.objects[sc].hide_render = False
 
-    def set_excluded(self, d):
+    def set_excluded(self, d,v):
         obj_key = d['filePrefix']
         for obj in bpy.data.objects:
-            if obj.name == d['filePrefix'] or obj.name == (obj_key + d['mask']):
+            hasMask = 'details' in d['mask']
+            isMask = hasMask and obj.name == d['mask']['details'][v]
+            isTarget = obj.name == d['filePrefix'] 
+            if isTarget or isMask:
                 obj.hide_render = False
 
     def set_default(self):
         for (k, v) in bpy.data.objects.items():
-            if v.name not in ["Camera", "Lamp", "Lamp_0", "Lamp_1", "Lamp_2", "Lamp_3","Lamp_4"]:
+            if v.name not in [
+                "Camera", "Lamp", "Lamp_0", 
+                "Lamp_1", "Lamp_2", "Lamp_3"
+                ]:
                 v.hide_render = True
                 v.cycles.is_shadow_catcher = False
 
-    def before_render(self, d):
+    def before_render(self, d,v):
         self.set_default()
         self.set_catchers(d)
-        self.set_excluded(d)
+        self.set_excluded(d,v)
 
     def render_partial(self, d):
         self.before_render(d)
