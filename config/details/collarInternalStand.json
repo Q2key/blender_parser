@@ -33,7 +33,7 @@
             "Mao" : "collarMao",
             "Mandarin" : "collarMandarin"
         },
-        "layerNumber" : 2
+        "layerIndex" : 2
     },
     "suffix": "InternalStand"
 }

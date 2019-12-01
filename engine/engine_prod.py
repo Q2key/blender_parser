@@ -69,14 +69,19 @@ class Engine(EngineBase):
 
     def set_excluded(self, d,v):
         obj_key = d['filePrefix']
+
+        hasMask = 'details' in d['mask']
+        if hasMask:
+            self.setLayerMaskState(True)
+
         for obj in bpy.data.objects:
-            hasMask = 'details' in d['mask']
             isMask = hasMask and obj.name == d['mask']['details'][v]
             isTarget = obj.name == d['filePrefix'] 
             if isTarget or isMask:
                 obj.hide_render = False
 
     def set_default(self):
+        self.setLayerMaskState(False)
         for (k, v) in bpy.data.objects.items():
             if v.name not in [
                 "Camera", "Lamp", "Lamp_0", 
@@ -84,6 +89,9 @@ class Engine(EngineBase):
                 ]:
                 v.hide_render = True
                 v.cycles.is_shadow_catcher = False
+
+    def setLayerMaskState(self,state):
+        bpy.data.scenes['Scene'].render.layers['RenderLayer'].layers_zmask[1] = state
 
     def before_render(self, d,v):
         self.set_default()
