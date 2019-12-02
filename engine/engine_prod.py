@@ -54,7 +54,8 @@ class Engine(EngineBase):
         if len(d['variants']) > 0:
             for v in d['variants']:
                 d['filePrefix'] = d['prefix'] + v + d['suffix']
-                self.before_render(d,v)
+                d['variant'] = v
+                self.before_render(d)
                 self.render_partial(d)
         else :
             d['filePrefix'] = d['prefix'] + d['suffix']
@@ -67,16 +68,18 @@ class Engine(EngineBase):
                 bpy.data.objects[sc].cycles.is_shadow_catcher = True
                 bpy.data.objects[sc].hide_render = False
 
-    def set_excluded(self, d,v):
-        obj_key = d['filePrefix']
+    def set_excluded(self, d):
+
+        d_name = d['filePrefix']
+        v_name = d['variant']
 
         hasMask = 'details' in d['mask']
         if hasMask:
             self.setLayerMaskState(True)
 
         for obj in bpy.data.objects:
-            isMask = hasMask and obj.name == d['mask']['details'][v]
-            isTarget = obj.name == d['filePrefix'] 
+            isMask = hasMask and obj.name == d['mask']['details'][v_name]
+            isTarget = (obj.name == d_name)
             if isTarget or isMask:
                 obj.hide_render = False
 
@@ -84,7 +87,7 @@ class Engine(EngineBase):
         self.setLayerMaskState(False)
         for (k, v) in bpy.data.objects.items():
             if v.name not in [
-                "Camera", "Lamp", "Lamp_0", 
+                "Camera", "Lamp", "Lamp_0",
                 "Lamp_1", "Lamp_2", "Lamp_3"
                 ]:
                 v.hide_render = True
@@ -93,10 +96,10 @@ class Engine(EngineBase):
     def setLayerMaskState(self,state):
         bpy.data.scenes['Scene'].render.layers['RenderLayer'].layers_zmask[1] = state
 
-    def before_render(self, d,v):
+    def before_render(self, d):
         self.set_default()
         self.set_catchers(d)
-        self.set_excluded(d,v)
+        self.set_excluded(d)
 
     def render_partial(self, d):
         self.before_render(d)
@@ -107,7 +110,6 @@ class Engine(EngineBase):
             ns = ph.get_image_name(self.folder, p, fp, r)
             self.set_material(m,d)
             self.render_detail(ns)
-            #self.save_big(ns, r)
             self.save_small(ns, r)
 
     def set_material(self, material, detail):

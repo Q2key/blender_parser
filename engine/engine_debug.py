@@ -7,13 +7,13 @@ import inspect
 from PIL import Image
 from engine.engine_base import EngineBase
 from helpers.process_helper import ProcessHelper as ph
+from structs.rendered_detail import RenderedObject
+from structs.rendered_identifier import RenderedItentifier
+from structs.rendered_material import RenderedMaterial
 
 
 class Engine(EngineBase):
 
-    def print_caller(fn):
-        # print(inspect.stack()[1][3])
-        pass
 
     def __init__(self, ctx, args=False):
         self.ctx = ctx
@@ -55,16 +55,20 @@ class Engine(EngineBase):
             if e['id'] in d['avaibleMaterialsID']]
 
     def process_details(self,detail):
-        if len(detail['variants']) > 0:
-            for variant in detail['variants']:
-                detail['filePrefix'] = detail['prefix'] + variant + detail['suffix']
-                self.before_render(detail)
-                self.render_partial(detail)
-        else :
-            detail['filePrefix'] = detail['prefix'] + detail['suffix']
-            self.before_render(detail)
-            self.render_partial(detail)
 
+        for variant in detail['variants']:
+            #
+            ri = RenderedItentifier(
+                variant=variant,
+                prefix=detail['prefix'],
+                suffix=detail['suffix'])
+            #
+            mi = RenderedMaterial(type=detail['type'])
+            #
+            rd = RenderedObject(ri,mi)
+
+            self.before_render(rd)
+            self.render_partial(rd)
 
     def set_default(self):
         pass

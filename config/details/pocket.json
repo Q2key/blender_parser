@@ -2,7 +2,7 @@
     "type": "fabric",
     "shadowCatchers": [],
     "prefix": "pocket",
-    "variants": [],
+    "variants": [""],
     "mask": false,
     "suffix": ""
 }

@@ -2,7 +2,7 @@
     "type": "fabric",
     "shadowCatchers": [],
     "prefix": "body",
-    "variants": [],
+    "variants": ["ShirtInternal"],
     "mask": false,
-    "suffix": "ShirtInternal"
+    "suffix": ""
 }
