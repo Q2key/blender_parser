@@ -59,6 +59,7 @@ class Engine(EngineBase):
         sc = d['shadowCatchers']
         vs = d['variants']
         am = d['avaibleMaterials']
+        rm = RenderedMask(d['mask'])
 
         for v in vs:
             #identifier
@@ -66,7 +67,7 @@ class Engine(EngineBase):
                 variant=v,
                 prefix=d['prefix'],
                 suffix=d['suffix'],
-                mask=d['mask']
+                mask_details=rm.details
                 )
 
             #material
@@ -85,11 +86,9 @@ class Engine(EngineBase):
             print("cather state: ", sc, True)
 
     def set_excluded(self, ro):
-        if self.check_for_exclude(ro):
+        print("object hided: ", ro.detail.id, False)
+        if ro.detail.mask_id is not None:
             print("object hided: ", ro.detail.id, False)
-
-    def check_for_exclude(self,ro):
-        return True
 
     def reset_suffix(self):
         for inc in self.ctx.SCENE['Components']:
