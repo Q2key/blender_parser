@@ -3,6 +3,6 @@
     "shadowCatchers": [],
     "prefix": "body",
     "variants": ["ShirtInternal"],
-    "mask": false,
+    "mask": {},
     "suffix": ""
 }

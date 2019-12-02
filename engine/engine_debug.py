@@ -7,9 +7,10 @@ import inspect
 from PIL import Image
 from engine.engine_base import EngineBase
 from helpers.process_helper import ProcessHelper as ph
-from structs.rendered_detail import RenderedObject
+from structs.rendered_object import RenderedObject
 from structs.rendered_identifier import RenderedItentifier
 from structs.rendered_material import RenderedMaterial
+from structs.rendered_mask import RenderedMask
 
 
 class Engine(EngineBase):
@@ -54,32 +55,40 @@ class Engine(EngineBase):
             e for e in self.ctx.MATERIALS
             if e['id'] in d['avaibleMaterialsID']]
 
-    def process_details(self,detail):
+    def process_details(self,d):
+        sc = d['shadowCatchers']
+        vs = d['variants']
+        am = d['avaibleMaterials']
+        rm = RenderedMask(d['mask'])
 
-        for variant in detail['variants']:
-            #
+        for v in vs:
+            #identifier
             ri = RenderedItentifier(
-                variant=variant,
-                prefix=detail['prefix'],
-                suffix=detail['suffix'])
-            #
-            mi = RenderedMaterial(type=detail['type'])
-            #
-            rd = RenderedObject(ri,mi)
+                variant=v,
+                prefix=d['prefix'],
+                suffix=d['suffix'])
 
-            self.before_render(rd)
-            self.render_partial(rd)
+            #material
+            mi = RenderedMaterial(type=d['type'])
+            #object
+            ro = RenderedObject(ri,mi,sc,rm)
+
+            self.before_render(ro)
+            self.render_partial(ro,am)
 
     def set_default(self):
         pass
 
-    def set_catchers(self, d):
-        for sc in d["shadowCatchers"]:
+    def set_catchers(self, ro):
+        for sc in ro.catchers:
             print("cather state: ", sc, True)
 
-    def set_excluded(self, d):
-        if self.check_for_exclude(d):
-            print("object hided: ", d['filePrefix'], False)
+    def set_excluded(self, ro):
+        if self.check_for_exclude(ro):
+            print("object hided: ", ro.detail.id, False)
+
+    def check_for_exclude(self,ro):
+        return True
 
     def reset_suffix(self):
         for inc in self.ctx.SCENE['Components']:
@@ -89,29 +98,30 @@ class Engine(EngineBase):
         for sc in self.ctx.SCENE['Components']:
             print("cather state: ", sc, False)
 
-    def before_render(self, d):
+    def before_render(self, ro):
         self.set_default()
-        self.set_catchers(d)
-        self.set_excluded(d)
+        self.set_catchers(ro)
+        self.set_excluded(ro)
 
-    def render_partial(self, d):
-        p = d['filePrefix']
+    def render_partial(self, rendering_object, avalible_materials):
+        p = rendering_object.detail.id
+        t = rendering_object.material.type
         r = self.ctx.SCENE['Resolution']
-        
-        for m in d['avaibleMaterials']:
-            fp = str.format("{0}_{1}", d["filePrefix"], m["id"])
+
+        for m in avalible_materials:
+            fp = str.format("{0}_{1}", p, m["id"])
             ns = ph.get_image_name(self.folder, p, fp, r)
-            self.set_material(m,d['type'])
+            self.set_material(m,t)
             self.render_detail(ns)
             self.save_small(ns)
 
     def set_material(self, material, mtype):
         if mtype == 'fabric':
-            print("\r\b","-------->" , material, "---------")
+            pass
         if mtype  == 'plastic':
-            print("\r\b","-------->" , material, "---------")
+            pass
         if mtype  == 'strings':
-            print("\r\b","-------->" , material, "---------")
+            pass
 
     def save_small(self, ns):
         pass

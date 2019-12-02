@@ -16,6 +16,6 @@
         "Londoner",
         "VintageClubMini"
     ],
-    "mask": false,
+    "mask": {},
     "suffix": "SeamInternalStand"
 }

@@ -18,6 +18,6 @@
         "Londoner",
         "VintageClubMini"
     ],
-    "mask": false,
+    "mask": {},
     "suffix": "Button"
 }
