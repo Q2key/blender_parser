@@ -59,19 +59,20 @@ class Engine(EngineBase):
         sc = d['shadowCatchers']
         vs = d['variants']
         am = d['avaibleMaterials']
-        rm = RenderedMask(d['mask'])
 
         for v in vs:
             #identifier
-            ri = RenderedItentifier(
+            oi = RenderedItentifier(
                 variant=v,
                 prefix=d['prefix'],
-                suffix=d['suffix'])
+                suffix=d['suffix'],
+                mask=d['mask']
+                )
 
             #material
             mi = RenderedMaterial(type=d['type'])
             #object
-            ro = RenderedObject(ri,mi,sc,rm)
+            ro = RenderedObject(oi,mi,sc)
 
             self.before_render(ro)
             self.render_partial(ro,am)

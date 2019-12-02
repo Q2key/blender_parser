@@ -1,4 +1,9 @@
 class RenderedMask:
-    def __init__(self,details=[],layer_index=1):
-        self.details = details
-        self.layer_index = layer_index
+    def __init__(self,mask):
+        self.details = self.get_details(mask)
+        self.layer_index = 1
+
+    def get_details(self,mask):
+        if 'details' in mask:
+            return mask['details']
+        return {}
