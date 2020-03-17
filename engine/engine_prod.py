@@ -72,16 +72,23 @@ class Engine(EngineBase):
 
         d_name = d['filePrefix']
         v_name = d['variant']
+        has_mask = 'details' in d['mask']
+        has_included = 'included' in d and 'details' in d['included']
 
-        hasMask = 'details' in d['mask']
-        if hasMask:
-            self.setLayerMaskState(True)
+        #toggle mask mode
+        if has_mask:
+            mask_mode = self.ctx.SCENE['MaskMode']
+            self.setLayerMaskState(mask_mode)
 
         for obj in bpy.data.objects:
-            isMask = hasMask and obj.name == d['mask']['details'][v_name]
-            isTarget = (obj.name == d_name)
-            if isTarget or isMask:
+            #checking displaying
+            is_mask = has_mask and obj.name == d['mask']['details'][v_name]
+            is_included = has_included and obj.name == d['included']['details'][v_name]
+            is_target = (obj.name == d_name)
+
+            if is_target or is_mask or is_included:
                 obj.hide_render = False
+    
 
     def set_default(self):
         self.setLayerMaskState(False)

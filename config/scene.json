@@ -16,6 +16,7 @@
     "PerspectiveStyle": "Table",
     "Percentage":100,
     "Compression": 50,
+    "MaskMode": false,
     "TexturesFormat": [
         ".png",
         ".jpg"

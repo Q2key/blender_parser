@@ -1,9 +1,21 @@
 {
     "type": "fabric",
-    "shadowCatchers": [
-        "collarCatcher"
-    ],
+    "shadowCatchers": ["collarCatcher"],
     "prefix": "collar",
+    "included": {
+        "details" : {
+            "King": "collarKingSeam",
+            "Colorado": "collarColoradoSeam",
+            "Cutaway": "collarCutawaySeam",
+            "Kent": "collarKentSeam",
+            "Windsor": "collarWindsorSeam",
+            "Roma": "collarRomaSeam",
+            "ColoradoMini": "collarColoradoMiniSeam",
+            "VintageClub": "collarVintageClubSeam",
+            "Londoner": "collarLondonerSeam",
+            "VintageClubMini": "collarVintageClubMiniSeam"
+        }
+    }, 
     "variants": [
         "King",
         "Colorado",

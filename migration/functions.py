@@ -23,7 +23,7 @@ def update_name(detail_scene_name,result_name):
                 obj.data.name = result_name
         #deselect object
         bpy.data.objects[result_name].select = False
-            
+
 def update_material(detail_scene_name='', material=''):
     found = detail_scene_name in bpy.data.objects
     if found:
