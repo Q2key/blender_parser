@@ -19,21 +19,19 @@
         "VintageClubMini"
     ],
     "included": {
-        "details" : {
-            "King": "collarKingSeamInternalStand",
-            "Cutaway" : "collarCutawaySeamInternalStand" ,
-            "Kent" : "collarKentSeamInternalStand",
-            "Windsor" : "collarWindsorSeamInternalStand",
-            "Roma" : "collarRomaSeamInternalStand",
-            "Colorado" : "collarColoradoSeamInternalStand",
-            "ColoradoMini" : "collarColoradoMiniSeamInternalStand",
-            "VintageClub" : "collarVintageClubSeamInternalStand",
-            "Londoner" : "collarLondonerSeamInternalStand",
-            "VintageClubMini" : "collarVintageClubMiniSeamInternalStand",
-            "Mao" : "collarMaoSeamInternalStand",
-            "Mandarin" : "collarMandarinSeamInternalStand"
-        },
-        "layerIndex" : 2
+        "King": ["collarKingSeamInternalStand"],
+        "Cutaway" : ["collarCutawaySeamInternalStand"] ,
+        "Kent" : ["collarKentSeamInternalStand"],
+        "Windsor" : ["collarWindsorSeamInternalStand"],
+        "Roma" : ["collarRomaSeamInternalStand"],
+        "Colorado" : ["collarColoradoSeamInternalStand"],
+        "ColoradoMini" : ["collarColoradoMiniSeamInternalStand"],
+        "VintageClub" : ["collarVintageClubSeamInternalStand"],
+        "Londoner" : ["collarLondonerSeamInternalStand"],
+        "VintageClubMini" : ["collarVintageClubMiniSeamInternalStand"],
+        "Mao" : ["collarMaoSeamInternalStand"],
+        "Mandarin" : ["collarMandarinSeamInternalStand"]
     },
+    "masks": false,
     "suffix": "InternalStand"
 }

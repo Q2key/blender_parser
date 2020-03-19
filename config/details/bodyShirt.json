@@ -5,6 +5,7 @@
         "Shirt"
     ],
     "suffix":  "",
+    "included": false,
     "shadow_catchers": [],
-    "masks": {}
+    "masks": false
 }

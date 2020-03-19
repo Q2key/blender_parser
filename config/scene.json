@@ -1,20 +1,20 @@
 {
     "Resolution": {
         "Loseless": {
-            "x": 800,
-            "y": 1250
+            "x": 1600,
+            "y": 2180
         },
         "Big": {
-            "x": 800,
-            "y": 1250
+            "x": 1600,
+            "y": 2180
         },  
         "Small": {
             "x": 400,
-            "y": 625
+            "y": 545
         }
     },
     "PerspectiveStyle": "Table",
-    "Percentage":50,
+    "Percentage":100,
     "Compression": 50,
     "mask_mode_on": true,
     "TexturesFormat": [

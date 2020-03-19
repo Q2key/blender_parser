@@ -1,8 +1,13 @@
 {
     "type": "fabric",
     "shadow_catchers": [],
-    "prefix": "pocket",
-    "variants": [""],
-    "mask": {},
+    "prefix": "",
+    "variants": ["pocket"],
+    "included": {
+        "pocket": "pocketStrings"
+    },
+    "masks": {
+        "pocket": ["bodyShirt"]
+    },
     "suffix": ""
 }

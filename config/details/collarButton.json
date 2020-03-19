@@ -18,6 +18,7 @@
         "Londoner",
         "VintageClubMini"
     ],
-    "mask": {},
+    "included": false,
+    "masks": false,
     "suffix": "Button"
 }

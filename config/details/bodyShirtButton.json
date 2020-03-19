@@ -8,5 +8,8 @@
     "shadow_catchers": [
         "bodyShirt"
     ],
-    "mask": "Strings"
+    "included": false,
+    "masks": {
+        "Shirt": ["bodyShirtStrings"]
+    }
 }
