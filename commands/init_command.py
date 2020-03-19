@@ -18,5 +18,5 @@ class InitCommand:
         for (key,details) in det:
             for detail in details:
                 material_key = detail['type']
-                detail['avaibleMaterials'] = mat[material_key]
+                detail['available_material'] = mat[material_key]
 

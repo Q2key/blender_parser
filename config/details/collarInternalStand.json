@@ -1,6 +1,6 @@
 {
     "type": "fabric",
-    "shadowCatchers": [
+    "shadow_catchers": [
         "bodyShirtInternal"
     ],
     "prefix" : "collar",
@@ -18,20 +18,20 @@
         "Londoner",
         "VintageClubMini"
     ],
-    "mask": {
+    "included": {
         "details" : {
-            "King": "collarKing",
-            "Cutaway" : "collarCutaway" ,
-            "Kent" : "collarKent",
-            "Windsor" : "collarWindsor",
-            "Roma" : "collarRoma",
-            "Colorado" : "collarColorado",
-            "ColoradoMini" : "collarColoradoMini",
-            "VintageClub" : "collarVintageClub",
-            "Londoner" : "collarLondoner",
-            "VintageClubMini" : "collarVintageClubMini",
-            "Mao" : "collarMao",
-            "Mandarin" : "collarMandarin"
+            "King": "collarKingSeamInternalStand",
+            "Cutaway" : "collarCutawaySeamInternalStand" ,
+            "Kent" : "collarKentSeamInternalStand",
+            "Windsor" : "collarWindsorSeamInternalStand",
+            "Roma" : "collarRomaSeamInternalStand",
+            "Colorado" : "collarColoradoSeamInternalStand",
+            "ColoradoMini" : "collarColoradoMiniSeamInternalStand",
+            "VintageClub" : "collarVintageClubSeamInternalStand",
+            "Londoner" : "collarLondonerSeamInternalStand",
+            "VintageClubMini" : "collarVintageClubMiniSeamInternalStand",
+            "Mao" : "collarMaoSeamInternalStand",
+            "Mandarin" : "collarMandarinSeamInternalStand"
         },
         "layerIndex" : 2
     },

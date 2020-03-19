@@ -1,8 +1,8 @@
 {
     "type": "fabric",
-    "shadowCatchers": [],
+    "shadow_catchers": [],
     "prefix": "body",
     "variants": ["ShirtInternal"],
-    "mask": {},
+    "masks": false,
     "suffix": ""
 }

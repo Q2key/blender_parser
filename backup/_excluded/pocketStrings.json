@@ -1,6 +1,6 @@
 {
     "type": "strings",
-    "shadowCatchers": [],
+    "shadow_catchers": [],
     "prefix": "pocket",
     "variants": ["Strings"],
     "mask": {},

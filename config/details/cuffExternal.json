@@ -1,6 +1,6 @@
 {
     "type": "fabric",
-    "shadowCatchers": [],
+    "shadow_catchers": [],
     "prefix": "cuff",
     "variants": [
         "French",

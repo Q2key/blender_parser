@@ -22,11 +22,7 @@ class EngineBase(ABC):
         pass
 
     @abstractmethod
-    def set_catchers(self, d):
-        pass
-
-    @abstractmethod
-    def set_excluded(self, d):
+    def preprocess_details(self, d):
         pass
 
     @abstractmethod

@@ -30,9 +30,9 @@ class ScanStoreCommand:
         for (k, v) in self.ctx.DETAILS.items():
             mkey = v['type']
             if mkey == 'fabric':
-                v['avaibleMaterials'] = mts
+                v['available_material'] = mts
             else:
-                v['avaibleMaterials'] = self.ctx.MATERIALS[mkey]
+                v['available_material'] = self.ctx.MATERIALS[mkey]
         print(mts)
 
     def write_config(self, file, data):

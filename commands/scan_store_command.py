@@ -25,47 +25,22 @@ class ScanStoreCommand:
         return m
 
     def update_config(self):
-        mts = self.search_for_material()
+        m = self.search_for_material()
         for (k, v) in self.ctx.DETAILS.items():
             mkey = v['type']
             if mkey == 'fabric':
-                v['avaibleMaterials'] = mts
+                v['available_material'] = m
+            elif bool(mkey):
+                v['available_material'] = self.ctx.MATERIALS[mkey]
+            elif mkey == 'vendor':
+                v['available_material'] = 'vendor'
             else:
-                v['avaibleMaterials'] = self.ctx.MATERIALS[mkey]
-        print(mts)
+                v['available_material'] = 'vendor'
 
     def write_config(self, file, data):
         with open(file, mode="w") as f:
             f.write(data)
 
-    #выпилить
-    def write_dir_tree(self, p):
-        print(p)
-        subdirs = [x for x in p.split('/') if x.find('.') is -1]
-        d = subdirs[0]
-        for s in subdirs:
-            if s is not d:
-                d = '{0}/{1}'.format(d, s)
-            if os.path.exists(d):
-                print('directory {0} exists'.format(d))
-            else:
-                print('directory {0} not exists'.format(d))
-                os.mkdir(d)
-
-    def flush_config(self):
-        for k, v in self.ctx.DETAILS.items():
-            file = k.lower() + '.json'
-            path = str.format("{0}/_config/_details/{1}",
-                              self.ctx.STORE_PATH, file)
-            self.write_dir_tree(path)
-            self.write_config(path, json.dumps(v, indent=4))
-
-        self.write_config("{0}/_config/scene.json".format(self.ctx.STORE_PATH),
-                          json.dumps(self.ctx.SCENE, indent=4))
-        self.write_config("{0}/_config/materials.json".format(self.ctx.STORE_PATH),
-                          json.dumps(self.ctx.MATERIALS, indent=4))
-
     def run(self):
         self.search_for_material()
         self.update_config()
-        #self.flush_config()

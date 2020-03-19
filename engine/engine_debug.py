@@ -51,14 +51,14 @@ class Engine(EngineBase):
         return elements  
 
     def get_material(self, d):
-        d['avaibleMaterials'] = [
+        d['available_material'] = [
             e for e in self.ctx.MATERIALS
-            if e['id'] in d['avaibleMaterialsID']]
+            if e['id'] in d['available_material_id']]
 
     def process_details(self,d):
-        sc = d['shadowCatchers']
+        sc = d['shadow_catchers']
         vs = d['variants']
-        am = d['avaibleMaterials']
+        am = d['available_material']
         rm = RenderedMask(d['mask'])
 
         for v in vs:
@@ -85,7 +85,7 @@ class Engine(EngineBase):
         for sc in ro.catchers:
             print("cather state: ", sc, True)
 
-    def set_excluded(self, ro):
+    def preprocess_details(self, ro):
         print("object hided: ", ro.detail.id, False)
         if ro.detail.mask_id is not None:
             print("object hided: ", ro.detail.id, False)
@@ -100,8 +100,7 @@ class Engine(EngineBase):
 
     def before_render(self, ro):
         self.set_default()
-        self.set_catchers(ro)
-        self.set_excluded(ro)
+        self.preprocess_details(ro)
 
     def render_partial(self, rendering_object, avalible_materials):
         p = rendering_object.detail.id

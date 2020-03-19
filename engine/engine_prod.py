@@ -46,52 +46,67 @@ class Engine(EngineBase):
         return elements
 
     def get_material(self, d):
-        d['avaibleMaterials'] = [
+        d['available_material'] = [
             e for e in self.ctx.MATERIALS
-            if e['id'] in d['avaibleMaterialsID']]
+            if e['id'] in d['available_material_id']]
 
     def process_details(self,d):
         if len(d['variants']) > 0:
             for v in d['variants']:
-                d['filePrefix'] = d['prefix'] + v + d['suffix']
+                d['file_id'] = d['prefix'] + v + d['suffix']
                 d['variant'] = v
                 self.before_render(d)
                 self.render_partial(d)
         else :
-            d['filePrefix'] = d['prefix'] + d['suffix']
+            d['file_id'] = d['prefix'] + d['suffix']
             self.before_render(d,v)
             self.render_partial(d)
 
-    def set_catchers(self, d):
-        for sc in d["shadowCatchers"]:
-            if sc in bpy.data.objects:
-                bpy.data.objects[sc].cycles.is_shadow_catcher = True
-                bpy.data.objects[sc].hide_render = False
+    def preprocess_details(self, d):
 
-    def set_excluded(self, d):
-
-        d_name = d['filePrefix']
+        d_name = d['file_id']
         v_name = d['variant']
-        has_mask = 'details' in d['mask']
-        has_included = 'included' in d and 'details' in d['included']
 
         #toggle mask mode
-        if has_mask:
-            mask_mode = self.ctx.SCENE['MaskMode']
-            self.setLayerMaskState(mask_mode)
-
+        mask_mode = self.ctx.SCENE['mask_mode_on']
+        self.set_layer_mask_state(mask_mode)
+ 
         for obj in bpy.data.objects:
+            n = obj.name
             #checking displaying
-            is_mask = has_mask and obj.name == d['mask']['details'][v_name]
-            is_included = has_included and obj.name == d['included']['details'][v_name]
-            is_target = (obj.name == d_name)
+            is_mask = bool(d['masks']) and n in d['masks'][v_name]
+            is_included = bool(d['masks']) and n in d['included'][v_name]
+            is_catcher = bool(d['shadow_catchers']) and n in d['shadow_catchers']
+            is_target = (n == d_name)
 
-            if is_target or is_mask or is_included:
+            if is_catcher:
+                obj.cycles.is_shadow_catcher = True
+                obj.layers[0] = True
+                obj.layers[1] = False
                 obj.hide_render = False
-    
+                print('Detail {0} : Catcher {1}'.format(n, True))
 
+            if is_target:
+                obj.layers[0] = True
+                obj.layers[1] = False
+                obj.hide_render = False
+                print('Detail {0} : Target {1}'.format(n, True))
+            
+            if is_included:
+                obj.layers[0] = True
+                obj.layers[1] = False
+                obj.hide_render = False
+                print('Detail {0} : Included {1}'.format(n, True))
+
+            if is_mask:
+                obj.layers[0] = False
+                obj.layers[1] = True
+                obj.hide_render = False
+                print('Detail {0} : Mask {1}'.format(n, True))
+        
+    
     def set_default(self):
-        self.setLayerMaskState(False)
+        self.set_layer_mask_state(False)
         for (k, v) in bpy.data.objects.items():
             if v.name not in [
                 "Camera", "Lamp", "Lamp_0",
@@ -100,25 +115,36 @@ class Engine(EngineBase):
                 v.hide_render = True
                 v.cycles.is_shadow_catcher = False
 
-    def setLayerMaskState(self,state):
-        bpy.data.scenes['Scene'].render.layers['RenderLayer'].layers_zmask[0] = False
+    def set_layer_mask_state(self,state):
+        bpy.data.scenes['Scene'].render.layers['RenderLayer'].layers_zmask[1] = state
+
+    def setObjectLayer(self,object, layer):
         bpy.data.scenes['Scene'].render.layers['RenderLayer'].layers_zmask[1] = state
 
     def before_render(self, d):
         self.set_default()
-        self.set_catchers(d)
-        self.set_excluded(d)
+        self.preprocess_details(d)
 
     def render_partial(self, d):
         self.before_render(d)
-        p = d['filePrefix']
+        p = d['file_id']
         r = self.ctx.SCENE['Resolution']
-        for m in d['avaibleMaterials']:
-            fp = str.format("{0}_{1}", p, m["id"])
+
+        #если хотим использовать только один материал
+        if d['available_material'] == 'vendor':
+            fp = str.format("{0}_vendor", p)
             ns = ph.get_image_name(self.folder, p, fp, r)
-            self.set_material(m,d)
             self.render_detail(ns)
             self.save_small(ns, r)
+
+        else:
+            for m in d['available_material']:
+                fp = str.format("{0}_{1}", p, m["id"])
+                ns = ph.get_image_name(self.folder, p, fp, r)
+                self.set_material(m,d)
+                self.render_detail(ns)
+                self.save_small(ns, r)
+
 
     def set_material(self, material, detail):
         if detail['type'] == 'fabric':

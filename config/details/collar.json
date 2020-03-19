@@ -1,47 +1,42 @@
 {
     "type": "fabric",
-    "shadowCatchers": [],
+    "shadow_catchers": ["bodyShirt"],
     "prefix": "collar",
     "included": {
-        "details" : {
-            "King": "collarKingSeam"
-/*             "Colorado": "collarColoradoSeam",
-            "Cutaway": "collarCutawaySeam",
-            "Kent": "collarKentSeam",
-            "Windsor": "collarWindsorSeam",
-            "Roma": "collarRomaSeam",
-            "ColoradoMini": "collarColoradoMiniSeam",
-            "VintageClub": "collarVintageClubSeam",
-            "Londoner": "collarLondonerSeam",
-            "VintageClubMini": "collarVintageClubMiniSeam" */
-        }
+        "King": ["collarKingSeam"],
+        "Colorado": ["collarColoradoSeam"],
+        "Cutaway": ["collarCutawaySeam"],
+        "Kent": ["collarKentSeam"],
+        "Windsor": ["collarWindsorSeam"],
+        "Roma": ["collarRomaSeam"],
+        "ColoradoMini": ["collarColoradoMiniSeam"],
+        "VintageClub": ["collarVintageClubSeam"],
+        "Londoner": ["collarLondonerSeam"],
+        "VintageClubMini": ["collarVintageClubMiniSeam"]
     }, 
     "variants": [
         "King",
-        "Colorado",
         "Cutaway",
         "Kent",
         "Windsor",
         "Roma",
+        "Colorado",
         "ColoradoMini",
         "VintageClub",
         "Londoner",
         "VintageClubMini"
     ],
-    "mask": {
-        "details" : {
-            "King": "collarKingSeam",
-            "Colorado": "collarColoradoSeam",
-            "Cutaway": "collarCutawaySeam",
-            "Kent": "collarKentSeam",
-            "Windsor": "collarWindsorSeam",
-            "Roma": "collarRomaSeam",
-            "ColoradoMini": "collarColoradoMiniSeam",
-            "VintageClub": "collarVintageClubSeam",
-            "Londoner": "collarLondonerSeam",
-            "VintageClubMini": "collarVintageClubMiniSeam"
-        },
-        "layerNumber" : 2
+    "masks": {
+        "King": ["collarKingInternalStand", "bodyShirtInternal"],
+        "Colorado": ["collarColoradoInternalStand", "bodyShirtInternal"],
+        "Cutaway": ["collarCutawayInternalStand", "bodyShirtInternal"],
+        "Kent": ["collarKentInternalStand", "bodyShirtInternal"],
+        "Windsor": ["collarWindsorInternalStand", "bodyShirtInternal"],
+        "Roma": ["collarRomaInternalStand", "bodyShirtInternal"],
+        "ColoradoMini": ["collarColoradoInternalStand", "bodyShirtInternal"],
+        "VintageClub": ["collarVintageInternalStand", "bodyShirtInternal"],
+        "Londoner": ["collarLondonerInternalStand", "bodyShirtInternal"],
+        "VintageClubMini": ["collarVintageInternalStand", "bodyShirtInternal"]
     },
     "suffix": ""
 }

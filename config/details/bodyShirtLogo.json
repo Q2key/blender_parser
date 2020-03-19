@@ -1,10 +1,10 @@
 {
-    "type": "fabric",
+    "type": false,
     "prefix": "body",
     "variants": [
         "Shirt"
     ],
-    "mask": {},
+    "masks": false,
     "suffix": "Logo",
-    "shadowCatchers": []
+    "shadow_catchers": []
 }

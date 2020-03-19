@@ -5,7 +5,7 @@
         "Shirt"
     ],
     "suffix":"Button",
-    "shadowCatchers": [
+    "shadow_catchers": [
         "bodyShirt"
     ],
     "mask": "Strings"

@@ -1,7 +1,7 @@
 {
     "type": "strings",
     "prefix": "body",
-    "shadowCatchers": [
+    "shadow_catchers": [
         "bodyShirt"
     ],
     "variants": [

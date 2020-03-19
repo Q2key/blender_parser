@@ -1,6 +1,6 @@
 {
     "type": "plastic",
-    "shadowCatchers": [
+    "shadow_catchers": [
         "bodyShirt"
     ],
     "prefix": "collar",

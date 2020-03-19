@@ -14,7 +14,7 @@ def read_config(path):
 
 
 def extend_materials(d):
-    d['avaibleMaterials'] = [a for a in MATERIALS if a['id'] in d['avaibleMaterialsID']]
+    d['available_material'] = [a for a in MATERIALS if a['id'] in d['available_material_id']]
 
 def render_all():
     for d in DETAILS:
@@ -34,7 +34,7 @@ def get_folder():
 
 def set_catchers(d):
     ''' set shadow catchers for element '''
-    for sc in d["shadowCatchers"]:
+    for sc in d["shadow_catchers"]:
          bpy.data.objects[sc].cycles.is_shadow_catcher = True
 
 def set_excluded(d):
@@ -61,8 +61,8 @@ def before_render(d):
 
 def render_partial(d):
     before_render(d)
-    for m in d['avaibleMaterials']:
-        r = str.format("{0}/{1}_{2}.png",FOLDER,d["filePrefix"],m["id"])
+    for m in d['available_material']:
+        r = str.format("{0}/{1}_{2}.png",FOLDER,d["file_id"],m["id"])
         set_material(m)
         render_detail(r)
     pass
