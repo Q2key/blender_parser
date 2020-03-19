@@ -4,8 +4,8 @@
     "prefix": "collar",
     "included": {
         "details" : {
-            "King": "collarKingSeam",
-            "Colorado": "collarColoradoSeam",
+            "King": "collarKingSeam"
+/*             "Colorado": "collarColoradoSeam",
             "Cutaway": "collarCutawaySeam",
             "Kent": "collarKentSeam",
             "Windsor": "collarWindsorSeam",
@@ -13,7 +13,7 @@
             "ColoradoMini": "collarColoradoMiniSeam",
             "VintageClub": "collarVintageClubSeam",
             "Londoner": "collarLondonerSeam",
-            "VintageClubMini": "collarVintageClubMiniSeam"
+            "VintageClubMini": "collarVintageClubMiniSeam" */
         }
     }, 
     "variants": [

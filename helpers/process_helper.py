@@ -7,7 +7,8 @@ class ProcessHelper:
     @staticmethod
     def get_folder_name(root):
         dt = datetime.datetime.now()
-        ft = dt.strftime("%d_%b_%Y_(%H_%M_%S)")
+        #ft = dt.strftime("%d_%b_%Y_(%H_%M_%S)")
+        ft = dt.strftime("%d_%b_%Y")
         pt = root + "/" + ft
         return pt
 
@@ -51,7 +52,7 @@ class ProcessHelper:
 
     @staticmethod
     def get_camel(raw):
-        cml = '';
+        cml = ''
         spl = raw.split('_')
         cml_array = []
         for i in range(len(spl)):

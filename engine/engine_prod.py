@@ -101,6 +101,7 @@ class Engine(EngineBase):
                 v.cycles.is_shadow_catcher = False
 
     def setLayerMaskState(self,state):
+        bpy.data.scenes['Scene'].render.layers['RenderLayer'].layers_zmask[0] = False
         bpy.data.scenes['Scene'].render.layers['RenderLayer'].layers_zmask[1] = state
 
     def before_render(self, d):

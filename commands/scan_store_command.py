@@ -2,7 +2,6 @@ import os
 import json
 from helpers.process_helper import ProcessHelper
 
-
 class ScanStoreCommand:
 
     def __init__(self, ctx, args):
@@ -39,7 +38,9 @@ class ScanStoreCommand:
         with open(file, mode="w") as f:
             f.write(data)
 
+    #выпилить
     def write_dir_tree(self, p):
+        print(p)
         subdirs = [x for x in p.split('/') if x.find('.') is -1]
         d = subdirs[0]
         for s in subdirs:
@@ -67,4 +68,4 @@ class ScanStoreCommand:
     def run(self):
         self.search_for_material()
         self.update_config()
-        self.flush_config()
+        #self.flush_config()
