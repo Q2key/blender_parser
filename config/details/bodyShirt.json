@@ -5,7 +5,9 @@
         "Shirt"
     ],
     "suffix":  "",
-    "included": false,
+    "included": {
+        "Shirt": ["bodyShirtStrings"]
+    },
     "shadow_catchers": [],
     "masks": false
 }

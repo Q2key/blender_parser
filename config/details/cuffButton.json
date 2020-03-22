@@ -11,13 +11,6 @@
         "TwoButtons"
     ],
     "included": false,
-    "masks": {
-        "French": ["cuffFrenchStrings"],
-        "OneButton": ["cuffOneButtonStrings"],
-        "Regulated": ["cuffRegulatedStrings"],
-        "Rounded": ["cuffRoundedStrings"],
-        "Straight": ["cuffStraightStrings"],
-        "TwoButtons": ["cuffTwoButtonsStrings"]
-    },
+    "masks": false,
     "suffix": "Button"
 }

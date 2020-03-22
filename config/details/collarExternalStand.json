@@ -30,6 +30,6 @@
         "Mao" : ["collarMaoSeamExternalStand"],
         "Mandarin" : ["collarMandarinSeamExternalStand"]
     },
-    "masks" : [],
+    "masks" : false,
     "suffix": "ExternalStand"
 }

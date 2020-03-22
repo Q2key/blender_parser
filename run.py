@@ -13,6 +13,7 @@ from commands.reset_command import ResetCommand
 from commands.render_command import RenderCommand
 from commands.install_command import InstallCommand
 from commands.register_detail_command import RegisterDetailCommand
+from commands.make_web_config_command import MakeWebConfigCommand
 
 #helpers
 from helpers.logger import Logger as Logger
@@ -28,6 +29,7 @@ parser.add_argument("-store", "--store", action='store_true')
 parser.add_argument("-static", "--static", action="store_true")
 parser.add_argument("-d", "--debug", action="store_true")
 parser.add_argument("-i", "--install", action="store_true")
+parser.add_argument("-wc", "--webconfig", action="store_true")
 
 #register command
 parser.add_argument("--register", action='store_true')
@@ -57,6 +59,8 @@ if __name__ == "__main__":
         cmd_stack.append(RenderCommand(ctx, args))
     if args.install:
         cmd_stack.append(InstallCommand(ctx, args))
+    if args.webconfig:
+        cmd_stack.append(MakeWebConfigCommand(ctx, args))
 
     for cmd in cmd_stack:
         cmd.run()

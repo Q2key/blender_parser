@@ -10,13 +10,7 @@
         "Straight",
         "TwoButtons"
     ],
-    "masks": {
-        "French" : ["cuffFrenchStrings"],
-        "OneButton": ["cuffOneButtonStrings"],
-        "Regulated": ["cuffRegulatedStrings"],
-        "Rounded": ["cuffRoundedStrings"],
-        "Straight": ["cuffStraightStrings"]
-    },
+    "masks": false,
     "included": false,
     "suffix":  "External"
 }

@@ -23,6 +23,18 @@
             ],
         },
         {
+            "name": "RENDER MAKE CONFIG",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/run.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--",
+                "--webconfig",
+                "-d"
+            ],
+        },
+        {
             "name": "REGISTER DEBUG",
             "type": "python",
             "request": "launch",
