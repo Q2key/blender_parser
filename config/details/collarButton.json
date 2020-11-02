@@ -1,8 +1,6 @@
 {
     "type": "plastic",
-    "shadow_catchers": [
-        "bodyShirt"
-    ],
+    "shadow_catchers": [],
     "prefix": "collar",
     "variants": [
         "Mao",
