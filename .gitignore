@@ -3,6 +3,5 @@ renders/*
 *.pyc
 *.pyo
 textures/*
-scenes/*
 
 *.log

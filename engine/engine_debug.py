@@ -59,7 +59,7 @@ class Engine(EngineBase):
         sc = d['shadow_catchers']
         vs = d['variants']
         am = d['available_material']
-        rm = RenderedMask(d['mask'])
+        rm = RenderedMask(d['masks'])
 
         for v in vs:
             #identifier
