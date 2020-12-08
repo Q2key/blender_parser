@@ -14,8 +14,8 @@
         }
     },
     "PerspectiveStyle": "Table",
-    "Percentage":100,
-    "Compression": 50,
+    "Percentage":30,
+    "Compression": 80,
     "mask_mode_on": true,
     "TexturesFormat": [
         ".png",
