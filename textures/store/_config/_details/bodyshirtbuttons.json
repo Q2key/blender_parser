@@ -1,0 +1,26 @@
+[
+    {
+        "type": "plastic",
+        "filePrefix": "bodyShirtButton",
+        "shadowCatchers": [
+            "bodyShirt"
+        ],
+        "included": [
+            "bodyShirtButton"
+        ],
+        "avaibleMaterials": [
+            {
+                "id": "7ca4c5",
+                "color": "7ca4c5"
+            },
+            {
+                "id": "444444",
+                "color": "444444"
+            },
+            {
+                "id": "000000",
+                "color": "000000"
+            }
+        ]
+    }
+]

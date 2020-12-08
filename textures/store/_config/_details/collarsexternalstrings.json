@@ -1,0 +1,20 @@
+[
+    {
+        "type": "strings",
+        "filePrefix": "collarButtonDownSeamExternalStand",
+        "shadowCatchers": [],
+        "included": [
+            "collarButtonDownSeamExternalStand"
+        ],
+        "avaibleMaterials": [
+            {
+                "id": "7ad3d8",
+                "color": "7ad3d8"
+            },
+            {
+                "id": "0f968f",
+                "color": "0f968f"
+            }
+        ]
+    }
+]

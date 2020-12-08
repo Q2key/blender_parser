@@ -1,0 +1,24 @@
+[
+    {
+        "type": "plastic",
+        "filePrefix": "collarButtonDownButton",
+        "shadowCatchers": [],
+        "included": [
+            "collarButtonDownButton"
+        ],
+        "avaibleMaterials": [
+            {
+                "id": "7ca4c5",
+                "color": "7ca4c5"
+            },
+            {
+                "id": "444444",
+                "color": "444444"
+            },
+            {
+                "id": "000000",
+                "color": "000000"
+            }
+        ]
+    }
+]

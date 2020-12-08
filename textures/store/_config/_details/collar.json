@@ -1,0 +1,71 @@
+{
+    "type": "fabric",
+    "shadowCatchers": [
+        "collarCatcher"
+    ],
+    "prefix": "collar",
+    "included": {
+        "details": {
+            "King": "collarKingSeam",
+            "Colorado": "collarColoradoSeam",
+            "Cutaway": "collarCutawaySeam",
+            "Kent": "collarKentSeam",
+            "Windsor": "collarWindsorSeam",
+            "Roma": "collarRomaSeam",
+            "ColoradoMini": "collarColoradoMiniSeam",
+            "VintageClub": "collarVintageClubSeam",
+            "Londoner": "collarLondonerSeam",
+            "VintageClubMini": "collarVintageClubMiniSeam"
+        }
+    },
+    "variants": [
+        "King",
+        "Colorado",
+        "Cutaway",
+        "Kent",
+        "Windsor",
+        "Roma",
+        "ColoradoMini",
+        "VintageClub",
+        "Londoner",
+        "VintageClubMini"
+    ],
+    "mask": {
+        "details": {
+            "King": "collarKingSeam",
+            "Colorado": "collarColoradoSeam",
+            "Cutaway": "collarCutawaySeam",
+            "Kent": "collarKentSeam",
+            "Windsor": "collarWindsorSeam",
+            "Roma": "collarRomaSeam",
+            "ColoradoMini": "collarColoradoMiniSeam",
+            "VintageClub": "collarVintageClubSeam",
+            "Londoner": "collarLondonerSeam",
+            "VintageClubMini": "collarVintageClubMiniSeam"
+        },
+        "layerNumber": 2
+    },
+    "suffix": "",
+    "avaibleMaterials": [
+        {
+            "id": "akita-blue-navy-check1869x1722",
+            "texture": "C:\\Projects\\shirtsRender/textures/store/akita-blue-navy-check1869x1722.png"
+        },
+        {
+            "id": "babelan-blue-1863x1905-new",
+            "texture": "C:\\Projects\\shirtsRender/textures/store/babelan-blue-1863x1905-new.png"
+        },
+        {
+            "id": "babelan-denim1902x1920-new",
+            "texture": "C:\\Projects\\shirtsRender/textures/store/babelan-denim1902x1920-new.png"
+        },
+        {
+            "id": "cikupa-brown1716x1776-new",
+            "texture": "C:\\Projects\\shirtsRender/textures/store/cikupa-brown1716x1776-new.png"
+        },
+        {
+            "id": "garut-light-blue1998x1980-new",
+            "texture": "C:\\Projects\\shirtsRender/textures/store/garut-light-blue1998x1980-new.png"
+        }
+    ]
+}

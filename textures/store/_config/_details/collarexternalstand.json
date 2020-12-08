@@ -1,0 +1,59 @@
+{
+    "type": "fabric",
+    "shadowCatchers": [],
+    "prefix": "collar",
+    "variants": [
+        "King",
+        "Cutaway",
+        "Kent",
+        "Windsor",
+        "Roma",
+        "Colorado",
+        "ColoradoMini",
+        "VintageClub",
+        "Londoner",
+        "VintageClubMini",
+        "Mao",
+        "Mandarin"
+    ],
+    "mask": {
+        "details": {
+            "King": "collarKing",
+            "Cutaway": "collarCutaway",
+            "Kent": "collarKent",
+            "Windsor": "collarWindsor",
+            "Roma": "collarRoma",
+            "Colorado": "collarColorado",
+            "ColoradoMini": "collarColoradoMini",
+            "VintageClub": "collarVintageClub",
+            "Londoner": "collarLondoner",
+            "VintageClubMini": "collarVintageClubMini",
+            "Mao": "collarMao",
+            "Mandarin": "collarMandarin"
+        },
+        "layerNumber": 2
+    },
+    "suffix": "ExternalStand",
+    "avaibleMaterials": [
+        {
+            "id": "akita-blue-navy-check1869x1722",
+            "texture": "C:\\Projects\\shirtsRender/textures/store/akita-blue-navy-check1869x1722.png"
+        },
+        {
+            "id": "babelan-blue-1863x1905-new",
+            "texture": "C:\\Projects\\shirtsRender/textures/store/babelan-blue-1863x1905-new.png"
+        },
+        {
+            "id": "babelan-denim1902x1920-new",
+            "texture": "C:\\Projects\\shirtsRender/textures/store/babelan-denim1902x1920-new.png"
+        },
+        {
+            "id": "cikupa-brown1716x1776-new",
+            "texture": "C:\\Projects\\shirtsRender/textures/store/cikupa-brown1716x1776-new.png"
+        },
+        {
+            "id": "garut-light-blue1998x1980-new",
+            "texture": "C:\\Projects\\shirtsRender/textures/store/garut-light-blue1998x1980-new.png"
+        }
+    ]
+}
