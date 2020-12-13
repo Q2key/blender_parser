@@ -82,7 +82,7 @@ def create_fabric_multy_material(mat_name='fabric_material', map=False, texture=
 
     # define nodes tree
     nt = mat.node_tree
-    nt.name = 'ntg'
+    nt.Name = 'ntg'
     nodes = nt.nodes
     links = nt.links
 

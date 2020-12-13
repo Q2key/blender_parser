@@ -18,9 +18,9 @@ class FabricWorker():
         shaderNodeMapping.vector_type = 'TEXTURE'
 
         # выставляем скалирование текстуры под нормали сцены
-        shaderNodeMapping.scale[0] = 0.8
-        shaderNodeMapping.scale[1] = 0.8
-        shaderNodeMapping.scale[2] = 0.8
+        shaderNodeMapping.inputs[3].default_value[0] = 0.8
+        shaderNodeMapping.inputs[3].default_value[0] = 0.8
+        shaderNodeMapping.inputs[3].default_value[0] = 0.8
         shaderNodeMapping.location = [-700, -100]
 
         # shaderNodeTexImage

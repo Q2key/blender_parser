@@ -81,26 +81,26 @@ class Engine(EngineBase):
 
             if is_catcher:
                 obj.cycles.is_shadow_catcher = True
-                obj.layers[0] = True
-                obj.layers[1] = False
+                #obj.layers[0] = True
+                #obj.layers[1] = False
                 obj.hide_render = False
                 print('Detail {0} : Catcher {1}'.format(n, True))
 
             if is_target:
-                obj.layers[0] = True
-                obj.layers[1] = False
+                #obj.layers[0] = True
+                #obj.layers[1] = False
                 obj.hide_render = False
                 print('Detail {0} : Target {1}'.format(n, True))
             
             if is_included:
-                obj.layers[0] = True
-                obj.layers[1] = False
+                #obj.layers[0] = True
+                #obj.layers[1] = False
                 obj.hide_render = False
                 print('Detail {0} : Included {1}'.format(n, True))
 
             if is_mask:
-                obj.layers[0] = False
-                obj.layers[1] = True
+                #obj.layers[0] = False
+                #obj.layers[1] = True
                 obj.hide_render = False
                 print('Detail {0} : Mask {1}'.format(n, True))
         #exit()
@@ -114,7 +114,8 @@ class Engine(EngineBase):
                 v.cycles.is_shadow_catcher = False
 
     def set_layer_mask_state(self,state):
-        bpy.data.scenes['Scene'].render.layers['RenderLayer'].layers_zmask[1] = state
+        pass
+        #bpy.data.scenes['Scene'].render.layers['RenderLayer'].layers_zmask[1] = state
 
     def before_render(self, d):
         self.set_default()
