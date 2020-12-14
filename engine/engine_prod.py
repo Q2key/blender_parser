@@ -145,10 +145,12 @@ class Engine(EngineBase):
     def set_material(self, material, detail):
         if detail['type'] == 'fabric':
             FabricWorker.create_fabric_multy_material(material)
+            FabricWorker.collar_seam_multy_material(material)
         if detail['type'] == 'plastic':
             PlasticWorker.create_gloss_plastic_material(material)
         if detail['type'] == 'strings':
-            StringsWorker.create_strings_material(material)
+            pass
+            #StringsWorker.create_strings_material(material)
 
     def save_big(self, ns, r):
         ph.save_big(ns, r)

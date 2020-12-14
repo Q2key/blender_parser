@@ -14,11 +14,11 @@
         }
     },
     "PerspectiveStyle": "Table",
-    "Percentage":30,
-    "Compression": 80,
+    "Percentage":100,
+    "Compression": 50,
     "mask_mode_on": true,
     "TexturesFormat": [
         ".png",
         ".jpg"
-    ]   
+    ]
 }
