@@ -1,1 +1,1 @@
-sudo pip3 install -r requirements.txt --upgrade --target=/home/dmt/dev/blender/2.79/python/lib/python3.7/site-packages
+sudo pip3 install -r requirements.txt --upgrade --target=/home/dmt/dev/blender29/2.91/python/lib/python3.7/site-packages
