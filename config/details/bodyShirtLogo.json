@@ -1,5 +1,5 @@
 {
-    "type": false,
+    "type": "vendor",
     "prefix": "body",
     "variants": [
         "Shirt"

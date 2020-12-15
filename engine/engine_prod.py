@@ -74,7 +74,7 @@ class Engine(EngineBase):
         for obj in bpy.data.objects:
             n = obj.name
             #checking displaying
-            is_mask = bool(d['masks']) and n in d['masks'][v_name]
+            #is_mask = bool(d['masks']) and n in d['masks'][v_name]
             is_included = bool(d['included']) and n in d['included'][v_name]
             is_catcher = bool(d['shadow_catchers']) and n in d['shadow_catchers']
             is_target = (n == d_name)
@@ -98,14 +98,6 @@ class Engine(EngineBase):
                 obj.hide_render = False
                 print('Detail {0} : Included {1}'.format(n, True))
 
-            if is_mask:
-                #obj.layers[0] = False
-                #obj.layers[1] = True
-                obj.hide_render = False
-                print('Detail {0} : Mask {1}'.format(n, True))
-        #exit()
-        
-    
     def set_default(self):
         self.set_layer_mask_state(False)
         for (k, v) in bpy.data.objects.items():
@@ -130,6 +122,7 @@ class Engine(EngineBase):
         if d['available_material'] == 'vendor':
             fp = str.format("{0}_vendor", p)
             ns = ph.get_image_name(self.folder, p, fp, r)
+
             self.render_detail(ns)
             self.save_small(ns, r)
 
@@ -148,8 +141,8 @@ class Engine(EngineBase):
             FabricWorker.collar_seam_multy_material(material)
         if detail['type'] == 'plastic':
             PlasticWorker.create_gloss_plastic_material(material)
-        if detail['type'] == 'strings':
-            pass
+        #if detail['type'] == 'strings':
+            #pass
             #StringsWorker.create_strings_material(material)
 
     def save_big(self, ns, r):

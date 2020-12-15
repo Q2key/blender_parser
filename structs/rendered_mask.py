@@ -4,6 +4,7 @@ class RenderedMask:
         self.layer_index = 1
 
     def get_details(self,mask):
-        if 'details' in mask:
+        
+        if type(mask) is dict and 'details' in mask:
             return mask['details']
         return {}

@@ -2,6 +2,7 @@ import os
 import json
 from helpers.process_helper import ProcessHelper
 
+
 class ScanStoreCommand:
 
     def __init__(self, ctx, args):
@@ -30,11 +31,11 @@ class ScanStoreCommand:
             mkey = v['type']
             if mkey == 'fabric':
                 v['available_material'] = m
-            elif bool(mkey):
+            elif bool(mkey) and mkey in self.ctx.MATERIALS:
                 v['available_material'] = self.ctx.MATERIALS[mkey]
             elif mkey == 'vendor':
                 v['available_material'] = 'vendor'
-            else:
+            elif mkey == 'buttons':
                 v['available_material'] = 'vendor'
 
     def write_config(self, file, data):
