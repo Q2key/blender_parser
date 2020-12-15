@@ -1,6 +1,22 @@
 [
     {
-        "id": "pict.png",
-        "texture": "textures/static/pict.png"
+        "id": "a",
+        "texture": "C:/dev/blender_parser/textures/static/a.png"
+    },
+    {
+        "id": "b",
+        "texture": "C:/dev/blender_parser/textures/static/b.png"
+    },
+    {
+        "id": "c",
+        "texture": "C:/dev/blender_parser/textures/static/c.png"
+    },
+    {
+        "id": "d",
+        "texture": "C:/dev/blender_parser/textures/static/d.png"
+    },
+    {
+        "id": "e",
+        "texture": "C:/dev/blender_parser/textures/static/e.png"
     }
 ]

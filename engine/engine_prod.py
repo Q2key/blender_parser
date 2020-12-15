@@ -145,8 +145,9 @@ class Engine(EngineBase):
             FabricWorker.create_fabric_multy_material(material)
             FabricWorker.collar_seam_multy_material(material)
         if detail['type'] == 'plastic':
-            PlasticWorker.create_gloss_plastic_material(material)
-            print(" P L A S T I C ")
+            pass
+            #PlasticWorker.create_gloss_plastic_material(material)
+            #print(" P L A S T I C ")
         if detail['type'] == 'buttons':
             print(" B U T T O N S")
             PlasticWorker.create_img_button_material(material)

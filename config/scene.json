@@ -7,15 +7,15 @@
         "Big": {
             "x": 1600,
             "y": 2180
-        },  
+        },
         "Small": {
             "x": 400,
             "y": 545
         }
     },
     "PerspectiveStyle": "Table",
-    "Percentage":100,
-    "Compression": 50,
+    "Percentage": 100,
+    "Compression": 100,
     "mask_mode_on": true,
     "TexturesFormat": [
         ".png",
