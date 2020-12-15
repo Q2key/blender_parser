@@ -55,6 +55,7 @@ class Engine(EngineBase):
             for v in d['variants']:
                 d['file_id'] = d['prefix'] + v + d['suffix']
                 d['variant'] = v
+                print("PROCESSING DETAIL:")
                 self.before_render(d)
                 self.render_partial(d)
         else :
@@ -114,12 +115,15 @@ class Engine(EngineBase):
         self.preprocess_details(d)
 
     def render_partial(self, d):
+        print ("\r\nRENDERING PARTIAL")
         self.before_render(d)
         p = d['file_id']
         r = self.ctx.SCENE['Resolution']
 
+        print("\r\nAVAILABLE_MATRIAL: ", d['available_material'])
         #если хотим использовать только один материал
         if d['available_material'] == 'vendor':
+            print("IS VENDOR:")
             fp = str.format("{0}_vendor", p)
             ns = ph.get_image_name(self.folder, p, fp, r)
 
@@ -136,11 +140,16 @@ class Engine(EngineBase):
 
 
     def set_material(self, material, detail):
+        print (" S E T ")
         if detail['type'] == 'fabric':
             FabricWorker.create_fabric_multy_material(material)
             FabricWorker.collar_seam_multy_material(material)
         if detail['type'] == 'plastic':
             PlasticWorker.create_gloss_plastic_material(material)
+            print(" P L A S T I C ")
+        if detail['type'] == 'buttons':
+            print(" B U T T O N S")
+            PlasticWorker.create_img_button_material(material)
         #if detail['type'] == 'strings':
             #pass
             #StringsWorker.create_strings_material(material)

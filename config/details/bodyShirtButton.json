@@ -1,5 +1,5 @@
 {
-    "type": "plastic",
+    "type": "buttons",
     "prefix": "body",
     "variants": [
         "Shirt"
@@ -9,7 +9,5 @@
         "bodyShirt"
     ],
     "included": false,
-    "masks": {
-        "Shirt": ["bodyShirtStrings"]
-    }
+    "masks": false
 }

@@ -1,22 +1,6 @@
 [
-   {
-      "id": "m1",
-      "texture": "textures/static/test0.png"
-  },
-  {
-      "id": "m2",
-      "texture": "textures/static/test1.jpg"
-  },
-  {
-      "id": "m3",
-      "texture": "textures/static/test2.png"
-  },
-  {
-      "id": "m4",
-      "texture": "textures/static/test2(s).jpg"
-  },
-  {
-      "id": "m5",
-      "texture": "textures/static/TD_FABRIC25_basecolor.jpg"
-  }
+    {
+        "id": "pict.png",
+        "texture": "textures/static/pict.png"
+    }
 ]

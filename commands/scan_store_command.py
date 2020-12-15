@@ -36,7 +36,7 @@ class ScanStoreCommand:
             elif mkey == 'vendor':
                 v['available_material'] = 'vendor'
             elif mkey == 'buttons':
-                v['available_material'] = 'vendor'
+                v['available_material'] = 'buttons'
 
     def write_config(self, file, data):
         with open(file, mode="w") as f:

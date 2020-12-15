@@ -8,51 +8,42 @@ import bpy
 class PlasticWorker():
 
     @staticmethod
-    def create_gloss_plastic_material(m=False):
-        ''' set material '''
+    def create_img_button_material(m=False):
+        mi = MaterialInfo.get_material_info('img_button_material',True)
 
-        mi = MaterialInfo.get_material_info('plastic_material', True)
-        lw = mi['nodes'].new("ShaderNodeLayerWeight")
-        lw.location = [0, -200]
+        # shaderNodeTexImage
+        '''shaderNodeTextureCoordinate = mi['nodes'].new("ShaderNodeTexCoord")
+        shaderNodeTextureCoordinate.location = [-1100, -100]
 
-        bd1 = mi['nodes'].new("ShaderNodeBsdfDiffuse")
-        bd1.location = [0, -350]
+         # shaderMapper
+        shaderNodeMapping = mi['nodes'].new("ShaderNodeMapping")
+        shaderNodeMapping.vector_type = 'TEXTURE'
 
+        # выставляем скалирование текстуры под нормали сцены
+        shaderNodeMapping.inputs[3].default_value[0] = 0.8
+        shaderNodeMapping.inputs[3].default_value[0] = 0.8
+        shaderNodeMapping.inputs[3].default_value[0] = 0.8
+        shaderNodeMapping.location = [-700, -100]
 
-        bd2 = mi['nodes'].new("ShaderNodeBsdfDiffuse")
-        bd2.location = [0, -500]
+        # shaderNodeTexImage
+        shaderNodeTexImage = mi['nodes'].new("ShaderNodeTexImage")
+        shaderNodeTexImage.image = bpy.data.images.load(m['texture'])
+        shaderNodeTexImage.location = [-300, -100]
 
-        if m is not None:
-            c = m['color']
-            rgb = ph.hex2col(c, True, 2)
-            bd1.inputs[0].default_value = rgb
-            bd2.inputs[0].default_value = rgb
-        else:
-            bd2.inputs[0].default_value = (0, 0, 0, 1)
-            bd2.inputs[0].default_value = (0, 0, 0, 1)
+        # shaderNodeBsdfDfiffuseWidth
+        shaderNodeBsdfDfiffuse = mi['nodes'].new("ShaderNodeBsdfDiffuse")
+        shaderNodeBsdfDfiffuse.use_custom_color = True
+        shaderNodeBsdfDfiffuse.color = (200, 200, 200)
+        shaderNodeBsdfDfiffuse.location = [0, -100]
 
-        fr = mi['nodes'].new("ShaderNodeFresnel")
-        fr.location = [200,  -200]
-        fr.inputs['IOR'].default_value = 1.5
-        
+        # shaderNodeOutputMaterial
+        shaderNodeOutputMaterial = mi['nodes'].new("ShaderNodeOutputMaterial")
+        shaderNodeOutputMaterial.location = [300, -100]
 
-        ms1 = mi['nodes'].new("ShaderNodeMixShader")
-        ms1.location = [200, -350]
-
-        bg = mi['nodes'].new("ShaderNodeBsdfGlossy")
-        bg.location = [200, -500]
-        bg.inputs[1].default_value = 0.3
-
-        ms2 = mi['nodes'].new("ShaderNodeMixShader")
-        ms2.location = [400, -350]
-
-        om = mi['nodes'].new("ShaderNodeOutputMaterial")
-        om.location = [600, -350]
-
-        mi['links'].new(lw.outputs['Fresnel'], ms1.inputs[0])
-        mi['links'].new(bd1.outputs['BSDF'], ms1.inputs[1])
-        mi['links'].new(bd2.outputs['BSDF'], ms1.inputs[2])
-        mi['links'].new(fr.outputs['Fac'], ms2.inputs[0])
-        mi['links'].new(ms1.outputs['Shader'], ms2.inputs[1])
-        mi['links'].new(bg.outputs['BSDF'], ms2.inputs[2])
-        mi['links'].new(ms2.outputs['Shader'], om.inputs['Surface'])
+        # link up
+        mi['links'].new(shaderNodeTextureCoordinate.outputs["UV"],shaderNodeMapping.inputs['Vector'])
+        mi['links'].new(shaderNodeMapping.outputs['Vector'],shaderNodeTexImage.inputs["Vector"])
+        mi['links'].new(shaderNodeTexImage.outputs["Color"],shaderNodeBsdfDfiffuse.inputs['Color'])
+        mi['links'].new(shaderNodeBsdfDfiffuse.outputs["BSDF"],shaderNodeOutputMaterial.inputs['Surface'])
+        '''
+        pass
