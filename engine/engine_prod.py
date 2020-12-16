@@ -17,7 +17,7 @@ class Engine(EngineBase):
     def __init__(self, ctx, args=False):
         self.ctx = ctx
         self.args = args
-        self.folder = ph.get_folder_name(ctx.RENDERS_PATH)
+        self.folder = ph.get_folder_name(ctx.RENDERS_PATH, args)
 
     def prepare(self):
         print('prepare')
@@ -110,6 +110,7 @@ class Engine(EngineBase):
         for m in d['available_material']:
             m_id = m["id"]
             if m["id"] in dat_file:
+                print(str.format("{0} HAS ALREADY EXISTS", m_id))
                 continue
             
             fp = str.format("{0}_{1}", p, m_id)

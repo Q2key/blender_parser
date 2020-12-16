@@ -18,7 +18,7 @@ class Engine(EngineBase):
     def __init__(self, ctx, args=False):
         self.ctx = ctx
         self.args = args
-        self.folder = ph.get_folder_name(ctx.RENDERS_PATH)
+        self.folder = ph.get_folder_name(ctx.RENDERS_PATH, args)
 
     def go(self):
         self.set_scene()
@@ -112,6 +112,7 @@ class Engine(EngineBase):
             m_id = m["id"]
             
             if m_id in dat_file:
+                print(str.format("{0} HAS ALREADY EXISTS", m_id))
                 continue
 
             fp = str.format("{0}_{1}", d_id, m_id)

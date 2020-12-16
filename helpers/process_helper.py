@@ -8,10 +8,12 @@ from PIL import Image
 class ProcessHelper:
 
     @staticmethod
-    def get_folder_name(root):
+    def get_folder_name(root, args):
         dt = datetime.datetime.now()
-        ft = dt.strftime("%d_%b_%Y")
-        pt = root + "/" + ft
+        if args.version is not None:
+            pt = root + "/" + args.version
+        else:
+            pt = root + "/" + dt.strftime("%d_%b_%Y")
         return pt
 
     @staticmethod
@@ -104,7 +106,6 @@ class ProcessHelper:
             if os.path.exists(path) == False:
                 ProcessHelper.write_json(path, dict(), False)
 
-            print(path)
             with open(path, mode='r') as f:
                 data = f.read()
                 return json.loads(data)
