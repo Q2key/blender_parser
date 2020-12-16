@@ -69,8 +69,8 @@ class Engine(EngineBase):
         v_name = d['variant']
 
         #toggle mask mode
-        mask_mode = self.ctx.SCENE['mask_mode_on']
-        self.set_layer_mask_state(mask_mode)
+        #mask_mode = self.ctx.SCENE['mask_mode_on']
+        #self.set_layer_mask_state(mask_mode)
  
         for obj in bpy.data.objects:
             n = obj.name
