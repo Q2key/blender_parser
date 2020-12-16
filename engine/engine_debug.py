@@ -28,10 +28,10 @@ class Engine(EngineBase):
         pass
 
     def process_elements(self):
-        #define details
+        # define details
         details = self.ctx.DETAILS.items()
         elements = self.filter_details(details)
-        #extend details
+        # extend details
         for k, d in elements:
             print('\r\n{0}\r\n'.format(k))
             self.process_details(d)
@@ -98,30 +98,48 @@ class Engine(EngineBase):
         self.set_default()
         self.preprocess_details(ro)
 
-    def render_partial(self, rendering_object, avalible_materials):
+    def render_partial(self, rendering_object, material_list):
         d_id = rendering_object.detail.id
         t = rendering_object.material.type
         r = self.ctx.SCENE['Resolution']
 
-        for m in avalible_materials:
-            m_id = m["id"]
-            fp = str.format("{0}_{1}", d_id, m_id)
+        sp = str.format("{0}/{1}", self.folder, d_id)
+        ph.make_folder_by_detail(sp)
+        dat_file = ph.read_dat_file(sp)
+        
 
+        for m in material_list:
+            m_id = m["id"]
+            
+            if m_id in dat_file:
+                continue
+
+            fp = str.format("{0}_{1}", d_id, m_id)
             ns = ph.get_image_name(self.folder, d_id, fp, r)
+            
             self.set_material(m, t)
             self.render_detail(ns)
-            self.save_small(ns)
+            self.save_small(ns, r)
+            self.list_pop(sp, m_id)
 
-    def set_material(self, material, mtype):
-        if mtype == 'fabric':
+        dat_file = ph.read_dat_file(sp)
+
+    def set_material(self, material, m_type):
+        if m_type == 'fabric':
             pass
-        if mtype == 'plastic':
+        if m_type == 'plastic':
             pass
-        if mtype == 'strings':
+        if m_type == 'strings':
             pass
 
-    def save_small(self, ns):
+    def save_small(self, ns, r):
         pass
+
+    def check_list(self, ns):
+        pass
+
+    def list_pop(self, path, entity):
+        ph.write_stats(path, entity)
 
     def set_scene(self):
         pass

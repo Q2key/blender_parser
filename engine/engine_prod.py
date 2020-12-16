@@ -60,7 +60,7 @@ class Engine(EngineBase):
                 self.render_partial(d)
         else:
             d['file_id'] = d['prefix'] + d['suffix']
-            self.before_render(d, v)
+            self.before_render(d)
             self.render_partial(d)
 
     def preprocess_details(self, d):
@@ -103,12 +103,22 @@ class Engine(EngineBase):
         p = d['file_id']
         r = self.ctx.SCENE['Resolution']
 
+        sp = str.format("{0}/{1}", self.folder, p)
+        ph.make_folder_by_detail(sp)
+        dat_file = ph.read_dat_file(sp)
+
         for m in d['available_material']:
-            fp = str.format("{0}_{1}", p, m["id"])
+            m_id = m["id"]
+            if m["id"] in dat_file:
+                continue
+            
+            fp = str.format("{0}_{1}", p, m_id)
             ns = ph.get_image_name(self.folder, p, fp, r)
+            
             self.set_material(m, d)
             self.render_detail(ns)
             self.save_small(ns, r)
+            self.list_pop(sp, m_id)
 
     def set_material(self, material, detail):
         print(" S E T ")
@@ -128,6 +138,9 @@ class Engine(EngineBase):
 
     def save_small(self, ns, r):
         ph.save_small(ns, r)
+
+    def list_pop(self, path, entity):
+        ph.write_stats(path, entity)
 
     def set_scene(self):
         s = self.ctx.SCENE

@@ -1,7 +1,8 @@
 import datetime
 import os
-from PIL import Image
 import json
+
+from PIL import Image
 
 
 class ProcessHelper:
@@ -25,8 +26,9 @@ class ProcessHelper:
         }
 
     @staticmethod
-    def make_folder_by_detail(detail_code):
-        pass
+    def make_folder_by_detail(path):
+        if not os.path.exists(path):
+            os.makedirs(path)
 
     @staticmethod
     def get_meterial_name(raw):
@@ -82,19 +84,41 @@ class ProcessHelper:
 
     @staticmethod
     def write_stats(path, entity):
-        json = ProcessHelper.read_json(path)
-        print(json)
-        pass
+        data_path = str.format("{0}/.dat", path)
+        json_data = ProcessHelper.read_json(data_path)
+        json_data[entity] = 'ok'
+        ProcessHelper.write_json(data_path, json_data)
+
+    @staticmethod
+    def check_entity(path, entity):
+        data_path = str.format("{0}/.dat", path)
+        json_data = ProcessHelper.read_json(data_path)
+        if entity in json_data:
+            return False
+        else:
+            return True
 
     @staticmethod
     def read_json(path):
         try:
-            with open(path) as f:
-                return json.loads(f.read())
+            if os.path.exists(path) == False:
+                ProcessHelper.write_json(path, dict(), False)
+
+            print(path)
+            with open(path, mode='r') as f:
+                data = f.read()
+                return json.loads(data)
+
         except OSError:
             print("Creation of the directory %s failed" % path)
 
     @staticmethod
-    def write_json(file, data):
-        with open(file, mode="w") as f:
-            f.write(data)
+    def write_json(file, data, close=True):
+        with open(file, mode="w+") as f:
+            f.write(json.dumps(data, indent=4))
+            if close:
+                f.close()
+
+    @staticmethod
+    def read_dat_file(path):
+        return ProcessHelper.read_json(str.format("{0}/.dat", path))
