@@ -14,3 +14,5 @@ class StatHelper:
 
     def print_count(self):
         print(str.format("Total details count: {0}", self.counter))
+
+    
