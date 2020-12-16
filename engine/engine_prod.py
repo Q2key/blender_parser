@@ -9,7 +9,10 @@ from workers.plastic_worker import PlasticWorker
 from workers.strings_worker import StringsWorker
 from workers.label_worker import LabelWorker
 from engine.engine_base import EngineBase
+
 from helpers.process_helper import ProcessHelper as ph
+from helpers.stop_watch import StopWatch
+from helpers.stat_helper import StatHelper
 
 
 class Engine(EngineBase):
@@ -18,13 +21,19 @@ class Engine(EngineBase):
         self.ctx = ctx
         self.args = args
         self.folder = ph.get_folder_name(ctx.RENDERS_PATH, args)
+        self.stat_helper = StatHelper()
+        self.timer = StopWatch()
 
     def prepare(self):
         print('prepare')
 
     def go(self):
+        self.timer.watch_start()
         self.set_scene()
         self.process_elements()
+        self.timer.watch_stop()
+        self.timer.print_diff()
+        self.stat_helper.print_count()
 
     def process_elements(self):
         # define details
