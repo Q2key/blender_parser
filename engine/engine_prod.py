@@ -36,7 +36,7 @@ class Engine(EngineBase):
             self.process_details(d)
 
     def filter_details(self, elements):
-        if self.args and self.args.model and self.args.model is not "all":
+        if self.args and self.args.model:
             details = dict()
             # Iterate over all the items in dictionary
             for (key, value) in elements:
@@ -112,10 +112,10 @@ class Engine(EngineBase):
             if m["id"] in dat_file:
                 print(str.format("{0} HAS ALREADY EXISTS", m_id))
                 continue
-            
+
             fp = str.format("{0}_{1}", p, m_id)
             ns = ph.get_image_name(self.folder, p, fp, r)
-            
+
             self.set_material(m, d)
             self.render_detail(ns)
             self.save_small(ns, r)
