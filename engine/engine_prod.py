@@ -36,7 +36,7 @@ class Engine(EngineBase):
             self.process_details(d)
 
     def filter_details(self, elements):
-        if self.args and self.args.model:
+        if self.args and self.args.model and self.args.model is not "all":
             details = dict()
             # Iterate over all the items in dictionary
             for (key, value) in elements:

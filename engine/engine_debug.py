@@ -37,12 +37,13 @@ class Engine(EngineBase):
             self.process_details(d)
 
     def filter_details(self, elements):
-        if self.args and self.args.model:
+        if self.args and self.args.model and self.args.model is not "all":
             details = dict()
             # Iterate over all the items in dictionary
             for (key, value) in elements:
                 if key == self.args.model:
                     details[key] = value
+
             return details.items()
         return elements
 
@@ -106,18 +107,17 @@ class Engine(EngineBase):
         sp = str.format("{0}/{1}", self.folder, d_id)
         ph.make_folder_by_detail(sp)
         dat_file = ph.read_dat_file(sp)
-        
 
         for m in material_list:
             m_id = m["id"]
-            
+
             if m_id in dat_file:
                 print(str.format("{0} HAS ALREADY EXISTS", m_id))
                 continue
 
             fp = str.format("{0}_{1}", d_id, m_id)
             ns = ph.get_image_name(self.folder, d_id, fp, r)
-            
+
             self.set_material(m, t)
             self.render_detail(ns)
             self.save_small(ns, r)
