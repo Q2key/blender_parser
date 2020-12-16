@@ -129,6 +129,7 @@ class Engine(EngineBase):
             self.render_detail(ns)
             self.save_small(ns, r)
             self.list_pop(sp, m_id)
+            self.stat_helper.increment()
 
     def set_material(self, material, detail):
         print(" S E T ")
