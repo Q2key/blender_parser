@@ -1,28 +1,29 @@
 import datetime
 import os
 from PIL import Image
+import json
+
 
 class ProcessHelper:
 
     @staticmethod
     def get_folder_name(root):
         dt = datetime.datetime.now()
-        #ft = dt.strftime("%d_%b_%Y_(%H_%M_%S)")
         ft = dt.strftime("%d_%b_%Y")
         pt = root + "/" + ft
         return pt
 
     @staticmethod
-    def get_image_name(root,subfold,file,res):
-        s = 's' #str.format("{0}x{1}",res['Small']['x'],res['Small']['y']) 
-        b = 'b' #str.format("{0}x{1}",res['Big']['x'],res['Big']['y'])
-        l = 'l' #str.format("{0}x{1}",res['Big']['x'],res['Big']['y'])
+    def get_image_name(root, subfold, file, res):
+        s = 's'
+        b = 'b'
+        l = 'l'
         return {
-            "s" : str.format("{0}/{1}/{2}_{3}.png",root,subfold,file,s),
-            "b" : str.format("{0}/{1}/{2}_{3}.png",root,subfold,file,b),
-            "l" : str.format("{0}/{1}/{2}_{3}.png",root,subfold,file,l)
+            "s": str.format("{0}/{1}/{2}_{3}.png", root, subfold, file, s),
+            "b": str.format("{0}/{1}/{2}_{3}.png", root, subfold, file, b),
+            "l": str.format("{0}/{1}/{2}_{3}.png", root, subfold, file, l)
         }
-    
+
     @staticmethod
     def make_folder_by_detail(detail_code):
         pass
@@ -35,17 +36,17 @@ class ProcessHelper:
         return raw.strip()
 
     @staticmethod
-    def save_big(ns,res):
+    def save_big(ns, res):
         img = Image.open(ns['l'])
-        new_width  = res["Big"]["x"]
+        new_width = res["Big"]["x"]
         new_height = res["Big"]["y"]
         img = img.resize((new_width, new_height), Image.ANTIALIAS)
         img.save(ns['b'])
 
     @staticmethod
-    def save_small(ns,res):
+    def save_small(ns, res):
         img = Image.open(ns['b'])
-        new_width  = res["Small"]["x"]
+        new_width = res["Small"]["x"]
         new_height = res["Small"]["y"]
         img = img.resize((new_width, new_height), Image.ANTIALIAS)
         img.save(ns['s'])
@@ -74,8 +75,26 @@ class ProcessHelper:
 
         if normalize:
             col = map(lambda x: x / 255, col)
-            
             if precision is not None and precision > 0:
                 col = map(lambda x: round(x, precision), col)
-                    
+
         return list(col)
+
+    @staticmethod
+    def write_stats(path, entity):
+        json = ProcessHelper.read_json(path)
+        print(json)
+        pass
+
+    @staticmethod
+    def read_json(path):
+        try:
+            with open(path) as f:
+                return json.loads(f.read())
+        except OSError:
+            print("Creation of the directory %s failed" % path)
+
+    @staticmethod
+    def write_json(file, data):
+        with open(file, mode="w") as f:
+            f.write(data)

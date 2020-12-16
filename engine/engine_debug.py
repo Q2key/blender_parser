@@ -28,12 +28,12 @@ class Engine(EngineBase):
         pass
 
     def process_elements(self):
-        ''' define details '''
+        #define details
         details = self.ctx.DETAILS.items()
         elements = self.filter_details(details)
-        ''' extend details '''
+        #extend details
         for k, d in elements:
-            print('\r\n-----------{0}-----------\r\n'.format(k))
+            print('\r\n{0}\r\n'.format(k))
             self.process_details(d)
 
     def filter_details(self, elements):

@@ -13,9 +13,9 @@ class ScanStoreCommand:
     def check(self, f):
         return f.lower().endswith(tuple(self.ctx.SCENE["TexturesFormat"]))
 
-    def search_for_material(self):
-        s = self.ctx.STORE_PATH
-        f = os.listdir(s)
+    def scan(self, path):
+        s = path
+        f = os.listdir(path)
         t = [e for e in f if self.check(e)]
         m = list()
         for (key, val) in enumerate(t):
@@ -26,22 +26,17 @@ class ScanStoreCommand:
         return m
 
     def update_config(self):
-        m = self.search_for_material()
         for (k, v) in self.ctx.DETAILS.items():
-            mkey = v['type']
-            if mkey == 'fabric':
+            m_type = v['type']
+            if m_type == 'fabric':
+                m = self.scan(self.ctx.FABRICS_PATH)
                 v['available_material'] = m
-            elif bool(mkey) and mkey in self.ctx.MATERIALS:
-                v['available_material'] = self.ctx.MATERIALS[mkey]
-            elif mkey == 'vendor':
-                v['available_material'] = 'vendor'
-            elif mkey == 'buttons':
-                v['available_material'] = 'buttons'
-
-    def write_config(self, file, data):
-        with open(file, mode="w") as f:
-            f.write(data)
+            if m_type == 'buttons':
+                m = self.scan(self.ctx.BUTTONS_PATH)
+                v['available_material'] = m
+            elif m_type == 'label':
+                m = self.scan(self.ctx.LABEL_PATH)
+                v['available_material'] = m
 
     def run(self):
-        self.search_for_material()
         self.update_config()
