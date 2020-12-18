@@ -101,6 +101,10 @@ class ProcessHelper:
             return True
 
     @staticmethod
+    def read_dat_file(path):
+        return ProcessHelper.read_json(str.format("{0}/.dat", path))
+
+    @staticmethod
     def read_json(path):
         try:
             if os.path.exists(path) == False:
@@ -119,7 +123,3 @@ class ProcessHelper:
             f.write(json.dumps(data, indent=4))
             if close:
                 f.close()
-
-    @staticmethod
-    def read_dat_file(path):
-        return ProcessHelper.read_json(str.format("{0}/.dat", path))
