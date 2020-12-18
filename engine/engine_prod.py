@@ -80,14 +80,16 @@ class Engine(EngineBase):
         for obj in bpy.data.objects:
             n = obj.name
             is_included = bool(d['included']) and n in d['included'][v_name]
+            '''
             is_catcher = bool(d['shadow_catchers']
                               ) and n in d['shadow_catchers']
+            '''
             is_target = (n == d_name)
 
-            if is_catcher:
-                obj.cycles.is_shadow_catcher = True
-                obj.hide_render = False
-                print('Detail {0} : Catcher {1}'.format(n, True))
+            #f is_catcher:
+                #obj.cycles.is_shadow_catcher = True
+                #obj.hide_render = False
+                #print('Detail {0} : Catcher {1}'.format(n, True))
 
             if is_target:
                 obj.hide_render = False
@@ -99,9 +101,9 @@ class Engine(EngineBase):
 
     def set_default(self):
         for (k, v) in bpy.data.objects.items():
-            if v.name not in ["Camera", "Lamp", "Lamp_0"]:
+            if v.name not in ["EEVEE-Light-0", "EEVEE-Light-1"]:
                 v.hide_render = True
-                v.cycles.is_shadow_catcher = False
+                #v.cycles.is_shadow_catcher = False
 
     def before_render(self, d):
         self.set_default()
@@ -160,7 +162,7 @@ class Engine(EngineBase):
         p = s["Percentage"]
         c = s["Compression"]
 
-        bpy.data.scenes["Scene"].render.engine = 'CYCLES'
+        bpy.data.scenes["Scene"].render.engine = 'BLENDER_EEVEE'
         bpy.data.scenes["Scene"].render.resolution_x = l["x"]
         bpy.data.scenes["Scene"].render.resolution_y = l["y"]
         bpy.data.scenes["Scene"].render.resolution_percentage = p
