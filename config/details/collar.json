@@ -3,16 +3,16 @@
     "shadow_catchers": ["bodyShirt"],
     "prefix": "collar",
     "included": {
-        "King": ["collarKingSeam"],
-        "Colorado": ["collarColoradoSeam"],
-        "Cutaway": ["collarCutawaySeam"],
-        "Kent": ["collarKentSeam"],
-        "Windsor": ["collarWindsorSeam"],
-        "Roma": ["collarRomaSeam"],
-        "ColoradoMini": ["collarColoradoMiniSeam"],
-        "VintageClub": ["collarVintageClubSeam"],
-        "Londoner": ["collarLondonerSeam"],
-        "VintageClubMini": ["collarVintageClubMiniSeam"]
+        "King": ["collarKingSeam", "collarCatcher"],
+        "Colorado": ["collarColoradoSeam", "collarCatcher"],
+        "Cutaway": ["collarCutawaySeam", "collarCatcher"],
+        "Kent": ["collarKentSeam", "collarCatcher"],
+        "Windsor": ["collarWindsorSeam", "collarCatcher"],
+        "Roma": ["collarRomaSeam", "collarCatcher"],
+        "ColoradoMini": ["collarColoradoMiniSeam", "collarCatcher"],
+        "VintageClub": ["collarVintageClubSeam", "collarCatcher"],
+        "Londoner": ["collarLondonerSeam", "collarCatcher"],
+        "VintageClubMini": ["collarVintageClubMiniSeam", "collarCatcher"]
     }, 
     "variants": [
         "King",
