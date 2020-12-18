@@ -83,6 +83,7 @@ class Engine(EngineBase):
             is_catcher = bool(d['shadow_catchers']
                               ) and n in d['shadow_catchers']
             is_target = (n == d_name)
+            is_mask = bool(d['masks']) and n in d['masks'][v_name]
 
             if is_catcher:
                 obj.cycles.is_shadow_catcher = True
@@ -97,11 +98,17 @@ class Engine(EngineBase):
                 obj.hide_render = False
                 print('Detail {0} : Included {1}'.format(n, True))
 
+            if is_mask:
+                obj.hide_render = False
+                obj.cycles.is_holdout = True
+                print('Detail {0} : Included {1}'.format(n, True))
+
     def set_default(self):
         for (k, v) in bpy.data.objects.items():
             if v.name not in ["Camera", "Lamp", "Lamp_0"]:
                 v.hide_render = True
                 v.cycles.is_shadow_catcher = False
+                v.cycles.is_holdout = False
 
     def before_render(self, d):
         self.set_default()
@@ -132,7 +139,6 @@ class Engine(EngineBase):
             self.stat_helper.increment()
 
     def set_material(self, material, detail):
-        print(" S E T ")
         if detail['type'] == 'fabric':
             FabricWorker.create_fabric_multy_material(material)
             FabricWorker.collar_seam_multy_material(material)
