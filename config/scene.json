@@ -18,5 +18,6 @@
     "TexturesFormat": [
         ".png",
         ".jpg"
-    ]
+    ],
+    "Engine": "Cycles"
 }

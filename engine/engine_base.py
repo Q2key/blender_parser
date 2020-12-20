@@ -3,8 +3,6 @@ from abc import ABC, abstractmethod
 
 class EngineBase(ABC):
 
-
-
     @abstractmethod
     def go(self):
         pass
