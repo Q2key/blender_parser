@@ -3,14 +3,18 @@
     "shadow_catchers": [],
     "prefix": "cuff",
     "variants": [
-        "French",
-        "OneButton",
-        "Regulated",
-        "Rounded",
-        "Straight",
-        "TwoButtons"
+
+        "Straight"
+
     ],
-    "masks": false,
+    "masks": {
+        "French": ["cuffFrenchInternal"],
+        "OneButton": ["cuffOneButtonInternal"],
+        "Regulated": ["cuffRegulatedInternal"],
+        "Rounded": ["cuffRoundedInternal"],
+        "Straight": ["cuffStraightInternal"],
+        "TwoButtons": ["cuffTwoButtonsInternal"] 
+    },
     "included": false,
     "suffix":  "External"
 }

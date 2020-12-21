@@ -11,13 +11,6 @@
         "TwoButtons"
     ],
     "included": false,
-    "masks": {
-        "French": ["cuffFrenchInternal"],
-        "OneButton": ["cuffOneButtonInternal"],
-        "Regulated": ["cuffRegulatedInternal"],
-        "Rounded": ["cuffRoundedInternal"],
-        "Straight": ["cuffStraightInternal"],
-        "TwoButtons": ["cuffTwoButtonsInternal"] 
-    },
+    "masks": false,
     "suffix":"Internal"
 }
