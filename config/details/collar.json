@@ -34,9 +34,13 @@
         ],
         "VintageClubMini": [
             "collarVintageClubMiniSeam"
+        ],
+        "ButtonDown": [
+            "collarButtonDownSeam"
         ]
     },
     "variants": [
+        "ButtonDown",
         "King",
         "Cutaway",
         "Kent",
@@ -46,7 +50,8 @@
         "ColoradoMini",
         "VintageClub",
         "Londoner",
-        "VintageClubMini"    ],
+        "VintageClubMini"
+    ],
     "masks": {
         "King": [
             "collarKingInternalStand",
@@ -86,6 +91,10 @@
         ],
         "VintageClubMini": [
             "collarVintageInternalStand",
+            "bodyShirtInternal"
+        ],
+        "ButtonDown": [
+            "collarButtonDownInternalStand",
             "bodyShirtInternal"
         ]
     },
