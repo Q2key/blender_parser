@@ -16,7 +16,7 @@
         "Regulated": ["cuffRegulatedInternal"],
         "Rounded": ["cuffRoundedInternal"],
         "Straight": ["cuffStraightInternal"],
-        "TwoButtons": ["cuffTwoButtonsInternal"] 
+        "TwoButtons": ["cuffTwoButtonsInternal"]
     },
     "included": false,
     "suffix":  "External"
