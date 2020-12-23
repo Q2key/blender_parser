@@ -1,13 +1,13 @@
 {
     "type": "preset",
-    "prefix": "body",
+    "prefix": "",
     "preset_id": "business",
     "variants": [
-        "preset"
+        "business"
     ],
     "suffix": "",
     "included": {
-        "preset": [
+        "business": [
             "bodyShirt",
             "bodyShirtInternal",
             "bodyShirtLogo",
