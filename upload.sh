@@ -1,3 +1,5 @@
+#./upload.sh renders/presets/business renders/presets jpg
+
 SOURCE=$1
 DEST=$2
 EXT=$3
