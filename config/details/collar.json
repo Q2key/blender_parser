@@ -1,7 +1,6 @@
 {
     "type": "fabric",
     "shadow_catchers": [
-        "bodyShirt"
     ],
     "prefix": "collar",
     "included": {
@@ -37,10 +36,26 @@
         ],
         "ButtonDown": [
             "collarButtonDownSeam"
+        ],
+        "ButtonDownMini": [
+            "collarButtonDownMiniSeam"
+        ],
+        "Colorado2buttons": [
+            "collarColorado2buttonsSeam"
+        ],
+        "Londoner2buttons": [
+            "collarLondoner2buttonsSeam"
+        ],
+        "Classic": [
+            "collarClassicSeam"
         ]
     },
     "variants": [
         "ButtonDown",
+        "ButtonDownMini",
+        "Colorado2buttons",
+        "Londoner2buttons",
+        "Classic",
         "King",
         "Cutaway",
         "Kent",
@@ -95,6 +110,22 @@
         ],
         "ButtonDown": [
             "collarButtonDownInternalStand",
+            "bodyShirtInternal"
+        ],
+        "ButtonDownMini": [
+            "collarButtonDownMiniInternalStand",
+            "bodyShirtInternal"
+        ],
+        "Colorado2buttons": [
+            "collarColorado2buttonsInternalStand",
+            "bodyShirtInternal"
+        ],
+        "Londoner2buttons": [
+            "collarLondoner2buttonsInternalStand",
+            "bodyShirtInternal"
+        ],
+        "Classic": [
+            "collarClassicInternalStand",
             "bodyShirtInternal"
         ]
     },
