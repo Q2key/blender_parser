@@ -4,6 +4,5 @@ renders/*
 *.pyo
 
 textures/
-scenes/
-
+scenes/*.blend1
 *.log
