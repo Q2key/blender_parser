@@ -38,5 +38,9 @@ class ScanStoreCommand:
                 m = self.scan(self.ctx.LABEL_PATH)
                 v['available_material'] = m
 
+            elif m_type == 'preset':
+                f = self.scan(self.ctx.FABRICS_PATH)
+                v['available_material'] = f
+
     def run(self):
         self.update_config()

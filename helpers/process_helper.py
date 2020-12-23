@@ -24,7 +24,14 @@ class ProcessHelper:
         return {
             "s": str.format("{0}/{1}/{2}_{3}.png", root, subfold, file, s),
             "b": str.format("{0}/{1}/{2}_{3}.png", root, subfold, file, b),
-            "l": str.format("{0}/{1}/{2}_{3}.png", root, subfold, file, l)
+            "l": str.format("{0}/{1}/{2}_{3}.png", root, subfold, file, l),
+        }
+
+    @staticmethod
+    def get_catalog_image(root, subfold, model, postifx):
+        return {
+            "b": str.format("{0}/{1}/{2}-{3}.png", root, subfold, model, postifx),
+            "s": str.format("{0}/{1}/{2}-{3}.png", root, subfold, model, postifx)
         }
 
     @staticmethod

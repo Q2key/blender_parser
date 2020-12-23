@@ -133,7 +133,11 @@ class Engine(EngineBase):
                 continue
 
             fp = str.format("{0}_{1}", p, m_id)
-            ns = ph.get_image_name(self.folder, p, fp, r)
+
+            if d['type'] != 'preset':
+                ns = ph.get_image_name(self.folder, p, fp, r)
+            else:
+                ns = ph.get_catalog_image(self.folder, p, m_id, d['preset_id'])
 
             self.set_material(m, d)
             self.render_detail(ns)
@@ -145,6 +149,11 @@ class Engine(EngineBase):
         if detail['type'] == 'fabric':
             FabricWorker.create_fabric_multy_material(material)
             FabricWorker.collar_seam_multy_material(material)
+        if detail['type'] == 'preset':
+            FabricWorker.create_fabric_multy_material(material)
+            FabricWorker.collar_seam_multy_material(material)
+            PlasticWorker.create_img_button_material(detail['button_texture'])
+            LabelWorker.label_seam_multy_material(detail['label_texture'])
         if detail['type'] == 'plastic':
             pass
         if detail['type'] == 'label':
