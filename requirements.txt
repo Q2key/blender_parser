@@ -9,3 +9,4 @@ pylint==2.2.2
 six==1.12.0
 wrapt==1.10.11
 Pillow
+optimize-images
