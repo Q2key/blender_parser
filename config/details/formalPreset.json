@@ -4,20 +4,30 @@
     "variants": [
         "formalPreset"
     ],
-    "suffix":  "",
+    "suffix": "",
     "included": {
         "formalPreset": [
             "bodyShirt",
+            "bodyShirtInternal",
+            "bodyShirtLogo",
+            "bodyShirtStrings",
+            "bodyShirtButton",
             "collarColorado",
             "collarColoradoButton",
             "collarSeam",
             "collarColoradoExternalStand",
             "collarColoradoInternalStand",
             "collarColoradoSeamInternalStand",
-            "collarColoradoSeamSeamStand"
+            "collarColoradoSeamSeamStand",
+            "cuffTwoButtonsButton",
+            "cuffTwoButtonsExternal",
+            "cuffTwoButtonsInternal",
+            "cuffTwoButtonsStrings",
+            "pocket",
+            "pocketStrings"
         ]
     },
-    "plastic": "C:/dev/.jpg",
+    "button": "C:/dev/.jpg",
     "shadow_catchers": [],
     "masks": false
 }
