@@ -1,13 +1,13 @@
 {
     "type": "preset",
-    "prefix": "body",
+    "prefix": "",
     "preset_id": "formal",
     "variants": [
-        "formalPreset"
+        "formal"
     ],
     "suffix": "",
     "included": {
-        "formalPreset": [
+        "formal": [
             "bodyShirt",
             "bodyShirtInternal",
             "bodyShirtLogo",

@@ -1,13 +1,13 @@
 {
     "type": "preset",
-    "prefix": "body",
+    "prefix": "",
     "preset_id": "tuxedo",
     "variants": [
-        "preset"
+        "tuxedo"
     ],
     "suffix": "",
     "included": {
-        "preset": [
+        "tuxedo": [
             "bodyShirt",
             "bodyShirtInternal",
             "bodyShirtLogo",
