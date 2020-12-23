@@ -104,6 +104,9 @@ class Engine(EngineBase):
                 print('Detail {0} : Included {1}'.format(n, True))
 
     def set_default(self):
+        for c in bpy.data.collections.values():
+            c.hide_render = False
+
         for (k, v) in bpy.data.objects.items():
             if v.name not in ["Camera", "Lamp", "Lamp_0"]:
                 v.hide_render = True
