@@ -11,4 +11,5 @@ class PlasticWorker():
     def create_img_button_material(m=False):
         print("\r\n BUTTONS ")
         mi = MaterialInfo.get_material_info('img_button_material', False)
-        mi['nodes']['Image Texture'].image = bpy.data.images.load(m['texture'])
+        mi['nodes']['MainTexture'].image = bpy.data.images.load(m['texture'])
+        mi['nodes']['AlphaTexture'].image = bpy.data.images.load(m['texture'])
