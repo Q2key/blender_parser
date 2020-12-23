@@ -1,0 +1,23 @@
+{
+    "type": "fabric",
+    "prefix": "body",
+    "variants": [
+        "formalPreset"
+    ],
+    "suffix":  "",
+    "included": {
+        "formalPreset": [
+            "bodyShirt",
+            "collarColorado",
+            "collarColoradoButton",
+            "collarSeam",
+            "collarColoradoExternalStand",
+            "collarColoradoInternalStand",
+            "collarColoradoSeamInternalStand",
+            "collarColoradoSeamSeamStand"
+        ]
+    },
+    "plastic": "C:/dev/.jpg",
+    "shadow_catchers": [],
+    "masks": false
+}
