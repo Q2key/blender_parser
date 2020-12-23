@@ -13,8 +13,8 @@
             "y": 545
         }
     },
-    "Percentage": 75,
-    "Compression": 50,
+    "Percentage": 35,
+    "Compression": 30,
     "TexturesFormat": [
         ".png",
         ".jpg"

@@ -5,8 +5,11 @@
     ],
     "prefix" : "collar",
     "variants": [
-        "Mao",
-        "Mandarin",
+        "ButtonDown",
+        "ButtonDownMini",
+        "Colorado2buttons",
+        "Londoner2buttons",
+        "Classic",
         "King",
         "Cutaway",
         "Kent",
@@ -19,6 +22,11 @@
         "VintageClubMini"
     ],
     "included": {
+        "ButtonDown": ["collarButtonDownInternalStand"],
+        "ButtonDownMini": ["collarButtonDownMiniInternalStand"],
+        "Colorado2buttons": ["collarColorado2buttonsSeamInternalStand"],
+        "Londoner2buttons": ["collarLondoner2buttonsSeamInternalStand"],
+        "Classic": ["collarClassicSeamInternalStand"],
         "King": ["collarKingSeamInternalStand"],
         "Cutaway" : ["collarCutawaySeamInternalStand"] ,
         "Kent" : ["collarKentSeamInternalStand"],

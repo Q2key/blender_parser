@@ -14,7 +14,12 @@
         "ColoradoMini",
         "VintageClub",
         "Londoner",
-        "VintageClubMini"
+        "VintageClubMini",
+        "ButtonDown",
+        "ButtonDownMini",
+        "Colorado2buttons",
+        "Londoner2buttons",
+        "Classic"
     ],
     "included": false,
     "masks": false,

@@ -3,8 +3,11 @@
     "shadow_catchers": [],
     "prefix": "collar",
     "variants": [
-        "Mao",
-        "Mandarin",
+        "ButtonDown",
+        "ButtonDownMini",
+        "Colorado2buttons",
+        "Londoner2buttons",
+        "Classic",
         "King",
         "Cutaway",
         "Kent",
@@ -17,19 +20,71 @@
         "VintageClubMini"
     ],
     "included": {
-        "King": ["collarKingSeamExternalStand", "collarLoop"],
-        "Cutaway" : ["collarCutawaySeamExternalStand", "collarLoop"] ,
-        "Kent" : ["collarKentSeamExternalStand", "collarLoop"],
-        "Windsor" : ["collarWindsorSeamExternalStand", "collarLoop"],
-        "Roma" : ["collarRomaSeamExternalStand", "collarLoop"],
-        "Colorado" : ["collarColoradoSeamExternalStand", "collarLoop"],
-        "ColoradoMini" : ["collarColoradoMiniSeamExternalStand", "collarLoop"],
-        "VintageClub" : ["collarVintageClubSeamExternalStand", "collarLoop"],
-        "Londoner" : ["collarLondonerSeamExternalStand", "collarLoop"],
-        "VintageClubMini" : ["collarVintageClubMiniSeamExternalStand", "collarLoop"],
-        "Mao" : ["collarMaoSeamExternalStand", "collarLoop"],
-        "Mandarin" : ["collarMandarinSeamExternalStand", "collarLoop"]
+        "ButtonDown": [
+            "collarKButtonDownExternalStand"
+        ],
+        "ButtonDownMini": [
+            "collarButtonDownMiniExternalStand"
+        ],
+        "Colorado2buttons": [
+            "collarColorado2buttonsExternalStand"
+        ],
+        "Londoner2buttons": [
+            "collarLondoner2buttonsExternalStand"
+        ],
+        "Classic": [
+            "collarClassicSeamExternalStand"
+        ],
+
+        "King": [
+            "collarKingSeamExternalStand",
+            "collarLoop"
+        ],
+        "Cutaway": [
+            "collarCutawaySeamExternalStand",
+            "collarLoop"
+        ],
+        "Kent": [
+            "collarKentSeamExternalStand",
+            "collarLoop"
+        ],
+        "Windsor": [
+            "collarWindsorSeamExternalStand",
+            "collarLoop"
+        ],
+        "Roma": [
+            "collarRomaSeamExternalStand",
+            "collarLoop"
+        ],
+        "Colorado": [
+            "collarColoradoSeamExternalStand",
+            "collarLoop"
+        ],
+        "ColoradoMini": [
+            "collarColoradoMiniSeamExternalStand",
+            "collarLoop"
+        ],
+        "VintageClub": [
+            "collarVintageClubSeamExternalStand",
+            "collarLoop"
+        ],
+        "Londoner": [
+            "collarLondonerSeamExternalStand",
+            "collarLoop"
+        ],
+        "VintageClubMini": [
+            "collarVintageClubMiniSeamExternalStand",
+            "collarLoop"
+        ],
+        "Mao": [
+            "collarMaoSeamExternalStand",
+            "collarLoop"
+        ],
+        "Mandarin": [
+            "collarMandarinSeamExternalStand",
+            "collarLoop"
+        ]
     },
-    "masks" : false,
+    "masks": false,
     "suffix": "ExternalStand"
 }
