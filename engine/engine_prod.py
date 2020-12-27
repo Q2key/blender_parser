@@ -140,8 +140,11 @@ class Engine(EngineBase):
                 ns = ph.get_catalog_image(self.folder, p, m_id, d['preset_id'])
 
             self.set_material(m, d)
+            
+            #save images
             self.render_detail(ns)
             self.save_small(ns, r)
+
             self.list_pop(sp, m_id)
             self.stat_helper.increment()
 
@@ -163,10 +166,11 @@ class Engine(EngineBase):
             PlasticWorker.create_img_button_material(material)
 
     def save_big(self, ns, r):
-        ph.save_big(ns, r)
+        ph.save_image(ns["b"], ns["s"], r["Big"])
 
     def save_small(self, ns, r):
-        ph.save_small(ns, r)
+        ph.save_image(ns["b"], ns["s"], r["Small"])
+
 
     def list_pop(self, path, entity):
         ph.write_stats(path, entity)

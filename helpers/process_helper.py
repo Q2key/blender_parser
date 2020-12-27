@@ -30,8 +30,8 @@ class ProcessHelper:
     @staticmethod
     def get_catalog_image(root, subfold, model, postifx):
         return {
-            "b": str.format("{0}/{1}/{2}-{3}.png", root, subfold, model.lower(), postifx),
-            "s": str.format("{0}/{1}/{2}-{3}.png", root, subfold, model.lower(), postifx)
+            "b": str.format("{0}/{1}/{2}-{3}_b.png", root, subfold, model.lower(), postifx),
+            "s": str.format("{0}/{1}/{2}-{3}_s.png", root, subfold, model.lower(), postifx)
         }
 
     @staticmethod
@@ -61,10 +61,16 @@ class ProcessHelper:
         new_height = res["Small"]["y"]
         img = img.resize((new_width, new_height), Image.ANTIALIAS)
         img.save(ns['s'])
+    
+    @staticmethod
+    def save_image(src, out, sizes):
+        img = Image.open(src)
+        
+        img = img.resize((sizes['x'], sizes['y']), Image.ANTIALIAS)
+        img.save(out)
 
     @staticmethod
     def get_camel(raw):
-        cml = ''
         spl = raw.split('_')
         cml_array = []
         for i in range(len(spl)):
