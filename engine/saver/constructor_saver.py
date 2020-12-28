@@ -1,9 +1,7 @@
-from helpers.process_helper import ProcessHelper
 from engine.saver.base_saver import BaseSaver
 from engine.saver.pillow_provider import PillowProvider
 
 import datetime
-
 
 class ConstructorSaver(BaseSaver):
 
@@ -31,6 +29,6 @@ class ConstructorSaver(BaseSaver):
 		}
 
 	def set_paths(self, detail, model):
-		self.root = self.get_folder_name()
+		self.root = self.root
 		self.subfold = detail['file_id']
 		self.file = "{0}_{1}".format(detail['file_id'], model)

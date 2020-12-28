@@ -1,4 +1,3 @@
-from helpers.process_helper import ProcessHelper
 from engine.saver.base_saver import BaseSaver
 from engine.saver.pillow_provider import PillowProvider
 
@@ -39,7 +38,7 @@ class CatalogSaver(BaseSaver):
 		}
 
 	def set_paths(self, detail, model):
-		self.part_1 = self.get_folder_name()
+		self.part_1 = self.root
 		self.part_2 = detail['file_id']
 		self.part_3 = model
 		self.part_4 = detail['preset_id']

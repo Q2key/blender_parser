@@ -15,6 +15,7 @@ from engine.saver.saver_builder import SaverBuilder
 from helpers.process_helper import ProcessHelper as ph
 from helpers.stop_watch import StopWatch
 from helpers.stat_helper import StatHelper
+from helpers.directory_helper import DirectoryHelper as dh
 
 
 class Engine(EngineBase):
@@ -22,11 +23,10 @@ class Engine(EngineBase):
     def __init__(self, ctx, args=False):
         self.ctx = ctx
         self.args = args
-        self.folder = ph.get_folder_name(ctx.RENDERS_PATH, args)
+        self.saver_builder = SaverBuilder(ctx, args)
+        self.folder = dh.get_root_folder(ctx.RENDERS_PATH, args)
         self.stat_helper = StatHelper()
         self.timer = StopWatch()
-        self.saver_builder = SaverBuilder(ctx, args)
-
 
     def prepare(self):
         print('prepare')
@@ -126,7 +126,7 @@ class Engine(EngineBase):
         
         p = d['file_id']
         sp = str.format("{0}/{1}", self.folder, p)
-        ph.make_folder_by_detail(sp)
+        dh.make_folder_by_detail(sp)
         dat_file = ph.read_dat_file(sp)
 
         #create image saver
