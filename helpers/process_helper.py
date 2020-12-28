@@ -22,22 +22,23 @@ class ProcessHelper:
         b = 'b'
         l = 'l'
         return {
-            "s": str.format("{0}/{1}/{2}_{3}.png", root, subfold, file.lower(), s),
-            "b": str.format("{0}/{1}/{2}_{3}.png", root, subfold, file.lower(), b),
-            "l": str.format("{0}/{1}/{2}_{3}.png", root, subfold, file.lower(), l),
+            "s": str.format("{0}/{1}/{2}_{3}.png", root, subfold, s).lower(),
+            "b": str.format("{0}/{1}/{2}_{3}.png", root, subfold, b).lower(),
+            "l": str.format("{0}/{1}/{2}_{3}.png", root, subfold, l).lower(),
         }
 
     @staticmethod
     def get_catalog_image(root, subfold, model, postifx):
         return {
-            "b": str.format("{0}/{1}/{2}-{3}_b.png", root, subfold, model.lower(), postifx),
-            "s": str.format("{0}/{1}/{2}-{3}_s.png", root, subfold, model.lower(), postifx)
+            "b": str.format("{0}/{1}/{2}-{3}_b.png", root, subfold, model, postifx).lower(),
+            "s": str.format("{0}/{1}/{2}-{3}_s.png", root, subfold, model, postifx).lower()
         }
 
     @staticmethod
     def make_folder_by_detail(path):
-        if not os.path.exists(path):
-            os.makedirs(path)
+        lpath = path.lower()
+        if not os.path.exists(lpath):
+            os.makedirs(lpath)
 
     @staticmethod
     def get_meterial_name(raw):
