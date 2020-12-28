@@ -1,14 +1,14 @@
 {
     "Resolution": {
-        "Loseless": {
-            "x": 1600,
-            "y": 2180
-        },
         "Big": {
             "x": 1600,
             "y": 2180
         },
         "Small": {
+            "x": 400,
+            "y": 545
+        },
+        "XSmall": {
             "x": 400,
             "y": 545
         },
@@ -23,5 +23,6 @@
         ".png",
         ".jpg"
     ],
-    "Engine": "Cycles"
+    "Engine": "Cycles",
+    "TempFile": "C:/tempishe.png"
 }

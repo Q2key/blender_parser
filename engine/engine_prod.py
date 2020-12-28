@@ -10,6 +10,8 @@ from workers.strings_worker import StringsWorker
 from workers.label_worker import LabelWorker
 from engine.engine_base import EngineBase
 
+from engine.saver.saver_builder import SaverBuilder
+
 from helpers.process_helper import ProcessHelper as ph
 from helpers.stop_watch import StopWatch
 from helpers.stat_helper import StatHelper
@@ -23,6 +25,8 @@ class Engine(EngineBase):
         self.folder = ph.get_folder_name(ctx.RENDERS_PATH, args)
         self.stat_helper = StatHelper()
         self.timer = StopWatch()
+        self.saver_builder = SaverBuilder(ctx, args)
+
 
     def prepare(self):
         print('prepare')
@@ -119,31 +123,28 @@ class Engine(EngineBase):
 
     def render_partial(self, d):
         self.before_render(d)
+        
         p = d['file_id']
-        r = self.ctx.SCENE['Resolution']
-
         sp = str.format("{0}/{1}", self.folder, p)
         ph.make_folder_by_detail(sp)
         dat_file = ph.read_dat_file(sp)
 
+        #create image saver
+        saver = self.saver_builder.get_saver(d['type'])
+
         for m in d['available_material']:
             m_id = m["id"]
             if m["id"] in dat_file:
-                print(str.format("{0} HAS ALREADY EXISTS", m_id))
+                print(str.format("{0} skipped", m_id))
                 continue
 
-            fp = str.format("{0}_{1}", p, m_id)
-
-            if d['type'] != 'preset':
-                ns = ph.get_image_name(self.folder, p, fp, r)
-            else:
-                ns = ph.get_catalog_image(self.folder, p, m_id, d['preset_id'])
-
+            #render image
             self.set_material(m, d)
+            self.render_detail()
             
-            #save images
-            self.render_detail(ns)
-            self.save_small(ns, r)
+            #save SOLID image
+            saver.set_paths(d, m_id)
+            saver.process()
 
             self.list_pop(sp, m_id)
             self.stat_helper.increment()
@@ -178,7 +179,7 @@ class Engine(EngineBase):
     def set_scene(self):
         s = self.ctx.SCENE
         r = s["Resolution"]
-        l = r['Loseless']
+        l = r['Big']
         p = s["Percentage"]
         c = s["Compression"]
 
@@ -188,6 +189,6 @@ class Engine(EngineBase):
         bpy.data.scenes["Scene"].render.resolution_percentage = p
         bpy.data.scenes["Scene"].render.image_settings.compression = c
 
-    def render_detail(self, result):
-        bpy.context.scene.render.filepath = result['b']
+    def render_detail(self):
+        bpy.context.scene.render.filepath = self.ctx.SCENE["TempFile"]
         bpy.ops.render.render(write_still=True)
