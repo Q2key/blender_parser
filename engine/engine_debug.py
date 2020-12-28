@@ -123,7 +123,7 @@ class Engine(EngineBase):
             m_id = m["id"]
             
             if m_id in dat_file:
-                print(str.format("{0} HAS ALREADY EXISTS", m_id))
+                print(str.format("{0} skipped", m_id))
                 continue
 
             fp = str.format("{0}_{1}", d_id, m_id)

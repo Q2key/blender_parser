@@ -22,23 +22,23 @@ class ProcessHelper:
         b = 'b'
         l = 'l'
         return {
-            "s": str.format("{0}/{1}/{2}_{3}.png", root, subfold, s).lower(),
-            "b": str.format("{0}/{1}/{2}_{3}.png", root, subfold, b).lower(),
-            "l": str.format("{0}/{1}/{2}_{3}.png", root, subfold, l).lower(),
+            "s": str.format("{0}/{1}/{2}_{3}.png", root, subfold, file, s).lower(),
+            "b": str.format("{0}/{1}/{2}_{3}.png", root, subfold, file, b).lower(),
+            "l": str.format("{0}/{1}/{2}_{3}.png", root, subfold, file, l).lower()
         }
 
     @staticmethod
     def get_catalog_image(root, subfold, model, postifx):
         return {
-            "b": str.format("{0}/{1}/{2}-{3}_b.png", root, subfold, model, postifx).lower(),
-            "s": str.format("{0}/{1}/{2}-{3}_s.png", root, subfold, model, postifx).lower()
+            "b": str.format("{0}/{1}/{2}-{3}.png", root, subfold, model, postifx).lower(),
+            "s": str.format("{0}/{1}/{2}-{3}.png", root, subfold, model, postifx).lower()
         }
 
     @staticmethod
     def make_folder_by_detail(path):
-        lpath = path.lower()
-        if not os.path.exists(lpath):
-            os.makedirs(lpath)
+        lower_path = path.lower()
+        if not os.path.exists(lower_path):
+            os.makedirs(lower_path)
 
     @staticmethod
     def get_meterial_name(raw):
@@ -62,16 +62,16 @@ class ProcessHelper:
         new_height = res["Small"]["y"]
         img = img.resize((new_width, new_height), Image.ANTIALIAS)
         img.save(ns['s'])
-    
+
     @staticmethod
     def save_image(src, out, sizes):
         img = Image.open(src)
-        
-        img = img.resize((sizes['x'], sizes['y']), Image.ANTIALIAS)
+        img = img.resize((sizes["x"], sizes["y"]), Image.ANTIALIAS)
         img.save(out)
 
     @staticmethod
     def get_camel(raw):
+        cml = ''
         spl = raw.split('_')
         cml_array = []
         for i in range(len(spl)):
