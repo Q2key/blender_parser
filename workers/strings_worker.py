@@ -1,6 +1,6 @@
 from workers.material_info import MaterialInfo
 from workers.colors import Colors
-from helpers.process_helper import ProcessHelper as ph
+from helpers.process import ProcessHelper as ph
 from os import sys
 import bpy
 

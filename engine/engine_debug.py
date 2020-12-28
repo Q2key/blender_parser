@@ -6,10 +6,10 @@ import inspect
 
 from PIL import Image
 from engine.engine_base import EngineBase
-from helpers.process_helper import ProcessHelper as ph
+from helpers.process import ProcessHelper as ph
 
 from helpers.stop_watch import StopWatch
-from helpers.stat_helper import StatHelper
+from helpers.stat import StatHelper
 
 from structs.rendered_object import RenderedObject
 from structs.rendered_identifier import RenderedItentifier
@@ -23,7 +23,7 @@ class Engine(EngineBase):
         self.ctx = ctx
         self.args = args
         self.folder = ph.get_folder_name(ctx.RENDERS_PATH, args)
-        self.stat_helper = StatHelper()
+        self.stat = StatHelper()
         self.timer = StopWatch()
 
     def go(self):
@@ -32,7 +32,7 @@ class Engine(EngineBase):
         self.process_elements()
         self.timer.watch_stop()
         self.timer.print_diff()
-        self.stat_helper.print_count()
+        self.stat.print_count()
 
     def prepare(self):
         pass
@@ -133,7 +133,7 @@ class Engine(EngineBase):
             self.render_detail(ns)
             self.save_small(ns, r)
             self.list_pop(sp, m_id)
-            self.stat_helper.increment()
+            self.stat.increment()
 
         dat_file = ph.read_dat_file(sp)
 

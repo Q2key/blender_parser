@@ -12,10 +12,10 @@ from engine.engine_base import EngineBase
 
 from engine.saver.saver_builder import SaverBuilder
 
-from helpers.process_helper import ProcessHelper as ph
+from helpers.process import ProcessHelper as ph
 from helpers.stop_watch import StopWatch
-from helpers.stat_helper import StatHelper
-from helpers.directory_helper import DirectoryHelper as dh
+from helpers.stat import StatHelper
+from helpers.directory import DirectoryHelper as dh
 
 
 class Engine(EngineBase):
@@ -25,7 +25,7 @@ class Engine(EngineBase):
         self.args = args
         self.saver_builder = SaverBuilder(ctx, args)
         self.folder = dh.get_root_folder(ctx.RENDERS_PATH, args)
-        self.stat_helper = StatHelper()
+        self.stat = StatHelper()
         self.timer = StopWatch()
 
     def prepare(self):
@@ -37,7 +37,7 @@ class Engine(EngineBase):
         self.process_elements()
         self.timer.watch_stop()
         self.timer.print_diff()
-        self.stat_helper.print_count()
+        self.stat.print_count()
 
     def process_elements(self):
         # define details
@@ -147,7 +147,7 @@ class Engine(EngineBase):
             saver.process()
 
             self.list_pop(sp, m_id)
-            self.stat_helper.increment()
+            self.stat.increment()
 
     def set_material(self, material, detail):
         if detail['type'] == 'fabric':

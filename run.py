@@ -17,7 +17,7 @@ from commands.make_web_config_command import MakeWebConfigCommand
 
 #helpers
 from helpers.logger import Logger as Logger
-from helpers.arguments_helper import ArgumentsHelper
+from helpers.arguments import ArgumentsHelper
 from instance import Instance
 
 parser = ArgumentsHelper()

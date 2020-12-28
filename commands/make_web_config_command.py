@@ -2,7 +2,7 @@ import os
 import json
 from PIL import Image
 
-from helpers.process_helper import ProcessHelper
+from helpers.process import ProcessHelper
 from commands.scan_store_command import ScanStoreCommand
 
 class MakeWebConfigCommand(ScanStoreCommand):

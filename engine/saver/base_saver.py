@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 import datetime
-from helpers.directory_helper import DirectoryHelper
+from helpers.directory import DirectoryHelper
 
 class BaseSaver(ABC):
 

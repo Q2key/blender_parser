@@ -1,6 +1,6 @@
 import os
 import json
-from helpers.process_helper import ProcessHelper
+from helpers.process import ProcessHelper
 
 
 class InitCommand:
