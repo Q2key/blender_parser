@@ -19,7 +19,8 @@
         "ColoradoMini",
         "VintageClub",
         "Londoner",
-        "VintageClubMini"
+        "VintageClubMini",
+        "WingTip"
     ],
     "included": {
         "ButtonDown": ["collarButtonDownInternalStand"],
@@ -38,7 +39,8 @@
         "Londoner" : ["collarLondonerSeamInternalStand"],
         "VintageClubMini" : ["collarVintageClubMiniSeamInternalStand"],
         "Mao" : ["collarMaoSeamInternalStand"],
-        "Mandarin" : ["collarMandarinSeamInternalStand"]
+        "Mandarin" : ["collarMandarinSeamInternalStand"],
+        "WingTip" : ["collarWingTipSeamInternalStand"]
     },
     "masks": false,
     "suffix": "InternalStand"

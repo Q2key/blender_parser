@@ -3,6 +3,9 @@
     "shadow_catchers": [],
     "prefix": "collar",
     "variants": [
+        "Mao",
+        "Mandarin",
+        "WingTip",
         "ButtonDown",
         "ButtonDownMini",
         "Colorado2buttons",
@@ -21,7 +24,7 @@
     ],
     "included": {
         "ButtonDown": [
-            "collarKButtonDownExternalStand"
+            "collarButtonDownExternalStand"
         ],
         "ButtonDownMini": [
             "collarButtonDownMiniExternalStand"
@@ -82,6 +85,10 @@
         ],
         "Mandarin": [
             "collarMandarinSeamExternalStand",
+            "collarLoop"
+        ],
+        "WingTip": [
+            "collarWingTipSeamExternalStand",
             "collarLoop"
         ]
     },

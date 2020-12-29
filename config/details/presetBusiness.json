@@ -1,6 +1,6 @@
 {
     "type": "preset",
-    "prefix": "",
+    "prefix": "preset_",
     "preset_id": "business",
     "variants": [
         "business"

@@ -1,6 +1,7 @@
 {
     "type": "fabric",
     "shadow_catchers": [
+        "bodyShirt"
     ],
     "prefix": "collar",
     "included": {
@@ -48,6 +49,13 @@
         ],
         "Classic": [
             "collarClassicSeam"
+        ],
+        "Mao": [
+        ],
+        "Mandarin": [
+        ],
+        "WingTip": [
+            "collarWingTipSeam"
         ]
     },
     "variants": [
@@ -65,7 +73,10 @@
         "ColoradoMini",
         "VintageClub",
         "Londoner",
-        "VintageClubMini"
+        "VintageClubMini",
+        "Mao",
+        "Mandarin",
+        "WingTip"
     ],
     "masks": {
         "King": [
@@ -126,6 +137,12 @@
         ],
         "Classic": [
             "collarClassicInternalStand",
+            "bodyShirtInternal"
+        ],
+        "Mao": [],
+        "Mandarin": [],
+        "WingTip": [
+            "collarWingTipInternalStand",
             "bodyShirtInternal"
         ]
     },
