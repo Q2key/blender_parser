@@ -3,6 +3,7 @@ from engine.saver.pillow_provider import PillowProvider
 
 import datetime
 
+
 class ConstructorSaver(BaseSaver):
 
 	def process(self):
@@ -11,21 +12,21 @@ class ConstructorSaver(BaseSaver):
 
 		out_s = ns['s']
 		out_b = ns['b']
+		out_xs = ns['xs']
 
 		res_s = self.ctx.SCENE['Resolution']['Small']
 		res_b = self.ctx.SCENE['Resolution']['Big']
+		res_xs = self.ctx.SCENE['Resolution']['XSmall']
 
 		PillowProvider.save_image(src, out_s, res_s)
 		PillowProvider.save_image(src, out_b, res_b)
+		PillowProvider.save_image(src, out_xs, res_xs)
 
 	def get_name_spaces(self):
-		s = 's'
-		b = 'b'
-		l = 'l'
 		return {
-			"s": str.format("{0}/{1}/{2}_{3}.png", self.root, self.subfold, self.file, s).lower(),
-			"b": str.format("{0}/{1}/{2}_{3}.png", self.root, self.subfold, self.file, b).lower(),
-			"l": str.format("{0}/{1}/{2}_{3}.png", self.root, self.subfold, self.file, l).lower()
+			"xs": str.format("{0}/{1}/{2}_{3}.png", self.root, self.subfold, self.file, 'xs').lower(),
+			"s": str.format("{0}/{1}/{2}_{3}.png", self.root, self.subfold, self.file, 's').lower(),
+			"b": str.format("{0}/{1}/{2}_{3}.png", self.root, self.subfold, self.file, 'b').lower()
 		}
 
 	def set_paths(self, detail, model):

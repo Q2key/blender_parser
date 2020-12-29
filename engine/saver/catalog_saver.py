@@ -22,14 +22,14 @@ class CatalogSaver(BaseSaver):
 	def get_name_spaces(self):
 		return {
 			"s": str.format(
-				"{0}/{1}/{2}-{3}-s.jpg",
+				"{0}/{1}/{2}-{3}_s.jpg",
 				self.part_1,
 				self.part_2,
 				self.part_3,
 				self.part_4
 				).lower(), 
 			"b": str.format(
-				"{0}/{1}/{2}-{3}-b.jpg",
+				"{0}/{1}/{2}-{3}_b.jpg",
 				self.part_1,
 				self.part_2,
 				self.part_3,
