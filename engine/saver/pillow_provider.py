@@ -18,4 +18,4 @@ class PillowProvider:
 
 		background = Image.new("RGB", png.size, (255, 255, 255))
 		background.paste(png, mask=png.split()[3])
-		background.save(out, 'JPEG', progressive=True, optimize=True, quality=60)
+		background.save(out, 'JPEG', progressive=True, optimize=True, quality=95)

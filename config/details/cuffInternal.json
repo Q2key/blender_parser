@@ -3,14 +3,37 @@
     "shadow_catchers": [],
     "prefix": "cuff",
     "variants": [
-        "French",
-        "OneButton",
-        "Regulated",
-        "Rounded",
-        "Straight",
-        "TwoButtons"
+        "OneButtonInternal_a",
+        "OneButtonInternal_b",
+        "OneButtonInternal_c",
+        "OneButtonInternal_d",
+
+        "RegulatedInternal_a",
+        "RegulatedInternal_b",
+        "RegulatedInternal_c",
+        "RegulatedInternal_d",
+
+        "TwoButtonsInternal_a",
+        "TwoButtonsInternal_b",
+        "TwoButtonsInternal_c",
+        "TwoButtonsInternal_d",
+
+        "FrenchInternal_a",
+        "FrenchInternal_b",
+        "FrenchInternal_c",
+        "FrenchInternal_d",
+
+        "LinksWienInternal_a",
+        "LinksWienInternal_b",
+        "LinksWienInternal_c",
+        "LinksWienInternal_d",
+
+        "LinksSingleInternal_a",
+        "LinksSingleInternal_b",
+        "LinksSingleInternal_c",
+        "LinksSingleInternal_d"
     ],
     "included": false,
     "masks": false,
-    "suffix":"Internal"
+    "suffix":""
 }

@@ -12,12 +12,15 @@ class CatalogSaver(BaseSaver):
 
 		out_s = ns['s']
 		out_b = ns['b']
+		out_xs = ns['xs']
 		
 		res_s = self.ctx.SCENE['Resolution']['Small']
 		res_b = self.ctx.SCENE['Resolution']['Big']
+		res_xs = self.ctx.SCENE['Resolution']['XSmall']
 
 		PillowProvider.save_as_jpg(src, out_s, res_s)
 		PillowProvider.save_as_jpg(src, out_b, res_b)
+		PillowProvider.save_as_jpg(src, out_xs, res_xs)
 
 	def get_name_spaces(self):
 		return {
@@ -30,6 +33,13 @@ class CatalogSaver(BaseSaver):
 				).lower(), 
 			"b": str.format(
 				"{0}/{1}/{2}-{3}_b.jpg",
+				self.part_1,
+				self.part_2,
+				self.part_3,
+				self.part_4
+				).lower(),
+			"xs": str.format(
+				"{0}/{1}/{2}-{3}_xs.jpg",
 				self.part_1,
 				self.part_2,
 				self.part_3,

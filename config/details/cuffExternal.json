@@ -3,21 +3,67 @@
     "shadow_catchers": [],
     "prefix": "cuff",
     "variants": [
-        "French",
-        "OneButton",
-        "Regulated",
-        "Rounded",
-        "Straight",
-        "TwoButtons"
+        "OneButtonExternal_a",
+        "OneButtonExternal_b",
+        "OneButtonExternal_c",
+        "OneButtonExternal_d",
+
+        "RegulatedExternal_a",
+        "RegulatedExternal_b",
+        "RegulatedExternal_c",
+        "RegulatedExternal_d",
+
+        "TwoButtonsExternal_a",
+        "TwoButtonsExternal_b",
+        "TwoButtonsExternal_c",
+        "TwoButtonsExternal_d",
+
+        "FrenchExternal_a",
+        "FrenchExternal_b",
+        "FrenchExternal_c",
+        "FrenchExternal_d",
+
+        "LinksWienExternal_a",
+        "LinksWienExternal_b",
+        "LinksWienExternal_c",
+        "LinksWienExternal_d",
+
+        "LinksSingleExternal_a",
+        "LinksSingleExternal_b",
+        "LinksSingleExternal_c",
+        "LinksSingleExternal_d"
     ],
     "masks": {
-        "French": ["cuffFrenchInternal"],
-        "OneButton": ["cuffOneButtonInternal"],
-        "Regulated": ["cuffRegulatedInternal"],
-        "Rounded": ["cuffRoundedInternal"],
-        "Straight": ["cuffStraightInternal"],
-        "TwoButtons": ["cuffTwoButtonsInternal"]
+        "OneButtonExternal_a": ["OneButtonInternal_a"],
+        "OneButtonExternal_b": ["OneButtonInternal_b"],
+        "OneButtonExternal_c": ["OneButtonInternal_c"],
+        "OneButtonExternal_d": ["OneButtonInternal_d"],
+
+        "RegulatedExternal_a": ["RegulatedInternal_a"],
+        "RegulatedExternal_b": ["RegulatedInternal_b"],
+        "RegulatedExternal_c": ["RegulatedInternal_c"],
+        "RegulatedExternal_d": ["RegulatedInternal_d"],
+
+        "TwoButtonsExternal_a": ["TwoButtonsInternal_a"],
+        "TwoButtonsExternal_b": ["TwoButtonsInternal_b"],
+        "TwoButtonsExternal_c": ["TwoButtonsInternal_c"],
+        "TwoButtonsExternal_d": ["TwoButtonsInternal_d"],
+        
+        "FrenchExternal_a": ["FrenchInternal_a"],
+        "FrenchExternal_b": ["FrenchInternal_b"],
+        "FrenchExternal_c": ["FrenchInternal_c"],
+        "FrenchExternal_d": ["FrenchInternal_d"],
+
+        "LinksWienExternal_a": ["LinksWienInternal_a"],
+        "LinksWienExternal_b": ["LinksWienInternal_b"],
+        "LinksWienExternal_c": ["LinksWienInternal_c"],
+        "LinksWienExternal_d": ["LinksWienInternal_d"],
+
+        "LinksSingleExternal_a": ["LinksSingleInternal_a"],
+        "LinksSingleExternal_b": ["LinksSingleInternal_b"],
+        "LinksSingleExternal_c": ["LinksSingleInternal_c"],
+        "LinksSingleExternal_d": ["LinksSingleInternal_d"]
     },
     "included": false,
-    "suffix":  "External"
+    "suffix":  ""
 }

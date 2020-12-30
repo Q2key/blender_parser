@@ -3,14 +3,37 @@
     "shadow_catchers": [],
     "prefix": "cuff",
     "variants": [
-        "French",
-        "OneButton",
-        "Regulated",
-        "Rounded",
-        "Straight",
-        "TwoButtons"
+        "OneButtonButton_a",
+        "OneButtonButton_b",
+        "OneButtonButton_c",
+        "OneButtonButton_d",
+
+        "RegulatedButton_a",
+        "RegulatedButton_b",
+        "RegulatedButton_c",
+        "RegulatedButton_d",
+
+        "TwoButtonsButton_a",
+        "TwoButtonsButton_b",
+        "TwoButtonsButton_c",
+        "TwoButtonsButton_d",
+
+        "FrenchButton_a",
+        "FrenchButton_b",
+        "FrenchButton_c",
+        "FrenchButton_d",
+
+        "cuffLinksWienButton_a",
+        "cuffLinksWienButton_b",
+        "cuffLinksWienButton_c",
+        "cuffLinksWienButton_d",
+
+        "cuffLinksSingleButton_a",
+        "cuffLinksSingleButton_b",
+        "cuffLinksSingleButton_c",
+        "cuffLinksSingleButton_d"
     ],
     "included": false,
     "masks": false,
-    "suffix": "Button"
+    "suffix": ""
 }
