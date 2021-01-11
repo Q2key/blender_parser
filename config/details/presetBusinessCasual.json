@@ -20,10 +20,10 @@
             "collarLondonerInternalStand",
             "collarLondonerSeamInternalStand",
             "collarLondonerSeamSeamStand",
-            "cuffTwoButtonsButton",
-            "cuffTwoButtonsExternal",
-            "cuffTwoButtonsInternal",
-            "cuffTwoButtonsStrings"
+            "cuffTwoButtonsButton_a",
+            "cuffTwoButtonsExternal_a",
+            "cuffTwoButtonsInternal_a",
+            "cuffTwoButtonsStrings_a"
         ]
     },
     "button_texture": {

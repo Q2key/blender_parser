@@ -20,10 +20,10 @@
             "collarColoradoInternalStand",
             "collarColoradoSeamInternalStand",
             "collarColoradoSeamSeamStand",
-            "cuffOneButtonButton",
-            "cuffOneButtonExternal",
-            "cuffOneButtonInternal",
-            "cuffOneButtonStrings"
+            "cuffOneButtonButton_a",
+            "cuffOneButtonExternal_a",
+            "cuffOneButtonInternal_a",
+            "cuffOneButtonStrings_a"
         ]
     },
     "button_texture": {

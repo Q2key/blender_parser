@@ -20,10 +20,10 @@
             "collarRomaInternalStand",
             "collarRomaSeamInternalStand",
             "collarRomaSeamSeamStand",
-            "cuffFrenchButton",
-            "cuffFrenchExternal",
-            "cuffFrenchInternal",
-            "cuffFrenchStrings"
+            "cuffFrenchButton_a",
+            "cuffFrenchExternal_a",
+            "cuffFrenchInternal_a",
+            "cuffFrenchStrings_a"
         ]
     },
     "button_texture": {
