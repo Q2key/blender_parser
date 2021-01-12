@@ -2,27 +2,31 @@
     "Resolution": {
         "Big": {
             "x": 1600,
-            "y": 2180
+            "y": 2180,
+            "q": 35
         },
         "Small": {
             "x": 400,
-            "y": 545
+            "y": 545,
+            "q": 35
         },
         "XSmall": {
             "x": 100,
-            "y": 136
+            "y": 136,
+            "q": 35
         },
         "Catalog": {
             "x": 400,
-            "y": 545
+            "y": 545,
+            "q": 35
         }
     },
-    "Percentage": 65,
+    "Percentage": 100,
     "Compression": 100,
     "TexturesFormat": [
         ".png",
         ".jpg"
     ],
     "Engine": "Cycles",
-    "TempFile": "C:/tempishe.png"
+    "TempFile": "G:/tempishe.png"
 }

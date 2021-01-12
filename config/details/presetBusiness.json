@@ -28,11 +28,11 @@
     },
     "button_texture": {
         "id": "SG2-1953",
-        "texture": "C:/dev/blender_parser/textures/static/buttons/SG2-1953.png"
+        "texture": "C:/Projects/shirtsRender/textures/static/buttons/SG2-1953.png"
     },
     "label_texture": {
         "id" : "remark_birka",
-        "texture": "C:/dev/blender_parser/textures/static/label/remark_birka.png"
+        "texture": "C:/Projects/shirtsRender/textures/static/label/remark_birka.png"
     },
     "shadow_catchers": [],
     "masks": false
