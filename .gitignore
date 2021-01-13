@@ -2,9 +2,10 @@
 renders/*
 *.pyc
 *.pyo
+__pycache__/
 
 config/
 textures/
 scenes/
-scenes/*.blend1
+
 *.log
