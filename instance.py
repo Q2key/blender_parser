@@ -9,7 +9,7 @@ class Instance:
         core_path = os.getcwd()
         src_path = core_path
         self.SRC_PATH = src_path
-        self.RENDERS_PATH = str.format("{0}/renders", src_path)
+
         self.THUMBS_PATH = str.format("{0}/thumbs", src_path)
         self.STORE_PATH = str.format("{0}/textures/store", src_path)
         self.FABRICS_PATH = str.format("{0}/fabrics", self.STORE_PATH)
@@ -18,6 +18,8 @@ class Instance:
         self.CONFIG_PATH = str.format("{0}/config", src_path)
         self.SCENE = self.read_json(
             str.format("{0}/config/scene.json", src_path))
+        
+        self.RENDERS_PATH = str.format(self.SCENE["RenderStorage"], src_path)
 
         self.init_details_config()
 
