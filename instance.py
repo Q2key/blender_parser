@@ -10,7 +10,6 @@ class Instance:
         src_path = core_path
         self.SRC_PATH = src_path
 
-        self.THUMBS_PATH = str.format("{0}/thumbs", src_path)
         self.STORE_PATH = str.format("{0}/textures/store", src_path)
         self.FABRICS_PATH = str.format("{0}/fabrics", self.STORE_PATH)
         self.BUTTONS_PATH = str.format("{0}/buttons", self.STORE_PATH)
