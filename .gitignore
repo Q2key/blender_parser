@@ -3,6 +3,7 @@ renders/*
 *.pyc
 *.pyo
 
+config/
 textures/
 scenes/*.blend1
 *.log
