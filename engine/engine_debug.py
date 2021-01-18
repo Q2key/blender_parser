@@ -6,10 +6,13 @@ import inspect
 
 from PIL import Image
 from engine.engine_base import EngineBase
+from helpers.directory import DirectoryHelper as dh
 from helpers.process import ProcessHelper as ph
 
 from helpers.stop_watch import StopWatch
 from helpers.stat import StatHelper
+
+from engine.saver.saver_builder import SaverBuilder
 
 from structs.rendered_object import RenderedObject
 from structs.rendered_identifier import RenderedItentifier
@@ -19,143 +22,145 @@ from structs.rendered_mask import RenderedMask
 
 class Engine(EngineBase):
 
-    def __init__(self, ctx, args=False):
-        self.ctx = ctx
-        self.args = args
-        self.folder = ph.get_folder_name(ctx.RENDERS_PATH, args)
-        self.stat = StatHelper()
-        self.timer = StopWatch()
+	# 1
+	def __init__(self, ctx, args=False):
+		self.ctx = ctx
+		self.args = args
+		self.saver_builder = SaverBuilder(ctx, args)
+		self.folder = dh.get_root_folder(ctx.RENDERS_PATH, args)
+		self.stat = StatHelper()
+		self.timer = StopWatch()
 
-    def go(self):
-        self.timer.watch_start()
-        self.set_scene()
-        self.process_elements()
-        self.timer.watch_stop()
-        self.timer.print_diff()
-        self.stat.print_count()
+	# 2
+	def prepare(self):
+		pass
 
-    def prepare(self):
-        pass
+	# 3
+	def go(self):
+		self.timer.watch_start()
+		self.set_scene()
+		self.process_elements()
+		self.timer.watch_stop()
+		self.timer.print_diff()
+		self.stat.print_count()
 
-    def process_elements(self):
-        # define details
-        details = self.ctx.DETAILS.items()
-        elements = self.filter_details(details)
-        # extend details
-        for k, d in elements:
-            print('\r\n{0}\r\n'.format(k))
-            self.process_details(d)
+	# 4
+	def process_elements(self):
+		# define details
+		details = self.ctx.DETAILS.items()
+		elements = self.filter_details(details)
+		# extend details
+		for k, d in elements:
+			print('\r\n{0}\r\n'.format(k))
+			self.process_details(d)
 
-    def filter_details(self, elements):
-        if self.args and self.args.model:
-            details = dict()
-            # Iterate over all the items in dictionary
-            for (key, value) in elements:
-                if key == self.args.model:
-                    details[key] = value
-            
-            return details.items()
-        return elements
+	# 5
+	def filter_details(self, elements):
+		if self.args and self.args.model:
+			details = dict()
+			# Iterate over all the items in dictionary
+			for (key, value) in elements:
+				if key == self.args.model:
+					details[key] = value
 
-    def get_material(self, d):
-        d['available_material'] = [
-            e for e in self.ctx.MATERIALS
-            if e['id'] in d['available_material_id']]
+			return details.items()
+		return elements
 
-    def process_details(self, d):
-        sc = d['shadow_catchers']
-        vs = d['variants']
-        am = d['available_material']
-        rm = RenderedMask(d['masks'])
+	# 6
+	def get_material(self, d):
+		d['available_material'] = [
+			e for e in self.ctx.MATERIALS
+			if e['id'] in d['available_material_id']]
 
-        for v in vs:
-            # identifier
-            oi = RenderedItentifier(
-                variant=v,
-                prefix=d['prefix'],
-                suffix=d['suffix'],
-                mask_details=rm.details
-            )
+	# 7
+	def process_details(self, d):
+		if len(d['variants']) > 0:
+			for v in d['variants']:
+				d['file_id'] = d['prefix'] + v + d['suffix']
+				d['variant'] = v
+				self.before_render(d)
+				self.render_partial(d)
+		else:
+			d['file_id'] = d['prefix'] + d['suffix']
+			self.before_render(d)
+			self.render_partial(d)
 
-            # material
-            mi = RenderedMaterial(type=d['type'])
-            # object
-            ro = RenderedObject(oi, mi, sc)
+		print("PROCESSING DETAIL: ", d['file_id'])
 
-            self.before_render(ro)
-            self.render_partial(ro, am)
+	def set_default(self):
+		pass
 
-    def set_default(self):
-        pass
+	def set_catchers(self, ro):
+		pass
 
-    def set_catchers(self, ro):
-        for sc in ro.catchers:
-            print("cather state: ", sc, True)
+	def preprocess_details(self, ro):
+		pass
 
-    def preprocess_details(self, ro):
-        print("object hided: ", ro.detail.id, False)
-        if ro.detail.mask_id is not None:
-            print("object hided: ", ro.detail.id, False)
+	def reset_catchers(self):
+		pass
 
-    def reset_suffix(self):
-        for inc in self.ctx.SCENE['Components']:
-            print("object hided: ", inc, True)
+	def before_render(self, ro):
+		self.set_default()
+		self.preprocess_details(ro)
 
-    def reset_catchers(self):
-        for sc in self.ctx.SCENE['Components']:
-            print("cather state: ", sc, False)
+	def render_partial(self, d):
+		self.before_render(d)
+		
+		p = d['file_id']
+		sp = str.format("{0}/{1}", self.folder, p)
+		dh.make_folder_by_detail(sp)
+		dat_file = ph.read_dat_file(sp)
 
-    def before_render(self, ro):
-        self.set_default()
-        self.preprocess_details(ro)
+		#create image saver
+		saver = self.saver_builder.get_saver(d['type'])
 
-    def render_partial(self, rendering_object, material_list):
-        d_id = rendering_object.detail.id
-        t = rendering_object.material.type
-        r = self.ctx.SCENE['Resolution']
+		for m in d['available_material']:
+			m_id = m["id"]
+			if m["id"] in dat_file:
+				print(str.format("{0} skipped", m_id))
+				continue
 
-        sp = str.format("{0}/{1}", self.folder, d_id)
-        ph.make_folder_by_detail(sp)
-        dat_file = ph.read_dat_file(sp)
-        
+			print(m_id)
 
-        for m in material_list:
-            m_id = m["id"]
-            
-            if m_id in dat_file:
-                print(str.format("{0} skipped", m_id))
-                continue
+			#render image
+			self.set_material(m, d)
+			self.render_detail()
+			
+			#save SOLID image
+			#saver.set_paths(d, m_id)
+			#saver.process()
 
-            fp = str.format("{0}_{1}", d_id, m_id)
-            ns = ph.get_image_name(self.folder, d_id, fp, r)
-            
-            self.set_material(m, t)
-            self.render_detail(ns)
-            self.save_small(ns, r)
-            self.list_pop(sp, m_id)
-            self.stat.increment()
+			self.list_pop(sp, m_id)
+			self.stat.increment()
+		
 
-        dat_file = ph.read_dat_file(sp)
+	def set_material(self, material, detail):
+		if detail['type'] == 'fabric':
+			pass
+		if detail['type'] == 'preset':
+			pass
+		if detail['type'] == 'plastic':
+			pass
+		if detail['type'] == 'label':
+			pass
+		if detail['type'] == 'buttons':
+			pass
 
-    def set_material(self, material, m_type):
-        if m_type == 'fabric':
-            pass
-        if m_type == 'plastic':
-            pass
-        if m_type == 'strings':
-            pass
+	def save_small(self, ns, r):
+		ph.save_image(ns["b"], ns["s"], r["Big"])
 
-    def save_small(self, ns, r):
-        pass
+	def check_list(self, ns):
+		ph.save_image(ns["b"], ns["s"], r["Small"])
 
-    def check_list(self, ns):
-        pass
+	def list_pop(self, path, entity):
+		ph.write_stats(path, entity)
 
-    def list_pop(self, path, entity):
-        ph.write_stats(path, entity)
+	def set_scene(self):
+		s = self.ctx.SCENE
+		r = s["Resolution"]
+		l = r['Big']
+		p = s["Percentage"]
+		c = s["Compression"]
 
-    def set_scene(self):
-        pass
-
-    def render_detail(self, result):
-        pass
+	def render_detail(self):
+		pass
