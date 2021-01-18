@@ -23,13 +23,25 @@ class ConstructorSaver(BaseSaver):
 		PillowProvider.save_image(src, out_xs, res_xs)
 
 	def get_name_spaces(self):
+		raw_str = self.parts[0]
+		i = 0
+		while i < len(self.parts):
+			part = self.parts[i]
+			if i > 0:
+				raw_str = raw_str + "/" + part
+			i += 1
+
 		return {
-			"xs": str.format("{0}/{1}/{2}_{3}.png", self.root, self.subfold, self.file, 'xs').lower(),
-			"s": str.format("{0}/{1}/{2}_{3}.png", self.root, self.subfold, self.file, 's').lower(),
-			"b": str.format("{0}/{1}/{2}_{3}.png", self.root, self.subfold, self.file, 'b').lower()
+			"xs": str.format("{0}_{1}.png", raw_str, 'xs').lower(),
+			"s": str.format("{0}_{1}.png", raw_str, 's').lower(),
+			"b": str.format("{0}_{1}.png", raw_str, 'b').lower()
 		}
 
 	def set_paths(self, detail, model):
-		self.root = self.root
-		self.subfold = detail['file_id']
-		self.file = "{0}_{1}".format(detail['file_id'], model)
+		#self.root = self.root
+		#self.subfold = detail['file_id']
+		#self.file = "{0}_{1}".format(detail['file_id'], model)
+		pass
+
+	def set_paths_hierarhy(self, parts):
+		self.parts = parts

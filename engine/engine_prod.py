@@ -54,16 +54,14 @@ class Engine(EngineBase):
 
 	#5
 	def filter_details(self, elements):
-		if self.args and self.args.model is None:
-			return elements
-
-		details = dict()
-		# Iterate over all the items in dictionary
-		for (key, value) in elements:
-			if key in self.args.model:
-				details[key] = value
-
-		return details.items()
+		if self.args and self.args.model:
+			details = dict()
+			# Iterate over all the items in dictionary
+			for (key, value) in elements:
+				if key == self.args.model:
+					details[key] = value
+			return details.items()
+		return elements
 
 	#6
 	def get_material(self, d):
@@ -132,11 +130,17 @@ class Engine(EngineBase):
 
 	def render_partial(self, d):
 		self.before_render(d)
-		
+
 		p = d['file_id']
-		sp = str.format("{0}/{1}", self.folder, p)
+		sp = str.format("{0}", self.folder)
+		pp = sp + "/" + d['prefix']
+		mp = pp + "/" + d['variant']
+
 		dh.make_folder_by_detail(sp)
-		dat_file = ph.read_dat_file(sp)
+		dh.make_folder_by_detail(pp)
+		dh.make_folder_by_detail(mp)
+
+		dat_file = ph.read_dat_file(mp)
 
 		#create image saver
 		saver = self.saver_builder.get_saver(d['type'])
@@ -152,7 +156,12 @@ class Engine(EngineBase):
 			self.render_detail()
 			
 			#save SOLID image
-			saver.set_paths(d, m_id)
+			saver.set_paths_hierarhy([
+				self.folder,
+				d['prefix'],
+				d['variant'],
+				m["id"],
+			])
 			saver.process()
 
 			self.list_pop(sp, m_id)

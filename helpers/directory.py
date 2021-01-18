@@ -10,7 +10,7 @@ class DirectoryHelper:
 		if args.version is not None:
 			pt = root + "/" + args.version
 		else:
-			pt = root + "/" + dt.strftime("%d_%b_%Y")
+			pt = root + "/" + dt.strftime("%d_%b_%Y_%S")
 		return pt
 
 	@staticmethod

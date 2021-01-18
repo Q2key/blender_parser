@@ -108,9 +108,16 @@ class Engine(EngineBase):
 		self.before_render(d)
 
 		p = d['file_id']
-		sp = str.format("{0}/{1}", self.folder, p)
+		sp = str.format("{0}", self.folder)
+		pp = sp + "/" + d['prefix']
+		mp = pp + "/" + d['variant']
+
 		dh.make_folder_by_detail(sp)
-		dat_file = ph.read_dat_file(sp)
+		dh.make_folder_by_detail(pp)
+		dh.make_folder_by_detail(mp)
+
+		
+		dat_file = ph.read_dat_file(mp)
 
 		# create image saver
 		saver = self.saver_builder.get_saver(d['type'])
@@ -121,17 +128,20 @@ class Engine(EngineBase):
 				print(str.format("{0} skipped", m_id))
 				continue
 
-			print(m_id)
-
 			# render image
 			self.set_material(m, d)
 			self.render_detail()
 
 			# save SOLID image
-			#saver.set_paths(d, m_id)
-			# saver.process()
+			saver.set_paths_hierarhy([
+				self.folder,
+				d['prefix'],
+				d['variant'],
+				m["id"],
+			])
+			saver.process()
 
-			self.list_pop(sp, m_id)
+			self.list_pop(mp, m_id)
 			self.stat.increment()
 
 	def set_material(self, material, detail):
@@ -149,7 +159,7 @@ class Engine(EngineBase):
 	def save_small(self, ns, r):
 		ph.save_image(ns["b"], ns["s"], r["Big"])
 
-	def check_list(self, ns):
+	def check_list(self, ns, r):
 		ph.save_image(ns["b"], ns["s"], r["Small"])
 
 	def list_pop(self, path, entity):

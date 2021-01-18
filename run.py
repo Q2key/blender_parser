@@ -48,8 +48,6 @@ if __name__ == "__main__":
     cmd_stack = list()
     ctx = Instance()
 
-    print(args)
-
     if args.register:
         cmd_stack.append(RegisterDetailCommand(ctx,args))
     if args.reset:
