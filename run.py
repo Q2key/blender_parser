@@ -22,7 +22,7 @@ from instance import Instance
 
 parser = ArgumentsHelper()
 
-parser.add_argument("-m", "--model", action='append', type=str, help="model || all models")
+parser.add_argument("-m", "--model", action='append', default=None, help="model || all models")
 parser.add_argument("-v", "--version", type=str, default=None)
 parser.add_argument("-r", "--reset", action='store_true')
 parser.add_argument("-prepare", "--prepare",action="store_true")
