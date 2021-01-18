@@ -22,7 +22,7 @@ from instance import Instance
 
 parser = ArgumentsHelper()
 
-parser.add_argument("-m", "--model", type=str, default=False, help="model type | all models")
+parser.add_argument("-m", "--model", action='append', type=str, help="model || all models")
 parser.add_argument("-v", "--version", type=str, default=None)
 parser.add_argument("-r", "--reset", action='store_true')
 parser.add_argument("-prepare", "--prepare",action="store_true")
@@ -47,6 +47,9 @@ args = parser.parse_args()
 if __name__ == "__main__":
     cmd_stack = list()
     ctx = Instance()
+
+    print(args)
+    exit()
 
     if args.register:
         cmd_stack.append(RegisterDetailCommand(ctx,args))

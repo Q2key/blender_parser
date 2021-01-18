@@ -54,14 +54,19 @@ class Engine(EngineBase):
 
 	#5
 	def filter_details(self, elements):
-		if self.args and self.args.model:
-			details = dict()
-			# Iterate over all the items in dictionary
-			for (key, value) in elements:
-				if key == self.args.model:
-					details[key] = value
-			return details.items()
-		return elements
+		if self.args and self.args.model is False:
+			return elements
+
+		# check for arguments collection
+		arg_array = self.args.model.split(",")
+
+		details = dict()
+		# Iterate over all the items in dictionary
+		for (key, value) in elements:
+			if key in arg_array:
+				details[key] = value
+
+		return details.items()
 
 	#6
 	def get_material(self, d):

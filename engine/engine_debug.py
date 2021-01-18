@@ -56,15 +56,19 @@ class Engine(EngineBase):
 
 	# 5
 	def filter_details(self, elements):
-		if self.args and self.args.model:
-			details = dict()
-			# Iterate over all the items in dictionary
-			for (key, value) in elements:
-				if key == self.args.model:
-					details[key] = value
+		if self.args and self.args.model == False:
+			return elements
 
-			return details.items()
-		return elements
+		# check for arguments collection
+		arg_array = self.args.model.split(",")
+
+		details = dict()
+		# Iterate over all the items in dictionary
+		for (key, value) in elements:
+			if key in arg_array:
+				details[key] = value
+
+		return details.items()
 
 	# 6
 	def get_material(self, d):
@@ -105,13 +109,13 @@ class Engine(EngineBase):
 
 	def render_partial(self, d):
 		self.before_render(d)
-		
+
 		p = d['file_id']
 		sp = str.format("{0}/{1}", self.folder, p)
 		dh.make_folder_by_detail(sp)
 		dat_file = ph.read_dat_file(sp)
 
-		#create image saver
+		# create image saver
 		saver = self.saver_builder.get_saver(d['type'])
 
 		for m in d['available_material']:
@@ -122,17 +126,16 @@ class Engine(EngineBase):
 
 			print(m_id)
 
-			#render image
+			# render image
 			self.set_material(m, d)
 			self.render_detail()
-			
-			#save SOLID image
+
+			# save SOLID image
 			#saver.set_paths(d, m_id)
-			#saver.process()
+			# saver.process()
 
 			self.list_pop(sp, m_id)
 			self.stat.increment()
-		
 
 	def set_material(self, material, detail):
 		if detail['type'] == 'fabric':
