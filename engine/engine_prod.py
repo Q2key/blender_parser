@@ -134,8 +134,8 @@ class Engine(EngineBase):
 
 		p = d['file_id']
 		sp = str.format("{0}", self.folder)
-		pp = sp + "/" + d['prefix']
-		mp = pp + "/" + d['variant']
+		pp = sp + "/" + d['file_id']
+		mp = pp + "/" + d['detail_folder']
 
 		dh.make_folder_by_detail(sp)
 		dh.make_folder_by_detail(pp)
@@ -159,8 +159,8 @@ class Engine(EngineBase):
 			#save SOLID image
 			saver.set_paths_hierarhy([
 				self.folder,
-				d['prefix'],
-				d['variant'],
+				d['file_id'],
+				d['detail_folder'],
 				m["id"],
 			])
 			saver.process()
