@@ -110,12 +110,17 @@ class Engine(EngineBase):
 
 		p = d['file_id']
 		sp = str.format("{0}", self.folder)
-		pp = sp + "/" + d['prefix']
-		mp = pp + "/" + d['variant']
+		mp = sp + "/" + d['prefix'] +  d["variant"]
+		fp = mp  + "/" +  d["folder"]
 
 		dh.make_folder_by_detail(sp)
-		dh.make_folder_by_detail(pp)
 		dh.make_folder_by_detail(mp)
+		dh.make_folder_by_detail(fp)
+
+
+		print("\r\n ---- ")
+		print(d['prefix'] +  d["variant"] + "/" + d["folder"])
+
 
 		
 		dat_file = ph.read_dat_file(mp)
@@ -124,6 +129,7 @@ class Engine(EngineBase):
 		saver = self.saver_builder.get_saver(d['type'])
 
 		for m in d['available_material']:
+			continue
 			m_id = m["id"]
 			if m["id"] in dat_file:
 				print(str.format("{0} skipped", m_id))
@@ -140,7 +146,7 @@ class Engine(EngineBase):
 				d['variant'],
 				m["id"],
 			])
-			saver.process()
+			#saver.process()
 
 			self.list_pop(mp, m_id)
 			self.stat.increment()

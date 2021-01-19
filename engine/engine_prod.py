@@ -134,14 +134,17 @@ class Engine(EngineBase):
 
 		p = d['file_id']
 		sp = str.format("{0}", self.folder)
-		pp = sp + "/" + d['file_id']
-		mp = pp + "/" + d['detail_folder']
+		mp = sp + "/" + d['prefix'] +  d["variant"]
+		fp = mp  + "/" +  d["folder"]
 
 		dh.make_folder_by_detail(sp)
-		dh.make_folder_by_detail(pp)
 		dh.make_folder_by_detail(mp)
+		dh.make_folder_by_detail(fp)
 
-		dat_file = ph.read_dat_file(mp)
+		print("\r\n ---- ")
+		print(d['prefix'] +  d["variant"] + "/" + d["folder"])
+
+		dat_file = ph.read_dat_file(fp)
 
 		#create image saver
 		saver = self.saver_builder.get_saver(d['type'])
@@ -159,13 +162,13 @@ class Engine(EngineBase):
 			#save SOLID image
 			saver.set_paths_hierarhy([
 				self.folder,
-				d['file_id'],
-				d['detail_folder'],
+				d['prefix'] +  d["variant"],
+				d["folder"],
 				m["id"],
 			])
 			saver.process()
 
-			self.list_pop(mp, m_id)
+			self.list_pop(fp, m_id)
 			self.stat.increment()
 
 	def set_material(self, material, detail):

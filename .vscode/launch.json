@@ -15,7 +15,7 @@
                 "--",
                 "--store",
                 "-d",
-                "--model=collar"
+                "--model=collarButton"
             ],
         },
     ]
