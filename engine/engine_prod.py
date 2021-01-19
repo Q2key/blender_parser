@@ -58,7 +58,7 @@ class Engine(EngineBase):
 			details = dict()
 			# Iterate over all the items in dictionary
 			for (key, value) in elements:
-				if key == self.args.model:
+				if key in self.args.model:
 					details[key] = value
 			return details.items()
 		return elements
@@ -71,6 +71,7 @@ class Engine(EngineBase):
 
 	#7
 	def process_details(self, d):
+		d['variant'] = 'parent'
 		if len(d['variants']) > 0:
 			for v in d['variants']:
 				d['file_id'] = d['prefix'] + v + d['suffix']
@@ -164,7 +165,7 @@ class Engine(EngineBase):
 			])
 			saver.process()
 
-			self.list_pop(sp, m_id)
+			self.list_pop(mp, m_id)
 			self.stat.increment()
 
 	def set_material(self, material, detail):

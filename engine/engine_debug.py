@@ -75,6 +75,7 @@ class Engine(EngineBase):
 
 	# 7
 	def process_details(self, d):
+		d['variant'] = ''
 		if len(d['variants']) > 0:
 			for v in d['variants']:
 				d['file_id'] = d['prefix'] + v + d['suffix']

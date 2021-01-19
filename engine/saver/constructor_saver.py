@@ -38,9 +38,6 @@ class ConstructorSaver(BaseSaver):
 		}
 
 	def set_paths(self, detail, model):
-		#self.root = self.root
-		#self.subfold = detail['file_id']
-		#self.file = "{0}_{1}".format(detail['file_id'], model)
 		pass
 
 	def set_paths_hierarhy(self, parts):

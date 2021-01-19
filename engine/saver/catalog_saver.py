@@ -13,7 +13,7 @@ class CatalogSaver(BaseSaver):
 		out_s = ns['s']
 		out_b = ns['b']
 		out_xs = ns['xs']
-		
+
 		res_s = self.ctx.SCENE['Resolution']['Small']
 		res_b = self.ctx.SCENE['Resolution']['Big']
 		res_xs = self.ctx.SCENE['Resolution']['XSmall']
@@ -23,32 +23,19 @@ class CatalogSaver(BaseSaver):
 		PillowProvider.save_as_jpg(src, out_xs, res_xs)
 
 	def get_name_spaces(self):
+		raw_str = self.parts[0]
+		i = 0
+		while i < len(self.parts):
+			part = self.parts[i]
+			if i > 0:
+				raw_str = raw_str + "/" + part
+			i += 1
+
 		return {
-			"s": str.format(
-				"{0}/{1}/{2}-{3}_s.jpg",
-				self.part_1,
-				self.part_2,
-				self.part_3,
-				self.part_4
-				).lower(), 
-			"b": str.format(
-				"{0}/{1}/{2}-{3}_b.jpg",
-				self.part_1,
-				self.part_2,
-				self.part_3,
-				self.part_4
-				).lower(),
-			"xs": str.format(
-				"{0}/{1}/{2}-{3}_xs.jpg",
-				self.part_1,
-				self.part_2,
-				self.part_3,
-				self.part_4
-				).lower()
+			"xs": str.format("{0}_{1}.png", raw_str, 'xs').lower(),
+			"s": str.format("{0}_{1}.png", raw_str, 's').lower(),
+			"b": str.format("{0}_{1}.png", raw_str, 'b').lower()
 		}
 
-	def set_paths(self, detail, model):
-		self.part_1 = self.root
-		self.part_2 = detail['file_id']
-		self.part_3 = model
-		self.part_4 = detail['preset_id']
+	def set_paths_hierarhy(self, parts):
+		self.parts = parts
