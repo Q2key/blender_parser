@@ -32,9 +32,9 @@ class CatalogSaver(BaseSaver):
 			i += 1
 
 		return {
-			"xs": str.format("{0}_{1}.png", raw_str, 'xs').lower(),
-			"s": str.format("{0}_{1}.png", raw_str, 's').lower(),
-			"b": str.format("{0}_{1}.png", raw_str, 'b').lower()
+			"xs": str.format("{0}_{1}.jpg", raw_str, 'xs').lower(),
+			"s": str.format("{0}_{1}.jpg", raw_str, 's').lower(),
+			"b": str.format("{0}_{1}.jpg", raw_str, 'b').lower()
 		}
 
 	def set_paths_hierarhy(self, parts):
