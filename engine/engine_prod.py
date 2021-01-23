@@ -8,8 +8,9 @@ from workers.fabric_worker import FabricWorker
 from workers.plastic_worker import PlasticWorker
 from workers.strings_worker import StringsWorker
 from workers.label_worker import LabelWorker
-from engine.engine_base import EngineBase
+from workers.holdout_worker import HoldoutWorker
 
+from engine.engine_base import EngineBase
 from engine.saver.saver_builder import SaverBuilder
 
 from helpers.process import ProcessHelper as ph
@@ -20,7 +21,7 @@ from helpers.directory import DirectoryHelper as dh
 
 class Engine(EngineBase):
 
-	#1
+	# 1
 	def __init__(self, ctx, args=False):
 		self.ctx = ctx
 		self.args = args
@@ -29,11 +30,11 @@ class Engine(EngineBase):
 		self.stat = StatHelper()
 		self.timer = StopWatch()
 
-	#2
+	# 2
 	def prepare(self):
 		pass
 
-	#3
+	# 3
 	def go(self):
 		self.timer.watch_start()
 		self.set_scene()
@@ -42,7 +43,7 @@ class Engine(EngineBase):
 		self.timer.print_diff()
 		self.stat.print_count()
 
-	#4
+	# 4
 	def process_elements(self):
 		# define details
 		details = self.ctx.DETAILS.items()
@@ -52,7 +53,7 @@ class Engine(EngineBase):
 			print('\r\n:{0}\r\n'.format(k))
 			self.process_details(d)
 
-	#5
+	# 5
 	def filter_details(self, elements):
 		if self.args and self.args.model:
 			details = dict()
@@ -63,13 +64,13 @@ class Engine(EngineBase):
 			return details.items()
 		return elements
 
-	#6
+	# 6
 	def get_material(self, d):
 		d['available_material'] = [
 			e for e in self.ctx.MATERIALS
 			if e['id'] in d['available_material_id']]
 
-	#7
+	# 7
 	def process_details(self, d):
 		d['variant'] = 'parent'
 		if len(d['variants']) > 0:
@@ -98,32 +99,25 @@ class Engine(EngineBase):
 			is_mask = bool(d['masks']) and n in d['masks'][v_name]
 
 			if is_catcher:
-				obj.cycles.is_shadow_catcher = True
+				#obj.cycles.is_shadow_catcher = True
 				obj.hide_render = False
-				print('Detail {0} : Catcher {1}'.format(n, True))
 
 			if is_target:
 				obj.hide_render = False
-				print('Detail {0} : Target {1}'.format(n, True))
 
 			if is_included:
 				obj.hide_render = False
-				print('Detail {0} : Included {1}'.format(n, True))
 
 			if is_mask:
 				obj.hide_render = False
-				obj.cycles.is_holdout = True
-				print('Detail {0} : Included {1}'.format(n, True))
+				HoldoutWorker.apply_holdout_material(obj)
 
 	def set_default(self):
 		for c in bpy.data.collections.values():
 			c.hide_render = False
 
 		for (k, v) in bpy.data.objects.items():
-			if v.name not in ["Camera", "Lamp_0", "Lamp_1", "Sun"]:
-				v.hide_render = True
-				v.cycles.is_shadow_catcher = False
-				v.cycles.is_holdout = False
+			v.hide_render = True
 
 	def before_render(self, d):
 		self.set_default()
@@ -134,19 +128,19 @@ class Engine(EngineBase):
 
 		p = d['file_id']
 		sp = str.format("{0}", self.folder)
-		mp = sp + "/" + d['prefix'] +  d["variant"]
-		fp = mp  + "/" +  d["folder"]
+		mp = sp + "/" + d['prefix'] + d["variant"]
+		fp = mp + "/" + d["folder"]
 
 		dh.make_folder_by_detail(sp)
 		dh.make_folder_by_detail(mp)
 		dh.make_folder_by_detail(fp)
 
 		print("\r\n ---- ")
-		print(d['prefix'] +  d["variant"] + "/" + d["folder"])
+		print(d['prefix'] + d["variant"] + "/" + d["folder"])
 
 		dat_file = ph.read_dat_file(fp)
 
-		#create image saver
+		# create image saver
 		saver = self.saver_builder.get_saver(d['type'])
 
 		for m in d['available_material']:
@@ -155,14 +149,14 @@ class Engine(EngineBase):
 				print(str.format("{0} skipped", m_id))
 				continue
 
-			#render image
+			# render image
 			self.set_material(m, d)
 			self.render_detail()
-			
-			#save SOLID image
+
+			# save SOLID image
 			saver.set_paths_hierarhy([
 				self.folder,
-				d['prefix'] +  d["variant"],
+				d['prefix'] + d["variant"],
 				d["folder"],
 				m["id"],
 			])
@@ -194,7 +188,6 @@ class Engine(EngineBase):
 	def save_small(self, ns, r):
 		ph.save_image(ns["b"], ns["s"], r["Small"])
 
-
 	def list_pop(self, path, entity):
 		ph.write_stats(path, entity)
 
@@ -205,7 +198,7 @@ class Engine(EngineBase):
 		p = s["Percentage"]
 		c = s["Compression"]
 
-		bpy.data.scenes["Scene"].render.engine = 'CYCLES'
+		bpy.data.scenes["Scene"].render.engine = 'BLENDER_EEVEE'
 		bpy.data.scenes["Scene"].render.resolution_x = l["x"]
 		bpy.data.scenes["Scene"].render.resolution_y = l["y"]
 		bpy.data.scenes["Scene"].render.resolution_percentage = p
