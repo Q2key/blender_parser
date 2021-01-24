@@ -77,13 +77,15 @@ class Engine(EngineBase):
 			for v in d['variants']:
 				d['file_id'] = d['prefix'] + v + d['suffix']
 				d['variant'] = v
-				print("PROCESSING DETAIL:")
 				self.before_render(d)
 				self.render_partial(d)
+				self.after_render(d)
 		else:
 			d['file_id'] = d['prefix'] + d['suffix']
 			self.before_render(d)
 			self.render_partial(d)
+			self.after_render(d)
+
 
 	def preprocess_details(self, d):
 
@@ -93,13 +95,12 @@ class Engine(EngineBase):
 		for obj in bpy.data.objects:
 			n = obj.name
 			is_included = bool(d['included']) and n in d['included'][v_name]
-			is_catcher = bool(d['shadow_catchers']
-							  ) and n in d['shadow_catchers']
+
 			is_target = (n == d_name)
 			is_mask = bool(d['masks']) and n in d['masks'][v_name]
+			is_light = bool(d['light'] and n in d['light'])
 
-			if is_catcher:
-				#obj.cycles.is_shadow_catcher = True
+			if is_light:
 				obj.hide_render = False
 
 			if is_target:
@@ -110,6 +111,7 @@ class Engine(EngineBase):
 
 			if is_mask:
 				obj.hide_render = False
+				HoldoutWorker.create_holdout_material()
 				HoldoutWorker.apply_holdout_material(obj)
 
 	def set_default(self):
@@ -123,6 +125,20 @@ class Engine(EngineBase):
 		self.set_default()
 		self.preprocess_details(d)
 
+	def after_render(self, d):
+
+		v_name = d['variant']
+		m_name = d['type']
+
+		for obj in bpy.data.objects:
+			n = obj.name
+			is_mask = bool(d['masks']) and n in d['masks'][v_name]
+
+			if is_mask:
+				obj.hide_render = False
+				HoldoutWorker.restore_material(obj, m_name)
+
+
 	def render_partial(self, d):
 		self.before_render(d)
 
@@ -134,10 +150,6 @@ class Engine(EngineBase):
 		dh.make_folder_by_detail(sp)
 		dh.make_folder_by_detail(mp)
 		dh.make_folder_by_detail(fp)
-
-		print("\r\n ---- ")
-		print(d['prefix'] + d["variant"] + "/" + d["folder"])
-
 		dat_file = ph.read_dat_file(fp)
 
 		# create image saver
