@@ -31,5 +31,4 @@ class HoldoutWorker():
     @staticmethod
     def restore_material(obj, detail_name):
         m = MaterialRegistry.get_material_by_name(detail_name)
-        print('\r\nrestore_material: ', m)
         obj.data.materials[0] = bpy.data.materials.get(m)
