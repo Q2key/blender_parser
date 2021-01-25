@@ -136,7 +136,7 @@ class Engine(EngineBase):
 
 			if is_mask:
 				obj.hide_render = False
-				HoldoutWorker.restore_material(obj, m_name)
+				HoldoutWorker.restore_material(obj, n)
 
 
 	def render_partial(self, d):
