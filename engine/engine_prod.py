@@ -86,7 +86,6 @@ class Engine(EngineBase):
 			self.render_partial(d)
 			self.after_render(d)
 
-
 	def preprocess_details(self, d):
 
 		d_name = d['file_id']
@@ -123,7 +122,16 @@ class Engine(EngineBase):
 
 	def before_render(self, d):
 		self.set_default()
+		self.save_details_state()
 		self.preprocess_details(d)
+
+	def save_details_state(self):
+		d = dict()
+		for obj in bpy.data.objects:
+			if str(type(obj.data)) == "<class 'bpy_types.Mesh'>":
+				d[obj.name] = obj.data.materials[0].name
+		
+		ph.write_json(self.ctx.SCENE_STATE_PATH, d)
 
 	def after_render(self, d):
 
@@ -136,7 +144,7 @@ class Engine(EngineBase):
 
 			if is_mask:
 				obj.hide_render = False
-				HoldoutWorker.restore_material(obj, n)
+				HoldoutWorker.restore_material(obj, n, self.ctx.SCENE_STATE_PATH)
 
 
 	def render_partial(self, d):

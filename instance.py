@@ -15,10 +15,12 @@ class Instance:
         self.BUTTONS_PATH = str.format("{0}/buttons", self.STORE_PATH)
         self.LABEL_PATH = str.format("{0}/label", self.STORE_PATH)
         self.CONFIG_PATH = str.format("{0}/config", src_path)
+        self.SCENE_PATH = str.format("{0}/scenes", src_path)
         self.SCENE = self.read_json(
             str.format("{0}/config/scene.json", src_path))
         
         self.RENDERS_PATH = str.format(self.SCENE["RenderStorage"], src_path)
+        self.SCENE_STATE_PATH = self.SCENE_PATH + "/state.details.txt"
 
         self.init_details_config()
 
