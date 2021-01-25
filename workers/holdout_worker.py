@@ -1,7 +1,6 @@
 from workers.material_info import MaterialInfo
 from workers.colors import Colors
 from helpers.process import ProcessHelper as ph
-from structs.material_registry import MaterialRegistry
 from os import sys
 import bpy
 
@@ -31,4 +30,4 @@ class HoldoutWorker():
     @staticmethod
     def restore_material(obj, detail_name, details_state_json):
         m = ph.read_json(details_state_json)
-        obj.data.materials[0] = bpy.data.materials.get(m)
+        obj.data.materials[0] = bpy.data.materials.get(m[detail_name])

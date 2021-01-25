@@ -38,6 +38,7 @@ class Engine(EngineBase):
 	def go(self):
 		self.timer.watch_start()
 		self.set_scene()
+		self.save_details_state()
 		self.process_elements()
 		self.timer.watch_stop()
 		self.timer.print_diff()
@@ -122,7 +123,6 @@ class Engine(EngineBase):
 
 	def before_render(self, d):
 		self.set_default()
-		self.save_details_state()
 		self.preprocess_details(d)
 
 	def save_details_state(self):
