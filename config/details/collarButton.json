@@ -1,0 +1,40 @@
+{
+    "type": "buttons",
+    "shadow_catchers": [],
+    "prefix": "collar",
+    "light": [
+		"area_1",
+		"area_2",
+		"point_1",
+		"point_2",
+		"point_3",
+		"point_4",
+		"point_5",
+		"point_6",
+		"sun"
+	],
+    "variants": [
+        "Mao",
+        "Mandarin",
+        "WingTip",
+        "King",
+        "Cutaway",
+        "Kent",
+        "Windsor",
+        "Roma",
+        "Colorado",
+        "ColoradoMini",
+        "VintageClub",
+        "Londoner",
+        "VintageClubMini",
+        "ButtonDown",
+        "ButtonDownMini",
+        "Colorado2buttons",
+        "Londoner2buttons",
+        "Classic"
+    ],
+    "included": false,
+    "masks": false,
+    "suffix": "Button",
+    "folder": "button"
+}

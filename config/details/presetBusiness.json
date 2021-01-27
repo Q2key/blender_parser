@@ -1,0 +1,51 @@
+{
+    "type": "preset",
+    "prefix": "",
+    "preset_id": "business",
+    "light": [
+        "area_1",
+        "area_2",
+        "point_1",
+        "point_2",
+        "point_3",
+        "point_4",
+        "point_5",
+        "point_6",
+        "sun"
+    ],
+    "variants": [
+        "preset"
+    ],
+    "suffix": "",
+    "included": {
+        "preset": [
+            "bodyShirtHidden",
+            "bodyShirtInternal",
+            "bodyShirtLogo",
+            "bodyShirtStandartStrings",
+            "bodyShirtButton",
+            "collarColorado",
+            "collarColoradoButton",
+            "collarColoradoSeam",
+            "collarColoradoExternalStand",
+            "collarColoradoInternalStand",
+            "collarColoradoSeamInternalStand",
+            "collarColoradoSeamSeamStand",
+            "cuffOneButtonButton_a",
+            "cuffOneButtonExternal_a",
+            "cuffOneButtonInternal_a",
+            "cuffOneButtonStrings_a"
+        ]
+    },
+    "button_texture": {
+        "id": "SG2-1953",
+        "texture": "C:/Projects/shirtsRender/textures/static/buttons/SG2-1953.png"
+    },
+    "label_texture": {
+        "id" : "remark_birka",
+        "texture": "C:/Projects/shirtsRender/textures/static/label/remark_birka.png"
+    },
+    "shadow_catchers": [],
+    "masks": false,
+    "folder": "business"
+}

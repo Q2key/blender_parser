@@ -1,0 +1,28 @@
+{
+    "type": "fabric",
+    "shadow_catchers": [],
+    "prefix": "pocket",
+    "light": [
+        "area_1",
+        "area_2",
+        "point_1",
+        "point_2",
+        "point_3",
+        "point_4",
+        "point_5",
+        "point_6",
+        "sun"
+    ],
+    "variants": [
+        "left"
+    ],
+    "included": {
+        "left": [
+            "pocketLeft",
+            "pocketLeftStrings"
+        ]
+    },
+    "masks": false,
+    "suffix": "",
+    "folder": "parent"
+}

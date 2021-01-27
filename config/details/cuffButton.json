@@ -1,0 +1,81 @@
+{
+    "type": "buttons",
+    "shadow_catchers": [],
+    "prefix": "cuff",
+    "light": [
+		"area_1",
+		"area_2",
+		"point_1",
+		"point_2",
+		"point_3",
+		"point_4",
+		"point_5",
+		"point_6",
+		"sun"
+	],
+    "variants": [
+        "OneButton_a",
+        "OneButton_b",
+        "OneButton_c",
+        "OneButton_d",
+
+        "Regulated_a",
+        "Regulated_b",
+        "Regulated_c",
+        "Regulated_d",
+
+        "TwoButtons_a",
+        "TwoButtons_b",
+        "TwoButtons_c",
+        "TwoButtons_d",
+
+        "French_a",
+        "French_b",
+        "French_c",
+        "French_d",
+
+        "LinksWien_a",
+        "LinksWien_b",
+        "LinksWien_c",
+        "LinksWien_d",
+
+        "LinksSingle_a",
+        "LinksSingle_b",
+        "LinksSingle_c",
+        "LinksSingle_d"
+    ],
+    "included": {
+        "OneButton_a": ["cuffOneButtonButton_a"],
+        "OneButton_b": ["cuffOneButtonButton_b"],
+        "OneButton_c": ["cuffOneButtonButton_c"],
+        "OneButton_d": ["cuffOneButtonButton_d"],
+
+        "Regulated_a": ["cuffRegulatedButton_a"],
+        "Regulated_b": ["cuffRegulatedButton_b"],
+        "Regulated_c": ["cuffRegulatedButton_c"],
+        "Regulated_d": ["cuffRegulatedButton_d"],
+
+        "TwoButtons_a": ["cuffTwoButtonsButton_a"],
+        "TwoButtons_b": ["cuffTwoButtonsButton_b"],
+        "TwoButtons_c": ["cuffTwoButtonsButton_c"],
+        "TwoButtons_d": ["cuffTwoButtonsButton_d"],
+
+        "French_a": ["cuffFrenchButton_a"],
+        "French_b": ["cuffFrenchButton_b"],
+        "French_c": ["cuffFrenchButton_c"],
+        "French_d": ["cuffFrenchButton_d"],
+
+        "LinksWien_a": ["LinksWienButton_a"],
+        "LinksWien_b": ["LinksWienButton_b"],
+        "LinksWien_c": ["LinksWienButton_c"],
+        "LinksWien_d": ["LinksWienButton_d"],
+
+        "LinksSingle_a": ["cuffLinksSingleButton_a"],
+        "LinksSingle_b": ["cuffLinksSingleButton_b"],
+        "LinksSingle_c": ["cuffLinksSingleButton_c"],
+        "LinksSingle_d": ["cuffLinksSingleButton_d"]
+    },
+    "masks": false,
+    "suffix": "",
+    "folder": "button"
+}

@@ -3,7 +3,6 @@ renders/*
 *.pyo
 __pycache__/
 
-config/
 textures/
 scenes/
 

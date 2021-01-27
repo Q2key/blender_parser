@@ -1,0 +1,34 @@
+{
+    "Resolution": {
+        "Big": {
+            "x": 1600,
+            "y": 2180,
+            "quality": 100
+        },
+        "Small": {
+            "x": 400,
+            "y": 545,
+            "quality": 80
+        },
+        "XSmall": {
+            "x": 100,
+            "y": 136,
+            "quality": 35
+        },
+        "Catalog": {
+            "x": 400,
+            "y": 545,
+            "quality": 35
+        }
+    },
+    "Percentage": 100,
+    "Compression": 100,
+    "SamplesCount": 128,
+    "TexturesFormat": [
+        ".png",
+        ".jpg"
+    ],
+    "Engine": "BLENDER_EEVEE",
+    "TempFile": "G:\\tempishe.png",
+    "RenderStorage": "renders"
+}
