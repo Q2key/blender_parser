@@ -173,7 +173,10 @@ class Engine(EngineBase):
 			self.set_material(m, d)
 			self.render_detail()
 
-			# save SOLID image
+			# clean orphans
+			self.purge_oprhans_data()
+
+			# save image
 			saver.set_paths_hierarhy([
 				self.folder,
 				d['prefix'] + d["variant"],
@@ -223,6 +226,9 @@ class Engine(EngineBase):
 		bpy.data.scenes["Scene"].render.resolution_y = l["y"]
 		bpy.data.scenes["Scene"].render.resolution_percentage = p
 		bpy.data.scenes["Scene"].render.image_settings.compression = c
+
+	def purge_oprhans_data(self):
+		bpy.ops.outliner.orphans_purge()
 
 	def render_detail(self):
 		bpy.context.scene.render.filepath = self.ctx.SCENE["TempFile"]
