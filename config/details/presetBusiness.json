@@ -19,9 +19,9 @@
     "suffix": "",
     "included": {
         "preset": [
-            "bodyShirtHidden",
-            "bodyShirtHiddenStrings",
-            "bodyShirtHiddenButton",
+            "bodyShirtStandart",
+            "bodyShirtStandartStrings",
+            "bodyShirtStandartButton",
             "bodyShirtInternal",
             "bodyShirtLogo",
             "collarColorado",
