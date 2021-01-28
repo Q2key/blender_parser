@@ -3,15 +3,9 @@
     "prefix": "",
     "preset_id": "tuxedo",
     "light": [
-        "area_1",
-        "area_2",
-        "point_1",
-        "point_2",
-        "point_3",
-        "point_4",
-        "point_5",
-        "point_6",
-        "sun"
+        "area_like_0",
+        "area_like_1",
+        "area_like_2"
     ],
     "variants": [
         "preset"
@@ -30,7 +24,7 @@
             "collarRomaExternalStand",
             "collarRomaInternalStand",
             "collarRomaSeamInternalStand",
-            "collarRomaSeamSeamStand",
+            "collarRomaSeamExternalStand",
             "cuffFrenchButton_a",
             "cuffFrenchExternal_a",
             "cuffFrenchInternal_a",

@@ -1,1 +1,1 @@
-call C:/blender29/blender scenes/remark.blend --background --python run.py -- -store %*
+call C:/blender29/blender scenes/test.blend --background --python run.py -- -store %*

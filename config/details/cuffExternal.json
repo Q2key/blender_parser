@@ -3,15 +3,9 @@
     "shadow_catchers": [],
     "prefix": "cuff",
     "light": [
-        "area_1",
-        "area_2",
-        "point_1",
-        "point_2",
-        "point_3",
-        "point_4",
-        "point_5",
-        "point_6",
-        "sun"
+        "area_like_0",
+        "area_like_1",
+        "area_like_2"
     ],
     "variants": [
         "OneButton_a",
