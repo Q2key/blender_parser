@@ -1,7 +1,6 @@
 {
 	"type": "fabric",
-	"shadow_catchers": [
-	],
+	"shadow_catchers": [],
 	"variants": [
 		"Colorado",
 		"Mao",
@@ -14,8 +13,8 @@
 		"Roma",
 		"Colorado",
 		"ColoradoMini",
-		"VintageClub",
 		"Londoner",
+		"VintageClub",
 		"VintageClubMini",
 		"ButtonDown",
 		"ButtonDownMini",
@@ -25,9 +24,9 @@
 	],
 	"prefix": "collar",
 	"light": [
-        "area_like_0",
-        "area_like_1",
-        "area_like_2"
+		"area_like_0",
+		"area_like_1",
+		"area_like_2"
 	],
 	"included": {
 		"King": [
@@ -90,10 +89,8 @@
 			"collarCatcher",
 			"collarClassicSeam"
 		],
-		"Mao": [
-		],
-		"Mandarin": [
-		],
+		"Mao": [],
+		"Mandarin": [],
 		"WingTip": [
 			"collarCatcher",
 			"collarWingTipSeam"
@@ -114,7 +111,7 @@
 		],
 		"Cutaway": [
 			"collarCutawayInternalStand",
-			"collarCutawayExternallStand",
+			"collarCutawayExternalStand",
 			"collarCutawayButton",
 			"bodyShirtInternal"
 		],
@@ -143,21 +140,21 @@
 			"bodyShirtInternal"
 		],
 		"VintageClub": [
-			"collarVintageInternalStand",
-			"collarVintageExternalStand",
-			"collarVintageButton",
+			"collarVintageClubInternalStand",
+			"collarVintageClubExternalStand",
+			"collarVintageClubButton",
+			"bodyShirtInternal"
+		],
+		"VintageClubMini": [
+			"collarVintageClubMiniInternalStand",
+			"collarVintageClubMiniExternalStand",
+			"collarVintageClubMiniButton",
 			"bodyShirtInternal"
 		],
 		"Londoner": [
 			"collarLondonerInternalStand",
 			"collarLondonerExternalStand",
 			"collarLondonerButton",
-			"bodyShirtInternal"
-		],
-		"VintageClubMini": [
-			"collarVintageInternalStand",
-			"collarVintageExternalStand",
-			"collarVintageButton",
 			"bodyShirtInternal"
 		],
 		"ButtonDown": [

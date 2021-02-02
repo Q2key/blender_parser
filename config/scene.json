@@ -13,12 +13,12 @@
         "XSmall": {
             "x": 100,
             "y": 136,
-            "quality": 35
+            "quality": 80
         },
         "Catalog": {
             "x": 400,
             "y": 545,
-            "quality": 35
+            "quality": 80
         }
     },
     "Percentage": 100,

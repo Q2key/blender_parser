@@ -12,12 +12,15 @@
     ],
     "included": {
         "left": [
-            "pocketCatcher",
             "pocketLeft",
             "pocketLeftStrings"
         ]
     },
-    "masks": false,
+    "masks": {
+        "left": [
+            "bodyShirtHidden"
+        ]
+    },
     "suffix": "",
     "folder": "parent"
 }

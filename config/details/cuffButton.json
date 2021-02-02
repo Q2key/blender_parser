@@ -59,10 +59,10 @@
         "French_c": ["cuffFrenchButton_c"],
         "French_d": ["cuffFrenchButton_d"],
 
-        "LinksWien_a": ["LinksWienButton_a"],
-        "LinksWien_b": ["LinksWienButton_b"],
-        "LinksWien_c": ["LinksWienButton_c"],
-        "LinksWien_d": ["LinksWienButton_d"],
+        "LinksWien_a": ["cuffLinksWienButton_a"],
+        "LinksWien_b": ["cuffLinksWienButton_b"],
+        "LinksWien_c": ["cuffLinksWienButton_c"],
+        "LinksWien_d": ["cuffLinksWienButton_d"],
 
         "LinksSingle_a": ["cuffLinksSingleButton_a"],
         "LinksSingle_b": ["cuffLinksSingleButton_b"],
