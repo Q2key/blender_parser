@@ -201,7 +201,7 @@ class Engine(EngineBase):
 			FabricWorker.create_fabric_multy_material(material, scale)
 			FabricWorker.collar_seam_multy_material(material)
 		if detail['type'] == 'preset':
-			FabricWorker.create_fabric_multy_material(material)
+			FabricWorker.create_fabric_multy_material(material, scale)
 			FabricWorker.collar_seam_multy_material(material)
 			PlasticWorker.create_img_button_material(detail['button_texture'])
 			LabelWorker.label_seam_multy_material(detail['label_texture'])
