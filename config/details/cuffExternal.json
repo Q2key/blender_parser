@@ -8,8 +8,35 @@
         "area_like_2"
     ],
     "variants": [
-        "TwoButtons_c",
-        "French_a"
+		"OneButton_a",
+		"OneButton_b",
+		"OneButton_c",
+		"OneButton_d",
+
+		"Regulated_a",
+		"Regulated_b",
+		"Regulated_c",
+		"Regulated_d",
+
+		"TwoButtons_a",
+		"TwoButtons_b",
+		"TwoButtons_c",
+		"TwoButtons_d",
+
+		"French_a",
+		"French_b",
+		"French_c",
+		"French_d",
+
+		"LinksWien_a",
+		"LinksWien_b",
+		"LinksWien_c",
+		"LinksWien_d",
+
+		"LinksSingle_a",
+		"LinksSingle_b",
+		"LinksSingle_c",
+		"LinksSingle_d"
     ],
     "included": {
         "OneButton_a": [
@@ -208,10 +235,21 @@
         ]
     },
     "scale": {
-        "TwoButtons_a": [1.8, 1.8, 1.8],
-        "TwoButtons_b": [1.8, 1.8, 1.8],
-        "TwoButtons_c": [1.8, 1.8, 1.8],
-        "TwoButtons_d": [1.8, 1.8, 1.8]
+        "French_a": [
+            1.45,
+            1.45,
+            1.45
+        ],
+        "TwoButtons_b": [
+            2.1,
+            2.1,
+            2.1
+        ],
+        "TwoButtons_с": [
+            2.1,
+            2.1,
+            2.1
+        ]
     },
     "folder": "External",
     "suffix": ""

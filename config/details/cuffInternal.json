@@ -100,6 +100,23 @@
 		"LinksSingle_c": ["cuffLinksSingleExternal_c"],
 		"LinksSingle_d": ["cuffLinksSingleExternal_d"]
 	},
+	"scale": {
+        "French_a": [
+            1.45,
+            1.45,
+            1.45
+        ],
+        "TwoButtons_b": [
+            2.1,
+            2.1,
+            2.1
+        ],
+        "TwoButtons_с": [
+            2.1,
+            2.1,
+            2.1
+        ]
+    },
 	"suffix":"",
 	"folder": "Internal"
 }

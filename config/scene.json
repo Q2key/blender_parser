@@ -8,17 +8,17 @@
         "Small": {
             "x": 400,
             "y": 545,
-            "quality": 80
+            "quality": 100
         },
         "XSmall": {
-            "x": 100,
-            "y": 136,
-            "quality": 80
+            "x": 200,
+            "y": 272,
+            "quality": 100
         },
         "Catalog": {
             "x": 400,
             "y": 545,
-            "quality": 80
+            "quality": 100
         }
     },
     "Percentage": 100,
