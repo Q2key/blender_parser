@@ -19,7 +19,7 @@
     "included": {
         "Planked": ["bodyShirtButton"],
         "Standart": ["bodyShirtButton"],
-        "Hidden": ["bodyShirtButton"],
+        "Hidden": [],
         "Tuxedo": ["bodyShirtButton"]
     },
     "folder": "button",

@@ -74,6 +74,9 @@ class Engine(EngineBase):
 	# 7
 	def process_details(self, d):
 		d['variant'] = 'parent'
+
+
+
 		if len(d['variants']) > 0:
 			for v in d['variants']:
 				d['file_id'] = d['prefix'] + v + d['suffix']
@@ -189,8 +192,13 @@ class Engine(EngineBase):
 			self.stat.increment()
 
 	def set_material(self, material, detail):
+		v_name = detail['variant']
+		scale = None
+		if 'scale' in detail and v_name in detail['scale']:
+			scale = detail['scale'][v_name]
+		
 		if detail['type'] == 'fabric':
-			FabricWorker.create_fabric_multy_material(material)
+			FabricWorker.create_fabric_multy_material(material, scale)
 			FabricWorker.collar_seam_multy_material(material)
 		if detail['type'] == 'preset':
 			FabricWorker.create_fabric_multy_material(material)

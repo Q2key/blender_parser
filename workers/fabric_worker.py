@@ -4,8 +4,12 @@ import bpy
 class FabricWorker():
 
     @staticmethod
-    def create_fabric_multy_material(m):
+    def create_fabric_multy_material(m, scale):
         ''' set material '''
+
+        shader_scale = [1.3, 1.3, 1.3]
+        if scale != None:
+            shader_scale = scale
 
         mi = MaterialInfo.get_material_info('fabric_material',True)
 
@@ -17,10 +21,10 @@ class FabricWorker():
         shaderNodeMapping = mi['nodes'].new("ShaderNodeMapping")
         shaderNodeMapping.vector_type = 'TEXTURE'
 
-        # выставляем скалирование текстуры под нормали сцены
-        shaderNodeMapping.inputs[3].default_value[0] = 1.3
-        shaderNodeMapping.inputs[3].default_value[0] = 1.3
-        shaderNodeMapping.inputs[3].default_value[0] = 1.3
+        # выставляем скалирование текстуры
+        shaderNodeMapping.inputs[3].default_value[0] = shader_scale[0]
+        shaderNodeMapping.inputs[3].default_value[1] = shader_scale[1]
+        shaderNodeMapping.inputs[3].default_value[2] = shader_scale[2]
         shaderNodeMapping.location = [-700, -100]
 
         # shaderNodeTexImage
@@ -49,3 +53,4 @@ class FabricWorker():
     def collar_seam_multy_material(m):
         mi = MaterialInfo.get_material_info('collar_seam_material',False)
         mi['nodes']['Image Texture'].image = bpy.data.images.load(m['texture'])
+        
