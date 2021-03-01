@@ -8,35 +8,7 @@
         "area_like_2"
     ],
 	"variants": [
-		"OneButton_a",
-		"OneButton_b",
-		"OneButton_c",
-		"OneButton_d",
-
-		"Regulated_a",
-		"Regulated_b",
-		"Regulated_c",
-		"Regulated_d",
-
-		"TwoButtons_a",
-		"TwoButtons_b",
-		"TwoButtons_c",
-		"TwoButtons_d",
-
-		"French_a",
-		"French_b",
-		"French_c",
-		"French_d",
-
-		"LinksWien_a",
-		"LinksWien_b",
-		"LinksWien_c",
-		"LinksWien_d",
-
-		"LinksSingle_a",
-		"LinksSingle_b",
-		"LinksSingle_c",
-		"LinksSingle_d"
+		"TwoButtons_c"
 	],
 	"included": {
 		"OneButton_a": ["cuffOneButtonInternal_a"],
