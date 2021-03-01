@@ -40,6 +40,7 @@ parser.add_argument("--suffix", type=str,default='')
 parser.add_argument("--variant", type=str)
 parser.add_argument("--material", type=str)
 parser.add_argument("--configFamily", type=str)
+parser.add_argument("--forget", type=str)
 
 
 args = parser.parse_args()
