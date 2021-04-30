@@ -46,27 +46,18 @@ class PillowProvider:
 
 		png = Image.open(cp_img)
 
-		png.load()
-		png = png.resize(
+		png_white = Image.new("RGB", png.size, "WHITE")
+		png_white.paste(png, (0, 0), png) 
+		png_white = png_white.resize(
 			(
 				sizes["x"],
 				sizes["y"]
 			), 
 			Image.ANTIALIAS
 		)
-
-		background = Image.new(
-			"RGB",
-			png.size,
-			(255, 255, 255)
-		)
-
-		
-		background.save(
+		png_white.save(
 			out,
 			'JPEG',
-			progressive=True,
-			optimize=True,
 			quality=sizes["quality"]
 			)
 		
