@@ -60,10 +60,7 @@ class PillowProvider:
 			png.size,
 			(255, 255, 255)
 		)
-		
-		background.paste(png,
-			mask=png.split()[3]
-		)
+
 		
 		background.save(
 			out,
