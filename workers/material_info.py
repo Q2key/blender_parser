@@ -16,7 +16,7 @@ class MaterialInfo:
 
         # define nodes tree
         nt = mat.node_tree
-        nt.name = 'ntg'
+        #nt.name = 'ntg'
         nodes = nt.nodes
         links = nt.links
 

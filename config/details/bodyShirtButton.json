@@ -1,0 +1,27 @@
+{
+    "type": "buttons",
+    "prefix": "bodyShirt",
+    "light": [
+        "area_like_0",
+        "area_like_1",
+        "area_like_2"
+	],
+    "variants": [ 
+        "Planked",
+        "Standart",
+        "Hidden",
+        "Tuxedo"
+     ],
+    "suffix":"Button",
+    "shadow_catchers": [
+        "bodyShirtStandart"
+    ],
+    "included": {
+        "Planked": ["bodyShirtButton"],
+        "Standart": ["bodyShirtButton"],
+        "Hidden": [],
+        "Tuxedo": ["bodyShirtButton"]
+    },
+    "folder": "button",
+    "masks": false
+}

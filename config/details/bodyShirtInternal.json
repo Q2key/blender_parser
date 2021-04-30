@@ -1,0 +1,25 @@
+{
+    "type": "fabric",
+    "shadow_catchers": [],
+    "prefix": "bodyShirt",
+    "light": [
+        "area_like_0",
+        "area_like_1",
+        "area_like_2"
+	],
+    "variants": [
+        "Planked",
+        "Standart",
+        "Hidden",
+        "Tuxedo"
+    ],
+    "included": {
+        "Planked": ["bodyShirtInternal"],
+        "Standart": ["bodyShirtInternal"],
+        "Hidden": ["bodyShirtInternal"],
+        "Tuxedo": ["bodyShirtInternal"]
+    },
+    "masks": false,
+    "suffix": "Internal",
+    "folder": "Internal"
+}

@@ -4,10 +4,6 @@ from abc import ABC, abstractmethod
 class EngineBase(ABC):
 
     @abstractmethod
-    def extend_materials(self, d):
-        pass
-
-    @abstractmethod
     def go(self):
         pass
 
@@ -20,19 +16,11 @@ class EngineBase(ABC):
         pass
 
     @abstractmethod
-    def extend_details(self):
-        pass
-
-    @abstractmethod
     def process_details(self):
         pass
 
     @abstractmethod
-    def set_catchers(self, d):
-        pass
-
-    @abstractmethod
-    def set_excluded(self, d):
+    def preprocess_details(self, d):
         pass
 
     @abstractmethod

@@ -1,0 +1,45 @@
+{
+    "type": "preset",
+    "prefix": "",
+    "preset_id": "formal",
+    "light": [
+        "area_like_0",
+        "area_like_1",
+        "area_like_2"
+    ],
+    "variants": [
+        "preset"
+    ],
+    "suffix": "",
+    "included": {
+        "preset": [
+            "bodyShirtStandart",
+            "bodyShirtStandartStrings",
+            "bodyShirtStandartButton",
+            "bodyShirtInternal",
+            "bodyShirtLogo",
+            "collarRoma",
+            "collarRomaButton",
+            "collarRomaSeam",
+            "collarRomaExternalStand",
+            "collarRomaInternalStand",
+            "collarRomaSeamInternalStand",
+            "collarRomaSeamExternalStand",
+            "cuffFrenchButton_a",
+            "cuffFrenchExternal_a",
+            "cuffFrenchInternal_a",
+            "cuffFrenchStrings_a"
+        ]
+    },
+    "button_texture": {
+        "id": "11018",
+        "texture": "C:/dev/blender_parser/textures/static/buttons/11018.png"
+    },
+    "label_texture": {
+        "id" : "remark_birka",
+        "texture": "C:/dev/blender_parser/textures/static/label/remark_birka.png"
+    },
+    "shadow_catchers": [],
+    "masks": false,
+    "folder": "formal"
+}

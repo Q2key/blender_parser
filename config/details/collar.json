@@ -1,0 +1,211 @@
+{
+	"type": "fabric",
+	"shadow_catchers": [],
+	"variants": [
+		"Colorado",
+		"Mao",
+		"Mandarin",
+		"WingTip",
+		"King",
+		"Cutaway",
+		"Kent",
+		"Windsor",
+		"Roma",
+		"Colorado",
+		"ColoradoMini",
+		"Londoner",
+		"VintageClub",
+		"VintageClubMini",
+		"ButtonDown",
+		"ButtonDownMini",
+		"Colorado2buttons",
+		"Londoner2buttons",
+		"Classic"
+	],
+	"prefix": "collar",
+	"light": [
+		"area_like_0",
+		"area_like_1",
+		"area_like_2"
+	],
+	"included": {
+		"King": [
+			"collarCatcher",
+			"collarKingSeam"
+		],
+		"Colorado": [
+			"collarCatcher",
+			"collarColoradoSeam"
+		],
+		"Cutaway": [
+			"collarCatcher",
+			"collarCutawaySeam"
+		],
+		"Kent": [
+			"collarCatcher",
+			"collarKentSeam"
+		],
+		"Windsor": [
+			"collarCatcher",
+			"collarWindsorSeam"
+		],
+		"Roma": [
+			"collarCatcher",
+			"collarRomaSeam"
+		],
+		"ColoradoMini": [
+			"collarCatcher",
+			"collarColoradoMiniSeam"
+		],
+		"VintageClub": [
+			"collarCatcher",
+			"collarVintageClubSeam"
+		],
+		"Londoner": [
+			"collarCatcher",
+			"collarLondonerSeam"
+		],
+		"VintageClubMini": [
+			"collarCatcher",
+			"collarVintageClubMiniSeam"
+		],
+		"ButtonDown": [
+			"collarCatcher",
+			"collarButtonDownSeam"
+		],
+		"ButtonDownMini": [
+			"collarCatcher",
+			"collarButtonDownMiniSeam"
+		],
+		"Colorado2buttons": [
+			"collarCatcher",
+			"collarColorado2buttonsSeam"
+		],
+		"Londoner2buttons": [
+			"collarCatcher",
+			"collarLondoner2buttonsSeam"
+		],
+		"Classic": [
+			"collarCatcher",
+			"collarClassicSeam"
+		],
+		"Mao": [],
+		"Mandarin": [],
+		"WingTip": [
+			"collarCatcher",
+			"collarWingTipSeam"
+		]
+	},
+	"masks": {
+		"King": [
+			"collarKingInternalStand",
+			"collarKingExternalStand",
+			"collarKingButton",
+			"bodyShirtInternal"
+		],
+		"Colorado": [
+			"collarColoradoInternalStand",
+			"collarColoradoExternalStand",
+			"collarColoradoButton",
+			"bodyShirtInternal"
+		],
+		"Cutaway": [
+			"collarCutawayInternalStand",
+			"collarCutawayExternalStand",
+			"collarCutawayButton",
+			"bodyShirtInternal"
+		],
+		"Kent": [
+			"collarKentInternalStand",
+			"collarKentExternalStand",
+			"collarKentButton",
+			"bodyShirtInternal"
+		],
+		"Windsor": [
+			"collarWindsorInternalStand",
+			"collarWindsorExternalStand",
+			"collarWindsorButton",
+			"bodyShirtInternal"
+		],
+		"Roma": [
+			"collarRomaInternalStand",
+			"collarRomaExternalStand",
+			"collarRomaButton",
+			"bodyShirtInternal"
+		],
+		"ColoradoMini": [
+			"collarColoradoInternalStand",
+			"collarColoradoExternalStand",
+			"collarColoradoButton",
+			"bodyShirtInternal"
+		],
+		"VintageClub": [
+			"collarVintageClubInternalStand",
+			"collarVintageClubExternalStand",
+			"collarVintageClubButton",
+			"bodyShirtInternal"
+		],
+		"VintageClubMini": [
+			"collarVintageClubMiniInternalStand",
+			"collarVintageClubMiniExternalStand",
+			"collarVintageClubMiniButton",
+			"bodyShirtInternal"
+		],
+		"Londoner": [
+			"collarLondonerInternalStand",
+			"collarLondonerExternalStand",
+			"collarLondonerButton",
+			"bodyShirtInternal"
+		],
+		"ButtonDown": [
+			"collarButtonDownInternalStand",
+			"collarButtonDownExternalStand",
+			"collarButtonDownButton",
+			"bodyShirtInternal"
+		],
+		"ButtonDownMini": [
+			"collarButtonDownMiniInternalStand",
+			"collarButtonDownMiniExternalStand",
+			"collarButtonDownMiniButton",
+			"bodyShirtInternal"
+		],
+		"Colorado2buttons": [
+			"collarColorado2buttonsInternalStand",
+			"collarColorado2buttonsExternalStand",
+			"collarColorado2buttonsButton",
+			"bodyShirtInternal"
+		],
+		"Londoner2buttons": [
+			"collarLondoner2buttonsInternalStand",
+			"collarLondoner2buttonsExternalStand",
+			"collarLondoner2buttonsButton",
+			"bodyShirtInternal"
+		],
+		"Classic": [
+			"collarClassicInternalStand",
+			"collarClassicExternalStand",
+			"collarClassicButton",
+			"bodyShirtInternal"
+		],
+		"Mao": [
+			"collarMaoInternalStand",
+			"collarMaoExternalStand",
+			"collarMaoButton",
+			"bodyShirtInternal"
+		],
+		"Mandarin": [
+			"collarMandarinInternalStand",
+			"collarMandarinExternalStand",
+			"collarMandarinButton",
+			"bodyShirtInternal"
+		],
+		"WingTip": [
+			"collarWingTipInternalStand",
+			"collarWingTipExternalStand",
+			"collarWingTipButton",
+			"bodyShirtInternal"
+		]
+	},
+	"suffix": "",
+	"folder": "parent"
+}

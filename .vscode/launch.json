@@ -5,13 +5,35 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "DEBUG",
+            "name": "RENDER DEBUG",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/run.py",
             "console": "integratedTerminal",
-            "args": ["--","-w","-e","-d"],
-            "cwd": "C:/blender"
-        }
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "--",
+                "--store",
+                "-d",
+                "--model=collarButton"
+            ],
+        },
+        {
+            "name": "RENDER FORGET",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/run.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "--",
+                "--forget",
+                "-d",
+                "--entity=kioto-denim",
+                "--entity=kioto-navy",
+                "--entity=kioto-purple",
+                "--version=prod-last"
+            ],
+        },
     ]
 }

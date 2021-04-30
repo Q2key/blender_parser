@@ -1,0 +1,36 @@
+{
+    "type": "fabric",
+    "prefix": "bodyShirt",
+    "light": [
+        "area_like_0",
+        "area_like_1",
+        "area_like_2"
+	],
+    "variants": [
+        "Planked",
+        "Standart",
+        "Hidden",
+        "Tuxedo"
+    ],
+    "suffix": "",
+    "included": {
+        "Planked": [
+            "bodyShirtPlanked",
+            "bodyShirtPlankedStrings"
+        ],
+        "Hidden": [
+            "bodyShirtHidden",
+            "bodyShirtHiddenStrings"
+        ],
+        "Standart": [
+            "bodyShirtStandart",
+            "bodyShirtStandartStrings"
+        ],
+        "Tuxedo": [
+            "bodyShirtTuxedo",
+            "bodyShirtTuxedoStrings"
+        ]
+    },
+    "folder": "parent",
+    "masks": false
+}

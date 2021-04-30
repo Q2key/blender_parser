@@ -1,5 +1,9 @@
-
 renders/*
 *.pyc
 *.pyo
-textures/*
+__pycache__/
+
+textures/
+scenes/
+
+*.log

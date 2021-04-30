@@ -1,0 +1,126 @@
+{
+	"type": "fabric",
+	"shadow_catchers": [
+	],
+	"light": [
+        "area_like_0",
+        "area_like_1",
+        "area_like_2"
+	],
+	"prefix": "collar",
+	"variants": [
+		"Mao",
+		"Mandarin",
+		"WingTip",
+		"King",
+		"Cutaway",
+		"Kent",
+		"Windsor",
+		"Roma",
+		"Colorado",
+		"ColoradoMini",
+		"VintageClub",
+		"Londoner",
+		"VintageClubMini",
+		"ButtonDown",
+		"ButtonDownMini",
+		"Colorado2buttons",
+		"Londoner2buttons",
+		"Classic"
+	],
+	"included": {
+		"ButtonDown": [
+			"internalCatcher",
+			"collarButtonDownInternalStand",
+			"collarButtonDownSeamInternalStand"
+		],
+		"ButtonDownMini": [
+			"internalCatcher",
+			"collarButtonDownMiniInternalStand",
+			"collarButtonDownMiniSeamInternalStand"
+		],
+		"Londoner2buttons": [
+			"internalCatcher",
+			"collarLondoner2buttonsSeamInternalStand",
+			"collarLondoner2buttonsInternalStand"
+		],
+		"Classic": [
+			"internalCatcher",
+			"collarClassicSeamInternalStand",
+			"collarClassicInternalStand"
+		],
+		"King": [
+			"internalCatcher",
+			"collarKingSeamInternalStand",
+			"collarKingInternalStand"
+		],
+		"Cutaway": [
+			"internalCatcher",
+			"collarCutawaySeamInternalStand",
+			"collarCutawayInternalStand"
+		],
+		"Kent": [
+			"internalCatcher",
+			"collarKentSeamInternalStand",
+			"collarKentInternalStand"
+		],
+		"Windsor": [
+			"internalCatcher",
+			"collarWindsorSeamInternalStand",
+			"collarWindsorInternalStand"
+		],
+		"Roma": [
+			"internalCatcher",
+			"collarRomaSeamInternalStand",
+			"collarRomaInternalStand"
+		],
+		"Colorado": [
+			"internalCatcher",
+			"collarColoradoSeamInternalStand",
+			"collarColoradoInternalStand"
+		],
+		"ColoradoMini": [
+			"internalCatcher",
+			"collarColoradoMiniSeamInternalStand",
+			"collarColoradoMiniInternalStand"
+		],
+		"Colorado2buttons": [
+			"internalCatcher",
+			"collarColorado2buttonsSeamInternalStand",
+			"collarColorado2buttonsInternalStand"
+		],
+		"VintageClub": [
+			"internalCatcher",
+			"collarVintageClubSeamInternalStand",
+			"collarVintageClubInternalStand"
+		],
+		"Londoner": [
+			"internalCatcher",
+			"collarLondonerSeamInternalStand",
+			"collarLondonerInternalStand"
+		],
+		"VintageClubMini": [
+			"internalCatcher",
+			"collarVintageClubMiniSeamInternalStand",
+			"collarVintageClubMiniInternalStand"
+		],
+		"Mao": [
+			"internalCatcher",
+			"collarMaoSeamInternalStand",
+			"collarMaoInternalStand"
+		],
+		"Mandarin": [
+			"internalCatcher",
+			"collarMandarinSeamInternalStand",
+			"collarMandarinInternalStand"
+		],
+		"WingTip": [
+			"internalCatcher",
+			"collarWingTipSeamInternalStand",
+			"collarWingTipInternalStand"
+		]
+	},
+	"masks": false,
+	"suffix": "InternalStand",
+	"folder": "InternalStand"
+}

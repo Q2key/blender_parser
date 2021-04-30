@@ -1,0 +1,256 @@
+{
+    "type": "fabric",
+    "shadow_catchers": [],
+    "prefix": "cuff",
+    "light": [
+        "area_like_0",
+        "area_like_1",
+        "area_like_2"
+    ],
+    "variants": [
+		"OneButton_a",
+		"OneButton_b",
+		"OneButton_c",
+		"OneButton_d",
+
+		"Regulated_a",
+		"Regulated_b",
+		"Regulated_c",
+		"Regulated_d",
+
+		"TwoButtons_a",
+		"TwoButtons_b",
+		"TwoButtons_c",
+		"TwoButtons_d",
+
+		"French_a",
+		"French_b",
+		"French_c",
+		"French_d",
+
+		"LinksWien_a",
+		"LinksWien_b",
+		"LinksWien_c",
+		"LinksWien_d",
+
+		"LinksSingle_a",
+		"LinksSingle_b",
+		"LinksSingle_c",
+		"LinksSingle_d"
+    ],
+    "included": {
+        "OneButton_a": [
+            "cuffCatcher",
+            "cuffOneButtonExternal_a",
+            "cuffOneButtonStrings_a"
+        ],
+        "OneButton_b": [
+            "cuffCatcher",
+            "cuffOneButtonExternal_b",
+            "cuffOneButtonStrings_b"
+        ],
+        "OneButton_c": [
+            "cuffCatcher",
+            "cuffOneButtonExternal_c",
+            "cuffOneButtonStrings_c"
+        ],
+        "OneButton_d": [
+            "cuffCatcher",
+            "cuffOneButtonExternal_d",
+            "cuffOneButtonStrings_d"
+        ],
+        "Regulated_a": [
+            "cuffCatcher",
+            "cuffRegulatedExternal_a",
+            "cuffRegulatedStrings_a"
+        ],
+        "Regulated_b": [
+            "cuffCatcher",
+            "cuffRegulatedExternal_b",
+            "cuffRegulatedStrings_b"
+        ],
+        "Regulated_c": [
+            "cuffCatcher",
+            "cuffRegulatedExternal_c",
+            "cuffRegulatedStrings_c"
+        ],
+        "Regulated_d": [
+            "cuffCatcher",
+            "cuffRegulatedExternal_d",
+            "cuffRegulatedStrings_d"
+        ],
+        "TwoButtons_a": [
+            "cuffCatcher",
+            "cuffTwoButtonsExternal_a",
+            "cuffTwoButtonsStrings_d"
+        ],
+        "TwoButtons_b": [
+            "cuffCatcher",
+            "cuffTwoButtonsExternal_b",
+            "cuffTwoButtonsStrings_b"
+        ],
+        "TwoButtons_c": [
+            "cuffCatcher",
+            "cuffTwoButtonsExternal_c",
+            "cuffTwoButtonsStrings_c"
+        ],
+        "TwoButtons_d": [
+            "cuffCatcher",
+            "cuffTwoButtonsExternal_d",
+            "cuffTwoButtonsStrings_d"
+        ],
+        "French_a": [
+            "cuffCatcher",
+            "cuffFrenchExternal_a",
+            "cuffFrenchStrings_a"
+        ],
+        "French_b": [
+            "cuffCatcher",
+            "cuffFrenchExternal_b",
+            "cuffFrenchStrings_b"
+        ],
+        "French_c": [
+            "cuffCatcher",
+            "cuffFrenchExternal_c",
+            "cuffFrenchStrings_c"
+        ],
+        "French_d": [
+            "cuffCatcher",
+            "cuffFrenchExternal_d",
+            "cuffFrenchStrings_d"
+        ],
+        "LinksWien_a": [
+            "cuffCatcher",
+            "cuffLinksWienExternal_a",
+            "cuffLinksWienStrings_a"
+        ],
+        "LinksWien_b": [
+            "cuffCatcher",
+            "cuffLinksWienExternal_b",
+            "cuffLinksWienStrings_b"
+        ],
+        "LinksWien_c": [
+            "cuffCatcher",
+            "cuffLinksWienExternal_c",
+            "cuffLinksWienStrings_c"
+        ],
+        "LinksWien_d": [
+            "cuffCatcher",
+            "cuffLinksWienExternal_d",
+            "cuffLinksWienStrings_d"
+        ],
+        "LinksSingle_a": [
+            "cuffCatcher",
+            "cuffLinksSingleExternal_a",
+            "cuffLinksSingleStrings_a"
+        ],
+        "LinksSingle_b": [
+            "cuffCatcher",
+            "cuffLinksSingleExternal_b",
+            "cuffLinksSingleStrings_b"
+        ],
+        "LinksSingle_c": [
+            "cuffCatcher",
+            "cuffLinksSingleExternal_c",
+            "cuffLinksSingleStrings_c"
+        ],
+        "LinksSingle_d": [
+            "cuffCatcher",
+            "cuffLinksSingleExternal_d",
+            "cuffLinksSingleStrings_d"
+        ]
+    },
+    "masks": {
+        "OneButton_a": [
+            "cuffOneButtonInternal_a"
+        ],
+        "OneButton_b": [
+            "cuffOneButtonInternal_b"
+        ],
+        "OneButton_c": [
+            "cuffOneButtonInternal_c"
+        ],
+        "OneButton_d": [
+            "cuffOneButtonInternal_d"
+        ],
+        "Regulated_a": [
+            "cuffRegulatedInternal_a"
+        ],
+        "Regulated_b": [
+            "cuffRegulatedInternal_b"
+        ],
+        "Regulated_c": [
+            "cuffRegulatedInternal_c"
+        ],
+        "Regulated_d": [
+            "cuffRegulatedInternal_d"
+        ],
+        "TwoButtons_a": [
+            "cuffTwoButtonsInternal_a"
+        ],
+        "TwoButtons_b": [
+            "cuffTwoButtonsInternal_b"
+        ],
+        "TwoButtons_c": [
+            "cuffTwoButtonsInternal_c"
+        ],
+        "TwoButtons_d": [
+            "cuffTwoButtonsInternal_d"
+        ],
+        "French_a": [
+            "cuffFrenchInternal_a"
+        ],
+        "French_b": [
+            "cuffFrenchInternal_b"
+        ],
+        "French_c": [
+            "cuffFrenchInternal_c"
+        ],
+        "French_d": [
+            "cuffFrenchInternal_d"
+        ],
+        "LinksWien_a": [
+            "cuffLinksWienInternal_a"
+        ],
+        "LinksWien_b": [
+            "cuffLinksWienInternal_b"
+        ],
+        "LinksWien_c": [
+            "cuffLinksWienInternal_c"
+        ],
+        "LinksWien_d": [
+            "cuffLinksWienInternal_d"
+        ],
+        "LinksSingle_a": [
+            "cuffLinksSingleInternal_a"
+        ],
+        "LinksSingle_b": [
+            "cuffLinksSingleInternal_b"
+        ],
+        "LinksSingle_c": [
+            "cuffLinksSingleInternal_c"
+        ],
+        "LinksSingle_d": [
+            "cuffLinksSingleInternal_d"
+        ]
+    },
+    "scale": {
+        "French_a": [
+            1.45,
+            1.45,
+            1.45
+        ],
+        "TwoButtons_b": [
+            2.1,
+            2.1,
+            2.1
+        ],
+        "TwoButtons_c": [
+            2.1,
+            2.1,
+            2.1
+        ]
+    },
+    "folder": "External",
+    "suffix": ""
+}

@@ -6,126 +6,178 @@ import inspect
 
 from PIL import Image
 from engine.engine_base import EngineBase
-from helpers.process_helper import ProcessHelper as ph
+from helpers.directory import DirectoryHelper as dh
+from helpers.process import ProcessHelper as ph
+
+from helpers.stop_watch import StopWatch
+from helpers.stat import StatHelper
+
+from engine.saver.saver_builder import SaverBuilder
+
+from structs.rendered_object import RenderedObject
+from structs.rendered_identifier import RenderedItentifier
+from structs.rendered_material import RenderedMaterial
+from structs.rendered_mask import RenderedMask
 
 
 class Engine(EngineBase):
 
-    def print_caller(fn):
-        # print(inspect.stack()[1][3])
-        pass
+	# 1
+	def __init__(self, ctx, args=False):
+		self.ctx = ctx
+		self.args = args
+		self.saver_builder = SaverBuilder(ctx, args)
+		self.folder = dh.get_root_folder(ctx.RENDERS_PATH, args)
+		self.stat = StatHelper()
+		self.timer = StopWatch()
 
-    def __init__(self, ctx, args=False):
-        self.print_caller()
-        self.ctx = ctx
-        self.args = args
-        self.folder = ph.get_folder_name(ctx.RENDERS_PATH)
+	# 2
+	def prepare(self):
+		pass
 
-    def extend_materials(self, d):
-        self.print_caller()
-        d['avaibleMaterials'] = [
-            m for m in self.ctx.MATERIALS if m['id'] in d['avaibleMaterialsID']]
+	# 3
+	def go(self):
+		self.timer.watch_start()
+		self.set_scene()
+		self.process_elements()
+		self.timer.watch_stop()
+		self.timer.print_diff()
+		self.stat.print_count()
 
-    def go(self):
-        self.print_caller()
-        self.set_scene()
-        self.process_elements()
+	# 4
+	def process_elements(self):
+		# define details
+		details = self.ctx.DETAILS.items()
+		elements = self.filter_details(details)
+		# extend details
+		for k, d in elements:
+			print('\r\n{0}\r\n'.format(k))
+			self.process_details(d)
+
+	# 5
+	def filter_details(self, elements):
+		if self.args and self.args.model is None:
+			return elements
+
+		details = dict()
+		# Iterate over all the items in dictionary
+		for (key, value) in elements:
+			if key in self.args.model:
+				details[key] = value
+
+		return details.items()
+
+	# 6
+	def get_material(self, d):
+		d['available_material'] = [
+			e for e in self.ctx.MATERIALS
+			if e['id'] in d['available_material_id']]
+
+	# 7
+	def process_details(self, d):
+		d['variant'] = ''
+		if len(d['variants']) > 0:
+			for v in d['variants']:
+				d['file_id'] = d['prefix'] + v + d['suffix']
+				d['variant'] = v
+				self.before_render(d)
+				self.render_partial(d)
+		else:
+			d['file_id'] = d['prefix'] + d['suffix']
+			self.before_render(d)
+			self.render_partial(d)
+
+		print("PROCESSING DETAIL: ", d['file_id'])
+
+	def set_default(self):
+		pass
+
+	def set_catchers(self, ro):
+		pass
+
+	def preprocess_details(self, ro):
+		pass
+
+	def reset_catchers(self):
+		pass
+
+	def before_render(self, ro):
+		self.set_default()
+		self.preprocess_details(ro)
+
+	def render_partial(self, d):
+		self.before_render(d)
+
+		p = d['file_id']
+		sp = str.format("{0}", self.folder)
+		mp = sp + "/" + d['prefix'] +  d["variant"]
+		fp = mp  + "/" +  d["folder"]
+
+		dh.make_folder_by_detail(sp)
+		dh.make_folder_by_detail(mp)
+		dh.make_folder_by_detail(fp)
 
 
-    def process_elements(self):
-        ''' define details '''
-
-        details = self.ctx.DETAILS2
-        elements = self.filter_details(details).items()
-        ''' extend details '''
-        for k,d in elements:
-            print('\r\n-----------{0}-----------\r\n'.format(k))
-            self.extend_details(d)
-            self.process_details(d)
+		print("\r\n ---- ")
+		print(d['prefix'] +  d["variant"] + "/" + d["folder"])
 
 
-    def filter_details(self,elements):
-        self.print_caller()
-        if self.args and self.args.model:
-            details = dict()
-            # Iterate over all the items in dictionary
-            for (key, value) in elements:
-                if key == self.args.model:
-                    details[key] = value
-            return details.items()
-        return elements  
+		
+		dat_file = ph.read_dat_file(mp)
 
-    def get_material(self, d):
-        d['avaibleMaterials'] = [
-            e for e in self.ctx.MATERIALS
-            if e['id'] in d['avaibleMaterialsID']]
+		# create image saver
+		saver = self.saver_builder.get_saver(d['type'])
 
-    def extend_details(self,details):
-        self.print_caller()
-        vls = details
-        [self.get_material(d) for d in vls]
+		for m in d['available_material']:
+			continue
+			m_id = m["id"]
+			if m["id"] in dat_file:
+				print(str.format("{0} skipped", m_id))
+				continue
 
-    def process_details(self,details):
-        self.print_caller()
-        for value in details:
-            self.render_partial(value)
+			# render image
+			self.set_material(m, d)
+			self.render_detail()
 
-    def set_default(self):
-        self.print_caller()
+			# save SOLID image
+			saver.set_paths_hierarhy([
+				self.folder,
+				d['prefix'],
+				d['variant'],
+				m["id"],
+			])
+			#saver.process()
 
-    def set_catchers(self, d):
-        self.print_caller()
-        for sc in d["shadowCatchers"]:
-            print("cather state: ", sc, True)
-            print("object hided: ", sc, False)
+			self.list_pop(mp, m_id)
+			self.stat.increment()
 
-    def set_excluded(self, d):
-        self.print_caller()
-        for ex in d["included"]:
-            print("object hided: ", ex, False)
+	def set_material(self, material, detail):
+		if detail['type'] == 'fabric':
+			pass
+		if detail['type'] == 'preset':
+			pass
+		if detail['type'] == 'plastic':
+			pass
+		if detail['type'] == 'label':
+			pass
+		if detail['type'] == 'buttons':
+			pass
 
-    def reset_included(self):
-        self.print_caller()
-        for inc in self.ctx.SCENE['Components']:
-            print("object hided: ", inc, True)
+	def save_small(self, ns, r):
+		ph.save_image(ns["b"], ns["s"], r["Big"])
 
-    def reset_catchers(self):
-        self.print_caller()
-        for sc in self.ctx.SCENE['Components']:
-            print("cather state: ", sc, False)
+	def check_list(self, ns, r):
+		ph.save_image(ns["b"], ns["s"], r["Small"])
 
-    def before_render(self, d):
-        self.print_caller()
-        self.set_default()
-        self.set_catchers(d)
-        self.set_excluded(d)
+	def list_pop(self, path, entity):
+		ph.write_stats(path, entity)
 
-    def render_partial(self, d):
-        self.print_caller()
-        self.before_render(d)
-        p = d['filePrefix']
-        r = self.ctx.SCENE['Resolution']
-        for m in d['avaibleMaterials']:
-            fp = str.format("{0}_{1}", d["filePrefix"], m["id"])
-            ns = ph.get_image_name(self.folder, p, fp, r)
-            self.set_material(m)
-            self.render_detail(ns)
-            self.save_small(ns)
+	def set_scene(self):
+		s = self.ctx.SCENE
+		r = s["Resolution"]
+		l = r['Big']
+		p = s["Percentage"]
+		c = s["Compression"]
 
-    def set_material(self, m):
-        self.print_caller()
-        if m['type'] == 'fabric_multy':
-            pass
-        if m['type'] == 'plastic_glossy':
-            pass
-        if m['type'] == 'strings_base':
-            pass
-
-    def save_small(self, ns):
-        pass
-
-    def set_scene(self):
-        self.print_caller()
-
-    def render_detail(self, result):
-        self.print_caller()
+	def render_detail(self):
+		pass

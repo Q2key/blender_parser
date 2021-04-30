@@ -1,0 +1,26 @@
+{
+    "type": "fabric",
+    "shadow_catchers": [],
+    "prefix": "pocket",
+    "light": [
+        "area_like_0",
+        "area_like_1",
+        "area_like_2"
+    ],
+    "variants": [
+        "left"
+    ],
+    "included": {
+        "left": [
+            "pocketLeft",
+            "pocketLeftStrings"
+        ]
+    },
+    "masks": {
+        "left": [
+            "bodyShirtHidden"
+        ]
+    },
+    "suffix": "",
+    "folder": "parent"
+}

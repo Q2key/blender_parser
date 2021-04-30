@@ -5,48 +5,42 @@ import datetime
 
 class Instance:
 
-
     def __init__(self):
         core_path = os.getcwd()
-        src_path = str.format("{0}/src",core_path)
+        src_path = core_path
+        self.SRC_PATH = src_path
 
-        self.RENDERS_PATH = str.format("{0}/renders",src_path)
-        self.STORE_PATH = str.format("{0}/textures/store",src_path)
-        self.DETAILS2 = {}
+        self.STORE_PATH = str.format("{0}/textures/store", src_path)
+        self.FABRICS_PATH = str.format("{0}/fabrics", self.STORE_PATH)
+        self.BUTTONS_PATH = str.format("{0}/buttons", self.STORE_PATH)
+        self.LABEL_PATH = str.format("{0}/label", self.STORE_PATH)
+        self.CONFIG_PATH = str.format("{0}/config", src_path)
+        self.SCENE_PATH = str.format("{0}/scenes", src_path)
+        self.SCENE = self.read_json(
+            str.format("{0}/config/scene.json", src_path))
+        
+        self.RENDERS_PATH = str.format(self.SCENE["RenderStorage"], src_path)
+        self.SCENE_STATE_PATH = self.SCENE_PATH + "/state.details.txt"
 
-        self.DETAILS2['BODY'] = self.read_config(str.format("{0}/config/details/body.json",src_path))
-        self.DETAILS2['BUTTONS'] = self.read_config(str.format("{0}/config/details/buttons.json",src_path))
+        self.init_details_config()
 
-        #Воротники
-        self.DETAILS2['COLLARS_INTERNAL'] = self.read_config(str.format("{0}/config/details/collarsInternal.json",src_path))
-        self.DETAILS2['COLLARS_INTERNAL_STRINGS'] = self.read_config(str.format("{0}/config/details/collarsInternalStrings.json",src_path))
-        self.DETAILS2['COLLARS'] = self.read_config(str.format("{0}/config/details/collars.json",src_path))
-        self.DETAILS2['COLLARS_BOTTOM_LAYER'] = self.read_config(str.format("{0}/config/details/collarsBottomLayer.json",src_path))
+    def init_details_config(self):
 
-        #Манжеты
-        self.DETAILS2['CUFFS'] = self.read_config(str.format("{0}/config/details/cuffs.json",src_path))
-        self.DETAILS2['CUFFS_BUTTONS'] = self.read_config(str.format("{0}/config/details/cuffsButtons.json",src_path))
-        self.DETAILS2['CUFFS_INTERNAL'] = self.read_config(str.format("{0}/config/details/cuffsInternal.json",src_path))
-        self.DETAILS2['CUFFS_STRINGS'] = self.read_config(str.format("{0}/config/details/cuffsStrings.json",src_path))
+        path = self.CONFIG_PATH + '/details'
+        files = os.listdir(path)
 
-        #logos
-        self.DETAILS2['LOGOS'] = self.read_config(str.format("{0}/config/details/logo.json",src_path))
+        cfg_list = {}
+        for (key, val) in enumerate(files):
+            k = val[:len(val) - 5]
+            cfg = str.format("{0}/config/{1}/{2}",
+                             self.SRC_PATH, 'details', val)
+            cfg_list[k] = self.read_json(cfg)
 
-        #logos
-        self.DETAILS2['POCKET'] = self.read_config(str.format("{0}/config/details/pockets.json",src_path))
-        self.DETAILS2['POCKET_STRINGS'] = self.read_config(str.format("{0}/config/details/pocketsStrings.json",src_path))
+        self.DETAILS = cfg_list
 
-
-        self.DETAILS2['STRINGS'] = self.read_config(str.format("{0}/config/details/strings.json",src_path))
-
-        self.COLLARS = self.read_config(str.format("{0}/config/details/collars.json",src_path))
-        self.MATERIALS = self.read_config(str.format("{0}/config/materials.json",src_path))
-        self.SCENE = self.read_config(str.format("{0}/config/scene.json",src_path))
-
-
-    def read_config(self,path): 
+    def read_json(self, path):
         try:
             with open(path) as f:
                 return json.loads(f.read())
-        except OSError:  
-            print ("Creation of the directory %s failed" % path)
+        except OSError:
+            print("Creation of the directory %s failed" % path)

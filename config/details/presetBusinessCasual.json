@@ -1,0 +1,45 @@
+{
+    "type": "preset",
+    "prefix": "",
+    "preset_id": "business-casual",
+    "light": [
+        "area_like_0",
+        "area_like_1",
+        "area_like_2"
+    ],
+    "variants": [
+        "preset"
+    ],
+    "suffix": "",
+    "included": {
+        "preset": [
+            "bodyShirtPlanked",
+            "bodyShirtPlankedStrings",
+            "bodyShirtPlankedButton",
+            "bodyShirtInternal",
+            "bodyShirtLogo",
+            "collarLondoner",
+            "collarLondonerButton",
+            "collarLondonerSeam",
+            "collarLondonerExternalStand",
+            "collarLondonerInternalStand",
+            "collarLondonerSeamInternalStand",
+            "collarLondonerSeamExternalStand",
+            "cuffTwoButtonsButton_a",
+            "cuffTwoButtonsExternal_a",
+            "cuffTwoButtonsInternal_a",
+            "cuffTwoButtonsStrings_a"
+        ]
+    },
+    "button_texture": {
+        "id": "SG2-1953",
+        "texture": "C:/dev/blender_parser/textures/static/buttons/SG2-1953.png"
+    },
+    "label_texture": {
+        "id" : "remark_birka",
+        "texture": "C:/dev/blender_parser/textures/static/label/remark_birka.png"
+    },
+    "shadow_catchers": [],
+    "masks": false,
+    "folder": "business-casual"
+}

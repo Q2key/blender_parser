@@ -1,56 +1,13 @@
 from workers.material_info import MaterialInfo
 from workers.colors import Colors
+from constants.materials import Materials
 import bpy
 
 
 class PlasticWorker():
 
-
     @staticmethod
-    def create_gloss_plastic_material(m=False):
-        ''' set material '''
-        
-        mi = MaterialInfo.get_material_info('pearl_plastic', True)
-        lw = mi['nodes'].new("ShaderNodeLayerWeight")
-        lw.location = [0, -200]
-
-        bd1 = mi['nodes'].new("ShaderNodeBsdfDiffuse")
-        bd1.location = [0, -350]
-
-
-        bd2 = mi['nodes'].new("ShaderNodeBsdfDiffuse")
-        bd2.location = [0, -500]
-
-        if m is not None:
-            c = m['color']
-            bd1.inputs[0].default_value = (c['R'], c['G'], c['B'], c['A'])
-            bd2.inputs[0].default_value = (c['R'], c['G'], c['B'], c['A'])
-        else:
-            bd2.inputs[0].default_value = (1, 0.977174, 0.910533, 1)
-            bd2.inputs[0].default_value = (1, 0.977174, 0.910533, 1)
-
-        fr = mi['nodes'].new("ShaderNodeFresnel")
-        fr.location = [200,  -200]
-        fr.inputs['IOR'].default_value = 2
-        
-
-        ms1 = mi['nodes'].new("ShaderNodeMixShader")
-        ms1.location = [200, -350]
-
-        bg = mi['nodes'].new("ShaderNodeBsdfGlossy")
-        bg.location = [200, -500]
-        bg.inputs[1].default_value = 0.3
-
-        ms2 = mi['nodes'].new("ShaderNodeMixShader")
-        ms2.location = [400, -350]
-
-        om = mi['nodes'].new("ShaderNodeOutputMaterial")
-        om.location = [600, -350]
-
-        mi['links'].new(lw.outputs['Fresnel'], ms1.inputs[0])
-        mi['links'].new(bd1.outputs['BSDF'], ms1.inputs[1])
-        mi['links'].new(bd2.outputs['BSDF'], ms1.inputs[2])
-        mi['links'].new(fr.outputs['Fac'], ms2.inputs[0])
-        mi['links'].new(ms1.outputs['Shader'], ms2.inputs[1])
-        mi['links'].new(bg.outputs['BSDF'], ms2.inputs[2])
-        mi['links'].new(ms2.outputs['Shader'], om.inputs['Surface'])
+    def create_img_button_material(m=False):
+        mi = MaterialInfo.get_material_info('img_button_material', False)
+        mi['nodes']['MainTexture'].image = bpy.data.images.load(m['texture'])
+        mi['nodes']['AlphaTexture'].image = bpy.data.images.load(m['texture'])
