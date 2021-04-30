@@ -1,1 +1,1 @@
-/home/dmt/dev/blender29/blender /home/dmt/dev/blender_parser/scenes/remark.blend --background --python run.py -- -store $@
+/home/matnik/render_engine/blender/blender /home/matnik/render_engine/blender_parser/scenes/remark_prod.blend --background --python run.py -- -store $@

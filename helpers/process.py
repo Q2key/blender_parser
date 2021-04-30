@@ -33,6 +33,7 @@ class ProcessHelper:
 
 	@staticmethod
 	def read_json(path):
+		path = path.lower()
 		try:
 			if os.path.exists(path) == False:
 				ProcessHelper.write_json(path, dict(), False)
@@ -42,11 +43,18 @@ class ProcessHelper:
 				return json.loads(data)
 
 		except OSError:
-			print("Creation of the directory %s failed" % path)
+			pass
+			#print("Creation of the directory %s failed" % path)
 
 	@staticmethod
 	def write_json(file, data, close=True):
-		with open(file, mode="w+") as f:
-			f.write(json.dumps(data, indent=4))
-			if close:
-				f.close()
+		file = file.lower()
+		try:
+			with open(file, mode="w+") as f:
+				f.write(json.dumps(data, indent=4))
+				if close:
+					f.close()
+		except Exception as inst:
+			print(inst)
+			
+			

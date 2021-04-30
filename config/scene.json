@@ -24,6 +24,6 @@
         ".jpg"
     ],
     "Engine": "BLENDER_EEVEE",
-    "TempFile": "D:\\tempishe.png",
-    "RenderStorage": "renders"
+    "TempFile": "/home/matnik/render_engine/temp.png",
+    "RenderStorage": "/home/matnik/render_engine/blender_parser/renders"
 }
