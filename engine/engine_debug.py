@@ -140,7 +140,7 @@ class Engine(EngineBase):
 			self.render_detail()
 
 			# save SOLID image
-			saver.set_paths_hierarhy([
+			saver.set_paths_hierarchy([
 				self.folder,
 				d['prefix'],
 				d['variant'],

@@ -1,27 +1,21 @@
 from workers.material_info import MaterialInfo
-from workers.colors import Colors
 from helpers.process import ProcessHelper as ph
-from os import sys
 import bpy
 
 
-class HoldoutWorker():
+class HoldoutWorker:
 
     @staticmethod
     def create_holdout_material():
-        ''' set material '''
+        mi = MaterialInfo.get_material_info('holdout_material', True)
 
-        mi = MaterialInfo.get_material_info('holdout_material',True)
+        shader_node_holdout = mi['nodes'].new("ShaderNodeHoldout")
+        shader_node_holdout.location = [0, -100]
 
-        shaderNodeHoldout = mi['nodes'].new("ShaderNodeHoldout")
-        shaderNodeHoldout.location = [0, -100]
+        shader_node_output_material = mi['nodes'].new("ShaderNodeOutputMaterial")
+        shader_node_output_material.location = [300, -100]
 
-        shaderNodeOutputMaterial = mi['nodes'].new("ShaderNodeOutputMaterial")
-        shaderNodeOutputMaterial.location = [300, -100]
-
-        # link up
-        mi['links'].new(shaderNodeHoldout.outputs["Holdout"],shaderNodeOutputMaterial.inputs['Surface'])
-
+        mi['links'].new(shader_node_holdout.outputs["Holdout"], shader_node_output_material.inputs['Surface'])
 
     @staticmethod
     def apply_holdout_material(obj):

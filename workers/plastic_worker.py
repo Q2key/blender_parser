@@ -1,10 +1,8 @@
 from workers.material_info import MaterialInfo
-from workers.colors import Colors
-from constants.materials import Materials
 import bpy
 
 
-class PlasticWorker():
+class PlasticWorker:
 
     @staticmethod
     def create_img_button_material(m=False):

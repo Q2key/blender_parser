@@ -1,5 +1,4 @@
 import sys
-import os
 
 if '-d' in sys.argv:
     from engine.engine_debug import Engine

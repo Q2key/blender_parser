@@ -1,6 +1,7 @@
 from engine.saver.catalog_saver import CatalogSaver
 from engine.saver.constructor_saver import ConstructorSaver
 
+
 class SaverBuilder:
 
     def __init__(self, ctx, args):
@@ -12,4 +13,3 @@ class SaverBuilder:
             return CatalogSaver(self.ctx, self.args)
         else:
             return ConstructorSaver(self.ctx, self.args)
-    
