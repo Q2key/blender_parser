@@ -38,5 +38,5 @@ class ConstructorSaver(BaseSaver):
     def set_paths(self, detail, model):
         pass
 
-    def set_paths_hierarhy(self, parts):
+    def set_paths_hierarchy(self, parts):
         self.parts = parts
